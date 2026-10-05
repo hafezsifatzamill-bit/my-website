@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAMIL ACADEMY - Punctuation Practice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Hind Siliguri', sans-serif; }
+        .completed-card {
+            background-color: #f0fdf4 !important;
+            border-color: #16a34a !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+    <!-- হেডার: পুরো বক্স সবুজ এবং নিচের দিকে কার্ভ করা -->
+    <header class="bg-green-800 text-white py-12 px-6 text-center shadow-lg rounded-b-[40px]">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white-400">ZAMIL ACADEMY</h1>
+    </header>
+
+    <!-- সাবস্ক্রাইব বক্স -->
+    <div class="flex justify-center -mt-8 px-6">
+        <div class="bg-white p-8 shadow-md border-t-4 border-green-800 rounded-2xl max-w-md w-full text-center">
+            <p class="text-gray-700 text-lg mb-6">
+                প্রিমিয়াম সেবা পেতে আমাদের ইউটিউব চ্যানেলটি সাবস্ক্রাইব করুন।
+            </p>
+            <a href="https://youtube.com/@zamil_academy?si=EbWJq_lwwbWrLar9" 
+               target="_blank"
+               class="inline-block bg-red-700 hover:bg-green-800 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-md">
+                চ্যানেল ভিজিট করুন
+            </a>
+        </div>
+    </div>
+
+    <!-- মূল কন্টেন্ট (Main Content) -->
+    <main class="flex-grow max-w-4xl w-full mx-auto px-4 md:px-6 py-12">
+        
+        <!-- রুলস পেজে যাওয়ার আকর্ষণীয় বক্স -->
+        <div class="mb-10">
+            <a href="punctuation-rules.html" class="block bg-gradient-to-r from-green-700 to-green-900 hover:from-green-800 hover:to-green-950 text-white p-6 rounded-2xl shadow-md text-center transition duration-300 transform hover:scale-[1.02]">
+                <h3 class="text-2xl font-bold mb-1">📖 পাঙ্কচুয়েশন ও ক্যাপিটালাইজেশন রুলস দেখুন</h3>
+                <p class="text-green-100 text-sm md:text-base">কমা, সেমিকোলন, ইনভার্টেড কমা ও ক্যাপিটাল লেটারের সকল নিয়ম সহজ ব্যাখ্যা ও উদাহরণ সহ দেখতে এখানে ক্লিক করুন।</p>
+            </a>
+        </div>
+
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">Punctuation & Capitalization Practice Board</h2>
+            <p class="text-green-700 font-semibold text-lg">HSC & Alim English 2nd Paper (Question No. 12)</p>
+            <div class="w-24 h-1 bg-green-700 mx-auto mt-3 rounded"></div>
+        </div>
+
+        <!-- এক্সারসাইজ সেকশনসমূহ -->
+        <div class="space-y-12" id="practice-container">
+            
+            <!-- Exercise 1 -->
+            <div id="ex-1" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 01</span>
+                    <button onclick="toggleComplete(1)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-1"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">why are you going to barisal said father i want to buy some important books said rashed father said do you need money yes father i need some money rashed replied</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(1)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-1" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Correct Passage:</h4>
+                            <p class="font-semibold text-red-700 bg-white p-4 rounded-lg shadow-inner mt-2 leading-relaxed font-mono">
+                                <span class="bg-yellow-200 px-1 text-black font-bold">"Why</span> are you going to <span class="bg-yellow-200 px-1 text-black font-bold">Barisal?"</span> said <span class="bg-yellow-200 px-1 text-black font-bold">father.</span> <span class="bg-yellow-200 px-1 text-black font-bold">"I</span> want to buy some important <span class="bg-yellow-200 px-1 text-black font-bold">books,"</span> said <span class="bg-yellow-200 px-1 text-black font-bold">Rashed.</span> Father <span class="bg-yellow-200 px-1 text-black font-bold">said,</span> <span class="bg-yellow-200 px-1 text-black font-bold">"Do</span> you need <span class="bg-yellow-200 px-1 text-black font-bold">money?"</span> <span class="bg-yellow-200 px-1 text-black font-bold">"Yes,</span> father, I need some <span class="bg-yellow-200 px-1 text-black font-bold">money,"</span> Rashed replied.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">বাংলা অর্থ:</h4>
+                            <p class="text-gray-700 text-sm mt-1 leading-relaxed">"তুমি কেন বরিশাল যাচ্ছ?" বাবা জিজ্ঞেস করলেন। "আমি কিছু গুরুত্বপূর্ণ বই কিনতে চাই," রাশেদ বলল। বাবা বললেন, "তোমার কি টাকা লাগবে?" "হ্যাঁ বাবা, আমার কিছু টাকা লাগবে," রাশেদ উত্তর দিল।</p>
+                        </div>
+                        <div class="text-xs text-green-800 bg-green-100/50 p-4 rounded-lg border border-green-200/50">
+                            <h4 class="font-bold">সহজ ব্যাখ্যা:</h4>
+                            <ul class="list-disc pl-5 mt-1 space-y-1">
+                                <li>ডিরেক্ট স্পিচ বা বক্তার মুখের কথা হওয়ায় ইনভার্টেড কমা <strong>"..."</strong> বসেছে।</li>
+                                <li>স্থানের নাম <strong>Barisal</strong> এবং মানুষের নাম <strong>Rashed</strong> প্রোপার নাউন হওয়ায় ক্যাপিটাল লেটার করা হয়েছে।</li>
+                                <li>প্রশ্নবোধক বাক্যের শেষে <strong>?</strong> বসেছে।</li>
+                                <li><strong>Yes</strong> এর পর অল্প থামার জন্য কমা <strong>,</strong> বসেছে।</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 2 -->
+            <div id="ex-2" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 02</span>
+                    <button onclick="toggleComplete(2)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-2"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">the school boy said to the teacher sir i cannot do my sum today as i was ill yesterday the teacher said dont worry i will help you to solve it tomorrow</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(2)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-2" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Correct Passage:</h4>
+                            <p class="font-semibold text-red-700 bg-white p-4 rounded-lg shadow-inner mt-2 leading-relaxed font-mono">
+                                <span class="bg-yellow-200 px-1 text-black font-bold">The</span> school boy said to the <span class="bg-yellow-200 px-1 text-black font-bold">teacher, "Sir, I</span> cannot do my sum today as <span class="bg-yellow-200 px-1 text-black font-bold">I</span> was ill <span class="bg-yellow-200 px-1 text-black font-bold">yesterday." The</span> teacher <span class="bg-yellow-200 px-1 text-black font-bold">said, "Don't</span> worry, <span class="bg-yellow-200 px-1 text-black font-bold">I</span> will help you to solve <span class="bg-yellow-200 px-1 text-black font-bold">it tomorrow."</span>
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">বাংলা অর্থ:</h4>
+                            <p class="text-gray-700 text-sm mt-1 leading-relaxed">স্কুলছাত্রটি শিক্ষককে বলল, "স্যার, আমি আজ আমার অংকটি করতে পারছি না কারণ আমি গতকাল অসুস্থ ছিলাম।" শিক্ষক বললেন, "চিন্তা করো না, আমি তোমাকে আগামীকাল এটি সমাধান করতে সাহায্য করব।"</p>
+                        </div>
+                        <div class="text-xs text-green-800 bg-green-100/50 p-4 rounded-lg border border-green-200/50">
+                            <h4 class="font-bold">সহজ ব্যাখ্যা:</h4>
+                            <ul class="list-disc pl-5 mt-1 space-y-1">
+                                <li>বাক্যের শুরুতে <strong>The</strong>-এর 'T' বড় হাতের হয়েছে।</li>
+                                <li>'আমি' অর্থে ব্যবহৃত <strong>I</strong> সর্বদাই বড় হাতের অক্ষর হয়েছে।</li>
+                                <li><strong>Sir</strong> দিয়ে শিক্ষককে সম্বোধন করায় তার আগে কমা এবং এটি ডিরেক্ট স্পিচে থাকায় ক্যাপিটাল করা হয়েছে।</li>
+                                <li>সংকুচিত রূপ <strong>Don't</strong>-এ অ্যাপোস্ট্রফি <strong>'</strong> ব্যবহৃত হয়েছে।</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 3 -->
+            <div id="ex-3" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 03</span>
+                    <button onclick="toggleComplete(3)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-3"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">how noble those brave soldiers were they fought for our independence they did not care for their own lives may almighty bless them forever</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(3)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-3" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Correct Passage:</h4>
+                            <p class="font-semibold text-red-700 bg-white p-4 rounded-lg shadow-inner mt-2 leading-relaxed font-mono">
+                                <span class="bg-yellow-200 px-1 text-black font-bold">How</span> noble those brave soldiers <span class="bg-yellow-200 px-1 text-black font-bold">were! They</span> fought for our <span class="bg-yellow-200 px-1 text-black font-bold">independence. They</span> did not care for their own <span class="bg-yellow-200 px-1 text-black font-bold">lives. May Almighty</span> bless <span class="bg-yellow-200 px-1 text-black font-bold">them forever.</span>
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">বাংলা অর্থ:</h4>
+                            <p class="text-gray-700 text-sm mt-1 leading-relaxed">সেই বীর সেনারা কতই না মহৎ ছিলেন! তারা আমাদের স্বাধীনতার জন্য যুদ্ধ করেছিলেন। তারা নিজেদের জীবনের কোনো তোয়াক্কা করেননি। সর্বশক্তিমান তাদের চিরকাল মঙ্গল করুন।</p>
+                        </div>
+                        <div class="text-xs text-green-800 bg-green-100/50 p-4 rounded-lg border border-green-200/50">
+                            <h4 class="font-bold">সহজ ব্যাখ্যা:</h4>
+                            <ul class="list-disc pl-5 mt-1 space-y-1">
+                                <li>প্রথম বাক্যটি বিস্ময়সূচক (Exclamatory) হওয়ায় শেষে <strong>!</strong> বসেছে।</li>
+                                <li>পরবর্তী বাক্যগুলো সাধারণ হওয়ায় শেষে ফুলস্টপ <strong>.</strong> বসেছে এবং প্রতিটি বাক্য শুরুর প্রথম অক্ষর বড় হাতের করা হয়েছে।</li>
+                                <li><strong>Almighty</strong> (আল্লাহ/ভগবান) বোঝাতে প্রথম অক্ষর বড় হাতের <strong>A</strong> করা হয়েছে।</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 4 -->
+            <div id="ex-4" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 04</span>
+                    <button onclick="toggleComplete(4)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-4"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">what kind of stories do you like said mita i like detective stories very much said joy have you read sherlock holmes yes i have read it replied joy</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(4)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-4" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Correct Passage:</h4>
+                            <p class="font-semibold text-red-700 bg-white p-4 rounded-lg shadow-inner mt-2 leading-relaxed font-mono">
+                                <span class="bg-yellow-200 px-1 text-black font-bold">"What</span> kind of stories do you <span class="bg-yellow-200 px-1 text-black font-bold">like?"</span> said <span class="bg-yellow-200 px-1 text-black font-bold">Mita.</span> <span class="bg-yellow-200 px-1 text-black font-bold">"I</span> like detective stories very <span class="bg-yellow-200 px-1 text-black font-bold">much,"</span> said <span class="bg-yellow-200 px-1 text-black font-bold">Joy. "Have</span> you read <span class="bg-yellow-200 px-1 text-black font-bold">Sherlock Holmes?"</span> <span class="bg-yellow-200 px-1 text-black font-bold">"Yes, I</span> have read <span class="bg-yellow-200 px-1 text-black font-bold">it,"</span> replied <span class="bg-yellow-200 px-1 text-black font-bold">Joy.</span>
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">বাংলা অর্থ:</h4>
+                            <p class="text-gray-700 text-sm mt-1 leading-relaxed">"তুমি কোন ধরনের গল্প পছন্দ করো?" মিতা জিজ্ঞেস করল। "আমি গোয়েন্দা গল্প খুব পছন্দ করি," জয় বলল। "তুমি কি শার্লক হোমস পড়েছ?" "হ্যাঁ, আমি এটি পড়েছি," জয় উত্তর দিল।</p>
+                        </div>
+                        <div class="text-xs text-green-800 bg-green-100/50 p-4 rounded-lg border border-green-200/50">
+                            <h4 class="font-bold">সহজ ব্যাখ্যা:</h4>
+                            <ul class="list-disc pl-5 mt-1 space-y-1">
+                                <li>নামবাচক শব্দ যেমন <strong>Mita</strong>, <strong>Joy</strong> এবং বিখ্যাত বই বা চরিত্রের নাম <strong>Sherlock Holmes</strong> এর প্রতিটির প্রথম অক্ষর ক্যাপিটাল করা হয়েছে।</li>
+                                <li>প্রশ্নবোধক বাক্যের ডিরেক্ট স্পিচ অংশ ইনভার্টেড কমায় মুড়ে দিয়ে শেষে প্রশ্নবোধক <strong>?</strong> বসেছে।</li>
+                                <li><strong>Yes</strong> এবং <strong>I</strong> ক্যাপিটালাইজেশন ও কমার নিয়ম মেনে বসানো হয়েছে।</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 5 -->
+            <div id="ex-5" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 05</span>
+                    <button onclick="toggleComplete(5)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-5"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">the traveller said can you tell me the way to the nearest hotel yes said the peasant do you want a residential one in which you can spend the night</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(5)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-5" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Correct Passage:</h4>
+                            <p class="font-semibold text-red-700 bg-white p-4 rounded-lg shadow-inner mt-2 leading-relaxed font-mono">
+                                <span class="bg-yellow-200 px-1 text-black font-bold">The</span> traveller <span class="bg-yellow-200 px-1 text-black font-bold">said, "Can</span> you tell me the way to the nearest <span class="bg-yellow-200 px-1 text-black font-bold">hotel?" "Yes,"</span> said the <span class="bg-yellow-200 px-1 text-black font-bold">peasant. "Do</span> you want a residential <span class="bg-yellow-200 px-1 text-black font-bold">one, in</span> which you can spend the <span class="bg-yellow-200 px-1 text-black font-bold">night?"</span>
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">বাংলা অর্থ:</h4>
+                            <p class="text-gray-700 text-sm mt-1 leading-relaxed">পথিকটি বলল, "আপনি কি আমাকে নিকটবর্তী হোটেলের পথ বলতে পারবেন?" "হ্যাঁ," কৃষকটি বলল। "আপনি কি কোনো আবাসিক হোটেল চাচ্ছেন, যেখানে আপনি রাত কাটাতে পারেন?"</p>
+                        </div>
+                        <div class="text-xs text-green-800 bg-green-100/50 p-4 rounded-lg border border-green-200/50">
+                            <h4 class="font-bold">সহজ ব্যাখ্যা:</h4>
+                            <ul class="list-disc pl-5 mt-1 space-y-1">
+                                <li>রিপোর্টিং ভার্বের পর কমা <strong>,</strong> এবং তার পর ডিরেক্ট স্পিচ অংশ ইনভার্টেড কমায় রাখা হয়েছে।</li>
+                                <li><strong>Yes</strong> এরপর কমা বসেছে এবং সম্পূর্ণ কথাটি ক্লোজ করে ইনভার্টেড কমা <strong>"..."</strong> দেওয়া হয়েছে।</li>
+                                <li><strong>one</strong> এর পর অতিরিক্ত তথ্য বা কন্ডিশনাল রিলেটিভ ক্লজকে কমা <strong>,</strong> দিয়ে ভাগ করা হয়েছে।</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 6 -->
+            <div id="ex-6" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 06</span>
+                    <button onclick="toggleComplete(6)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-6"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">gobinda said to me please lend me your pen for a moment i dont have mine right now the teacher told me to complete this task quickly</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(6)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-6" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Correct Passage:</h4>
+                            <p class="font-semibold text-red-700 bg-white p-4 rounded-lg shadow-inner mt-2 leading-relaxed font-mono">
+                                <span class="bg-yellow-200 px-1 text-black font-bold">Gobinda</span> said to <span class="bg-yellow-200 px-1 text-black font-bold">me, "Please</span> lend me your pen for a <span class="bg-yellow-200 px-1 text-black font-bold">moment. I don't</span> have mine right <span class="bg-yellow-200 px-1 text-black font-bold">now." The</span> teacher told me to complete this task <span class="bg-yellow-200 px-1 text-black font-bold">quickly.</span>
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">বাংলা অর্থ:</h4>
+                            <p class="text-gray-700 text-sm mt-1 leading-relaxed">গোবিন্দ আমাকে বলল, "দয়া করে এক মুহূর্তের জন্য তোমার কলমটি আমাকে ধার দাও। আমার কাছে এই মুহূর্তে আমার কলমটি নেই।" শিক্ষক আমাকে এই কাজটি দ্রুত শেষ করতে বললেন।</p>
+                        </div>
+                        <div class="text-xs text-green-800 bg-green-100/50 p-4 rounded-lg border border-green-200/50">
+                            <h4 class="font-bold">সহজ ব্যাখ্যা:</h4>
+                            <ul class="list-disc pl-5 mt-1 space-y-1">
+                                <li>মানুষের নাম প্রোপার নাউন হিসেবে <strong>Gobinda</strong> ক্যাপিটাল দিয়ে শুরু হয়েছে।</li>
+                                <li>বক্তব্যের প্রথম অংশ শেষ হওয়ার পর ফুলস্টপ ও নতুন বাক্য <strong>I</strong> বড় হাতের অক্ষরে শুরু হয়েছে।</li>
+                                <li><strong>dont</strong> এর সংকীর্ণ রূপকে সংশোধন করে অ্যাপোস্ট্রফি সহ <strong>don't</strong> করা হয়েছে।</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 7 -->
+            <div id="ex-7" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 07</span>
+                    <button onclick="toggleComplete(7)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-7"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">my mother said why are you wasting your time you must study hard to get an a plus in english yes mother i will do that rashed replied</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(7)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-7" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Correct Passage:</h4>
+                            <p class="font-semibold text-red-700 bg-white p-4 rounded-lg shadow-inner mt-2 leading-relaxed font-mono">
+                                <span class="bg-yellow-200 px-1 text-black font-bold">My</span> mother <span class="bg-yellow-200 px-1 text-black font-bold">said, "Why</span> are you wasting your <span class="bg-yellow-200 px-1 text-black font-bold">time? You</span> must study hard to get an <span class="bg-yellow-200 px-1 text-black font-bold">A-plus</span> in <span class="bg-yellow-200 px-1 text-black font-bold">English." "Yes,</span> mother, <span class="bg-yellow-200 px-1 text-black font-bold">I</span> will do <span class="bg-yellow-200 px-1 text-black font-bold">that," Rashed</span> replied.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">বাংলা অর্থ:</h4>
+                            <p class="text-gray-700 text-sm mt-1 leading-relaxed">আমার মা বললেন, "তুমি কেন তোমার সময় অপচয় করছ? ইংরেজিতে এ-প্লাস পাওয়ার জন্য তোমাকে অবশ্যই কঠোর পড়াশোনা করতে হবে।" "হ্যাঁ মা, আমি সেটাই করব," রাশেদ উত্তর দিল।</p>
+                        </div>
+                        <div class="text-xs text-green-800 bg-green-100/50 p-4 rounded-lg border border-green-200/50">
+                            <h4 class="font-bold">সহজ ব্যাখ্যা:</h4>
+                            <ul class="list-disc pl-5 mt-1 space-y-1">
+                                <li>গ্রেডিং হিসেবে <strong>A-plus</strong> এর 'A' বড় হাতের এবং বিষয়ের নাম হিসেবে <strong>English</strong> এর 'E' বড় হাতের করা হয়েছে।</li>
+                                <li>প্রশ্নবোধক বাক্যের ডিরেক্ট স্পিচ শেষ হলে <strong>?</strong> বসেছে এবং তার পর নতুন বাক্য <strong>You</strong> দিয়ে শুরু হয়েছে।</li>
+                                <li>বক্তব্য শেষ হওয়ার পর ইনভার্টেড কমা ক্লোজ করা হয়েছে।</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 8 -->
+            <div id="ex-8" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 08</span>
+                    <button onclick="toggleComplete(8)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-8"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">will you help me to solve this puzzle requested my sister she said it has been driving me crazy since monday morning</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(8)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-8" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Correct Passage:</h4>
+                            <p class="font-semibold text-red-700 bg-white p-4 rounded-lg shadow-inner mt-2 leading-relaxed font-mono">
+                                <span class="bg-yellow-200 px-1 text-black font-bold">"Will</span> you help me to solve this <span class="bg-yellow-200 px-1 text-black font-bold">puzzle?"</span> requested my sister. <span class="bg-yellow-200 px-1 text-black font-bold">She</span> <span class="bg-yellow-200 px-1 text-black font-bold">said, "It</span> has been driving me crazy since <span class="bg-yellow-200 px-1 text-black font-bold">Monday morning."</span>
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">বাংলা অর্থ:</h4>
+                            <p class="text-gray-700 text-sm mt-1 leading-relaxed">"তুমি কি এই ধাঁধাটি সমাধান করতে আমাকে সাহায্য করবে?" আমার বোন অনুরোধ করল। সে বলল, "সোমবার সকাল থেকে এটি আমাকে পাগল করে তুলছে।"</p>
+                        </div>
+                        <div class="text-xs text-green-800 bg-green-100/50 p-4 rounded-lg border border-green-200/50">
+                            <h4 class="font-bold">সহজ ব্যাখ্যা:</h4>
+                            <ul class="list-disc pl-5 mt-1 space-y-1">
+                                <li>প্রশ্নের শুরু ইনভার্টেড কমায় এবং শেষে <strong>?</strong> বসেছে।</li>
+                                <li>বার বা দিনের নাম Proper Noun হওয়ার কারণে <strong>Monday</strong>-এর 'M' ক্যাপিটাল লেটার করা হয়েছে।</li>
+                                <li><strong>She said, "It..."</strong> রিপোর্টিং ভার্ব ও রিপোর্টেড স্পিচের মাঝে কমা বসেছে।</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 9 -->
+            <div id="ex-9" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 09</span>
+                    <button onclick="toggleComplete(9)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-9"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">what a brilliant achievement you have made said the headmaster to kafi i am very proud of you may you shine further</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(9)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-9" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Correct Passage:</h4>
+                            <p class="font-semibold text-red-700 bg-white p-4 rounded-lg shadow-inner mt-2 leading-relaxed font-mono">
+                                <span class="bg-yellow-200 px-1 text-black font-bold">"What</span> a brilliant achievement you have <span class="bg-yellow-200 px-1 text-black font-bold">made!"</span> said the headmaster to <span class="bg-yellow-200 px-1 text-black font-bold">Kafi. "I</span> am very proud of <span class="bg-yellow-200 px-1 text-black font-bold">you. May</span> you shine <span class="bg-yellow-200 px-1 text-black font-bold">further."</span>
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">বাংলা অর্থ:</h4>
+                            <p class="text-gray-700 text-sm mt-1 leading-relaxed">"তুমি কতই না চমৎকার কৃতিত্ব অর্জন করেছ!" প্রধান শিক্ষক কাফিকে বললেন। "আমি তোমাকে নিয়ে অত্যন্ত গর্বিত। তুমি আরও উজ্জ্বল হও।"</p>
+                        </div>
+                        <div class="text-xs text-green-800 bg-green-100/50 p-4 rounded-lg border border-green-200/50">
+                            <h4 class="font-bold">সহজ ব্যাখ্যা:</h4>
+                            <ul class="list-disc pl-5 mt-1 space-y-1">
+                                <li>বিস্ময় প্রকাশকারী বাক্যের শেষে এক্সক্লামেশন মার্ক বা <strong>!</strong> বসেছে।</li>
+                                <li>মানুষের নাম হওয়ায় <strong>Kafi</strong>-র প্রথম অক্ষর বড় হাতের করা হয়েছে।</li>
+                                <li><strong>May you...</strong> ইচ্ছা বা প্রার্থনামূলক বাক্যের শুরুতে ক্যাপিটাল <strong>M</strong> ও শেষে ফুলস্টপ দেওয়া হয়েছে।</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 10 -->
+            <div id="ex-10" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 10</span>
+                    <button onclick="toggleComplete(10)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-10"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">my god he cried she has fallen from the roof call a doctor immediately someone help us please</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(10)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-10" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Correct Passage:</h4>
+                            <p class="font-semibold text-red-700 bg-white p-4 rounded-lg shadow-inner mt-2 leading-relaxed font-mono">
+                                <span class="bg-yellow-200 px-1 text-black font-bold">"My God!"</span> he <span class="bg-yellow-200 px-1 text-black font-bold">cried, "she</span> has fallen from the <span class="bg-yellow-200 px-1 text-black font-bold">roof. Call</span> a doctor <span class="bg-yellow-200 px-1 text-black font-bold">immediately! Someone</span> help us, <span class="bg-yellow-200 px-1 text-black font-bold">please!"</span>
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">বাংলা অর্থ:</h4>
+                            <p class="text-gray-700 text-sm mt-1 leading-relaxed">"হায় ঈশ্বর!" সে চিৎকার করে উঠল, "সে ছাদ থেকে পড়ে গেছে। অবিলম্বে একজন ডাক্তার ডাকুন! কেউ আমাদের সাহায্য করুন, দয়া করে!"</p>
+                        </div>
+                        <div class="text-xs text-green-800 bg-green-100/50 p-4 rounded-lg border border-green-200/50">
+                            <h4 class="font-bold">সহজ ব্যাখ্যা:</h4>
+                            <ul class="list-disc pl-5 mt-1 space-y-1">
+                                <li>আবেগের তীব্রতা বোঝাতে <strong>"My God!"</strong> এবং <strong>immediately!</strong> এরপর এক্সক্লামেশন মার্ক <strong>!</strong> বসেছে।</li>
+                                <li>অনুরোধ করার সময় <strong>please</strong> এর আগে কমা <strong>,</strong> বসেছে।</li>
+                                <li>আলাদা আলাদা নির্দেশ বা আদেশের ক্ষেত্রে বাক্যগুলোকে ফুলস্টপ ও ক্যাপিটাল দিয়ে শুরু করা হয়েছে।</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ফুটার -->
+    <footer class="text-center py-6 text-gray-500 text-sm border-t border-gray-200 mt-12 bg-white">
+        <p>&copy; ২০২৬ ZAMIL ACADEMY। সর্বস্বত্ব সংরক্ষিত।</p>
+    </footer>
+
+    <script>
+        // উত্তর প্যানেল শো বা হাইড করার ফাংশন
+        function toggleAnswerPanel(exNum) {
+            const panel = document.getElementById(`ans-panel-${exNum}`);
+            if (panel.classList.contains('hidden')) {
+                panel.classList.remove('hidden');
+            } else {
+                panel.classList.add('hidden');
+            }
+        }
+
+        // কমপ্লিট স্ট্যাটাস টগল এবং লোকাল স্টোরেজ আপডেট
+        function toggleComplete(exNum) {
+            const card = document.getElementById(`ex-${exNum}`);
+            const badge = card.querySelector('.completed-badge');
+            const checkbox = document.getElementById(`checkbox-${exNum}`);
+            
+            let completedList = JSON.parse(localStorage.getItem('punctuation_completed_exercises')) || [];
+
+            if (completedList.includes(exNum)) {
+                // আন-কমপ্লিট করা
+                completedList = completedList.filter(id => id !== exNum);
+                card.classList.remove('completed-card');
+                badge.classList.add('hidden');
+                badge.classList.remove('flex');
+                checkbox.innerHTML = '';
+                checkbox.classList.remove('bg-green-600', 'border-green-600');
+                checkbox.classList.add('bg-white', 'border-gray-300');
+            } else {
+                // কমপ্লিট করা
+                completedList.push(exNum);
+                card.classList.add('completed-card');
+                badge.classList.remove('hidden');
+                badge.classList.add('flex');
+                checkbox.innerHTML = '<svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>';
+                checkbox.classList.remove('bg-white', 'border-gray-300');
+                checkbox.classList.add('bg-green-600', 'border-green-600');
+            }
+
+            localStorage.setItem('punctuation_completed_exercises', JSON.stringify(completedList));
+        }
+
+        // পেজ লোড হওয়ার পর লোকাল স্টোরেজ থেকে প্রোগ্রেস পুনরুদ্ধার
+        window.addEventListener('DOMContentLoaded', () => {
+            const completedList = JSON.parse(localStorage.getItem('punctuation_completed_exercises')) || [];
+            completedList.forEach(exNum => {
+                const card = document.getElementById(`ex-${exNum}`);
+                if (card) {
+                    const badge = card.querySelector('.completed-badge');
+                    const checkbox = document.getElementById(`checkbox-${exNum}`);
+                    
+                    card.classList.add('completed-card');
+                    if (badge) {
+                        badge.classList.remove('hidden');
+                        badge.classList.add('flex');
+                    }
+                    if (checkbox) {
+                        checkbox.innerHTML = '<svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>';
+                        checkbox.classList.remove('bg-white', 'border-gray-300');
+                        checkbox.classList.add('bg-green-600', 'border-green-600');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

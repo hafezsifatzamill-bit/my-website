@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAMIL ACADEMY - Pronoun Reference Practice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Hind Siliguri', sans-serif; }
+        .completed-card {
+            background-color: #f0fdf4 !important;
+            border-color: #16a34a !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+    <!-- হেডার: পুরো বক্স সবুজ এবং নিচের দিকে কার্ভ করা -->
+    <header class="bg-green-800 text-white py-12 px-6 text-center shadow-lg rounded-b-[40px]">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white-400">ZAMIL ACADEMY</h1>
+    </header>
+
+    <!-- সাবস্ক্রাইব বক্স -->
+    <div class="flex justify-center -mt-8 px-6">
+        <div class="bg-white p-8 shadow-md border-t-4 border-green-800 rounded-2xl max-w-md w-full text-center">
+            <p class="text-gray-700 text-lg mb-6">
+                প্রিমিয়াম সেবা পেতে আমাদের ইউটিউব চ্যানেলটি সাবস্ক্রাইব করুন।
+            </p>
+            <a href="https://youtube.com/@zamil_academy?si=EbWJq_lwwbWrLar9" 
+               target="_blank"
+               class="inline-block bg-red-700 hover:bg-green-800 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-md">
+                চ্যানেল ভিজিট করুন
+            </a>
+        </div>
+    </div>
+
+    <!-- মূল কন্টেন্ট (Main Content) -->
+    <main class="flex-grow max-w-4xl w-full mx-auto px-4 md:px-6 py-12">
+        
+        <!-- রুলস পেজে যাওয়ার আকর্ষণীয় বক্স -->
+        <div class="mb-10">
+            <a href="pronoun-reference-rules.html" class="block bg-gradient-to-r from-green-700 to-green-900 hover:from-green-800 hover:to-green-950 text-white p-6 rounded-2xl shadow-md text-center transition duration-300 transform hover:scale-[1.02]">
+                <h3 class="text-2xl font-bold mb-1">📖 প্রোনাউন রেফারেন্স এর রুলস দেখুন</h3>
+                <p class="text-green-100 text-sm md:text-base">অস্পষ্ট ও ভুল প্রোনাউন সংশোধনের সকল রুলস সহজ ব্যাখ্যা ও উদাহরণ সহ দেখতে এখানে ক্লিক করুন।</p>
+            </a>
+        </div>
+
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">Pronoun Reference Practice Board</h2>
+            <p class="text-green-700 font-semibold text-lg">HSC & Alim English 2nd Paper (Question No. 8)</p>
+            <div class="w-24 h-1 bg-green-700 mx-auto mt-3 rounded"></div>
+        </div>
+
+        <!-- এক্সারসাইজ সেকশনসমূহ -->
+        <div class="space-y-12" id="practice-container">
+            
+            <!-- Exercise 1 -->
+            <div id="ex-1" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 01</span>
+                    <button onclick="toggleComplete(1)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-1"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">Travelling is a part of education. This means of acquiring knowledge. It can be enhanced by visiting new places. Our education remains incomplete if we do not visit them. Man is a curious being. He wants to know the unknown things. This can be achieved easily by travelling.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(1)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-1" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Corrected Passage:</h4>
+                            <p class="font-semibold text-red-700 bg-white p-4 rounded-lg shadow-inner mt-2 leading-relaxed">Travelling is a part of education. <span class="bg-yellow-200 px-1 text-black font-bold">This travel is a</span> means of acquiring knowledge. <span class="bg-yellow-200 px-1 text-black font-bold">Our knowledge</span> can be enhanced by visiting new places. Our education remains incomplete if we do not visit <span class="bg-yellow-200 px-1 text-black font-bold">new places</span>. Man is a curious being. He wants to know the unknown <span class="bg-yellow-200 px-1 text-black font-bold">world</span>. <span class="bg-yellow-200 px-1 text-black font-bold">This knowledge</span> can be achieved easily by travelling.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">বাংলা অর্থ:</h4>
+                            <p class="text-gray-700 text-sm mt-1 leading-relaxed">ভ্রমণ শিক্ষার একটি অংশ। এই ভ্রমণ জ্ঞান অর্জনের একটি মাধ্যম। নতুন নতুন স্থান পরিদর্শনের মাধ্যমে আমাদের জ্ঞান বৃদ্ধি পেতে পারে। আমরা যদি নতুন স্থানগুলো পরিদর্শনে না যাই তবে আমাদের শিক্ষা অসম্পূর্ণ থেকে যায়। মানুষ একটি কৌতূহলী সত্তা। সে অজানা বিশ্বকে জানতে চায়। ভ্রমণ দ্বারা এই জ্ঞান সহজেই অর্জন করা যেতে পারে।</p>
+                        </div>
+                        <div class="text-xs text-green-800 bg-green-100/50 p-4 rounded-lg border border-green-200/50">
+                            <h4 class="font-bold">সহজ ব্যাখ্যা:</h4>
+                            <ul class="list-disc pl-5 mt-1 space-y-1">
+                                <li><strong>This means of...</strong> এখানে অস্পষ্ট 'This' কে সংশোধন করে <strong>This travel is a</strong> করা হয়েছে।</li>
+                                <li><strong>It can be...</strong> বাক্যটিতে 'It' দ্বারা পূর্বের travelling না নলেজ বোঝানো হচ্ছে তা অস্পষ্ট ছিল, তাই <strong>Our knowledge</strong> করা হয়েছে।</li>
+                                <li><strong>visit them</strong> এখানে 'them' এর পরিবর্তে স্পষ্ট করার জন্য <strong>new places</strong> বসানো হয়েছে।</li>
+                                <li><strong>unknown things</strong> এর চেয়ে <strong>unknown world</strong> অধিক অর্থপূর্ণ ও সঠিক নাউন।</li>
+                                <li>শেষ লাইনে <strong>This can be...</strong> অস্পষ্ট Demonstrative-কে স্পষ্ট করতে <strong>This knowledge</strong> বসানো হয়েছে।</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 2 -->
+            <div id="ex-2" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 02</span>
+                    <button onclick="toggleComplete(2)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-2"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">Kabir is a student of class twelve. He has a sister named Rita who reads in class ten. He is very brilliant and assists her in preparing his lessons. This pleases their parents who want them to be highly educated. This is indeed a good sign.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(2)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-2" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Corrected Passage:</h4>
+                            <p class="font-semibold text-red-700 bg-white p-4 rounded-lg shadow-inner mt-2 leading-relaxed">Kabir is a student of class twelve. He has a sister named Rita who reads in class ten. He is very brilliant and assists her in preparing <span class="bg-yellow-200 px-1 text-black font-bold">her</span> lessons. <span class="bg-yellow-200 px-1 text-black font-bold">This help</span> pleases their parents who want them to be highly educated. <span class="bg-yellow-200 px-1 text-black font-bold">This mutual understanding / This cooperative attitude</span> is indeed a good sign.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">বাংলা অর্থ:</h4>
+                            <p class="text-gray-700 text-sm mt-1 leading-relaxed">কবির দ্বাদশ শ্রেণীর একজন ছাত্র। তার রীতা নামে একটি বোন আছে যে দশম শ্রেণীতে পড়ে। সে খুব মেধাবী এবং তার পড়া প্রস্তুত করতে তাকে সাহায্য করে। এই সাহায্য তাদের পিতা-মাতাকে সন্তুষ্ট করে যারা তাদের উচ্চ শিক্ষায় শিক্ষিত দেখতে চান। এই পারস্পরিক বোঝাপড়াটি আসলেই একটি ভালো লক্ষণ।</p>
+                        </div>
+                        <div class="text-xs text-green-800 bg-green-100/50 p-4 rounded-lg border border-green-200/50">
+                            <h4 class="font-bold">সহজ ব্যাখ্যা:</h4>
+                            <ul class="list-disc pl-5 mt-1 space-y-1">
+                                <li><strong>preparing his lessons</strong> এখানে কবির তার বোনকে সাহায্য করায় প্রোনাউনটি ভুল ছিল। 'his'-এর জায়গায় <strong>her</strong> হবে।</li>
+                                <li><strong>This pleases...</strong> অস্পষ্ট Demonstrative 'This' কে সংশোধন করে <strong>This help</strong> করা হয়েছে।</li>
+                                <li><strong>This is indeed...</strong> শেষ লাইনের অস্পষ্ট 'This' এর জায়গায় ভাবানুসারে <strong>This mutual understanding / This cooperative attitude</strong> ব্যবহার করে বাক্যকে স্পষ্ট করা হয়েছে।</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 3 -->
+            <div id="ex-3" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 03</span>
+                    <button onclick="toggleComplete(3)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-3"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">Books are the greatest friends of men. It is the gold mines of wisdom. Those who read them find new horizons of thoughts. It is a good habit. You should develop it from childhood.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(3)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-3" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Corrected Passage:</h4>
+                            <p class="font-semibold text-red-700 bg-white p-4 rounded-lg shadow-inner mt-2 leading-relaxed">Books are the greatest friends of men. <span class="bg-yellow-200 px-1 text-black font-bold">They are</span> the gold mines of wisdom. Those who read <span class="bg-yellow-200 px-1 text-black font-bold">books</span> find new horizons of thoughts. <span class="bg-yellow-200 px-1 text-black font-bold">Reading books</span> is a good habit. You should develop <span class="bg-yellow-200 px-1 text-black font-bold">this habit</span> from childhood.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">বাংলা অর্থ:</h4>
+                            <p class="text-gray-700 text-sm mt-1 leading-relaxed">বই মানুষের সবচেয়ে বড় বন্ধু। সেগুলো হলো জ্ঞানের স্বর্ণখনি। যারা বই পড়ে তারা চিন্তার নতুন দিগন্তের সন্ধান পায়। বই পড়া একটি ভালো অভ্যাস। শৈশব থেকেই তোমার এই অভ্যাস গড়ে তোলা উচিত।</p>
+                        </div>
+                        <div class="text-xs text-green-800 bg-green-100/50 p-4 rounded-lg border border-green-200/50">
+                            <h4 class="font-bold">সহজ ব্যাখ্যা:</h4>
+                            <ul class="list-disc pl-5 mt-1 space-y-1">
+                                <li><strong>It is the gold mines...</strong> Books প্লুরাল হওয়ায় Singular 'It' এর স্থানে <strong>They are</strong> হবে।</li>
+                                <li><strong>read them</strong> এর জায়গায় বাক্যটি স্পষ্ট করতে Noun <strong>books</strong> বসানো হয়েছে।</li>
+                                <li><strong>It is a good habit.</strong> এখানে 'It' বলতে বই বোঝায় না, বরং বই পড়ার কাজকে বোঝায়। তাই <strong>Reading books</strong> করা হয়েছে।</li>
+                                <li><strong>develop it</strong> এর পরিবর্তে অস্পষ্ট সর্বনাম সংশোধন করে <strong>this habit</strong> করা হয়েছে।</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 4 -->
+            <div id="ex-4" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 04</span>
+                    <button onclick="toggleComplete(4)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-4"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">Nelson Mandela was a great leader of South Africa. He fought against apartheid. It was practiced by the white rulers of the country. They treated them very badly, which was extremely painful. But he did not give up his fight against this.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(4)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-4" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Corrected Passage:</h4>
+                            <p class="font-semibold text-red-700 bg-white p-4 rounded-lg shadow-inner mt-2 leading-relaxed">Nelson Mandela was a great leader of South Africa. He fought against apartheid. <span class="bg-yellow-200 px-1 text-black font-bold">This apartheid</span> was practiced by the white rulers of the country. They treated <span class="bg-yellow-200 px-1 text-black font-bold">the black people</span> very badly, which was extremely painful. But he did not give up his fight against <span class="bg-yellow-200 px-1 text-black font-bold">racial discrimination</span>.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">বাংলা অর্থ:</h4>
+                            <p class="text-gray-700 text-sm mt-1 leading-relaxed">নেলসন ম্যান্ডেলা দক্ষিণ আফ্রিকার একজন মহান নেতা ছিলেন। তিনি বর্ণবাদের বিরুদ্ধে লড়াই করেছিলেন। এই বর্ণবাদ দেশের শ্বেতাঙ্গ শাসকদের দ্বারা চর্চা করা হতো। তারা কৃষ্ণাঙ্গ মানুষের সাথে অত্যন্ত খারাপ ব্যবহার করত, যা ছিল অত্যন্ত বেদনাদায়ক। কিন্তু তিনি এই বর্ণবৈষম্যের বিরুদ্ধে তাঁর সংগ্রাম ত্যাগ করেননি।</p>
+                        </div>
+                        <div class="text-xs text-green-800 bg-green-100/50 p-4 rounded-lg border border-green-200/50">
+                            <h4 class="font-bold">সহজ ব্যাখ্যা:</h4>
+                            <ul class="list-disc pl-5 mt-1 space-y-1">
+                                <li><strong>It was practiced...</strong> এখানে অস্পষ্ট 'It' কে সঠিক নাউন <strong>This apartheid</strong> দ্বারা প্রতিস্থাপন করা হয়েছে।</li>
+                                <li><strong>treated them...</strong> এখানে 'them' বলতে শ্বেতাঙ্গরা কাদের নির্যাতন করত তা অস্পষ্ট ছিল। তাই স্পষ্ট করার জন্য <strong>the black people</strong> করা হয়েছে।</li>
+                                <li><strong>against this</strong> শেষ লাইনের অস্পষ্ট 'this'-এর পরিবর্তে <strong>racial discrimination</strong> (বর্ণবৈষম্য) বসানো হয়েছে।</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 5 -->
+            <div id="ex-5" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 05</span>
+                    <button onclick="toggleComplete(5)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-5"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">Women are nowadays playing an important role in our society. She is no longer confined within the four walls of their house. They have come out to work hand in hand with men. It is a good sign for development.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(5)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-5" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Corrected Passage:</h4>
+                            <p class="font-semibold text-red-700 bg-white p-4 rounded-lg shadow-inner mt-2 leading-relaxed">Women are nowadays playing an important role in our society. <span class="bg-yellow-200 px-1 text-black font-bold">They are</span> no longer confined within the four walls of <span class="bg-yellow-200 px-1 text-black font-bold">their</span> houses. They have come out to work hand in hand with men. <span class="bg-yellow-200 px-1 text-black font-bold">Their participation in work</span> is a good sign for development.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">বাংলা অর্থ:</h4>
+                            <p class="text-gray-700 text-sm mt-1 leading-relaxed">আজকাল নারীরা আমাদের সমাজে গুরুত্বপূর্ণ ভূমিকা পালন করছে। তারা আর তাদের চার দেয়ালের ঘরে বন্দী নেই। তারা পুরুষদের সাথে কাঁধে কাঁধ মিলিয়ে কাজ করার জন্য বাইরে এসেছে। কাজে তাদের এই অংশগ্রহণ উন্নয়নের জন্য একটি ভালো লক্ষণ।</p>
+                        </div>
+                        <div class="text-xs text-green-800 bg-green-100/50 p-4 rounded-lg border border-green-200/50">
+                            <h4 class="font-bold">সহজ ব্যাখ্যা:</h4>
+                            <ul class="list-disc pl-5 mt-1 space-y-1">
+                                <li><strong>She is no longer...</strong> শুরুতে 'Women' (বহুবচন) থাকায় ভুল প্রোনাউন 'She is'-এর জায়গায় Plural <strong>They are</strong> বসেছে।</li>
+                                <li><strong>their house</strong> এর জায়গায় <strong>their houses</strong> ব্যবহার করা ব্যাকরণগতভাবে সঠিক।</li>
+                                <li><strong>It is a good sign...</strong> অস্পষ্ট 'It' এর জায়গায় স্পষ্ট করার জন্য <strong>Their participation in work</strong> (কাজে তাদের এই অংশগ্রহণ) কথাটি আনা হয়েছে।</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 6 -->
+            <div id="ex-6" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 06</span>
+                    <button onclick="toggleComplete(6)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-6"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">Once there lived a wise king named Solomon. He was famous for his wisdom. One day the Queen of Sheba wanted to test it. She brought two types of flowers, one was artificial and another was natural. She asked him to differentiate between them. He solved it very cleverly.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(6)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-6" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Corrected Passage:</h4>
+                            <p class="font-semibold text-red-700 bg-white p-4 rounded-lg shadow-inner mt-2 leading-relaxed">Once there lived a wise king named Solomon. He was famous for his wisdom. One day the Queen of Sheba wanted to test <span class="bg-yellow-200 px-1 text-black font-bold">his wisdom</span>. She brought two types of flowers, one was artificial and <span class="bg-yellow-200 px-1 text-black font-bold">the other</span> was natural. She asked him to differentiate between them. He solved <span class="bg-yellow-200 px-1 text-black font-bold">the puzzle / this problem</span> very cleverly.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">বাংলা অর্থ:</h4>
+                            <p class="text-gray-700 text-sm mt-1 leading-relaxed">একদা সলোমন নামে এক জ্ঞানী রাজা বাস করতেন। তিনি তাঁর প্রজ্ঞার জন্য বিখ্যাত ছিলেন। একদিন শেবার রাণী তাঁর প্রজ্ঞা পরীক্ষা করতে চাইলেন। তিনি দুই ধরনের ফুল নিয়ে এলেন, একটি ছিল কৃত্রিম এবং অন্যটি ছিল প্রাকৃতিক। তিনি তাকে ফুল দুটির মধ্যে পার্থক্য করতে বললেন। তিনি অত্যন্ত চতুরতার সাথে এই ধাঁধাটির সমাধান করলেন।</p>
+                        </div>
+                        <div class="text-xs text-green-800 bg-green-100/50 p-4 rounded-lg border border-green-200/50">
+                            <h4 class="font-bold">সহজ ব্যাখ্যা:</h4>
+                            <ul class="list-disc pl-5 mt-1 space-y-1">
+                                <li><strong>wanted to test it</strong> এখানে অস্পষ্ট 'it' তুলে দিয়ে স্পষ্ট করার জন্য <strong>his wisdom</strong> বসানো হয়েছে।</li>
+                                <li>দুটির মধ্যে একটিকে <strong>one</strong> এবং অপরটিকে <strong>the other</strong> বলা ব্যাকরণগতভাবে শুদ্ধ। তাই 'another' পরিবর্তিত হয়ে <strong>the other</strong> হয়েছে।</li>
+                                <li><strong>He solved it...</strong> এখানে অস্পষ্ট 'it' কে নির্দিষ্ট নাউন <strong>the puzzle / this problem</strong> দ্বারা সংশোধন করা হয়েছে।</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 7 -->
+            <div id="ex-7" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 07</span>
+                    <button onclick="toggleComplete(7)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-7"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">E-mail has brought about a great revolution in modern communication. It is a very fast and cheap medium of communication. In spite of its advantages, they are not available to all. It is because of the cost of internet and computers.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(7)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-7" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Corrected Passage:</h4>
+                            <p class="font-semibold text-red-700 bg-white p-4 rounded-lg shadow-inner mt-2 leading-relaxed">E-mail has brought about a great revolution in modern communication. It is a very fast and cheap medium of communication. In spite of its advantages, <span class="bg-yellow-200 px-1 text-black font-bold">this service / e-mail facility</span> is not available to all. It is because of the high cost of internet and computers.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">বাংলা অর্থ:</h4>
+                            <p class="text-gray-700 text-sm mt-1 leading-relaxed">ই-মেইল আধুনিক যোগাযোগ ব্যবস্থায় এক মহান বিপ্লব নিয়ে এসেছে। এটি যোগাযোগের অত্যন্ত দ্রুত এবং সস্তা একটি মাধ্যম। এর নানা সুবিধা থাকা সত্ত্বেও, এই সেবা বা ই-মেইল সুবিধাটি সবার জন্য সহজলভ্য নয়। ইন্টারনেট এবং কম্পিউটারের অতিরিক্ত খরচের কারণেই এমনটি হয়।</p>
+                        </div>
+                        <div class="text-xs text-green-800 bg-green-100/50 p-4 rounded-lg border border-green-200/50">
+                            <h4 class="font-bold">সহজ ব্যাখ্যা:</h4>
+                            <ul class="list-disc pl-5 mt-1 space-y-1">
+                                <li><strong>they are not available...</strong> এখানে 'they' প্রোনাউনটি ভুল ছিল কারণ পূর্বের 'E-mail' একবচন। তাই 'they' এর জায়গায় <strong>this service / e-mail facility</strong> বসিয়ে স্পষ্ট করা হয়েছে।</li>
+                                <li><strong>because of the cost...</strong> বাক্যের সৌন্দর্য ও ভাব স্পষ্ট করতে cost-এর আগে <strong>high cost</strong> (অতিরিক্ত খরচ) বসানো যুক্তিযুক্ত।</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 8 -->
+            <div id="ex-8" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 08</span>
+                    <button onclick="toggleComplete(8)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-8"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">Patriotism is a noble virtue. It inspires a man to shed his blood for his country. Those who do not love it are no better than beasts. It is their duty to protect the freedom of the motherland. This is expected from all citizens.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(8)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-8" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Corrected Passage:</h4>
+                            <p class="font-semibold text-red-700 bg-white p-4 rounded-lg shadow-inner mt-2 leading-relaxed">Patriotism is a noble virtue. It inspires a man to shed his blood for his country. Those who do not love <span class="bg-yellow-200 px-1 text-black font-bold">their country</span> are no better than beasts. It is <span class="bg-yellow-200 px-1 text-black font-bold">the citizens' / patriots'</span> duty to protect the freedom of the motherland. <span class="bg-yellow-200 px-1 text-black font-bold">This patriotism</span> is expected from all citizens.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">বাংলা অর্থ:</h4>
+                            <p class="text-gray-700 text-sm mt-1 leading-relaxed">দেশপ্রেম একটি মহৎ গুণ। এটি একজন মানুষকে দেশের জন্য রক্ত দিতে অনুপ্রাণিত করে। যারা তাদের দেশকে ভালোবাসে না তারা পশুর চেয়ে ভালো কিছু নয়। মাতৃভূমির স্বাধীনতা রক্ষা করা নাগরিকদের বা দেশপ্রেমিকদের দায়িত্ব। এই দেশপ্রেম সকল নাগরিকের কাছে প্রত্যাশিত।</p>
+                        </div>
+                        <div class="text-xs text-green-800 bg-green-100/50 p-4 rounded-lg border border-green-200/50">
+                            <h4 class="font-bold">সহজ ব্যাখ্যা:</h4>
+                            <ul class="list-disc pl-5 mt-1 space-y-1">
+                                <li><strong>do not love it</strong> এখানে 'it' দ্বারা নিজের দেশকে বোঝানো হচ্ছে, তাই স্পষ্ট করার জন্য <strong>their country</strong> বসানো হয়েছে।</li>
+                                <li><strong>It is their duty...</strong> এখানে 'their' বলতে কাদের বোঝানো হচ্ছে তা অস্পষ্ট ছিল। তাই স্পষ্ট করার জন্য <strong>the citizens' / patriots'</strong> করা হয়েছে।</li>
+                                <li><strong>This is expected...</strong> শেষ লাইনের অস্পষ্ট 'This'-এর পরিবর্তে <strong>This patriotism</strong> বসিয়ে পুরো প্যাসেজের অর্থ স্পষ্ট করা হয়েছে।</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 9 -->
+            <div id="ex-9" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 09</span>
+                    <button onclick="toggleComplete(9)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-9"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">Teaching is a noble profession. A teacher is a nation builder. He teaches his students and gives them moral lessons. They must follow his path to build their life properly. This is very important for their future.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(9)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-9" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Corrected Passage:</h4>
+                            <p class="font-semibold text-red-700 bg-white p-4 rounded-lg shadow-inner mt-2 leading-relaxed">Teaching is a noble profession. A teacher is a nation builder. He teaches his students and gives them moral lessons. <span class="bg-yellow-200 px-1 text-black font-bold">The students</span> must follow <span class="bg-yellow-200 px-1 text-black font-bold">the teacher's</span> path to build their life properly. <span class="bg-yellow-200 px-1 text-black font-bold">Following this path / Moral education</span> is very important for their future.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">বাংলা অর্থ:</h4>
+                            <p class="text-gray-700 text-sm mt-1 leading-relaxed">শিক্ষকতা একটি মহৎ পেশা। একজন শিক্ষক হলেন জাতি গঠনের কারিগর। তিনি তাঁর ছাত্র-ছাত্রীদের শিক্ষা দেন এবং তাদের নৈতিক পাঠ প্রদান করেন। নিজেদের জীবন সঠিকভাবে গড়ে তুলতে ছাত্র-ছাত্রীদের অবশ্যই শিক্ষকের পথ অনুসরণ করতে হবে। এই পথ অনুসরণ বা নৈতিক শিক্ষা তাদের ভবিষ্যতের জন্য অত্যন্ত গুরুত্বপূর্ণ।</p>
+                        </div>
+                        <div class="text-xs text-green-800 bg-green-100/50 p-4 rounded-lg border border-green-200/50">
+                            <h4 class="font-bold">সহজ ব্যাখ্যা:</h4>
+                            <ul class="list-disc pl-5 mt-1 space-y-1">
+                                <li><strong>They must follow...</strong> এখানে 'They' বলতে শিক্ষক না ছাত্র তা কিছুটা বিভ্রান্তিকর ছিল, তাই স্পষ্টভাবে <strong>The students</strong> করা হয়েছে।</li>
+                                <li><strong>follow his path</strong> এর জায়গায় অস্পষ্টতা এড়াতে <strong>the teacher's</strong> করা হয়েছে।</li>
+                                <li><strong>This is very important...</strong> শেষ বাক্যের অস্পষ্ট 'This' কে সংশোধন করে <strong>Following this path / Moral education</strong> করা হয়েছে।</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 10 -->
+            <div id="ex-10" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 10</span>
+                    <button onclick="toggleComplete(10)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-10"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">Deforestation means cutting down trees in a large scale. It is a great threat to our environment. People cut them down for various purposes. By doing this, we are making our own planet vulnerable. This must be stopped immediately.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(10)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-10" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Corrected Passage:</h4>
+                            <p class="font-semibold text-red-700 bg-white p-4 rounded-lg shadow-inner mt-2 leading-relaxed">Deforestation means cutting down trees in a large scale. <span class="bg-yellow-200 px-1 text-black font-bold">This deforestation</span> is a great threat to our environment. People cut <span class="bg-yellow-200 px-1 text-black font-bold">trees</span> down for various purposes. By doing <span class="bg-yellow-200 px-1 text-black font-bold">this act / By cutting down trees</span>, we are making our own planet vulnerable. <span class="bg-yellow-200 px-1 text-black font-bold">This destruction of trees / Deforestation</span> must be stopped immediately.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">বাংলা অর্থ:</h4>
+                            <p class="text-gray-700 text-sm mt-1 leading-relaxed">বন উজাড়করণ বা ডিফরেস্টেশন মানে ব্যাপক হারে গাছ কেটে ফেলা। এই বন উজাড়করণ আমাদের পরিবেশের জন্য একটি বিরাট হুমকি। মানুষ বিভিন্ন প্রয়োজনে গাছ কেটে ফেলে। এই কাজ করার মাধ্যমে (গাছ কাটার মাধ্যমে) আমরা আমাদের নিজেদের গ্রহকে ঝুঁকিপূর্ণ করে তুলছি। এই বৃক্ষ নিধন বা বন উজাড়করণ অবিলম্বে বন্ধ করতে হবে।</p>
+                        </div>
+                        <div class="text-xs text-green-800 bg-green-100/50 p-4 rounded-lg border border-green-200/50">
+                            <h4 class="font-bold">সহজ ব্যাখ্যা:</h4>
+                            <ul class="list-disc pl-5 mt-1 space-y-1">
+                                <li><strong>It is a great threat...</strong> এখানে অস্পষ্ট 'It' কে সঠিক ও চমৎকার সাবজেক্ট <strong>This deforestation</strong> দ্বারা প্রতিস্থাপন করা হয়েছে।</li>
+                                <li><strong>cut them down</strong> এর জায়গায় 'them' অস্পষ্ট থাকায় নাউন <strong>trees</strong> বসানো হয়েছে।</li>
+                                <li><strong>By doing this</strong> এর পরিবর্তে <strong>By doing this act / By cutting down trees</strong> ব্যবহার করে বাক্যকে অত্যন্ত স্পষ্ট করা হয়েছে।</li>
+                                <li>শেষ লাইনের অস্পষ্ট <strong>This must be...</strong> এর জায়গায় <strong>This destruction of trees / Deforestation</strong> বসানো হয়েছে।</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ফুটার -->
+    <footer class="text-center py-6 text-gray-500 text-sm border-t border-gray-200 mt-12 bg-white">
+        <p>&copy; ২০২৬ ZAMIL ACADEMY। সর্বস্বত্ব সংরক্ষিত।</p>
+    </footer>
+
+    <script>
+        // উত্তর প্যানেল শো বা হাইড করার ফাংশন
+        function toggleAnswerPanel(exNum) {
+            const panel = document.getElementById(`ans-panel-${exNum}`);
+            if (panel.classList.contains('hidden')) {
+                panel.classList.remove('hidden');
+            } else {
+                panel.classList.add('hidden');
+            }
+        }
+
+        // কমপ্লিট স্ট্যাটাস টগল এবং লোকাল স্টোরেজ আপডেট
+        function toggleComplete(exNum) {
+            const card = document.getElementById(`ex-${exNum}`);
+            const badge = card.querySelector('.completed-badge');
+            const checkbox = document.getElementById(`checkbox-${exNum}`);
+            
+            let completedList = JSON.parse(localStorage.getItem('pronoun_completed_exercises')) || [];
+
+            if (completedList.includes(exNum)) {
+                // আন-কমপ্লিট করা
+                completedList = completedList.filter(id => id !== exNum);
+                card.classList.remove('completed-card');
+                badge.classList.add('hidden');
+                badge.classList.remove('flex');
+                checkbox.innerHTML = '';
+                checkbox.classList.remove('bg-green-600', 'border-green-600');
+                checkbox.classList.add('bg-white', 'border-gray-300');
+            } else {
+                // কমপ্লিট করা
+                completedList.push(exNum);
+                card.classList.add('completed-card');
+                badge.classList.remove('hidden');
+                badge.classList.add('flex');
+                checkbox.innerHTML = '<svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>';
+                checkbox.classList.remove('bg-white', 'border-gray-300');
+                checkbox.classList.add('bg-green-600', 'border-green-600');
+            }
+
+            localStorage.setItem('pronoun_completed_exercises', JSON.stringify(completedList));
+        }
+
+        // পেজ লোড হওয়ার পর লোকাল স্টোরেজ থেকে প্রোগ্রেস পুনরুদ্ধার
+        window.addEventListener('DOMContentLoaded', () => {
+            const completedList = JSON.parse(localStorage.getItem('pronoun_completed_exercises')) || [];
+            completedList.forEach(exNum => {
+                const card = document.getElementById(`ex-${exNum}`);
+                if (card) {
+                    const badge = card.querySelector('.completed-badge');
+                    const checkbox = document.getElementById(`checkbox-${exNum}`);
+                    
+                    card.classList.add('completed-card');
+                    if (badge) {
+                        badge.classList.remove('hidden');
+                        badge.classList.add('flex');
+                    }
+                    if (checkbox) {
+                        checkbox.innerHTML = '<svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>';
+                        checkbox.classList.remove('bg-white', 'border-gray-300');
+                        checkbox.classList.add('bg-green-600', 'border-green-600');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

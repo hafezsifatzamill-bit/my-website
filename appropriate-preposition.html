@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appropriate Prepositions - ZAMIL ACADEMY</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'hind': ['"Hind Siliguri"', 'sans-serif'],
+                        'poppins': ['"Poppins"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Hind Siliguri', sans-serif; }
+        .fade-in { animation: fadeIn 0.3s ease-out forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+    <!-- হেডার -->
+    <header class="relative bg-green-800 text-white py-12 px-6 text-center shadow-lg rounded-b-[40px]">
+        <!-- ব্যাক বাটন (ড্যাশবোর্ডে ফিরে যাওয়ার জন্য) -->
+        <a href="index.html" 
+           class="absolute top-6 left-4 md:left-8 flex items-center gap-2 text-white/90 hover:text-white bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full transition-all duration-300 backdrop-blur-sm text-sm font-semibold shadow-sm border border-white/10">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            <span class="hidden md:inline font-hind">ড্যাশবোর্ড</span>
+        </a>
+
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white font-hind mt-4 md:mt-0">ZAMIL ACADEMY</h1>
+        <p class="mt-2 text-green-100 text-sm md:text-base font-hind opacity-90">ALIM & HSC English 2nd Paper • Appropriate Prepositions Complete Dictionary</p>
+    </header>
+
+    <!-- সাবস্ক্রাইব বক্স -->
+    <div class="flex justify-center -mt-8 px-6 relative z-10">
+        <div class="bg-white p-8 shadow-md border-t-4 border-green-800 rounded-2xl max-w-md w-full text-center">
+            <p class="text-gray-700 text-lg mb-6 font-hind">
+                প্রিমিয়াম সেবা পেতে আমাদের ইউটিউব চ্যানেলটি সাবস্ক্রাইব করুন।
+            </p>
+            <a href="https://youtube.com/@zamil_academy?si=EbWJq_lwwbWrLar9" 
+               target="_blank"
+               class="inline-block bg-red-700 hover:bg-green-800 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-md font-hind">
+                চ্যানেল ভিজিট করুন
+            </a>
+        </div>
+    </div>
+
+    <!-- মূল কন্টেন্ট এরিয়া -->
+    <main class="flex-grow flex flex-col items-center pt-16 pb-12 px-6">
+        
+        <!-- টাইটেল ও বর্ণনা -->
+        <div class="text-center mb-8 max-w-2xl">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-gray-800 font-hind">উপযুক্ত প্রিপজিশন (Appropriate Prepositions) ১৭০টি নিয়ম</h2>
+            <p class="text-gray-500 mt-2 font-hind text-sm md:text-base">বোর্ড পরীক্ষায় কমন উপযোগী বাছাইকৃত গুরুত্বপূর্ণ উপযুক্ত প্রিপজিশনসমূহ অর্থসহ এখানে দেওয়া হলো।</p>
+            <div class="w-16 h-1 bg-green-600 rounded-full mx-auto mt-3"></div>
+        </div>
+
+        <!-- লাইভ সার্চ বার -->
+        <div class="w-full max-w-xl mb-8">
+            <div class="relative shadow-sm rounded-full">
+                <input type="text" id="search-input" onkeyup="searchPreposition()" placeholder="যেকোনো শব্দ বা প্রিপজিশন লিখুন (যেমন: Attentive)..." 
+                       class="w-full pl-6 pr-12 py-3.5 bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-full focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent transition font-hind">
+                <div class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- ফিল্টার বা ক্যাটাগরি ট্যাব -->
+        <div class="flex flex-wrap justify-center gap-2 md:gap-3 mb-8 w-full max-w-2xl">
+            <button onclick="filterPreps('all')" id="tab-all" class="px-4 py-2 text-sm md:text-base rounded-full font-semibold transition shadow-sm font-hind bg-green-800 text-white">সবগুলো (All)</button>
+            <button onclick="filterPreps('A-D')" id="tab-A-D" class="px-4 py-2 text-sm md:text-base rounded-full font-semibold transition shadow-sm font-hind bg-white text-gray-700 border border-gray-200 hover:bg-gray-50">A - D</button>
+            <button onclick="filterPreps('E-L')" id="tab-E-L" class="px-4 py-2 text-sm md:text-base rounded-full font-semibold transition shadow-sm font-hind bg-white text-gray-700 border border-gray-200 hover:bg-gray-50">E - L</button>
+            <button onclick="filterPreps('M-P')" id="tab-M-P" class="px-4 py-2 text-sm md:text-base rounded-full font-semibold transition shadow-sm font-hind bg-white text-gray-700 border border-gray-200 hover:bg-gray-50">M - P</button>
+            <button onclick="filterPreps('R-Z')" id="tab-R-Z" class="px-4 py-2 text-sm md:text-base rounded-full font-semibold transition shadow-sm font-hind bg-white text-gray-700 border border-gray-200 hover:bg-gray-50">R - Z</button>
+        </div>
+
+        <!-- প্রিপজিশন গ্রিড কন্টেইনার -->
+        <div id="prep-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
+            <!-- JavaScript এর মাধ্যমে লোড হবে -->
+        </div>
+
+        <!-- নো রেজাল্ট মেসেজ -->
+        <div id="no-result" class="hidden text-center py-12">
+            <svg class="w-16 h-16 text-gray-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <p class="text-gray-500 font-hind text-lg">দুঃখিত, কোনো প্রিপজিশন খুঁজে পাওয়া যায়নি!</p>
+        </div>
+
+    </main>
+
+    <!-- ফুটার -->
+    <footer class="text-center py-8 text-gray-500 text-sm border-t border-gray-200 bg-white">
+        <p class="font-hind">&copy; ২০২৬ ZAMIL ACADEMY। সর্বস্বত্ব সংরক্ষিত।</p>
+    </footer>
+
+    <!-- ডাটাবেস ও কার্যকারী লজিক স্ক্রিপ্ট -->
+    <script>
+        // আপনার সরবরাহকৃত ১৭০টি উপযুক্ত প্রিপজিশন ডেটা
+        const prepositionsData = [
+            { id: 1, word: "Type", prep: "of", meaning: "প্রকার", tag: "A-D" },
+            { id: 2, word: "Sense", prep: "for", meaning: "যুক্তি / বোধ", tag: "R-Z" },
+            { id: 3, word: "Attentive", prep: "to", meaning: "মনোযোগী", tag: "A-D" },
+            { id: 4, word: "Indifferent", prep: "to", meaning: "উদাসীন", tag: "E-L" },
+            { id: 5, word: "Thirst", prep: "for", meaning: "কোন কিছুর প্রতি তীব্র বাসনা", tag: "R-Z" },
+            { id: 6, word: "Confine", prep: "to", meaning: "সীমাবদ্ধ / বন্দি", tag: "A-D" },
+            { id: 7, word: "Aware", prep: "of", meaning: "সচেতন / অবগত", tag: "A-D" },
+            { id: 8, word: "Affair", prep: "of", meaning: "সংশ্লিষ্ট বিষয়", tag: "A-D" },
+            { id: 9, word: "Listen", prep: "to", meaning: "মনোযোগ দেওয়া", tag: "E-L" },
+            { id: 10, word: "Abide", prep: "by", meaning: "মেনে চলা", tag: "A-D" },
+            { id: 11, word: "Look", prep: "into", meaning: "খোঁজ করা / তদন্ত করা", tag: "E-L" },
+            { id: 12, word: "Point", prep: "to", meaning: "ইঙ্গিত করা", tag: "M-P" },
+            { id: 13, word: "Opposite", prep: "to", meaning: "বিপরীত দিকে", tag: "M-P" },
+            { id: 14, word: "Away", prep: "towards", meaning: "সম্মুখপানে", tag: "A-D" },
+            { id: 15, word: "Useful", prep: "to / for", meaning: "কোন কিছুর জন্য উপকারী", tag: "R-Z" },
+            { id: 16, word: "Essential", prep: "for", meaning: "কোন কিছুর জন্য প্রয়োজনীয় / অপরিহার্য", tag: "E-L" },
+            { id: 17, word: "Protect", prep: "from", meaning: "কোন কিছু থেকে রক্ষা করা", tag: "M-P" },
+            { id: 18, word: "Wash away", prep: "from", meaning: "কোন কিছু ভেসে যাওয়া", tag: "R-Z" },
+            { id: 19, word: "Provide", prep: "with", meaning: "কোন কিছুর যোগান দেওয়া / সরবরাহ করা", tag: "M-P" },
+            { id: 20, word: "Take", prep: "in", meaning: "কোন কিছু গ্রহণ করা", tag: "R-Z" },
+            { id: 21, word: "Take care", prep: "of", meaning: "কোন কিছুর যত্ন নেওয়া", tag: "R-Z" },
+            { id: 22, word: "Idea", prep: "of / about", meaning: "বিশেষ বিষয়ে ধারণা", tag: "E-L" },
+            { id: 23, word: "Teeming", prep: "with", meaning: "পূর্ণ থাকা", tag: "R-Z" },
+            { id: 24, word: "Prejudicial", prep: "to / against", meaning: "কোন বিষয়ে কুসংস্কার ধারণা / পক্ষপাতমূলক", tag: "M-P" },
+            { id: 25, word: "Known", prep: "to", meaning: "পরিচিত", tag: "E-L" },
+            { id: 26, word: "Suffer", prep: "from", meaning: "কষ্ট ভোগ করা", tag: "R-Z" },
+            { id: 27, word: "Deprive", prep: "of", meaning: "বঞ্চিত হওয়া", tag: "A-D" },
+            { id: 28, word: "Long", prep: "for", meaning: "প্রত্যাশা করা / আকুল আকাঙ্ক্ষা করা", tag: "E-L" },
+            { id: 29, word: "Hanker", prep: "after", meaning: "কোন কিছুর পিছে ছোটা", tag: "E-L" },
+            { id: 30, word: "Lead", prep: "to", meaning: "পরিচালিত করা / পথ দেখানো", tag: "E-L" },
+            { id: 31, word: "Satisfy", prep: "with", meaning: "তুষ্ট হওয়া", tag: "R-Z" },
+            { id: 32, word: "Responsible", prep: "for", meaning: "কোন কিছুর জন্য দায়ী", tag: "R-Z" },
+            { id: 33, word: "Depend", prep: "on", meaning: "কোন কিছুর উপর নির্ভর করা", tag: "A-D" },
+            { id: 34, word: "Prepare", prep: "for", meaning: "কোন কিছুর জন্য প্রস্তুত থাকা", tag: "M-P" },
+            { id: 35, word: "Burst", prep: "into", meaning: "সহসাই ফেটে পড়া", tag: "A-D" },
+            { id: 36, word: "Fill", prep: "with", meaning: "পূর্ণ হওয়া", tag: "E-L" },
+            { id: 37, word: "Die", prep: "in", meaning: "শান্তিতে মরা / দুর্ঘটনায় মারা যাওয়া", tag: "A-D" },
+            { id: 38, word: "Form", prep: "of", meaning: "গঠন / রূপ", tag: "E-L" },
+            { id: 39, word: "Look", prep: "at", meaning: "তাকানো", tag: "E-L" },
+            { id: 40, word: "Wonder", prep: "at", meaning: "বিস্মিত হওয়া", tag: "R-Z" },
+            { id: 41, word: "Maker", prep: "of", meaning: "স্রষ্টা", tag: "M-P" },
+            { id: 42, word: "Away", prep: "from", meaning: "দূরে থাকা", tag: "A-D" },
+            { id: 43, word: "Appreciation", prep: "of", meaning: "কোন কিছুর মূল্যায়ন", tag: "A-D" },
+            { id: 44, word: "Inherent", prep: "in", meaning: "অন্তর্নিহিত / সহজাত / স্বভাবগতভাবে থাকা", tag: "E-L" },
+            { id: 45, word: "Attach", prep: "to", meaning: "লেগে থাকা / সংবেদনশীল হওয়া", tag: "A-D" },
+            { id: 46, word: "Noted", prep: "for", meaning: "কোন কিছুর জন্য উল্লেখযোগ্য / সুপরিচিত", tag: "E-L" },
+            { id: 47, word: "Different", prep: "from", meaning: "কোন কিছুর থেকে ভিন্ন হওয়া / আলাদা", tag: "A-D" },
+            { id: 48, word: "Sink", prep: "into", meaning: "হারিয়ে যাওয়া / তলিয়ে যাওয়া / নিমজ্জিত হওয়া", tag: "R-Z" },
+            { id: 49, word: "Worthy", prep: "of", meaning: "যোগ্য", tag: "R-Z" },
+            { id: 50, word: "Unaware", prep: "of", meaning: "অসচেতন / অবগত নয় এমন", tag: "R-Z" },
+            { id: 51, word: "Look down", prep: "upon", meaning: "ঘৃণা করা / ছোট চোখে দেখা", tag: "E-L" },
+            { id: 52, word: "Proportion", prep: "to", meaning: "অনুপাত", tag: "M-P" },
+            { id: 53, word: "Under", prep: "control", meaning: "নিয়ন্ত্রণাধীন", tag: "R-Z" },
+            { id: 54, word: "Bring", prep: "about", meaning: "বয়ে নিয়ে আসা / ঘটানো", tag: "A-D" },
+            { id: 55, word: "Transmitted", prep: "from", meaning: "কোন কিছু থেকে রূপান্তর বা পরিবাহিত হওয়া", tag: "R-Z" },
+            { id: 56, word: "Dependent", prep: "on", meaning: "কোন কিছুর উপর নির্ভরশীল", tag: "A-D" },
+            { id: 57, word: "Facilities", prep: "for", meaning: "কোন কিছুর জন্য সুবিধা", tag: "E-L" },
+            { id: 58, word: "Rely", prep: "on", meaning: "কোন কিছুর উপর নির্ভর করা", tag: "R-Z" },
+            { id: 59, word: "Share", prep: "with", meaning: "কারো সাথে ভাগাভাগি করা", tag: "R-Z" },
+            { id: 60, word: "Glimpse", prep: "of", meaning: "আভাস / এক পলক দেখা", tag: "E-L" },
+            { id: 61, word: "Effects", prep: "on", meaning: "কোন কিছুর ওপর প্রভাব", tag: "E-L" },
+            { id: 62, word: "Move", prep: "around", meaning: "ঘোরাফেরা করা", tag: "M-P" },
+            { id: 63, word: "Good", prep: "for", meaning: "কোনকিছুর জন্য ভালো", tag: "E-L" },
+            { id: 64, word: "Live", prep: "in", meaning: "বসবাস করা", tag: "E-L" },
+            { id: 65, word: "Come", prep: "from", meaning: "উৎপন্ন হওয়া / আগমন হওয়া", tag: "A-D" },
+            { id: 66, word: "Based", prep: "on", meaning: "ভিত্তির উপর প্রতিষ্ঠিত", tag: "A-D" },
+            { id: 67, word: "System", prep: "of", meaning: "পদ্ধতি", tag: "R-Z" },
+            { id: 68, word: "Important", prep: "for", meaning: "কোনকিছুর জন্য গুরুত্বপূর্ণ", tag: "E-L" },
+            { id: 69, word: "Presided", prep: "over", meaning: "সভাপতিত্ব করা", tag: "M-P" },
+            { id: 70, word: "Take part", prep: "in", meaning: "অংশগ্রহণ করা", tag: "R-Z" },
+            { id: 71, word: "Pertaining", prep: "to", meaning: "সংক্রান্ত / প্রাসঙ্গিক", tag: "M-P" },
+            { id: 72, word: "Discussion", prep: "on", meaning: "কোন বিষয়ে আলোচনা", tag: "A-D" },
+            { id: 73, word: "Related", prep: "to", meaning: "সম্পর্কিত", tag: "R-Z" },
+            { id: 74, word: "Assistance", prep: "from", meaning: "কোনো ব্যক্তি বা উৎস থেকে সহায়তা", tag: "A-D" },
+            { id: 75, word: "Stretch", prep: "out", meaning: "প্রসারিত করা", tag: "R-Z" },
+            { id: 76, word: "Confined", prep: "within / to", meaning: "সীমাবদ্ধ / বন্দি", tag: "A-D" },
+            { id: 77, word: "Look", prep: "for", meaning: "খোঁজ করা", tag: "E-L" },
+            { id: 78, word: "Difficult", prep: "for", meaning: "কোনো ব্যক্তির জন্য কঠিন", tag: "A-D" },
+            { id: 79, word: "Free", prep: "from", meaning: "কোনো বিপদ বা ঝামেলা থেকে মুক্ত", tag: "E-L" },
+            { id: 80, word: "Role", prep: "in", meaning: "ভূমিকা রাখা", tag: "R-Z" },
+            { id: 81, word: "Pity", prep: "on", meaning: "করুণা করা", tag: "M-P" },
+            { id: 82, word: "Fall", prep: "from", meaning: "উঁচু স্থান থেকে পড়ে যাওয়া", tag: "E-L" },
+            { id: 83, word: "Relieve", prep: "of", meaning: "মুক্তি পাওয়া / অব্যাহতি দেওয়া / উপশম করা", tag: "R-Z" },
+            { id: 84, word: "Curse", prep: "for", meaning: "কোনোকিছুর জন্য অভিশাপ", tag: "A-D" },
+            { id: 85, word: "Hindrance", prep: "to", meaning: "বাধা / অন্তরায়", tag: "E-L" },
+            { id: 86, word: "Suffer", prep: "in", meaning: "কোনো প্রতিকূল পরিবেশে বা কারণে কষ্ট পাওয়া", tag: "R-Z" },
+            { id: 87, word: "Feeling", prep: "for", meaning: "কোন নির্দিষ্ট বিষয়ে সহানুভূতি বা অনুভূতি", tag: "E-L" },
+            { id: 88, word: "Devoid", prep: "of", meaning: "বর্জিত / বিহীন / অভাব", tag: "A-D" },
+            { id: 89, word: "Impact", prep: "on", meaning: "কোন কিছুর উপরে প্রভাব ফেলা", tag: "E-L" },
+            { id: 90, word: "Blow", prep: "out", meaning: "ফুঁ দিয়ে নিভিয়ে দেওয়া", tag: "A-D" },
+            { id: 91, word: "Homesick", prep: "for", meaning: "বাড়ির জন্য বা কোনো কিছুর জন্য স্মৃতিকাতর", tag: "E-L" },
+            { id: 92, word: "Belong", prep: "to", meaning: "কারো অধীনে বা মালিকানাধীন হওয়া", tag: "A-D" },
+            { id: 93, word: "Respect", prep: "for", meaning: "শ্রদ্ধা", tag: "R-Z" },
+            { id: 94, word: "Stick", prep: "to", meaning: "লেগে থাকা / অটল থাকা", tag: "R-Z" },
+            { id: 95, word: "Occur", prep: "in", meaning: "সংঘটিত হওয়া", tag: "M-P" },
+            { id: 96, word: "Contribute", prep: "to", meaning: "কোন বিষয়ে অবদান রাখা", tag: "A-D" },
+            { id: 97, word: "Emphasis", prep: "on", meaning: "গুরুত্ব দেওয়া / জোর দেওয়া", tag: "E-L" },
+            { id: 98, word: "Ill", prep: "of", meaning: "কাউকে বা কিছু সম্পর্কে খারাপ কথা বলা", tag: "E-L" },
+            { id: 99, word: "Inclination", prep: "to", meaning: "কোন বিষয়ের প্রতি ঝোঁক", tag: "E-L" },
+            { id: 100, word: "Indulge", prep: "in", meaning: "জড়িত হওয়া / আসক্ত হওয়া / মগ্ন থাকা", tag: "E-L" },
+            { id: 101, word: "Give", prep: "up", meaning: "খারাপ অভ্যাস ত্যাগ করা", tag: "E-L" },
+            { id: 102, word: "Detail", prep: "about", meaning: "কোনোকিছু সম্পর্কে বিস্তারিত", tag: "A-D" },
+            { id: 103, word: "Accustom", prep: "to", meaning: "কোন বিষয়ে অভ্যস্ত হওয়া", tag: "A-D" },
+            { id: 104, word: "Addicted", prep: "to", meaning: "খারাপ কাজে আসক্তি", tag: "A-D" },
+            { id: 105, word: "Averse", prep: "to", meaning: "কোন কাজের প্রতি বিমুখ বা অনাগ্রহী", tag: "A-D" },
+            { id: 106, word: "Cling", prep: "to", meaning: "আকড়ে ধরা", tag: "A-D" },
+            { id: 107, word: "Used", prep: "to", meaning: "অভ্যস্ত", tag: "R-Z" },
+            { id: 108, word: "Doubtful", prep: "about", meaning: "কোনোকিছু নিয়ে সন্দেহ প্রকাশ করা", tag: "A-D" },
+            { id: 109, word: "Conscious", prep: "of", meaning: "কোনো নির্দিষ্ট বিষয়ে সচেতন", tag: "A-D" },
+            { id: 110, word: "Boastful", prep: "of", meaning: "কোনো গৌরব নিয়ে অহঙ্কারী", tag: "A-D" },
+            { id: 111, word: "Attend", prep: "to", meaning: "মনোযোগ দেওয়া", tag: "A-D" },
+            { id: 112, word: "Victim", prep: "to", meaning: "শিকারে পরিণত হওয়া", tag: "R-Z" },
+            { id: 113, word: "Reason", prep: "for / behind", meaning: "কোনো কিছুর কারণ", tag: "R-Z" },
+            { id: 114, word: "Go", prep: "for", meaning: "কোনোকিছুর খোঁজে বা জন্য যাওয়া", tag: "E-L" },
+            { id: 115, word: "Carry", prep: "on / out", meaning: "কাজ চালিয়ে যাওয়া / আদেশ পালন করা", tag: "A-D" },
+            { id: 116, word: "Interest", prep: "in", meaning: "কোন বিষয়ের প্রতি আগ্রহ", tag: "E-L" },
+            { id: 117, word: "Treated", prep: "with", meaning: "বিশেষভাবে মূল্যায়ন করা / চিকিৎসা করা", tag: "R-Z" },
+            { id: 118, word: "Walk", prep: "of", meaning: "হাঁটার গতি / জীবনের সর্বস্তরের", tag: "R-Z" },
+            { id: 119, word: "Co-operate", prep: "with", meaning: "কারো সাথে সহযোগিতা করা", tag: "A-D" },
+            { id: 120, word: "Age", prep: "of", meaning: "যুগ / নির্দিষ্ট বয়স", tag: "A-D" },
+            { id: 121, word: "Connected", prep: "with", meaning: "সংশ্লিষ্ট ব্যক্তির সাথে সংযুক্ত", tag: "A-D" },
+            { id: 122, word: "Lagging", prep: "behind", meaning: "অন্যদের থেকে পিছিয়ে পড়া", tag: "E-L" },
+            { id: 123, word: "Aloof", prep: "from", meaning: "নিজেকে দূরে রাখা", tag: "A-D" },
+            { id: 124, word: "Passion", prep: "for", meaning: "কোন বিষয়ের তীব্র আগ্রহ বা উৎসাহ", tag: "M-P" },
+            { id: 125, word: "Run", prep: "after", meaning: "কোন কিছুর পেছনে ছোটা", tag: "R-Z" },
+            { id: 126, word: "Benefits", prep: "from", meaning: "কোন কিছু থেকে প্রাপ্ত উপকার বা সুবিধা", tag: "A-D" },
+            { id: 127, word: "Common", prep: "to", meaning: "সবার জন্য সাধারণ বা সাধারণ বৈশিষ্ট্যসম্পন্ন", tag: "A-D" },
+            { id: 128, word: "Mourn", prep: "for", meaning: "কারো মৃত্যুর জন্য বা লোকসানে শোক করা", tag: "M-P" },
+            { id: 129, word: "Die", prep: "for", meaning: "কোনো মহৎ বা দেশের কাজের জন্য উৎসর্গ হওয়া / মারা যাওয়া", tag: "A-D" },
+            { id: 130, word: "Ready", prep: "for", meaning: "কোন কাজের জন্য প্রস্তুত থাকা", tag: "R-Z" },
+            { id: 131, word: "Drop", prep: "out", meaning: "প্রতিষ্ঠান থেকে ঝরে পড়া / নিজেকে সরিয়ে নেওয়া", tag: "A-D" },
+            { id: 132, word: "Opportunities", prep: "for", meaning: "কোনো কাজের সুযোগ সুবিধা", tag: "M-P" },
+            { id: 133, word: "Vulnerable", prep: "to", meaning: "দুর্বল / সংবেদনশীল / ক্ষতিপ্রবণ", tag: "R-Z" },
+            { id: 134, word: "Part and parcel", prep: "of", meaning: "অবিচ্ছেদ্য অংশ", tag: "M-P" },
+            { id: 135, word: "Cruel", prep: "to", meaning: "কারো প্রতি নিষ্ঠুর আচরণ করা", tag: "A-D" },
+            { id: 136, word: "Going", prep: "through", meaning: "কঠিন পরিস্থিতির মধ্য দিয়ে যাওয়া / বই রিডিং পড়া", tag: "E-L" },
+            { id: 137, word: "Silted", prep: "with", meaning: "নদী পলিমাটি দ্বারা ভরাট হওয়া", tag: "R-Z" },
+            { id: 138, word: "Instead", prep: "of", meaning: "কোনো কিছুর পরিবর্তে", tag: "E-L" },
+            { id: 139, word: "Creation", prep: "of", meaning: "সৃষ্টির উৎস", tag: "A-D" },
+            { id: 140, word: "Regarded", prep: "as", meaning: "কোন কিছু হিসেবে গণ্য করা / মনে করা", tag: "R-Z" },
+            { id: 141, word: "Endowed", prep: "with", meaning: "স্বভাবজাত বা ঐশ্বরিক গুণে ভূষিত / বৈশিষ্ট্যে সমৃদ্ধ", tag: "E-L" },
+            { id: 142, word: "Born", prep: "into", meaning: "কোনো নির্দিষ্ট পরিবার বা পরিবেশে জন্মানো", tag: "A-D" },
+            { id: 143, word: "Beset", prep: "with", meaning: "বিপদ দ্বারা বেষ্টিত / জর্জরিত / আক্রান্ত", tag: "A-D" },
+            { id: 144, word: "Raised", prep: "in", meaning: "কোনো নির্দিষ্ট পরিবেশে বড় হওয়া", tag: "R-Z" },
+            { id: 145, word: "Rules", prep: "of", meaning: "কোনকিছুর নিয়মাবলী", tag: "R-Z" },
+            { id: 146, word: "Kinds", prep: "of", meaning: "প্রকারভেদ", tag: "E-L" },
+            { id: 147, word: "Correct", prep: "for", meaning: "কোনকিছুর জন্য সঠিক হওয়া", tag: "A-D" },
+            { id: 148, word: "Careful", prep: "about", meaning: "কোনো বিষয়ে সতর্ক থাকা", tag: "A-D" },
+            { id: 149, word: "Such", prep: "as", meaning: "উদা হরণস্বরূপ / যেমন", tag: "R-Z" },
+            { id: 150, word: "Strict", prep: "to", meaning: "কিছুর প্রতি অত্যন্ত কঠোর থাকা", tag: "R-Z" },
+            { id: 151, word: "Arrived", prep: "at", meaning: "কোনো নির্দিষ্ট ছোট স্থানে পৌঁছানো", tag: "A-D" },
+            { id: 152, word: "Flying", prep: "over", meaning: "কোনকিছুর ওপর দিয়ে উড়ে যাওয়া", tag: "E-L" },
+            { id: 153, word: "Refer", prep: "to", meaning: "কোন বিষয়ে উল্লেখ করা", tag: "R-Z" },
+            { id: 154, word: "Grown", prep: "up", meaning: "বড় হয়ে ওঠা", tag: "E-L" },
+            { id: 155, word: "Fond", prep: "of", meaning: "প্রিয় / কিছুর প্রতি অনুরক্ত বা ভক্ত", tag: "E-L" },
+            { id: 156, word: "Absorbed", prep: "in", meaning: "কোন কাজে গভীর মনোযোগে নিমগ্ন হওয়া", tag: "A-D" },
+            { id: 157, word: "Connected", prep: "to", meaning: "যান্ত্রিকভাবে সম্পর্কিত হওয়া", tag: "A-D" },
+            { id: 158, word: "Sufferings", prep: "to", meaning: "কোনকিছুর ফলে সৃষ্ট দুর্ভোগ", tag: "R-Z" },
+            { id: 159, word: "Lack", prep: "of", meaning: "অভাব / ঘাটতি", tag: "E-L" },
+            { id: 160, word: "Think", prep: "of", meaning: "কোনো কিছু নিয়ে সংক্ষেপে চিন্তা করা / মনে করা", tag: "R-Z" },
+            { id: 161, word: "Bring", prep: "to", meaning: "কোনো কিছু কারো সামনে তুলে ধরা / স্মৃতি জাগানো", tag: "A-D" },
+            { id: 162, word: "In", prep: "terms", meaning: "নির্দিষ্ট নিয়মে বা নির্ধারিত দৃষ্টিভঙ্গিতে", tag: "E-L" },
+            { id: 163, word: "Escape", prep: "from", meaning: "বিপদ বা বন্দিদশা থেকে পালিয়ে যাওয়া", tag: "E-L" },
+            { id: 164, word: "Lie", prep: "in", meaning: "কোনোকিছুর মধ্যে নিহিত থাকা", tag: "E-L" },
+            { id: 165, word: "Number", prep: "of", meaning: "সংখ্যার দিক থেকে / সংখ্যা প্রকাশ করা", tag: "M-P" },
+            { id: 166, word: "Convert", prep: "into", meaning: "এক অবস্থা থেকে অন্য অবস্থায় রূপান্তর করা", tag: "A-D" },
+            { id: 167, word: "Add", prep: "to", meaning: "কোনো কিছু বৃদ্ধি করা", tag: "A-D" },
+            { id: 168, block: "Lay", prep: "down", word: "Lay", meaning: "স্থাপন করা বা জীবন উৎসর্গ করা / নির্ধারণ করা", tag: "E-L" },
+            { id: 169, word: "Pride", prep: "in", meaning: "কোনো বিষয়ে গর্ব করা", tag: "M-P" },
+            { id: 170, word: "Retreat", prep: "from", meaning: "যুদ্ধক্ষেত্র বা কঠিন পরিস্থিতি থেকে পিছু হটা", tag: "R-Z" }
+        ];
+
+        // প্রিপজিশন পেজ রেন্ডার করার ফাংশন
+        function renderPrepositions(data) {
+            const grid = document.getElementById('prep-grid');
+            grid.innerHTML = ""; // ক্লিয়ার করা
+            
+            data.forEach(item => {
+                const cardHTML = `
+                    <div class="prep-card bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md hover:border-green-100 transition-all duration-300 flex flex-col justify-between fade-in" data-tag="${item.tag}">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="bg-green-50 text-green-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">NO: ${item.id}</span>
+                                <span class="text-xs text-gray-400 font-semibold uppercase font-poppins">${item.tag} Group</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 font-poppins leading-tight flex items-baseline flex-wrap gap-2">
+                                <span class="text-red-700">${item.word}</span>
+                                <span class="text-green-800 bg-green-50 px-2.5 py-0.5 rounded-md text-lg">+ ${item.prep}</span>
+                            </h3>
+                            <p class="text-gray-600 font-hind mt-3 text-base leading-relaxed">
+                                <span class="font-bold text-gray-700">অর্থ:</span> ${item.meaning}
+                            </p>
+                        </div>
+                    </div>
+                `;
+                grid.insertAdjacentHTML('beforeend', cardHTML);
+            });
+        }
+
+        // লাইভ সার্চ ফাংশন
+        function searchPreposition() {
+            const query = document.getElementById('search-input').value.toLowerCase().trim();
+            const tabButtons = document.querySelectorAll('button[id^="tab-"]');
+            
+            // সার্চ করলে ট্যাব বাটন ডিফল্ট 'All' এ ফিরিয়ে নিয়ে যাবে
+            tabButtons.forEach(btn => {
+                if (btn.id === 'tab-all') {
+                    btn.className = "px-4 py-2 text-sm md:text-base rounded-full font-semibold transition shadow-sm font-hind bg-green-800 text-white";
+                } else {
+                    btn.className = "px-4 py-2 text-sm md:text-base rounded-full font-semibold transition shadow-sm font-hind bg-white text-gray-700 border border-gray-200 hover:bg-gray-50";
+                }
+            });
+
+            const filteredData = prepositionsData.filter(item => {
+                return item.word.toLowerCase().includes(query) || 
+                       item.prep.toLowerCase().includes(query) || 
+                       item.meaning.toLowerCase().includes(query);
+            });
+
+            toggleResultDisplay(filteredData);
+        }
+
+        // ট্যাব ভিত্তিক ক্যাটাগরি ফিল্টারিং
+        function filterPreps(groupName) {
+            // সার্চ ইনপুট ক্লিয়ার করা
+            document.getElementById('search-input').value = "";
+
+            // ট্যাব বাটন স্টাইল নিয়ন্ত্রণ
+            const tabButtons = document.querySelectorAll('button[id^="tab-"]');
+            const activeClass = "bg-green-800 text-white";
+            const inactiveClass = "bg-white text-gray-700 border border-gray-200 hover:bg-gray-50";
+
+            tabButtons.forEach(btn => {
+                if (btn.id === `tab-${groupName}`) {
+                    btn.className = `px-4 py-2 text-sm md:text-base rounded-full font-semibold transition shadow-sm font-hind ${activeClass}`;
+                } else {
+                    btn.className = `px-4 py-2 text-sm md:text-base rounded-full font-semibold transition shadow-sm font-hind ${inactiveClass}`;
+                }
+            });
+
+            if (groupName === 'all') {
+                toggleResultDisplay(prepositionsData);
+            } else {
+                const filteredData = prepositionsData.filter(item => item.tag === groupName);
+                toggleResultDisplay(filteredData);
+            }
+        }
+
+        // নো-রেজাল্ট এবং ফিল্টারড ডাটা রেন্ডার কন্ট্রোলার
+        function toggleResultDisplay(data) {
+            const noResultMsg = document.getElementById('no-result');
+            if (data.length === 0) {
+                noResultMsg.classList.remove('hidden');
+            } else {
+                noResultMsg.classList.add('hidden');
+            }
+            renderPrepositions(data);
+        }
+
+        // পেজ লোড হওয়ার পর ডিফল্ট সব প্রিপজিশন দেখানো
+        window.onload = function() {
+            renderPrepositions(prepositionsData);
+        };
+    </script>
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+    import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyABpKz4xjVKWb6kVR_mT8d13dt9lcDwipE",
+        authDomain: "zamil-4e08e.firebaseapp.com",
+        projectId: "zamil-4e08e",
+        storageBucket: "zamil-4e08e.firebasestorage.app",
+        messagingSenderId: "696619411784",
+        appId: "1:696619411784:web:3dce390ed5b840cbc32b7d"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+
+    // পেজ লোড হওয়ার সাথে সাথে চেক করবে
+    onAuthStateChanged(auth, async (user) => {
+        if (!user) {
+            // লগইন করা না থাকলে login.html এ পাঠিয়ে দিবে
+            window.location.href = "/paid.html";
+        } else {
+            // লগইন করা থাকলে Firestore এ চেক করবে সে পেইড কি না
+            const docRef = doc(db, "/paid_students", user.email);
+            const docSnap = await getDoc(docRef);
+
+            if (!docSnap.exists()) {
+                // পেইড না হলে paid.html এ পাঠিয়ে দিবে
+                window.location.href = "/paid.html";
+            }
+            // পেইড হলে পেজটি লোড হবে (অর্থাৎ কুইজ দেখতে পাবে)
+        }
+    });
+</script>
+
+<script type="module">
+    // Firebase Time Tracking Script
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
+    import { getDatabase, ref, update, increment } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-database.js";
+
+    // ফায়ারবেজ কনফিগারেশন
+    const firebaseConfig = {
+        apiKey: "AIzaSyABpKz4xjVKWb6kVR_mT8d13dt9lcDwipE",
+        authDomain: "zamil-4e08e.firebaseapp.com",
+        databaseURL: "https://zamil-4e08e-default-rtdb.firebaseio.com/",
+        projectId: "zamil-4e08e"
+    };
+
+    // ফায়ারবেজ অ্যাপ এবং ডেটাবেজ ইনিশিয়ালিলাইজেশন
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+
+    // ডেটাবেজ কানেকশনটিকে গ্লোবাল করা
+    window.db = db; 
+
+    // প্রতি ৩০ সেকেন্ডে সময় ট্র্যাকিং
+    const timeRef = ref(db, 'total_time_spent');
+
+    setInterval(() => {
+        // ইউজার ট্যাব অন্য ট্যাবে বা ব্যাকগ্রাউন্ডে থাকলে কোডটি রান করবে না
+        if (document.hidden) return; 
+
+        update(timeRef, {
+            "seconds": increment(30)
+        }).catch(err => console.error("Error updating time:", err));
+    }, 30000);
+
+    console.log("Firebase time tracking active (optimized).");
+</script>
+
+</body>
+</html>

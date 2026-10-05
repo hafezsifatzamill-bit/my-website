@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAMIL ACADEMY - Sentence Connectors Practice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Hind Siliguri', sans-serif; }
+        .completed-card {
+            background-color: #f0fdf4 !important;
+            border-color: #16a34a !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+    <!-- হেডার: পুরো বক্স সবুজ এবং নিচের দিকে কার্ভ করা -->
+    <header class="bg-green-800 text-white py-12 px-6 text-center shadow-lg rounded-b-[40px]">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white-400">ZAMIL ACADEMY</h1>
+    </header>
+
+    <!-- সাবস্ক্রাইব বক্স -->
+    <div class="flex justify-center -mt-8 px-6">
+        <div class="bg-white p-8 shadow-md border-t-4 border-green-800 rounded-2xl max-w-md w-full text-center">
+            <p class="text-gray-700 text-lg mb-6">
+                প্রিমিয়াম সেবা পেতে আমাদের ইউটিউব চ্যানেলটি সাবস্ক্রাইব করুন।
+            </p>
+            <a href="https://youtube.com/@zamil_academy?si=EbWJq_lwwbWrLar9" 
+               target="_blank"
+               class="inline-block bg-red-700 hover:bg-green-800 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-md">
+                চ্যানেল ভিজিট করুন
+            </a>
+        </div>
+    </div>
+
+    <!-- মূল কন্টেন্ট (Main Content) -->
+    <main class="flex-grow max-w-4xl w-full mx-auto px-4 md:px-6 py-12">
+        
+        <!-- রুলস পেজে যাওয়ার আকর্ষণীয় বক্স -->
+        <div class="mb-10">
+            <a href="sentence-connectors-rules.html" class="block bg-gradient-to-r from-green-700 to-green-900 hover:from-green-800 hover:to-green-950 text-white p-6 rounded-2xl shadow-md text-center transition duration-300 transform hover:scale-[1.02]">
+                <h3 class="text-2xl font-bold mb-1">📖 সেন্টেন্স কানেক্টরস এর রুলস দেখুন</h3>
+                <p class="text-green-100 text-sm md:text-base">পরীক্ষায় কমন উপযোগী ২০টি কানেক্টর এর সহজ ব্যাখ্যা, শর্টকাট ট্রিকস ও উদাহরণ দেখতে এখানে ক্লিক করুন।</p>
+            </a>
+        </div>
+
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">Sentence Connectors Practice Board</h2>
+            <p class="text-green-700 font-semibold text-lg">HSC & Alim English 2nd Paper (Question No. 10)</p>
+            <div class="w-24 h-1 bg-green-700 mx-auto mt-3 rounded"></div>
+        </div>
+
+        <!-- এক্সারসাইজ সেকশনসমূহ -->
+        <div class="space-y-12" id="practice-container">
+            
+            <!-- Exercise 1 -->
+            <div id="ex-1" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 01</span>
+                    <button onclick="toggleComplete(1)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-1"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">Trees are a useful gift of nature. (a) ______ they provide us with oxygen. (b) ______ they save our soil from erosion. (c) ______ they give us delicious fruits. (d) ______ some people cut down trees indiscriminately. (e) ______ our environment is losing its balance. We must stop this act. (f) ______ we will suffer in the long run. (g) ______ we must plant more trees. (h) ______ we should create public awareness. (i) ______ tree plantation programs should be launched. (j) ______ we can save our beautiful planet.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(1)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-1" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Correct Answers with Explanation:</h4>
+                            <div class="space-y-3 mt-2 text-sm md:text-base">
+                                <p><strong>(a) <span class="bg-yellow-200 px-1 text-black font-bold">Firstly</span></strong>: প্রথম সুবিধা উপস্থাপনে বসেছে। (প্রথমত তারা আমাদের অক্সিজেন দেয়।)</p>
+                                <p><strong>(b) <span class="bg-yellow-200 px-1 text-black font-bold">Secondly</span></strong>: দ্বিতীয় সুবিধাটি ক্রমানুসারে বলতে। (দ্বিতীয়ত তারা ভূমি ক্ষয় রোধ করে।)</p>
+                                <p><strong>(c) <span class="bg-yellow-200 px-1 text-black font-bold">Thirdly / Moreover</span></strong>: অতিরিক্ত আরেকটি সুবিধা যুক্ত করতে। (তৃতীয়ত/তাছাড়া তারা সুস্বাদু ফল দেয়।)</p>
+                                <p><strong>(d) <span class="bg-yellow-200 px-1 text-black font-bold">But / However</span></strong>: বিপরীত বা অসঙ্গতিপূর্ণ পরিস্থিতি প্রকাশ করতে। (কিন্তু কিছু লোক নির্বিচারে গাছ কাটে।)</p>
+                                <p><strong>(e) <span class="bg-yellow-200 px-1 text-black font-bold">As a result / Consequently</span></strong>: নির্বিচারে গাছ কাটার ফলাফল দেখাতে। (ফলে আমাদের পরিবেশ ভারসাম্য হারাচ্ছে।)</p>
+                                <p><strong>(f) <span class="bg-yellow-200 px-1 text-black font-bold">Otherwise</span></strong>: কাজ বন্ধ না করলে কী ঘটবে তা সতর্ক করতে। (অন্যথায় আমরা দীর্ঘমেয়াদে কষ্ট পাব।)</p>
+                                <p><strong>(g) <span class="bg-yellow-200 px-1 text-black font-bold">Therefore / So</span></strong>: যৌক্তিক সিদ্ধান্ত প্রকাশ করতে। (সুতরাং আমাদের আরও গাছ লাগাতে হবে।)</p>
+                                <p><strong>(h) <span class="bg-yellow-200 px-1 text-black font-bold">In addition / Besides</span></strong>: পরবর্তী করণীয় যুক্ত করতে। (পাশাপাশি আমাদের জনসচেতনতা তৈরি করতে হবে।)</p>
+                                <p><strong>(i) <span class="bg-yellow-200 px-1 text-black font-bold">To do so / For this</span></strong>: সচেতনতা তৈরিতে নির্দিষ্ট কার্যক্রম হিসেবে। (এজন্য বৃক্ষরোপণ কর্মসূচি চালু করতে হবে।)</p>
+                                <p><strong>(j) <span class="bg-yellow-200 px-1 text-black font-bold">Thus / In this way</span></strong>: কীভাবে সমাধান হবে তা দেখাতে। (এইভাবে আমরা আমাদের সুন্দর পৃথিবী রক্ষা করতে পারব।)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 2 -->
+            <div id="ex-2" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 02</span>
+                    <button onclick="toggleComplete(2)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-2"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">Student life is the golden season of life. (a) ______ a student should utilize this period. (b) ______ he fails to do so, he will suffer in the future. (c) ______ he must make a proper use of time. (d) ______ some students waste their valuable time on social media. (e) ______ they cannot secure a good result in the examination. (f) ______ they cannot succeed in life. Student life is for preparation. (g) ______ they should be regular in their studies. (h) ______ they should participate in co-curricular activities. (i) ______ they should build their moral character. (j) ______ they can become ideal citizens of the country.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(2)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-2" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Correct Answers with Explanation:</h4>
+                            <div class="space-y-3 mt-2 text-sm md:text-base">
+                                <p><strong>(a) <span class="bg-yellow-200 px-1 text-black font-bold">Therefore / So</span></strong>: সিদ্ধান্ত বোঝাতে বসেছে। (সুতরাং একজন ছাত্রের এই সময় কাজে লাগানো উচিত।)</p>
+                                <p><strong>(b) <span class="bg-yellow-200 px-1 text-black font-bold">If</span></strong>: শর্তাধীন পরিস্থিতি প্রকাশ করতে। (যদি সে এটি করতে ব্যর্থ হয়, তবে সে ভবিষ্যতে কষ্ট পাবে।)</p>
+                                <p><strong>(c) <span class="bg-yellow-200 px-1 text-black font-bold">Hence / That is why</span></strong>: আগের শর্তের যৌক্তিক দাবি হিসেবে। (এজন্য তাকে অবশ্যই সময়ের সঠিক ব্যবহার করতে হবে।)</p>
+                                <p><strong>(d) <span class="bg-yellow-200 px-1 text-black font-bold">But / Unfortunately</span></strong>: অনাকাঙ্ক্ষিত বাস্তবতার বৈপরীত্য তুলে ধরতে। (কিন্তু কিছু শিক্ষার্থী সোশ্যাল মিডিয়ায় মূল্যবান সময় অপচয় করে।)</p>
+                                <p><strong>(e) <span class="bg-yellow-200 px-1 text-black font-bold">As a result / Consequently</span></strong>: সময় অপচয়ের পরিণতি দেখাতে। (ফলে তারা পরীক্ষায় ভালো ফলাফল করতে পারে না।)</p>
+                                <p><strong>(f) <span class="bg-yellow-200 px-1 text-black font-bold">Moreover / Furthermore</span></strong>: পরিণতির সাথে আরেকটি ক্ষতি যুক্ত করতে। (তাছাড়া তারা জীবনে সফল হতে পারে না।)</p>
+                                <p><strong>(g) <span class="bg-yellow-200 px-1 text-black font-bold">Firstly</span></strong>: প্রথম করণীয়টি উপস্থাপন করতে। (প্রথমত তাদের পড়ালেখায় নিয়মিত হতে হবে।)</p>
+                                <p><strong>(h) <span class="bg-yellow-200 px-1 text-black font-bold">Secondly</span></strong>: দ্বিতীয় করণীয় উপস্থাপনে। (দ্বিতীয়ত তাদের সহশিক্ষা কার্যক্রমে অংশ নেওয়া উচিত।)</p>
+                                <p><strong>(i) <span class="bg-yellow-200 px-1 text-black font-bold">Finally / Above all</span></strong>: শেষ এবং সবচেয়ে গুরুত্বপূর্ণ ধাপটি প্রকাশ করতে। (সর্বোপরি তাদের নৈতিক চরিত্র গঠন করা উচিত।)</p>
+                                <p><strong>(j) <span class="bg-yellow-200 px-1 text-black font-bold">Thus / In this way</span></strong>: কাঙ্ক্ষিত ফলাফল কীভাবে অর্জন হবে তা বলতে। (এইভাবে তারা দেশের আদর্শ নাগরিক হতে পারবে।)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 3 -->
+            <div id="ex-3" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 03</span>
+                    <button onclick="toggleComplete(3)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-3"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">Water is an important element of our environment. (a) ______ we cannot live without it. (b) ______ clean water is safe for life, polluted water is harmful. (c) ______ water is being polluted in many ways. (d) ______ farmers use fertilizers and insecticides in their fields. (e) ______ rain washes them away into rivers and ponds. (f) ______ mills and factories dump their toxic waste into rivers. (g) ______ we pollute water by throwing domestic garbage. (h) ______ polluted water causes many water-borne diseases. (i) ______ we must take steps to prevent water pollution. (j) ______ we can ensure a healthier life for all.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(3)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-3" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Correct Answers with Explanation:</h4>
+                            <div class="space-y-3 mt-2 text-sm md:text-base">
+                                <p><strong>(a) <span class="bg-yellow-200 px-1 text-black font-bold">In fact / Indeed</span></strong>: সত্যের ওপর জোর দেওয়ার জন্য। (প্রকৃতপক্ষে আমরা পানি ছাড়া বাঁচতে পারি না।)</p>
+                                <p><strong>(b) <span class="bg-yellow-200 px-1 text-black font-bold">Although / While</span></strong>: তুলনামূলক বৈপরীত্য প্রকাশ করতে। (যদিও পরিষ্কার পানি জীবনের জন্য নিরাপদ, দূষিত পানি ক্ষতিকর।)</p>
+                                <p><strong>(c) <span class="bg-yellow-200 px-1 text-black font-bold">But unfortunately / At present</span></strong>: বর্তমান দুঃখজনক পরিস্থিতির সূচনা প্রকাশে। (কিন্তু দুর্ভাগ্যবশত পানি নানাভাবে দূষিত হচ্ছে।)</p>
+                                <p><strong>(d) <span class="bg-yellow-200 px-1 text-black font-bold">Firstly / For example</span></strong>: প্রথম দূষণের কারণ ব্যাখ্যা করতে। (যেমন কৃষকরা তাদের জমিতে সার ও কীটনাশক ব্যবহার করে।)</p>
+                                <p><strong>(e) <span class="bg-yellow-200 px-1 text-black font-bold">Then</span></strong>: এর পরবর্তী পর্যায় বা ধাপ নির্দেশ করতে। (তারপর বৃষ্টি সেগুলোকে ধুয়ে নদী এবং পুকুরে নিয়ে যায়।)</p>
+                                <p><strong>(f) <span class="bg-yellow-200 px-1 text-black font-bold">Secondly / In addition</span></strong>: দ্বিতীয় দূষণের কারণ হিসেবে। (দ্বিতীয়ত কলকারখানা তাদের বিষাক্ত বর্জ্য নদীতে ফেলে।)</p>
+                                <p><strong>(g) <span class="bg-yellow-200 px-1 text-black font-bold">Thirdly / Moreover</span></strong>: অতিরিক্ত আরেকটি কারণ বলতে। (তৃতীয়ত আমরা গৃহস্থালির আবর্জনা ফেলে পানি দূষিত করি।)</p>
+                                <p><strong>(h) <span class="bg-yellow-200 px-1 text-black font-bold">As a result / Consequently</span></strong>: দূষণের সামগ্রিক ফলাফল হিসেবে। (ফলে দূষিত পানি বিভিন্ন পানিবাহিত রোগের সৃষ্টি করে।)</p>
+                                <p><strong>(i) <span class="bg-yellow-200 px-1 text-black font-bold">Therefore / So</span></strong>: করণীয় নির্ধারণের যৌক্তিক দাবিতে। (সুতরাং আমাদের পানি দূষণ রোধে পদক্ষেপ নিতে হবে।)</p>
+                                <p><strong>(j) <span class="bg-yellow-200 px-1 text-black font-bold">Thus / In this way</span></strong>: পরিশেষে কাঙ্ক্ষিত সমাধান ব্যক্ত করতে। (এইভাবে আমরা সবার জন্য একটি স্বাস্থ্যকর জীবন নিশ্চিত করতে পারব।)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 4 -->
+            <div id="ex-4" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 04</span>
+                    <button onclick="toggleComplete(4)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-4"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">Honesty is a great virtue. (a) ______ it helps a man to gain respect and peace of mind. (b) ______ an honest man is trusted by everyone. (c) ______ a dishonest man is hated by all. (d) ______ he may become rich temporarily, he suffers in the long run. (e) ______ nobody believes a liar. (f) ______ we should practice honesty from our childhood. (g) ______ our parents should teach us moral values. (h) ______ our teachers should guide us to follow the path of truthfulness. (i) ______ our society will become peaceful. (j) ______ we will be rewarded in this world and the hereafter.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(4)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-4" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Correct Answers with Explanation:</h4>
+                            <div class="space-y-3 mt-2 text-sm md:text-base">
+                                <p><strong>(a) <span class="bg-yellow-200 px-1 text-black font-bold">In fact / Actually</span></strong>: সততার প্রথম ও প্রধান ভূমিকা স্পষ্ট করতে। (প্রকৃতপক্ষে এটি মানুষকে সম্মান ও মানসিক শান্তি পেতে সাহায্য করে।)</p>
+                                <p><strong>(b) <span class="bg-yellow-200 px-1 text-black font-bold">Besides / Moreover</span></strong>: অতিরিক্ত সুবিধা যোগ করতে। (তাছাড়া একজন সৎ মানুষকে সবাই বিশ্বাস করে।)</p>
+                                <p><strong>(c) <span class="bg-yellow-200 px-1 text-black font-bold">On the other hand / In contrast</span></strong>: অসৎ লোকের বিপরীত আচরণ দেখাতে। (পক্ষান্তরে অসৎ মানুষ সবার দ্বারা ঘৃণিত হয়।)</p>
+                                <p><strong>(d) <span class="bg-yellow-200 px-1 text-black font-bold">Though / Although</span></strong>: বিপরীতধর্মী শর্তযুক্ত পরিস্থিতি মেলাতে। (যদিও সে সাময়িকভাবে ধনী হতে পারে, দীর্ঘমেয়াদে সে কষ্ট পায়।)</p>
+                                <p><strong>(e) <span class="bg-yellow-200 px-1 text-black font-bold">Indeed / As a matter of fact</span></strong>: চরম সত্যের প্রকাশ হিসেবে। (আসলেই একজন মিথ্যাবাদীকে কেউ বিশ্বাস করে না।)</p>
+                                <p><strong>(f) <span class="bg-yellow-200 px-1 text-black font-bold">Therefore / So</span></strong>: যৌক্তিক সমাধানের ক্ষেত্রে। (সুতরাং শৈশব থেকেই আমাদের সততা চর্চা করা উচিত।)</p>
+                                <p><strong>(g) <span class="bg-yellow-200 px-1 text-black font-bold">Firstly / In this regard</span></strong>: এই বিষয়ে প্রথম কার দায়িত্ব তা বলতে। (প্রথমত/এই বিষয়ে আমাদের অভিভাবকদের নৈতিক মূল্যবোধ শেখানো উচিত।)</p>
+                                <p><strong>(h) <span class="bg-yellow-200 px-1 text-black font-bold">Secondly</span></strong>: দ্বিতীয় পক্ষ হিসেবে শিক্ষকদের ভূমিকা যুক্ত করতে। (দ্বিতীয়ত শিক্ষকদের উচিত আমাদের সত্যের পথে চলার নির্দেশনা দেওয়া।)</p>
+                                <p><strong>(i) <span class="bg-yellow-200 px-1 text-black font-bold">Thus / As a result</span></strong>: ফলে সমাজে কী ইতিবাচক প্রভাব পড়বে তা দেখাতে। (এইভাবে/ফলে আমাদের সমাজ শান্তিময় হয়ে উঠবে।)</p>
+                                <p><strong>(j) <span class="bg-yellow-200 px-1 text-black font-bold">Finally / Ultimately</span></strong>: পরিশেষে চূড়ান্ত পুরস্কারের নিশ্চয়তা দিতে। (পরিশেষে আমরা ইহকাল ও পরকালে পুরস্কৃত হব।)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 5 -->
+            <div id="ex-5" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 05</span>
+                    <button onclick="toggleComplete(5)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-5"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">Mobile phone is one of the most useful inventions of modern science. (a) ______ it has made communication very easy and instant. (b) ______ it connects people across the globe within seconds. (c) ______ it has some bad aspects too. (d) ______ some young people are getting addicted to it. (e) ______ they waste their precious study hours playing online games. (f) ______ it causes various health issues like headache and eye-strain. (g) ______ it is widely used by criminals to commit crimes. (h) ______ we should be very careful when we use it. (i) ______ parents should monitor their children's mobile usage. (j) ______ we can enjoy its benefits without any harm.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(5)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-5" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Correct Answers with Explanation:</h4>
+                            <div class="space-y-3 mt-2 text-sm md:text-base">
+                                <p><strong>(a) <span class="bg-yellow-200 px-1 text-black font-bold">Firstly / In fact</span></strong>: প্রথম সুবিধা উপস্থাপনে। (প্রথমত এটি যোগাযোগকে অত্যন্ত সহজ এবং তাৎক্ষণিক করেছে।)</p>
+                                <p><strong>(b) <span class="bg-yellow-200 px-1 text-black font-bold">Secondly / In addition</span></strong>: যোগাযোগের দ্বিতীয় সুবিধা যোগ করতে। (দ্বিতীয়ত এটি সেকেন্ডের মধ্যে সারা বিশ্বের মানুষকে সংযুক্ত করে।)</p>
+                                <p><strong>(c) <span class="bg-yellow-200 px-1 text-black font-bold">But / However</span></strong>: তবে অপকারিতার বৈপরীত্যের সূচনা বোঝাতে। (কিন্তু এর কিছু খারাপ দিকও আছে।)</p>
+                                <p><strong>(d) <span class="bg-yellow-200 px-1 text-black font-bold">For example / For instance</span></strong>: অপকারিতার একটি প্রথম উদাহরণ দিতে। (যেমন কিছু তরুণ এটার প্রতি আসক্ত হয়ে পড়ছে।)</p>
+                                <p><strong>(e) <span class="bg-yellow-200 px-1 text-black font-bold">As a result / Consequently</span></strong>: আসক্তির ক্ষতিকর প্রভাব হিসেবে। (ফলে তারা গেম খেলে পড়াশোনার মূল্যবান সময় নষ্ট করে।)</p>
+                                <p><strong>(f) <span class="bg-yellow-200 px-1 text-black font-bold">Moreover / Furthermore</span></strong>: শারীরিক ক্ষতিসমূহ অতিরিক্ত তথ্য হিসেবে যোগ করতে। (তাছাড়া এটি মাথাব্যথা এবং চোখের সমস্যার মতো শারীরিক সমস্যা তৈরি করে।)</p>
+                                <p><strong>(g) <span class="bg-yellow-200 px-1 text-black font-bold">Besides / Also</span></strong>: অপরাধমূলক ক্ষতিকর দিক যুক্ত করতে। (পাশাপাশি অপরাধীরা অপরাধ সংগঠনে এটি ব্যাপকভাবে ব্যবহার করে।)</p>
+                                <p><strong>(h) <span class="bg-yellow-200 px-1 text-black font-bold">Therefore / So</span></strong>: চূড়ান্ত যৌক্তিক সিদ্ধান্তে আসতে। (সুতরাং আমাদের এটি ব্যবহারের সময় খুব সতর্ক হতে হবে।)</p>
+                                <p><strong>(i) <span class="bg-yellow-200 px-1 text-black font-bold">Particularly / In this regard</span></strong>: অভিভাবকদের বিশেষ করণীয়ে জোর দিতে। (বিশেষত/এই ক্ষেত্রে অভিভাবকদের উচিত তাদের সন্তানদের মোবাইল ব্যবহার নজরদারি করা।)</p>
+                                <p><strong>(j) <span class="bg-yellow-200 px-1 text-black font-bold">Thus / In this way</span></strong>: কীভাবে সঠিক সুফল পাওয়া যাবে তা শেষ করতে। (এইভাবে আমরা কোনো ক্ষতি ছাড়াই এর সুবিধা উপভোগ করতে পারব।)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 6 -->
+            <div id="ex-6" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 06</span>
+                    <button onclick="toggleComplete(6)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-6"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">Global warming is a major global issue. (a) ______ greenhouse gases are increasing. (b) ______ the temperature of the world is rising rapidly. (c) ______ the polar ice caps are melting. (d) ______ the sea levels are rising day by day. (e) ______ many low-lying coastal areas may go under water very soon. We must reduce this crisis. (f) ______ we cannot protect our ecology. (g) ______ we should use renewable energy instead of fossil fuels. (h) ______ we must plant more trees to absorb carbon dioxide. (i) ______ strict laws should be enforced against pollution. (j) ______ we can preserve our beautiful earth for future generations.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(6)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-6" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Correct Answers with Explanation:</h4>
+                            <div class="space-y-3 mt-2 text-sm md:text-base">
+                                <p><strong>(a) <span class="bg-yellow-200 px-1 text-black font-bold">At present / Because</span></strong>: প্রধান কারণের প্রারম্ভ নির্দেশ করতে। (বর্তমানে গ্রিনহাউস গ্যাস বৃদ্ধি পাচ্ছে।)</p>
+                                <p><strong>(b) <span class="bg-yellow-200 px-1 text-black font-bold">As a result / Consequently</span></strong>: গ্রিনহাউস গ্যাস বৃদ্ধির ফলাফল। (ফলে পৃথিবীর তাপমাত্রা দ্রুত বাড়ছে।)</p>
+                                <p><strong>(c) <span class="bg-yellow-200 px-1 text-black font-bold">Due to this / Besides</span></strong>: তাপমাত্রা বৃদ্ধির পরবর্তী প্রত্যক্ষ প্রভাব। (এর কারণে মেরু অঞ্চলের বরফ গলে যাচ্ছে।)</p>
+                                <p><strong>(d) <span class="bg-yellow-200 px-1 text-black font-bold">Ultimately / As a consequence</span></strong>: বরফ গলার ফলে সমুদ্রপৃষ্ঠের অবস্থা। (ফলস্বরূপ সমুদ্রপৃষ্ঠের উচ্চতা দিন দিন বাড়ছে।)</p>
+                                <p><strong>(e) <span class="bg-yellow-200 px-1 text-black font-bold">Therefore / Indeed</span></strong>: ভয়াবহ পরিণতির নিশ্চয়তায়। (সুতরাং অনেক নিম্নাঞ্চল খুব শীঘ্রই পানির নিচে চলে যেতে পারে।)</p>
+                                <p><strong>(f) <span class="bg-yellow-200 px-1 text-black font-bold">Otherwise</span></strong>: সংকট না কমালে কী ঘটবে তা বোঝাতে। (অন্যথায় আমরা আমাদের বাস্তুসংস্থান রক্ষা করতে পারব না।)</p>
+                                <p><strong>(g) <span class="bg-yellow-200 px-1 text-black font-bold">Firstly</span></strong>: প্রথম সমাধানমুখী সমাধানটি বলতে। (প্রথমত আমাদের জীবাশ্ম জ্বালানির পরিবর্তে নবায়নযোগ্য শক্তি ব্যবহার করা উচিত।)</p>
+                                <p><strong>(h) <span class="bg-yellow-200 px-1 text-black font-bold">Secondly</span></strong>: দ্বিতীয় চমৎকার সমাধানটি যুক্ত করতে। (দ্বিতীয়ত কার্বন ডাই অক্সাইড শোষণের জন্য আমাদের বেশি গাছ লাগাতে হবে।)</p>
+                                <p><strong>(i) <span class="bg-yellow-200 px-1 text-black font-bold">Thirdly / Besides</span></strong>: আইনি ব্যবস্থার চূড়ান্ত সমাধান। (তৃতীয়ত দূষণের বিরুদ্ধে কঠোর আইন প্রণয়ন করতে হবে।)</p>
+                                <p><strong>(j) <span class="bg-yellow-200 px-1 text-black font-bold">Only then / Thus</span></strong>: চূড়ান্ত সমাধানমুখী ইতি টানতে। (কেবল তাহলেই/এইভাবে আমরা ভবিষ্যৎ প্রজন্মের জন্য সুন্দর পৃথিবী রক্ষা করতে পারব।)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 7 -->
+            <div id="ex-7" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 07</span>
+                    <button onclick="toggleComplete(7)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-7"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">Time is extremely valuable. (a) ______ it cannot be recalled once it is gone. (b) ______ we should utilize it properly. (c) ______ some students do not value time. (d) ______ they keep their duties pending for tomorrow. (e) ______ they suffer a lot during examinations. (f) ______ they cannot make a good result. (g) ______ they fail in life. We must remember that "Time and tide wait for none." (h) ______ we should be highly punctual. (i) ______ we should follow a regular routine. (j) ______ we can reach the peak of success.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(7)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-7" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Correct Answers with Explanation:</h4>
+                            <div class="space-y-3 mt-2 text-sm md:text-base">
+                                <p><strong>(a) <span class="bg-yellow-200 px-1 text-black font-bold">Because / As</span></strong>: সময় মূল্যবান হওয়ার পেছনে শক্তিশালী কারণ দেখাতে। (কারণ এটি একবার চলে গেলে আর ফিরে পাওয়া যায় না।)</p>
+                                <p><strong>(b) <span class="bg-yellow-200 px-1 text-black font-bold">Therefore / So</span></strong>: যৌক্তিক সিদ্ধান্ত। (সুতরাং আমাদের সময়ের যথাযথ ব্যবহার করা উচিত।)</p>
+                                <p><strong>(c) <span class="bg-yellow-200 px-1 text-black font-bold">But / However</span></strong>: বিপরীতে অসচেতনতা বোঝাতে। (কিন্তু কিছু শিক্ষার্থী সময়ের মূল্য দেয় না।)</p>
+                                <p><strong>(d) <span class="bg-yellow-200 px-1 text-black font-bold">Instead / As a result</span></strong>: ভুল স্বভাবের ধরন প্রকাশে। (বরং তারা তাদের কাজ আগামীকালের জন্য ফেলে রাখে।)</p>
+                                <p><strong>(e) <span class="bg-yellow-200 px-1 text-black font-bold">Consequently / As a result</span></strong>: অবহেলার চমৎকার চূড়ান্ত নেতিবাচক ফল। (ফলস্বরূপ তারা পরীক্ষার সময় অনেক কষ্ট পায়।)</p>
+                                <p><strong>(f) <span class="bg-yellow-200 px-1 text-black font-bold">In addition / Moreover</span></strong>: ফলাফলের সাথে বাড়তি ক্ষতি যুক্ত করতে। (তাছাড়া তারা ভালো ফলাফল করতে পারে না।)</p>
+                                <p><strong>(g) <span class="bg-yellow-200 px-1 text-black font-bold">Finally / Ultimately</span></strong>: পরিশেষে চূড়ান্ত ব্যর্থতা হিসেবে। (পরিশেষে তারা জীবনে ব্যর্থ হয়।)</p>
+                                <p><strong>(h) <span class="bg-yellow-200 px-1 text-black font-bold">Hence / So</span></strong>: প্রবাদের যৌক্তিক দাবি মেনে সিদ্ধান্ত প্রকাশে। (সুতরাং আমাদের অত্যন্ত সময়ানুবর্তী হতে হবে।)</p>
+                                <p><strong>(i) <span class="bg-yellow-200 px-1 text-black font-bold">Specifically / For this</span></strong>: কীভাবে সময়ানুবর্তী হবে তার ধাপ। (বিশেষত আমাদের একটি নিয়মিত রুটিন অনুসরণ করা উচিত।)</p>
+                                <p><strong>(j) <span class="bg-yellow-200 px-1 text-black font-bold">Thus / In this way</span></strong>: চূড়ান্তভাবে সাফল্যের সর্বোচ্চ শিখরে পৌঁছাতে। (এইভাবে আমরা সাফল্যের চূড়ায় পৌঁছাতে পারব।)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 8 -->
+            <div id="ex-8" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 08</span>
+                    <button onclick="toggleComplete(8)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-8"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">Co-curricular activities are essential for students. (a) ______ it helps in the physical growth. (b) ______ it develops the mental faculties. (c) ______ it teaches leadership and discipline. (d) ______ some traditional parents do not encourage their children. (e) ______ they believe it is a waste of time. (f) ______ they push them only to cram books. (g) ______ this practice limits the overall growth of children. (h) ______ we must change this mindset. (i) ______ schools should make co-curricular activities compulsory. (j) ______ we can build all-rounder citizens.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(8)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-8" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Correct Answers with Explanation:</h4>
+                            <div class="space-y-3 mt-2 text-sm md:text-base">
+                                <p><strong>(a) <span class="bg-yellow-200 px-1 text-black font-bold">Firstly</span></strong>: প্রথম সুবিধা উপস্থাপনে বসেছে। (প্রথমত এটি শারীরিক গঠনে সাহায্য করে।)</p>
+                                <p><strong>(b) <span class="bg-yellow-200 px-1 text-black font-bold">Secondly</span></strong>: দ্বিতীয় সুবিধাটি ক্রমানুসারে বলতে। (দ্বিতীয়ত এটি মানসিক দক্ষতা বৃদ্ধি করে।)</p>
+                                <p><strong>(c) <span class="bg-yellow-200 px-1 text-black font-bold">Thirdly / Moreover</span></strong>: অতিরিক্ত আরেকটি সুবিধা যুক্ত করতে। (তৃতীয়ত/তাছাড়া এটি নেতৃত্ব ও শৃঙ্খলা শেখায়।)</p>
+                                <p><strong>(d) <span class="bg-yellow-200 px-1 text-black font-bold">But / However</span></strong>: অভিভাবকদের নেতিবাচক দৃষ্টিভঙ্গির বৈপরীত্য প্রকাশে। (কিন্তু কিছু ঐতিহ্যগত অভিভাবক তাদের সন্তানদের উৎসাহিত করেন না।)</p>
+                                <p><strong>(e) <span class="bg-yellow-200 px-1 text-black font-bold">Actually / Because</span></strong>: তাদের না করানোর মূল মানসিক কারণ বলতে। (আসলে তারা মনে করে এটি সময়ের অপচয়।)</p>
+                                <p><strong>(f) <span class="bg-yellow-200 px-1 text-black font-bold">As a result / So</span></strong>: যার ফলস্বরূপ তারা সন্তানদের শুধু মুখস্থ করায়। (ফলে তারা শুধু বই মুখস্থ করার জন্য জোর দেয়।)</p>
+                                <p><strong>(g) <span class="bg-yellow-200 px-1 text-black font-bold">Consequently</span></strong>: মুখস্থ করার ক্ষতিকর প্রভাব দেখাতে। (ফলস্বরূপ এই অভ্যাস শিশুদের সামগ্রিক বৃদ্ধিকে বাধাগ্রস্ত করে।)</p>
+                                <p><strong>(h) <span class="bg-yellow-200 px-1 text-black font-bold">Therefore / So</span></strong>: যৌক্তিক সিদ্ধান্ত। (সুতরাং আমাদের অবশ্যই এই মানসিকতা পরিবর্তন করতে হবে।)</p>
+                                <p><strong>(i) <span class="bg-yellow-200 px-1 text-black font-bold">In addition / Besides</span></strong>: অতিরিক্ত প্রয়োজনীয় পদক্ষেপ হিসেবে। (পাশাপাশি স্কুলগুলোর উচিত সহশিক্ষা কার্যক্রম বাধ্যতামূলক করা।)</p>
+                                <p><strong>(j) <span class="bg-yellow-200 px-1 text-black font-bold">Thus / In this way</span></strong>: পরিশেষে কাঙ্ক্ষিত সমাধান ব্যক্ত করতে। (এইভাবে আমরা সর্বগুণসম্পন্ন নাগরিক গড়ে তুলতে পারব।)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 9 -->
+            <div id="ex-9" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 09</span>
+                    <button onclick="toggleComplete(9)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-9"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">Internet has brought the world closer. (a) ______ it serves as an immense storehouse of information. (b) ______ it connects millions of minds instantly. (c) ______ it is very cost-effective. (d) ______ it has opened new windows for education. (e) ______ it can be dangerous if abused. (f) ______ cybercrimes are rising at an alarming rate. (g) ______ young children are exposed to vulgar content. (h) ______ excessive use leads to physical and mental health issues. (i) ______ we must utilize internet with absolute care. (j) ______ we can secure a bright future through digital wisdom.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(9)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-9" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Correct Answers with Explanation:</h4>
+                            <div class="space-y-3 mt-2 text-sm md:text-base">
+                                <p><strong>(a) <span class="bg-yellow-200 px-1 text-black font-bold">Firstly / In fact</span></strong>: প্রথম সুবিধা উপস্থাপনে। (প্রথমত এটি তথ্যের একটি বিশাল ভান্ডার হিসেবে কাজ করে।)</p>
+                                <p><strong>(b) <span class="bg-yellow-200 px-1 text-black font-bold">Secondly</span></strong>: দ্বিতীয় সুবিধাটি ক্রমানুসারে বলতে। (দ্বিতীয়ত এটি তাৎক্ষণিকভাবে লক্ষ লক্ষ মনকে সংযুক্ত করে।)</p>
+                                <p><strong>(c) <span class="bg-yellow-200 px-1 text-black font-bold">Thirdly / Besides</span></strong>: অতিরিক্ত আরেকটি সুবিধা যুক্ত করতে। (তৃতীয়ত/পাশাপাশি এটি খুবই সাশ্রয়ী।)</p>
+                                <p><strong>(d) <span class="bg-yellow-200 px-1 text-black font-bold">Finally / Moreover</span></strong>: পরিশেষে শিক্ষার প্রধান অবদানের কথা বলতে। (পরিশেষে এটি শিক্ষার জন্য নতুন দিগন্ত উন্মোচন করেছে।)</p>
+                                <p><strong>(e) <span class="bg-yellow-200 px-1 text-black font-bold">But / However</span></strong>: বৈপরীত্য এবং অপকারিতার সূচনা প্রকাশে। (কিন্তু অপব্যবহার করলে এটি বিপজ্জনক হতে পারে।)</p>
+                                <p><strong>(f) <span class="bg-yellow-200 px-1 text-black font-bold">For example / For instance</span></strong>: প্রথম ক্ষতিকর দিক উল্লেখ করতে। (যেমন সাইবার অপরাধ উদ্বেগজনক হারে বাড়ছে।)</p>
+                                <p><strong>(g) <span class="bg-yellow-200 px-1 text-black font-bold">Moreover / Furthermore</span></strong>: অতিরিক্ত আরেকটি ক্ষতিকর প্রভাব যুক্ত করতে। (তাছাড়া শিশুরা অশ্লীল কনটেন্টের সংস্পর্শে আসছে।)</p>
+                                <p><strong>(h) <span class="bg-yellow-200 px-1 text-black font-bold">In addition / Lastly</span></strong>: শারীরিক ও মানসিক স্বাস্থ্যের অপকারিতা যুক্ত করতে। (পাশাপাশি অতিরিক্ত ব্যবহার শারীরিক ও মানসিক স্বাস্থ্য সমস্যা সৃষ্টি করে।)</p>
+                                <p><strong>(i) <span class="bg-yellow-200 px-1 text-black font-bold">Therefore / So</span></strong>: যৌক্তিক সিদ্ধান্তে আসতে। (সুতরাং আমাদের অত্যন্ত সতর্কতার সাথে ইন্টারনেট ব্যবহার করতে হবে।)</p>
+                                <p><strong>(j) <span class="bg-yellow-200 px-1 text-black font-bold">Thus / In this way</span></strong>: পরিশেষে উজ্জ্বল ভবিষ্যতের নিশ্চয়তা ব্যক্ত করতে। (এইভাবে আমরা ডিজিটাল প্রজ্ঞার মাধ্যমে একটি উজ্জ্বল ভবিষ্যৎ নিশ্চিত করতে পারব।)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 10 -->
+            <div id="ex-10" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 10</span>
+                    <button onclick="toggleComplete(10)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-10"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">Deforestation means cutting down trees in a large scale. (a) ______ our environment is losing its balance. (b) ______ greenhouse gases are increasing. (c) ______ the world temperature is rising. (d) ______ polar ice caps are melting. (e) ______ sea level is rising day by day. (f) ______ coastal regions are threatened by inundation. We must protect our forests. (g) ______ we will fail to sustain our ecological balance. (h) ______ tree plantation programs should be launched. (i) ______ we must make people aware of this issue. (j) ______ we can preserve our ecology.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(10)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-10" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Correct Answers with Explanation:</h4>
+                            <div class="space-y-3 mt-2 text-sm md:text-base">
+                                <p><strong>(a) <span class="bg-yellow-200 px-1 text-black font-bold">As a result / Consequently</span></strong>: বন উজাড়করণের প্রথম ও প্রধান নেতিবাচক ফল। (ফলে আমাদের পরিবেশ ভারসাম্য হারাচ্ছে।)</p>
+                                <p><strong>(b) <span class="bg-yellow-200 px-1 text-black font-bold">Secondly / Moreover</span></strong>: দ্বিতীয় ক্ষতিকর প্রভাব যুক্ত করতে। (দ্বিতীয়ত গ্রিনহাউস গ্যাস বৃদ্ধি পাচ্ছে।)</p>
+                                <p><strong>(c) <span class="bg-yellow-200 px-1 text-black font-bold">Thirdly / In addition</span></strong>: গ্যাসের বৃদ্ধির কারণে তাপমাত্রা বৃদ্ধির পর্যায়। (তৃতীয়ত পৃথিবীর তাপমাত্রা বাড়ছে।)</p>
+                                <p><strong>(d) <span class="bg-yellow-200 px-1 text-black font-bold">Consequently / As a result</span></strong>: তাপমাত্রা বৃদ্ধির পরবর্তী প্রত্যক্ষ প্রভাব। (ফলস্বরূপ মেরু অঞ্চলের বরফ গলে যাচ্ছে।)</p>
+                                <p><strong>(e) <span class="bg-yellow-200 px-1 text-black font-bold">Furthermore / Consequently</span></strong>: বরফ গলার চূড়ান্ত প্রভাব। (তাছাড়া সমুদ্রপৃষ্ঠের উচ্চতা দিন দিন বাড়ছে।)</p>
+                                <p><strong>(f) <span class="bg-yellow-200 px-1 text-black font-bold">Ultimately</span></strong>: পরিশেষে উপকূলীয় অঞ্চলের চূড়ান্ত বিপর্যয় ব্যক্ত করতে। (পরিশেষে উপকূলীয় অঞ্চলগুলো প্লাবিত হওয়ার ঝুঁকিতে পড়ছে।)</p>
+                                <p><strong>(g) <span class="bg-yellow-200 px-1 text-black font-bold">Otherwise</span></strong>: যদি বন রক্ষা না করা হয় তবে কী হবে। (অন্যথায় আমরা আমাদের বাস্তুসংস্থানের ভারসাম্য বজায় রাখতে ব্যর্থ হব।)</p>
+                                <p><strong>(h) <span class="bg-yellow-200 px-1 text-black font-bold">Therefore / So</span></strong>: যৌক্তিক সিদ্ধান্ত। (সুতরাং বৃক্ষরোপণ কর্মসূচি চালু করতে হবে।)</p>
+                                <p><strong>(i) <span class="bg-yellow-200 px-1 text-black font-bold">Moreover / Besides</span></strong>: অতিরিক্ত করণীয় পদক্ষেপ। (তাছাড়া আমাদের এই বিষয়ে মানুষকে সচেতন করতে হবে।)</p>
+                                <p><strong>(j) <span class="bg-yellow-200 px-1 text-black font-bold">Thus / In this way</span></strong>: পরিশেষে কীভাবে সমাধান নিশ্চিত হবে তা ব্যক্ত করতে। (এইভাবে আমরা আমাদের বাস্তুসংস্থান রক্ষা করতে পারব।)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ফুটার -->
+    <footer class="text-center py-6 text-gray-500 text-sm border-t border-gray-200 mt-12 bg-white">
+        <p>&copy; ২০২৬ ZAMIL ACADEMY। সর্বস্বত্ব সংরক্ষিত।</p>
+    </footer>
+
+    <script>
+        // উত্তর প্যানেল শো বা হাইড করার ফাংশন
+        function toggleAnswerPanel(exNum) {
+            const panel = document.getElementById(`ans-panel-${exNum}`);
+            if (panel.classList.contains('hidden')) {
+                panel.classList.remove('hidden');
+            } else {
+                panel.classList.add('hidden');
+            }
+        }
+
+        // কমপ্লিট স্ট্যাটাস টগল এবং লোকাল স্টোরেজ আপডেট
+        function toggleComplete(exNum) {
+            const card = document.getElementById(`ex-${exNum}`);
+            const badge = card.querySelector('.completed-badge');
+            const checkbox = document.getElementById(`checkbox-${exNum}`);
+            
+            let completedList = JSON.parse(localStorage.getItem('connectors_completed_exercises')) || [];
+
+            if (completedList.includes(exNum)) {
+                // আন-কমপ্লিট করা
+                completedList = completedList.filter(id => id !== exNum);
+                card.classList.remove('completed-card');
+                badge.classList.add('hidden');
+                badge.classList.remove('flex');
+                checkbox.innerHTML = '';
+                checkbox.classList.remove('bg-green-600', 'border-green-600');
+                checkbox.classList.add('bg-white', 'border-gray-300');
+            } else {
+                // কমপ্লিট করা
+                completedList.push(exNum);
+                card.classList.add('completed-card');
+                badge.classList.remove('hidden');
+                badge.classList.add('flex');
+                checkbox.innerHTML = '<svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>';
+                checkbox.classList.remove('bg-white', 'border-gray-300');
+                checkbox.classList.add('bg-green-600', 'border-green-600');
+            }
+
+            localStorage.setItem('connectors_completed_exercises', JSON.stringify(completedList));
+        }
+
+        // পেজ লোড হওয়ার পর লোকাল স্টোরেজ থেকে প্রোগ্রেস পুনরুদ্ধার
+        window.addEventListener('DOMContentLoaded', () => {
+            const completedList = JSON.parse(localStorage.getItem('connectors_completed_exercises')) || [];
+            completedList.forEach(exNum => {
+                const card = document.getElementById(`ex-${exNum}`);
+                if (card) {
+                    const badge = card.querySelector('.completed-badge');
+                    const checkbox = document.getElementById(`checkbox-${exNum}`);
+                    
+                    card.classList.add('completed-card');
+                    if (badge) {
+                        badge.classList.remove('hidden');
+                        badge.classList.add('flex');
+                    }
+                    if (checkbox) {
+                        checkbox.innerHTML = '<svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>';
+                        checkbox.classList.remove('bg-white', 'border-gray-300');
+                        checkbox.classList.add('bg-green-600', 'border-green-600');
+                    }
+                }
+            });
+        });
+    </script>
+<script type="module">
+    // Firebase Time Tracking Script
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
+    import { getDatabase, ref, update, increment } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-database.js";
+
+    // ফায়ারবেজ কনফিগারেশন
+    const firebaseConfig = {
+        apiKey: "AIzaSyABpKz4xjVKWb6kVR_mT8d13dt9lcDwipE",
+        authDomain: "zamil-4e08e.firebaseapp.com",
+        databaseURL: "https://zamil-4e08e-default-rtdb.firebaseio.com/",
+        projectId: "zamil-4e08e"
+    };
+
+    // ফায়ারবেজ অ্যাপ এবং ডেটাবেজ ইনিশিয়ালিলাইজেশন
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+
+    // ডেটাবেজ কানেকশনটিকে গ্লোবাল করা
+    window.db = db; 
+
+    // প্রতি ৩০ সেকেন্ডে সময় ট্র্যাকিং
+    const timeRef = ref(db, 'total_time_spent');
+
+    setInterval(() => {
+        // ইউজার ট্যাব অন্য ট্যাবে বা ব্যাকগ্রাউন্ডে থাকলে কোডটি রান করবে না
+        if (document.hidden) return; 
+
+        update(timeRef, {
+            "seconds": increment(30)
+        }).catch(err => console.error("Error updating time:", err));
+    }, 30000);
+
+    console.log("Firebase time tracking active (optimized).");
+</script>
+</body>
+</html>

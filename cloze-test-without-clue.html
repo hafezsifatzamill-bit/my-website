@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifiers Practice - ZAMIL ACADEMY</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore-compat.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'hind': ['"Hind Siliguri"', 'sans-serif'],
+                        'poppins': ['"Poppins"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Hind Siliguri', sans-serif; }
+        .checkmark-animate {
+            animation: pop 0.3s ease-out;
+        }
+        @keyframes pop {
+            0% { transform: scale(0.8); opacity: 0.5; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+    <header class="relative bg-green-800 text-white py-12 px-6 text-center shadow-lg rounded-b-[40px]">
+        <a href="index.html" 
+           class="absolute top-6 left-4 md:left-8 flex items-center gap-2 text-white/90 hover:text-white bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full transition-all duration-300 backdrop-blur-sm text-sm font-semibold shadow-sm border border-white/10">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            <span class="hidden md:inline font-hind">ড্যাশবোর্ড</span>
+        </a>
+
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white font-hind mt-4 md:mt-0">ZAMIL ACADEMY</h1>
+        <p class="mt-2 text-green-100 text-sm md:text-base font-hind opacity-90">HSC English 2nd Paper • Modifiers Interactive Practice</p>
+    </header>
+
+    <div class="flex justify-center -mt-8 px-6 relative z-10">
+        <div class="bg-white p-8 shadow-md border-t-4 border-green-800 rounded-2xl max-w-md w-full text-center">
+            <p class="text-gray-700 text-lg mb-6 font-hind">
+                প্রিমিয়াম সেবা পেতে আমাদের ইউটিউব চ্যানেলটি সাবস্ক্রাইব করুন।
+            </p>
+            <a href="https://youtube.com/@zamil_academy?si=EbWJq_lwwbWrLar9" 
+               target="_blank"
+               class="inline-block bg-red-700 hover:bg-green-800 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-md font-hind">
+                চ্যানেল ভিজিট করুন
+            </a>
+        </div>
+    </div>
+
+    <main class="flex-grow flex flex-col items-center pt-16 pb-12 px-6">
+        
+        <div class="max-w-5xl w-full mb-8">
+            <a href="cloze-test-without-clue-rules.html" class="flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-green-800 to-emerald-700 text-white p-6 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold font-hind">মডিফায়ার্স এর নিয়মাবলী (Rules)</h3>
+                        <p class="text-green-100 text-sm font-hind">সবগুলো নিয়ম উদাহরণ ও সহজ ব্যাখ্যাসহ দেখতে এখানে ক্লিক করুন।</p>
+                    </div>
+                </div>
+                <span class="mt-4 md:mt-0 bg-white text-green-800 font-bold px-6 py-2 rounded-full font-hind hover:bg-green-50 transition duration-300">নিয়মগুলো দেখুন →</span>
+            </a>
+        </div>
+
+        <div class="text-center mb-10">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-gray-800 font-hind">১০টি গুরুত্বপূর্ণ প্র্যাকটিস এক্সারসাইজ (Modifiers)</h2>
+            <div class="w-16 h-1 bg-green-600 rounded-full mx-auto mt-3"></div>
+        </div>
+
+        <div id="exercise-container" class="w-full max-w-5xl space-y-8">
+            </div>
+
+    </main>
+
+    <footer class="text-center py-8 text-gray-500 text-sm border-t border-gray-200 bg-white">
+        <p class="font-hind">© ২০২৬ ZAMIL ACADEMY। সর্বস্বত্ব সংরক্ষিত।</p>
+    </footer>
+
+    <script>
+        // ১০টি HSC বোর্ড স্ট্যান্ডার্ড মডিফায়ার্স এক্সারসাইজ ডেটাবেস
+        const exercises = [
+            {
+                id: 1,
+                title: "Exercise 01: Kazi Nazrul Islam",
+                passage: "Kazi Nazrul Islam is a (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] poet. He is considered (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Post-modify the noun with an appositive]. He was born in a (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] family. He wrote (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Post-modify the verb] against oppression. His (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] songs inspired people. He composed poems (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Post-modify the verb with an infinitive] the oppressed. His (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] contribution enriched Bengali literature. We love (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Use a possessive to pre-modify the noun] poems. His active life was (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] due to illness. He passed away in Dhaka, (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Post-modify the noun with an appositive].",
+                answers: {
+                    a: { text: "rebel", bangla: "বিদ্রোহী", explanation: "Noun 'poet'-কে pre-modify করার জন্য Adjective 'rebel' বসেছে।" },
+                    b: { text: "our national poet", bangla: "আমাদের জাতীয় কবি", explanation: "Subject সম্পর্কে অতিরিক্ত তথ্য দিতে Appositive হিসেবে 'our national poet' বসেছে।" },
+                    c: { text: "poor / needy", bangla: "দরিদ্র", explanation: "Noun 'family'-এর অবস্থা প্রকাশ করতে Adjective 'poor' ব্যবহৃত হয়েছে।" },
+                    d: { text: "strongly / fiercely", bangla: "দৃঢ়ভাবে / তীব্রভাবে", explanation: "Verb 'wrote'-এর বৈশিষ্ট্য প্রকাশ করতে Adverb 'strongly' বসেছে।" },
+                    e: { text: "patriotic / inspiring", bangla: "দেশাত্মবোধক / অনুপ্রেরণামূলক", explanation: "Noun 'songs'-কে বর্ণনা করতে Adjective 'patriotic' বসেছে।" },
+                    f: { text: "to awaken / to free", bangla: "জাগ্রত করতে / মুক্ত করতে", explanation: "উদ্দেশ্য প্রকাশ করতে Infinitive 'to awaken' ব্যবহৃত হয়েছে।" },
+                    g: { text: "great / outstanding", bangla: "মহান / অসামান্য", explanation: "Noun 'contribution'-এর পূর্বে গুণবাচক Adjective 'great' বসেছে।" },
+                    h: { text: "his", bangla: "তাঁর", explanation: "মালিকানা বা সম্বন্ধ বোঝাতে Possessive 'his' ব্যবহৃত হয়েছে।" },
+                    i: { text: "short", bangla: "সংক্ষিপ্ত", explanation: "Noun 'life'-এর স্থায়িত্ব প্রকাশে Adjective 'short' বসেছে।" },
+                    j: { text: "the capital of Bangladesh", bangla: "বাংলাদেশের রাজধানী", explanation: "Dhaka সম্পর্কে অতিরিক্ত তথ্য দিতে Appositive ফ্রেজ বসেছে।" }
+                }
+            },
+            {
+                id: 2,
+                title: "Exercise 02: Deforestation",
+                passage: "Deforestation means cutting down trees (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Post-modify the verb]. People cut trees for (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] purposes. They need wood (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Post-modify the verb with an infinitive phrase]. This destruction causes (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] damage to the environment. As a result, the level of (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Use a noun adjective to pre-modify the noun] dioxide is increasing. Global warming is rising (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Post-modify the verb]. Many species of animals are losing (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Use a possessive to pre-modify the noun] shelters. We must take (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] steps (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Post-modify the verb with an infinitive] our environment. Tree plantation should be turned into a (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] movement.",
+                answers: {
+                    a: { text: "indiscriminately / randomly", bangla: "নির্বিচারে", explanation: "গাছ কাটার ধরন বোঝাতে Verb 'cutting'-কে modify করে Adverb 'indiscriminately' বসেছে।" },
+                    b: { text: "various / different", bangla: "বিভিন্ন", explanation: "Noun 'purposes'-এর সংখ্যা বা প্রকার নির্দেশ করতে Adjective 'various' বসেছে।" },
+                    c: { text: "to make furniture / to burn as fuel", bangla: "আসবাবপত্র তৈরি করতে", explanation: "কাঠের প্রয়োজনীয়তার উদ্দেশ্য প্রকাশ করতে Infinitive Phrase বসেছে।" },
+                    d: { text: "severe / massive", bangla: "তীব্র / ব্যাপক", explanation: "Noun 'damage'-এর গভীরতা বোঝাতে Adjective 'severe' বসেছে।" },
+                    e: { text: "carbon", bangla: "কার্বন", explanation: "Noun 'dioxide'-এর আগে আরেকটি Noun 'carbon' বসে Noun Adjective হিসেবে কাজ করছে।" },
+                    f: { text: "rapidly / fast", bangla: "দ্রুত গতিতে", explanation: "বৃদ্ধি পাওয়ার গতি প্রকাশ করতে Verb 'rising'-এর পর Adverb 'rapidly' বসেছে।" },
+                    g: { text: "their", bangla: "তাদের", explanation: "প্রাণীদের অধিকার বোঝাতে Possessive 'their' বসেছে।" },
+                    h: { text: "necessary / effective", bangla: "প্রয়োজনীয় / কার্যকর", explanation: "Noun 'steps'-এর গুরুত্ব বোঝাতে Adjective 'necessary' বসেছে।" },
+                    i: { text: "to save / to protect", bangla: "রক্ষা করতে", explanation: "পদক্ষেপ নেওয়ার উদ্দেশ্য প্রকাশ করতে Infinitive 'to save' বসেছে।" },
+                    j: { text: "mass / national", bangla: "গণ / জাতীয়", explanation: "আন্দোলনের রূপ বোঝাতে Noun 'movement'-এর পূর্বে Adjective/Noun Adjective 'mass' বসেছে।" }
+                }
+            },
+            {
+                id: 3,
+                title: "Exercise 03: The Value of Time",
+                passage: "Our life is (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the adjective with an intensifier] short. But we have to perform (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] duties. Time is a (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] element. A person (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Use a present participle to post-modify the noun] time properly can succeed. Students should utilize (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Use a possessive to pre-modify the noun] time. Those who waste time (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Post-modify the verb] have to suffer (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Post-modify the verb with an adverbial phrase]. We must work hard (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Post-modify the verb with an infinitive phrase]. Time once gone is gone (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Post-modify the verb]. So, proper use of time is a (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] factor for success.",
+                answers: {
+                    a: { text: "very / extremely", bangla: "খুবই / অত্যন্ত", explanation: "Adjective 'short'-এর তীব্রতা বাড়াতে Intensifier হিসেবে Adverb 'very' বসেছে।" },
+                    b: { text: "many / diverse", bangla: "অনেক / বৈচিত্র্যময়", explanation: "Duties-এর বহুবচন রূপকে কোয়ালিফাই করতে Adjective 'many' বসেছে।" },
+                    c: { text: "valuable / precious", bangla: "মূল্যবান", explanation: "Noun 'element'-এর গুরুত্ব প্রকাশ করতে Adjective 'valuable' বসেছে।" },
+                    d: { text: "utilizing / using", bangla: "ব্যবহারকারী / ব্যবহার করে এমন", explanation: "Noun 'person'-কে post-modify করতে Verb+ing যুক্ত Present Participle 'utilizing' বসেছে।" },
+                    e: { text: "their", bangla: "তাদের", explanation: "শিক্ষার্থীদের অধিকার বোঝাতে Possessive 'their' ব্যবহৃত হয়েছে।" },
+                    f: { text: "foolishly / idly", bangla: "মূর্খতার সাথে / অলসভাবে", explanation: "অপচয় করার ধরণ প্রকাশ করতে Adverb 'foolishly' বসেছে।" },
+                    g: { text: "in the long run", bangla: "পরিশেষে / ভবিষ্যতে", explanation: "পাওনা ফল বা সময় বোঝাতে Adverbial Phrase 'in the long run' বসেছে।" },
+                    h: { text: "to shine in life", bangla: "জীবনে উন্নতি করতে", explanation: "কঠোর পরিশ্রমের উদ্দেশ্য বোঝাতে Infinitive Phrase বসেছে।" },
+                    i: { text: "forever", bangla: "চিরকালের জন্য", explanation: "Verb 'gone'-কে চিরস্থায়ী অর্থে প্রকাশ করতে Adverb 'forever' বসেছে।" },
+                    j: { text: "key / crucial", bangla: "প্রধান / গুরুত্বপূর্ণ", explanation: "Noun 'factor'-এর বৈশিষ্ট্য বোঝাতে Adjective 'key' বসেছে।" }
+                }
+            },
+            {
+                id: 4,
+                title: "Exercise 04: A Winter Morning",
+                passage: "A winter morning is (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the adjective with an intensifier] cold. There is (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] mist everywhere. Everything looks hazy due to (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] fog. The sun rises (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Post-modify the verb]. People wear (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] clothes (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Post-modify the verb with an infinitive phrase]. Poor people gather straw (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Post-modify the verb with an infinitive]. (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] dew drops on grass look like pearls. Children enjoy (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] cakes. A winter morning disappears (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Post-modify the verb] as the day advances.",
+                answers: {
+                    a: { text: "very / quite", bangla: "খুবই / বেশ", explanation: "Adjective 'cold'-এর তীব্রতা বাড়াতে Intensifier 'very' বসেছে।" },
+                    b: { text: "dense / thick", bangla: "ঘন", explanation: "Mist (কুয়াশা)-এর ঘনত্ব বোঝাতে Adjective 'dense' বসেছে।" },
+                    c: { text: "heavy / blinding", bangla: "প্রবল / অন্ধকারী", explanation: "Fog-কে বর্ণনা করতে Adjective 'heavy' ব্যবহৃত হয়েছে।" },
+                    d: { text: "late / slowly", bangla: "দেরিতে / ধীরে ধীরে", explanation: "সূর্য ওঠার সময় বা ধরণ বোঝাতে Adverb 'late' বসেছে।" },
+                    e: { text: "warm / winter", bangla: "উষ্ণ / শীতের", explanation: "Clothes-এর ধরন বোঝাতে Adjective 'warm' বা Noun Adjective 'winter' বসেছে।" },
+                    f: { text: "to protect themselves from cold", bangla: "ঠান্ডা থেকে নিজেদের রক্ষা করতে", explanation: "পোশাক পরার উদ্দেশ্য প্রকাশ করতে Infinitive Phrase বসেছে।" },
+                    g: { text: "to warm themselves", bangla: "নিজেদের উষ্ণ করতে", explanation: "খড় কুড়ানোর উদ্দেশ্য বোঝাতে Infinitive 'to warm themselves' বসেছে।" },
+                    h: { text: "Morning", bangla: "সকালের", explanation: "শিশিরের সময়কাল বোঝাতে Noun 'Morning' এখানে Noun Adjective হিসেবে বসেছে।" },
+                    i: { text: "delicious / traditional", bangla: "সুস্বাদু / ঐতিহ্যবাহী", explanation: "পিঠার স্বাদ বা ধরন প্রকাশে Adjective 'delicious' বসেছে।" },
+                    j: { text: "gradually / slowly", bangla: "ধীরে ধীরে", explanation: "কেমন করে কুয়াশা চলে যায় তা বোঝাতে Adverb 'gradually' বসেছে।" }
+                }
+            },
+            {
+                id: 5,
+                title: "Exercise 05: Importance of Reading Books",
+                passage: "Books are our (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] friends. Reading books is a (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] habit. It helps us (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Post-modify the verb with an infinitive phrase]. We can acquire (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] knowledge. Books open the (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] door of mind. A student (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Use a present participle to post-modify the noun] books can score well. We should read books (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Post-modify the verb]. It removes our (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] ignorance. Good books are (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the adjective with an intensifier] useful. So, we must build a (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] library at home.",
+                answers: {
+                    a: { text: "best / true", bangla: "সবচেয়ে ভালো / প্রকৃত", explanation: "Friends-এর গুণ প্রকাশ করতে Adjective 'best' বসেছে।" },
+                    b: { text: "noble / good", bangla: "মহৎ / ভালো", explanation: "Habit-কে কোয়ালিফাই করতে Adjective 'noble' বসেছে।" },
+                    c: { text: "to enrich our mind", bangla: "আমাদের মনকে সমৃদ্ধ করতে", explanation: "সাহায্য করার ক্ষেত্র বা উদ্দেশ্য প্রকাশে Infinitive Phrase বসেছে।" },
+                    d: { text: "vast / diverse", bangla: "বিশাল / বৈচিত্র্যময়", explanation: "Knowledge-এর পরিমাণ বা প্রকার বোঝাতে Adjective 'vast' বসেছে।" },
+                    e: { text: "hidden / mental", bangla: "লুকানো / মানসিক", explanation: "Door-এর অবস্থা বা বৈশিষ্ট্য বোঝাতে Adjective 'hidden' বা 'mental' বসেছে।" },
+                    f: { text: "reading / studying", bangla: "অধ্যয়নরত / বই পড়ে এমন", explanation: "Student-কে post-modify করার জন্য Verb+ing যুক্ত Present Participle 'reading' বসেছে।" },
+                    g: { text: "regularly / attentively", bangla: "নিয়মিত / মনোযোগ দিয়ে", explanation: "পড়ার ধরণ বা সময় বোঝাতে Adverb 'regularly' বসেছে।" },
+                    h: { text: "mental / deep", bangla: "মানসিক / গভীর", explanation: "Ignorance (অজ্ঞতা)-কে বিশেষায়িত করতে Adjective 'mental' বা 'deep' বসেছে।" },
+                    i: { text: "very / highly", bangla: "খুবই / উচ্চমাত্রায়", explanation: "Adjective 'useful'-এর মাত্রা বাড়াতে Intensifier 'very' বসেছে।" },
+                    j: { text: "personal / small", bangla: "ব্যক্তিগত / ছোট", explanation: "Library-র ধরন বোঝাতে Adjective 'personal' বসেছে।" }
+                }
+            },
+            {
+                id: 6,
+                title: "Exercise 06: Water Pollution",
+                passage: "Water is an (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] element of nature. But it is polluted (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Post-modify the verb]. (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] farmers use chemical fertilizers. Rain washes chemicals into (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] water bodies. Mills throw (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] waste into rivers. Steamers dump oil (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Post-modify the verb with a prepositional phrase]. People drink (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] water and get sick. We need water (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Post-modify the verb with an infinitive phrase]. Government must take (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] steps. Otherwise, (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] life will be in danger.",
+                answers: {
+                    a: { text: "essential / important", bangla: "অপরিহার্য / গুরুত্বপূর্ণ", explanation: "Noun 'element'-কে বিশেষায়িত করতে Adjective 'essential' বসেছে।" },
+                    b: { text: "indiscriminately / continuously", bangla: "নির্বিচারে / অনবরত", explanation: "দূষণের অবস্থা বা ধরণ বোঝাতে Adverb 'indiscriminately' বসেছে।" },
+                    c: { text: "Ignorant / Illiterate", bangla: "অজ্ঞ / অশিক্ষিত", explanation: "কৃষকদের অবস্থা বোঝাতে Adjective 'Ignorant' বসেছে।" },
+                    d: { text: "nearby / local", bangla: "নিকটবর্তী / স্থানীয়", explanation: "জলাশয়গুলোর অবস্থান বোঝাতে Adjective 'nearby' বসেছে।" },
+                    e: { text: "toxic / harmful", bangla: "বিষাক্ত / ক্ষতিকর", explanation: "বর্জ্যের ক্ষতিকর রূপ প্রকাশ করতে Adjective 'toxic' বসেছে।" },
+                    f: { text: "into the rivers / into the water", bangla: "নদীতে / পানির মধ্যে", explanation: "স্থান নির্দেশ করতে Prepositional Phrase 'into the rivers' বসেছে।" },
+                    g: { text: "polluted / unsafe", bangla: "দূষিত / অনিরাপদ", explanation: "পানির অবস্থা বোঝাতে Past Participle বা Adjective 'polluted' বসেছে।" },
+                    h: { text: "to survive on earth", bangla: "পৃথিবীতে বেঁচে থাকতে", explanation: "পানির প্রয়োজনীয়তার কারণ বা উদ্দেশ্য প্রকাশ করতে Infinitive Phrase বসেছে।" },
+                    i: { text: "strict / immediate", bangla: "কঠোর / অবিলম্বে", explanation: "পদক্ষেপের ধরন বোঝাতে Adjective 'strict' বসেছে।" },
+                    j: { text: "human / aquatic", bangla: "মানব / জলজ", explanation: "কোন ধরনের জীবন ঝুঁকিতে পড়বে তা বোঝাতে Noun Adjective 'human' বা 'aquatic' বসেছে।" }
+                }
+            },
+            {
+                id: 7,
+                title: "Exercise 07: Newspaper",
+                passage: "Newspaper is a (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] medium of news. It plays a (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] role in society. It provides (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] news. We can learn about (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] affairs. It is (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the adjective with an intensifier] helpful for students. A person (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Use a present participle to post-modify the noun] newspaper stays informed. It has (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] sections like sports and business. Some newspapers spread (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] rumors. We should read it (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Post-modify the verb]. It is called the (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] mirror of the world.",
+                answers: {
+                    a: { text: "popular / powerful", bangla: "জনপ্রিয় / শক্তিশালী", explanation: "Medium-কে বিশেষায়িত করতে গুণবাচক Adjective 'popular' বসেছে।" },
+                    b: { text: "vital / significant", bangla: "গুরুত্বপূর্ণ", explanation: "Role-এর বৈশিষ্ট্য বোঝাতে Adjective 'vital' ব্যবহৃত হয়েছে।" },
+                    c: { text: "daily / global", bangla: "দৈনিক / বৈশ্বিক", explanation: "খবরের ধরণ বা সময়কাল বোঝাতে Adjective 'daily' বসেছে।" },
+                    d: { text: "current / international", bangla: "সাম্প্রতিক / আন্তর্জাতিক", explanation: "Affairs (ঘটনাবলি)-কে বর্ণনা করতে Adjective 'current' বসেছে।" },
+                    e: { text: "very / extremely", bangla: "খুবই / অত্যন্ত", explanation: "Adjective 'helpful'-এর মাত্রা বাড়াতে Intensifier 'very' বসেছে।" },
+                    f: { text: "reading / skimming", bangla: "পাঠরত / যে পাঠ করে", explanation: "Noun 'person'-কে post-modify করতে Present Participle 'reading' বসেছে।" },
+                    g: { text: "different / distinct", bangla: "বিভিন্ন / পৃথক", explanation: "Sections-এর বিভিন্নতা বোঝাতে Adjective 'different' বসেছে।" },
+                    h: { text: "false / baseless", bangla: "মিথ্যা / ভিত্তিহীন", explanation: "Rumors (গুজব)-এর নেতিবাচক রূপ বোঝাতে Adjective 'false' বসেছে।" },
+                    i: { text: "regularly / daily", bangla: "নিয়মিত / প্রতিদিন", explanation: "পড়ার কর্ম সম্পন্ন করার সময় বা ধরণ বোঝাতে Adverb 'regularly' বসেছে।" },
+                    j: { text: "true / living", bangla: "প্রকৃত / জীবন্ত", explanation: "Mirror (আয়না)-কে বিশেষায়িত করতে Adjective 'true' বসেছে।" }
+                }
+            },
+            {
+                id: 8,
+                title: "Exercise 08: Student Life",
+                passage: "Student life is the (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] period of life. It is the time (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Post-modify the verb with an infinitive phrase]. A student must be (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the adjective with an intensifier] disciplined. He should study (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Post-modify the verb]. (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] students do not waste time. He should take part in (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] activities. Bad company can ruin (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Use a possessive to pre-modify the noun] character. He must obey (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] teachers. Success depends on (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] labor. It forms the base of (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] life.",
+                answers: {
+                    a: { text: "best / golden", bangla: "সেরা / সোনালী", explanation: "Period-এর শ্রেষ্ঠত্ব বা গুরুত্ব প্রকাশে Adjective 'best' বা 'golden' বসেছে।" },
+                    b: { text: "to prepare for future", bangla: "ভবিষ্যতের জন্য প্রস্তুতি নেওয়ার", explanation: "সময়ের উদ্দেশ্য বা কাজ প্রকাশ করতে Infinitive Phrase বসেছে।" },
+                    c: { text: "very / highly", bangla: "খুবই / অত্যন্ত", explanation: "Adjective 'disciplined'-এর গভীরতা বাড়াতে Intensifier 'very' বসেছে।" },
+                    d: { text: "attentively / regularly", bangla: "মনোযোগ সহকারে", explanation: "পড়াশোনা করার ধরন নির্দেশ করতে Adverb 'attentively' বসেছে।" },
+                    e: { text: "Good / Meritorious", bangla: "ভালো / মেধাবী", explanation: "Students-এর গুণ প্রকাশ করতে Adjective 'Good' বসেছে।" },
+                    f: { text: "co-curricular / social", bangla: "সহ-শিক্ষা / সামাজিক", explanation: "Activities-এর প্রকার বোঝাতে Adjective 'co-curricular' বসেছে।" },
+                    g: { text: "his / a student's", bangla: "তার / একজন ছাত্রের", explanation: "চরিত্রের মালিকানা বা সম্পর্ক বোঝাতে Possessive 'his' ব্যবহৃত হয়েছে।" },
+                    h: { text: "his / respect-worthy", bangla: "তার / শ্রদ্ধেয়", explanation: "শিক্ষকদের সাথে সম্পর্ক নির্দেশ করতে Possessive 'his' বসেছে।" },
+                    i: { text: "hard / honest", bangla: "কঠোর / সৎ", explanation: "Labor (শ্রম)-কে বর্ণনা করতে Adjective 'hard' বসেছে।" },
+                    j: { text: "future / professional", bangla: "ভবিষ্যৎ / পেশাদার", explanation: "Life-এর অবস্থা বা সময় বোঝাতে Noun Adjective 'future' ব্যবহৃত হয়েছে।" }
+                }
+            },
+            {
+                id: 9,
+                title: "Exercise 09: Cricket in Bangladesh",
+                passage: "Cricket is an (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] game. It has become (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the adjective with an intensifier] popular in Bangladesh. People enjoy (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] matches. Bangladesh team has (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] players. They play (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Post-modify the verb]. Winning a match brings (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] joy. Spectators go to stadium (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Post-modify the verb with an infinitive phrase]. Sometimes, (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] rain disrupts the game. Cricket fields are filled with (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] crowd. Bangladesh is moving (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Post-modify the verb] in world cricket.",
+                answers: {
+                    a: { text: "exciting / interesting", bangla: "উত্তেজনাপূর্ণ / আকর্ষনীয়", explanation: "Game-এর রোমাঞ্চকর অবস্থা প্রকাশ করতে Adjective 'exciting' বসেছে।" },
+                    b: { text: "very / extremely", bangla: "খুবই / অত্যন্ত", explanation: "Adjective 'popular'-এর তীব্রতা বাড়াতে Intensifier 'very' বসেছে।" },
+                    c: { text: "cricket / international", bangla: "ক্রিকেট / আন্তর্জাতিক", explanation: "Matches-এর ধরণ নির্ধারণে Noun Adjective 'cricket' বসেছে।" },
+                    d: { text: "world-class / talented", bangla: "বিশ্বমানের / প্রতিভাবান", explanation: "Players-এর গুণ বা মান প্রকাশে Adjective 'world-class' বসেছে।" },
+                    e: { text: "splendidly / aggressively", bangla: "চমৎকারভাবে / আক্রমণাত্মকভাবে", explanation: "খেলার ধরণ বা শৈলী প্রকাশে Verb 'play'-কে modify করে Adverb 'splendidly' বসেছে।" },
+                    f: { text: "immense / massive", bangla: "অসীম / ব্যাপক", explanation: "Joy (আনন্দ)-এর পরিমাণ বোঝাতে Adjective 'immense' বসেছে।" },
+                    g: { text: "to watch the match / to support team", bangla: "খেলাটি উপভোগ করতে", explanation: "স্টেডিয়ামে যাওয়ার উদ্দেশ্য প্রকাশ করতে Infinitive Phrase বসেছে।" },
+                    h: { text: "sudden / heavy", bangla: "হঠাৎ / ভারী", explanation: "Rain (বৃষ্টি)-এর অবস্থা বোঝাতে Adjective 'sudden' বসেছে।" },
+                    i: { text: "huge / excited", bangla: "বিশাল / উত্তেজিত", explanation: "Crowd (জনতা)-এর পরিমাণ বা অবস্থা প্রকাশে Adjective 'huge' বসেছে।" },
+                    j: { text: "forward / rapidly", bangla: "সামনের দিকে / দ্রুত গতিতে", explanation: "অগ্রগতির দিক নির্দেশ করতে Verb 'moving'-এর পর Adverb 'forward' বসেছে।" }
+                }
+            },
+            {
+                id: 10,
+                title: "Exercise 10: Early Rising",
+                passage: "Early rising is a (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] habit. An early riser wakes up (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Post-modify the verb]. He can enjoy the (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] air. He gets time (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Post-modify the verb with an infinitive phrase]. It is (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the adjective with an intensifier] beneficial to health. He can start (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Use a possessive to pre-modify the noun] daily work early. Taking a (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] walk refreshes his body. A lazy person misses (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] opportunities. Early rising gives us (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Pre-modify the noun] energy. We should practice this habit (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> [Post-modify the verb with a prepositional phrase].",
+                answers: {
+                    a: { text: "good / healthy", bangla: "ভালো / স্বাস্থ্যকর", explanation: "Habit-এর গুণ প্রকাশ করতে Adjective 'good' বসেছে।" },
+                    b: { text: "early / on time", bangla: "তাড়াতাড়ি", explanation: "ঘুম থেকে ওঠার সময় নির্দেশ করতে Adverb 'early' ব্যবহৃত হয়েছে।" },
+                    c: { text: "fresh / pure", bangla: "নির্মল / বিশুদ্ধ", explanation: "Air (বাতাস)-এর অবস্থা প্রকাশ করতে Adjective 'fresh' বসেছে।" },
+                    d: { text: "to take exercise / to do tasks", bangla: "ব্যায়াম করার / কাজ করার", explanation: "সময় পাওয়ার উদ্দেশ্য প্রকাশ করতে Infinitive Phrase বসেছে।" },
+                    e: { text: "very / highly", bangla: "খুবই / অত্যন্ত", explanation: "Adjective 'beneficial'-এর তীব্রতা বৃদ্ধি করতে Intensifier 'very' বসেছে।" },
+                    f: { text: "his", bangla: "তার", explanation: "কাজের সাথে ব্যক্তির সম্পর্ক বা আধিপত্য নির্দেশ করতে Possessive 'his' বসেছে।" },
+                    g: { text: "morning / daily", bangla: "সকালের / দৈনিক", explanation: "হাঁটার সময়কাল প্রকাশ করতে Noun 'morning' এখানে Noun Adjective হিসেবে ব্যবহৃত হয়েছে।" },
+                    h: { text: "beautiful / golden", bangla: "সুন্দর / সোনালী", explanation: "Opportunities (সুযোগসমূহ)-কে বিশেষায়িত করতে Adjective 'beautiful' বসেছে।" },
+                    i: { text: "ample / enough", bangla: "প্রচুর / পর্যাপ্ত", explanation: "Energy (শক্তি)-র পরিমাণ বোঝাতে Adjective 'ample' বসেছে।" },
+                    j: { text: "from our childhood / in daily life", bangla: "শৈশব থেকে / দৈনন্দিন জীবনে", explanation: "অভ্যাস গঠনের সময় বা ক্ষেত্র বোঝাতে Prepositional Phrase বসেছে।" }
+                }
+            }
+        ];
+
+        // প্রোগ্রেস ট্র্যাকিং মেমোরি অবজেক্ট
+        let completedExercises = {};
+
+        // ফায়ারবেস কনফিগারেশন ও ইনিশিয়ালিলাইজেশন
+        let db = null;
+        let auth = null;
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'zamil-academy-modifiers';
+
+        if (typeof __firebase_config !== 'undefined' && __firebase_config) {
+            try {
+                const firebaseConfig = JSON.parse(__firebase_config);
+                if (!firebase.apps.length) {
+                    firebase.initializeApp(firebaseConfig);
+                }
+                db = firebase.firestore();
+                auth = firebase.auth();
+                
+                // অথেনটিকেশন ও ডেটা লোড
+                initFirebaseSession();
+            } catch (err) {
+                console.warn("Firebase Setup Failed, falling back to local storage:", err);
+                loadFromLocalStorage();
+            }
+        } else {
+            loadFromLocalStorage();
+        }
+
+        // ফায়ারবেস সাইন ইন এবং ক্লাউড প্রোগ্রেস লোড
+        async function initFirebaseSession() {
+            try {
+                if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+                    await auth.signInWithCustomToken(__initial_auth_token);
+                } else {
+                    await auth.signInAnonymously();
+                }
+                
+                auth.onAuthStateChanged(user => {
+                    if (user) {
+                        loadCloudProgress(user.uid);
+                    } else {
+                        loadFromLocalStorage();
+                    }
+                });
+            } catch (e) {
+                console.error("Auth failed:", e);
+                loadFromLocalStorage();
+            }
+        }
+
+        // ক্লাউড ডেটাবেস থেকে অগ্রগতি লোড
+        function loadCloudProgress(userId) {
+            if (!db) return;
+            const docRef = db.collection('artifacts').doc(appId).collection('users').doc(userId).collection('progress').doc('modifier_tasks');
+            docRef.get().then(doc => {
+                if (doc.exists) {
+                    completedExercises = doc.data().completed || {};
+                } else {
+                    loadFromLocalStorage();
+                    saveCloudProgress(userId);
+                }
+                renderAllExercises();
+            }).catch(err => {
+                console.error("Firestore read error:", err);
+                loadFromLocalStorage();
+                renderAllExercises();
+            });
+        }
+
+        // ক্লাউড ডেটাবেসে প্রোগ্রেস সংরক্ষণ
+        function saveCloudProgress(userId) {
+            if (!db) return;
+            const docRef = db.collection('artifacts').doc(appId).collection('users').doc(userId).collection('progress').doc('modifier_tasks');
+            docRef.set({ completed: completedExercises }, { merge: true })
+                .catch(err => console.error("Firestore write error:", err));
+        }
+
+        // লোকাল মেমোরি (localStorage) থেকে লোড (চিরস্থায়ী সেভ রাখার জন্য)
+        function loadFromLocalStorage() {
+            try {
+                const localData = localStorage.getItem('zamil_modifiers_progress');
+                if (localData) {
+                    completedExercises = JSON.parse(localData);
+                }
+            } catch (e) {
+                console.warn("Local storage not supported or allowed:", e);
+            }
+        }
+
+        // লোকাল মেমোরিতে সংরক্ষণ
+        function saveToLocalStorage() {
+            try {
+                localStorage.setItem('zamil_modifiers_progress', JSON.stringify(completedExercises));
+            } catch (e) {
+                console.warn(e);
+            }
+        }
+
+        // প্রোগ্রেস পরিবর্তন হ্যান্ডল করা
+        function toggleComplete(exerciseId) {
+            if (completedExercises[exerciseId]) {
+                delete completedExercises[exerciseId];
+            } else {
+                completedExercises[exerciseId] = true;
+            }
+
+            saveToLocalStorage();
+
+            if (auth && auth.currentUser) {
+                saveCloudProgress(auth.currentUser.uid);
+            }
+
+            updateCardStyle(exerciseId);
+        }
+
+        // নির্দিষ্ট কার্ডের ডিজাইন আপডেট করা
+        function updateCardStyle(exerciseId) {
+            const card = document.getElementById(`card-${exerciseId}`);
+            const badge = document.getElementById(`badge-${exerciseId}`);
+            const checkbox = document.getElementById(`check-${exerciseId}`);
+            const isCompleted = !!completedExercises[exerciseId];
+
+            if (isCompleted) {
+                card.className = "bg-green-50/90 border-2 border-green-500 rounded-2xl p-6 md:p-8 shadow-md relative transition-all duration-300 transform scale-[1.01] checkmark-animate";
+                badge.classList.remove('hidden');
+                checkbox.checked = true;
+            } else {
+                card.className = "bg-white border border-gray-100 rounded-2xl p-6 md:p-8 shadow-sm relative transition-all duration-300";
+                badge.classList.add('hidden');
+                checkbox.checked = false;
+            }
+        }
+
+        // নির্দিষ্ট বর্ণানুক্রমিক বাটন ক্লিক করলে নির্দিষ্ট ব্ল্যাংকের উত্তর দেখানো
+        function selectAnswer(exerciseId, letter) {
+            const displayBox = document.getElementById(`ans-display-${exerciseId}`);
+            const exercise = exercises.find(ex => ex.id === exerciseId);
+            if (!exercise || !exercise.answers[letter]) return;
+
+            const selectedAns = exercise.answers[letter];
+
+            const allBtnContainer = document.getElementById(`btns-${exerciseId}`);
+            const buttons = allBtnContainer.getElementsByTagName('button');
+            for (let btn of buttons) {
+                btn.className = "w-10 h-10 rounded-full font-bold transition flex items-center justify-center border border-gray-200 bg-gray-50 text-gray-700 hover:bg-gray-100";
+            }
+            
+            const activeBtn = document.getElementById(`btn-${exerciseId}-${letter}`);
+            if (activeBtn) {
+                activeBtn.className = "w-10 h-10 rounded-full font-bold transition flex items-center justify-center bg-green-800 text-white shadow-md scale-115";
+            }
+
+            displayBox.innerHTML = `
+                <div class="space-y-2 text-left fade-in">
+                    <p class="text-lg font-bold text-green-900 font-poppins">Blank (${letter}): <span class="underline text-red-700">${selectedAns.text}</span></p>
+                    <p class="text-gray-700"><span class="font-bold font-hind">বাংলা অর্থ:</span> ${selectedAns.bangla}</p>
+                    <p class="text-sm text-gray-500 italic"><span class="font-bold font-hind">গঠনগত ব্যাখ্যা:</span> ${selectedAns.explanation}</p>
+                </div>
+            `;
+        }
+
+        // উত্তর দেখার প্যানেলটি টগল করা
+        function toggleAnswerPanel(exerciseId) {
+            const panel = document.getElementById(`panel-${exerciseId}`);
+            const btn = document.getElementById(`toggle-btn-${exerciseId}`);
+            if (panel.classList.contains('hidden')) {
+                panel.classList.remove('hidden');
+                btn.innerHTML = `উত্তর বন্ধ করুন 
+                    <svg class="w-5 h-5 ml-1 transform rotate-180 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>`;
+            } else {
+                panel.classList.add('hidden');
+                btn.innerHTML = `উত্তর দেখুন 
+                    <svg class="w-5 h-5 ml-1 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>`;
+            }
+        }
+
+        // সম্পূর্ণ এক্সারসাইজ জেনারেট করা
+        function renderAllExercises() {
+            const container = document.getElementById('exercise-container');
+            container.innerHTML = ""; 
+
+            exercises.forEach(ex => {
+                const isCompleted = !!completedExercises[ex.id];
+                const cardClass = isCompleted 
+                    ? "bg-green-50/90 border-2 border-green-500 rounded-2xl p-6 md:p-8 shadow-md relative transition-all duration-300 transform scale-[1.01]" 
+                    : "bg-white border border-gray-100 rounded-2xl p-6 md:p-8 shadow-sm relative transition-all duration-300";
+                
+                const badgeClass = isCompleted ? "" : "hidden";
+                const isChecked = isCompleted ? "checked" : "";
+
+                let letterButtons = "";
+                ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'].forEach(l => {
+                    letterButtons += `
+                        <button id="btn-${ex.id}-${l}" onclick="selectAnswer(${ex.id}, '${l}')" 
+                                class="w-10 h-10 rounded-full font-bold transition flex items-center justify-center border border-gray-200 bg-gray-50 text-gray-700 hover:bg-gray-100">
+                            ${l}
+                        </button>
+                    `;
+                });
+
+                const cardHTML = `
+                    <div id="card-${ex.id}" class="${cardClass}">
+                        
+                        <div id="badge-${ex.id}" class="absolute -top-3.5 right-6 bg-green-600 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-sm flex items-center gap-1.5 ${badgeClass}">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="font-hind">এটা আপনি কমপ্লিট করেছেন</span>
+                        </div>
+
+                        <div class="flex items-center justify-between mb-4 pb-2 border-b border-gray-100">
+                            <h3 class="text-xl font-bold text-gray-800 font-hind">${ex.title}</h3>
+                            
+                            <label class="flex items-center gap-2 cursor-pointer select-none">
+                                <span class="text-sm font-semibold text-gray-500 font-hind hidden sm:inline">কমপ্লিট চিহ্নিত করুন</span>
+                                <input type="checkbox" id="check-${ex.id}" onclick="toggleComplete(${ex.id})" ${isChecked}
+                                       class="w-6 h-6 rounded border-gray-300 text-green-700 focus:ring-green-500 cursor-pointer">
+                            </label>
+                        </div>
+
+                        <p class="text-gray-700 text-base md:text-lg leading-relaxed font-poppins mb-6 text-justify">
+                            ${ex.passage}
+                        </p>
+
+                        <div class="text-center">
+                            <button id="toggle-btn-${ex.id}" onclick="toggleAnswerPanel(${ex.id})" 
+                                    class="inline-flex items-center bg-green-800 hover:bg-green-900 text-white font-semibold py-2 px-6 rounded-full transition shadow-sm font-hind text-base">
+                                উত্তর দেখুন 
+                                <svg class="w-5 h-5 ml-1 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                        </div>
+
+                        <div id="panel-${ex.id}" class="hidden mt-6 pt-6 border-t border-gray-100">
+                            <p class="text-sm font-bold text-gray-500 mb-3 text-center font-hind">যেকোনো ব্ল্যাংকের বর্ণ সিলেক্ট করে সঠিক মডিফায়ার, বাংলা অর্থ ও ব্যাখ্যা দেখুন:</p>
+                            
+                            <div id="btns-${ex.id}" class="flex flex-wrap justify-center gap-2.5 mb-6">
+                                ${letterButtons}
+                            </div>
+
+                            <div id="ans-display-${ex.id}" class="bg-gray-50 p-5 rounded-2xl border border-gray-200 text-center min-h-[100px] flex items-center justify-center">
+                                <p class="text-gray-400 font-hind">কোনো উত্তর সিলেক্ট করা হয়নি। উপরের বাটনে ক্লিক করুন।</p>
+                            </div>
+                        </div>
+
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', cardHTML);
+            });
+        }
+
+        // উইন্ডো লোড হ্যান্ডলার
+        window.onload = function() {
+            if (!db) {
+                loadFromLocalStorage();
+                renderAllExercises();
+            }
+        };
+    </script>
+
+</body>
+</html>

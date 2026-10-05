@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Right Form of Verbs Practice - ZAMIL ACADEMY</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore-compat.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'hind': ['"Hind Siliguri"', 'sans-serif'],
+                        'poppins': ['"Poppins"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Hind Siliguri', sans-serif; }
+        .checkmark-animate {
+            animation: pop 0.3s ease-out;
+        }
+        @keyframes pop {
+            0% { transform: scale(0.8); opacity: 0.5; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+    <header class="relative bg-green-800 text-white py-12 px-6 text-center shadow-lg rounded-b-[40px]">
+        <a href="index.html" 
+           class="absolute top-6 left-4 md:left-8 flex items-center gap-2 text-white/90 hover:text-white bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full transition-all duration-300 backdrop-blur-sm text-sm font-semibold shadow-sm border border-white/10">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            <span class="hidden md:inline font-hind">ড্যাশবোর্ড</span>
+        </a>
+
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white font-hind mt-4 md:mt-0">ZAMIL ACADEMY</h1>
+        <p class="mt-2 text-green-100 text-sm md:text-base font-hind opacity-90">HSC English 2nd Paper • Right Form of Verbs Interactive Practice</p>
+    </header>
+
+    <div class="flex justify-center -mt-8 px-6 relative z-10">
+        <div class="bg-white p-8 shadow-md border-t-4 border-green-800 rounded-2xl max-w-md w-full text-center">
+            <p class="text-gray-700 text-lg mb-6 font-hind">
+                প্রিমিয়াম সেবা পেতে আমাদের ইউটিউব channel-টি সাবস্ক্রাইব করুন।
+            </p>
+            <a href="https://youtube.com/@zamil_academy?si=EbWJq_lwwbWrLar9" 
+               target="_blank"
+               class="inline-block bg-red-700 hover:bg-green-800 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-md font-hind">
+                চ্যানেল ভিজিট করুন
+            </a>
+        </div>
+    </div>
+
+    <main class="flex-grow flex flex-col items-center pt-16 pb-12 px-6">
+        
+        <div class="max-w-5xl w-full mb-8">
+            <a href="right-rules.html" class="flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-green-800 to-emerald-700 text-white p-6 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold font-hind">Right Form of Verbs এর নিয়মাবলী (Rules)</h3>
+                        <p class="text-green-100 text-sm font-hind">সবগুলো নিয়ম উদাহরণ ও সহজ ব্যাখ্যাসহ দেখতে এখানে ক্লিক করুন।</p>
+                    </div>
+                </div>
+                <span class="mt-4 md:mt-0 bg-white text-green-800 font-bold px-6 py-2 rounded-full font-hind hover:bg-green-50 transition duration-300">নিয়মগুলো দেখুন &rarr;</span>
+            </a>
+        </div>
+
+        <div class="text-center mb-10">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-gray-800 font-hind">১০টি গুরুত্বপূর্ণ প্র্যাকটিস এক্সারসাইজ</h2>
+            <div class="w-16 h-1 bg-green-600 rounded-full mx-auto mt-3"></div>
+        </div>
+
+        <div id="exercise-container" class="w-full max-w-5xl space-y-8">
+            </div>
+
+    </main>
+
+    <footer class="text-center py-8 text-gray-500 text-sm border-t border-gray-200 bg-white">
+        <p class="font-hind">&copy; ২০২৬ ZAMIL ACADEMY। সর্বস্বত্ব সংরক্ষিত।</p>
+    </footer>
+
+    <script>
+        // ১০টি HSC বোর্ড স্ট্যান্ডার্ড Right Form of Verbs এক্সারসাইজ ডেটাবেস
+        const exercises = [
+            {
+                id: 1,
+                title: "Exercise 01: The Importance of Education",
+                passage: "Education (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (enlighten)</span> a nation. A person who is not educated (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (be)</span> like a blind man. He cannot (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (distinguish)</span> between right and wrong. Proper education (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (help)</span> us to develop our minds. It (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (remove)</span> darkness from society. Many steps have been (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (take)</span> by the government. Illiteracy must be (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (eradicate)</span> immediately. If we want to progress, we must (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (give)</span> importance to education. A nation cannot (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (shine)</span> without it. So, we all should (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (work)</span> together.",
+                answers: {
+                    a: { text: "enlightens", bangla: "আলোকিত করে", explanation: "Subject (Education) থার্ড পারসন সিঙ্গুলার নাম্বার এবং চিরন্তন সত্য বা সাধারণ বর্তমান হওয়ায় ভার্বের সাথে s/es যুক্ত হয়েছে।" },
+                    b: { text: "is", bangla: "হয়", explanation: "Singular Subject-এর সাথে Present Tense-এ be-verb হিসেবে 'is' বসে।" },
+                    c: { text: "distinguish", bangla: "পার্থক্য করা", explanation: "Modal auxiliary (cannot)-এর পর সর্বদা মূল ভার্বের base form বা প্রেজেন্ট ফর্ম বসে।" },
+                    d: { text: "helps", bangla: "সাহায্য করে", explanation: "Subject (Proper education) থার্ড পারসন সিঙ্গুলার নাম্বার হওয়ায় Present Simple Tense-এ ভার্বের সাথে s যুক্ত হয়েছে।" },
+                    e: { text: "removes", bangla: "দূর করে", explanation: "Subject 'It' থার্ড পারসন সিঙ্গুলার হওয়ায় ভার্ব 'remove'-এর সাথে 's' যুক্ত হয়েছে।" },
+                    f: { text: "taken", bangla: "গ্রহণ করা হয়েছে", explanation: "Present Perfect Tense-এর Passive Structure (have been + V3) অনুযায়ী take-এর পাস্ট পার্টিসিপল 'taken' হয়েছে।" },
+                    g: { text: "eradicated", bangla: "নির্মূল করা", explanation: "Modal passive structure (must be + V3) অনুযায়ী ভার্বের পাস্ট পার্টিসিপল ফর্ম 'eradicated' বসেছে।" },
+                    h: { text: "give", bangla: "দেওয়া", explanation: "Modal verb (must)-এর পর মূল ভার্বের base form ব্যবহৃত হয়।" },
+                    i: { text: "shine", bangla: "উন্নত করা / উজ্জ্বল হওয়া", explanation: "Modal auxiliary (cannot)-এর পর মূল ভার্বের কোনো পরিবর্তন হয় না।" },
+                    j: { text: "work", bangla: "কাজ করা", explanation: "Modal verb (should)-এর পর নিয়ম অনুযায়ী ভার্বের base form বসে।" }
+                }
+            },
+            {
+                id: 2,
+                title: "Exercise 02: A Noble Virtue - Honesty",
+                passage: "Honesty (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (know)</span> as the best policy. An honest man is (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (respect)</span> by everyone. He never (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (tell)</span> a lie. Long ago, people (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (lead)</span> a very simple life based on truth. If a person (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (practice)</span> honesty, he will achieve peace. We should not (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (run)</span> after money dishonestly. A dishonest man may (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (become)</span> rich temporarily, but he (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (suffer)</span> in the long run. Let us (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (try)</span> to be honest. This habit needs to be (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (cultivate)</span> from childhood.",
+                answers: {
+                    a: { text: "is known", bangla: "পরিচিত/জানা যায়", explanation: "প্যাসিভ ভয়েস (Present Simple) হওয়ায় 'is + V3' ব্যবহৃত হয়েছে।" },
+                    b: { text: "respected", bangla: "সম্মানিত হন", explanation: "বাইরের কারো দ্বারা সম্মানিত হন (Passive Voice), তাই 'is'-এর পর V3 বসেছে।" },
+                    c: { text: "tells", bangla: "বলে", explanation: "Subject (He) থার্ড পারসন সিঙ্গুলার নাম্বার হওয়ায় এবং 'never' যুক্ত সাধারণ বর্তমান কালে 'tells' হয়েছে।" },
+                    d: { text: "led", bangla: "পরিচালনা করতেন", explanation: "'Long ago' অতীত নির্দেশক শব্দ থাকায় বাক্যটি Past Simple Tense-এ রূপান্তরিত হয়ে 'led' হয়েছে।" },
+                    e: { text: "practices", bangla: "চর্চা করে", explanation: "First Conditional (If + Present + Future)-এর নিয়ম অনুযায়ী প্রথম অংশ Present Simple এবং Subject অনুযায়ী 'practices' হয়েছে।" },
+                    f: { text: "run", bangla: "দৌড়ানো", explanation: "Modal 'should not'-এর পর ভার্বের মূল বা প্রেজেন্ট ফর্ম বসে।" },
+                    g: { text: "become", bangla: "হওয়া", explanation: "Modal auxiliary (may)-এর পর নিয়ম অনুযায়ী ভার্বের বেস ফর্ম 'become' বসে।" },
+                    h: { text: "suffers / will suffer", bangla: "কষ্ট পায় / কষ্ট পাবে", explanation: "চিরন্তন সত্য বা ভবিষ্যৎ ফলাফল বুঝাতে এটি Present Simple বা Future Simple উভয়ই হতে পারে।" },
+                    i: { text: "try", bangla: "চেষ্টা করা", explanation: "'Let us' বা 'Let's' এর পর সর্বদা মূল ভার্বের base form ব্যবহৃত হয়।" },
+                    j: { text: "cultivated", bangla: "চর্চা করা/গড়ে তোলা", explanation: "'to be'-এর পর প্যাসিভ অর্থে ভার্বের পাস্ট পার্টিসিপল ফর্ম (V3) বসে।" }
+                }
+            },
+            {
+                id: 3,
+                title: "Exercise 03: The Plight of Farmers",
+                passage: "Bangladesh is an agricultural country. Most of our people (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (engage)</span> in farming. The farmers (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (work)</span> hard day and night. They grow crops that (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (feed)</span> the nation. Last year, heavy flood (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (destroy)</span> many fields. As a result, many farmers (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (fall)</span> into deep crisis. Government is now (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (provide)</span> loans. If the weather (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (remain)</span> favorable, they will recover. Agriculture should be (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (modernize)</span> soon. New scientific methods must be (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (introduce)</span> to (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (increase)</span> production.",
+                answers: {
+                    a: { text: "are engaged", bangla: "নিযুক্ত রয়েছে", explanation: "লোকেরা নিজেরা নিযুক্ত থাকে বা প্যাসিভ অবস্থায় থাকে বুঝাতে 'are engaged' ব্যবহৃত হয়।" },
+                    b: { text: "work", bangla: "কাজ করে", explanation: "Subject (The farmers) প্লুরাল নাম্বার হওয়ায় Present Simple Tense-এ ভার্বের সাথে s/es যুক্ত হয়নি।" },
+                    c: { text: "feed", bangla: "খাওয়ায়/আহার জোগায়", explanation: "Relative pronoun 'that' তার পূর্ববর্তী Plural Noun (crops)-কে নির্দেশ করায় ভার্বটি Plural (feed) হয়েছে।" },
+                    d: { text: "destroyed", bangla: "ধ্বংস করেছিল", explanation: "'Last year' অতীত নির্দেশক শব্দ হওয়ায় Past Simple Tense অনুযায়ী 'destroyed' বসেছে।" },
+                    e: { text: "fell", bangla: "পড়েছিল", explanation: "অতীতের ঘটনার ধারাবাহিকতায় fall-এর পাস্ট ফর্ম 'fell' হয়েছে।" },
+                    f: { text: "providing", bangla: "প্রদান করছে", explanation: "চলমান বর্তমান কাল বা Present Continuous Tense (is + V-ing) গঠিত হয়েছে।" },
+                    g: { text: "remains", bangla: "থাকে", explanation: "If-conditional এর শর্তবাচক অংশে Singular Subject (the weather)-এর জন্য 'remains' বসেছে।" },
+                    h: { text: "modernized", bangla: "আধুনিকীকরণ করা", explanation: "'should be' মোডাল প্যাসিভ ফরম্যাট হওয়ায় ভার্বের V3 রূপ 'modernized' বসেছে।" },
+                    i: { text: "introduced", bangla: "প্রবর্তন করা", explanation: "'must be' মোডাল প্যাসিভ স্ট্রাকচার অনুসরণ করে V3 ফর্ম 'introduced' হয়েছে।" },
+                    j: { text: "increase", bangla: "বৃদ্ধি করতে", explanation: "উদ্দেশ্যমূলক ইনফিনিটিভ 'to'-এর পর সর্বদা ভার্বের base form বসে।" }
+                }
+            },
+            {
+                id: 4,
+                title: "Exercise 04: Tree Plantation Drive",
+                passage: "Trees (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (be)</span> our best friends. They (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (give)</span> us oxygen and shade. But humans are (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (cut)</span> down trees indiscriminately. If this trend (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (continue)</span>, our country will turn into a desert. Forests must be (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (protect)</span>. Yesterday, a seminar on tree plantation (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (hold)</span> in our college. The principal (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (deliver)</span> an inspiring speech. He suggested (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (plant)</span> more trees. We should avoid (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (destroy)</span> forests. It is time we (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (create)</span> awareness.",
+                answers: {
+                    a: { text: "are", bangla: "হয়", explanation: "Subject (Trees) প্লুরাল নাম্বার হওয়ায় Present Tense-এ be-verb হিসেবে 'are' বসে।" },
+                    b: { text: "give", bangla: "দেয়", explanation: "সাধারণ সত্য ঘটনা এবং Plural Subject এর কারণে ভার্বের বেস ফর্ম বসেছে।" },
+                    c: { text: "cutting", bangla: "কাটছে", explanation: "Present Continuous Tense এর নিয়ম অনুসারে 'are'-এর পর ভার্বের সাথে ing যুক্ত হয়ে 'cutting' হয়েছে।" },
+                    d: { text: "continues", bangla: "চলতে থাকে", explanation: "If clause-এ Subject (this trend) থার্ড পারসন সিঙ্গুলার হওয়ায় ভার্বের শেষে s যুক্ত হয়েছে।" },
+                    e: { text: "protected", bangla: "সুরক্ষিত করা", explanation: "'must be' প্যাসিভ মোডাল হওয়ায় ভার্বের পাস্ট পার্টিসিপল (protected) বসেছে।" },
+                    f: { text: "was held", bangla: "অনুষ্ঠিত হয়েছিল", explanation: "'Yesterday' অতীত নির্দেশক এবং সেমিনার নিজে নিজে অনুষ্ঠিত হতে পারে না (Past Passive), তাই 'was held' বসেছে।" },
+                    g: { text: "delivered", bangla: "প্রদান করেছিলেন", explanation: "অতীতের ঘটনা বর্ণনা করায় Past Simple Tense অনুযায়ী 'delivered' বসেছে।" },
+                    h: { text: "planting / to plant", bangla: "রোপণ করা", explanation: "Suggest ভার্বের পর সাধারণত gerund (V+ing) বসে, অথবা ইনফিনিটিভও হতে পারে।" },
+                    i: { text: "destroying", bangla: "ধ্বংস করা", explanation: "'avoid' ভার্বের পর পরবর্তী ভার্বের সাথে অবশ্যই ing (Gerund) যোগ করতে হয়।" },
+                    j: { text: "created", bangla: "তৈরি করলাম", explanation: "'It is time' বা 'It is high time' ফ্রেজের পর সাবজেক্ট থাকলে পরবর্তী ভার্বটি Past Simple Form (V2)-এ বসে।" }
+                }
+            },
+            {
+                id: 5,
+                title: "Exercise 05: Regular Exercise and Health",
+                passage: "Taking regular exercise (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (keep)</span> us fit. It (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (improve)</span> our blood circulation. Those who (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (do)</span> not exercise regularly may fall ill. Many benefits can be (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (derive)</span> from walking. While (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (walk)</span> in the morning, we can enjoy fresh air. Recently, people have (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (become)</span> more conscious about health. Gymnasiums are (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (establish)</span> in cities now. If you exercise, you (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (feel)</span> energetic. Good health cannot be (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (achieve)</span> by laziness. Let us (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (maintain)</span> a balanced routine.",
+                answers: {
+                    a: { text: "keeps", bangla: "রাখে", explanation: "Gerund (Taking regular exercise) বাক্যের সাবজেক্ট হলে তা সিঙ্গুলার হিসেবে গণ্য হয়, তাই 'keeps' হয়েছে।" },
+                    b: { text: "improves", bangla: "উন্নত করে", explanation: "Subject 'It' সিঙ্গুলার হওয়ায় সাধারণ সত্য প্রকাশে ভার্বের সাথে s যোগ হয়েছে।" },
+                    c: { text: "do", bangla: "করে", explanation: "Relative pronoun 'who' তার পূর্ববর্তী Plural subject 'Those'-কে নির্দেশ করায় plural সাহায্যকারী ভার্ব 'do' বসেছে।" },
+                    d: { text: "derived", bangla: "লাভ করা/পাওয়া", explanation: "'can be' প্যাসিভ ফর্মের কারণে derive-এর পাস্ট পার্টিসিপল 'derived' বসেছে।" },
+                    e: { text: "walking", bangla: "হাঁটার সময়", explanation: "'While'-এর ঠিক পরপরই কোনো সাবজেক্ট না থাকলে সরাসরি ভার্বের সাথে ing যুক্ত হয়।" },
+                    f: { text: "become", bangla: "হয়েছে", explanation: "Present Perfect Tense-এ 'have'-এর পর become-এর V3 ফর্ম 'become' বসে (become-became-become)।" },
+                    g: { text: "being established / established", bangla: "প্রতিষ্ঠিত হচ্ছে", explanation: "জিমনেসিয়ামগুলো বর্তমানে খোলা হচ্ছে (Passive Continuous), তাই 'being established' বা 'are established' সঠিক।" },
+                    h: { text: "will feel / feel", bangla: "অনূভব করবে", explanation: "If + Present Simple থাকলে অপর অংশটি সাধারণত Future Simple (will feel) হয়।" },
+                    i: { text: "achieved", bangla: "অর্জিত হওয়া", explanation: "Modal passive 'cannot be'-এর পর ভার্বের V3 রূপ 'achieved' বসেছে।" },
+                    j: { text: "maintain", bangla: "বজায় রাখা", explanation: "'Let us'-এর পর গ্রামারের নিয়ম অনুযায়ী ভার্বের বেস বা মূল ফর্ম অপরিবর্তিত থাকে।" }
+                }
+            },
+            {
+                id: 6,
+                title: "Exercise 06: Digital Bangladesh Vision",
+                passage: "Digital Bangladesh means (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (use)</span> technology in every sector. Massive progress has (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (achieve)</span> in recent years. Internet facilities (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (spread)</span> all over the country. Even villages have (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (bring)</span> under connectivity. Computer literacy is (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (impart)</span> to students now. If we adopt ICT, our country (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (develop)</span> rapidly. Corruption can be (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (minimize)</span> through digitalization. Online services (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (save)</span> both time and money. We look forward to (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (see)</span> a fully developed tech nation. Everyone should (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (contribute)</span> to this cause.",
+                answers: {
+                    a: { text: "using", bangla: "ব্যবহার করা", explanation: "'Mean' ভার্বের পর অবজেক্ট হিসেবে সাধারণত Gerund (V+ing) রূপ বসে।" },
+                    b: { text: "been achieved", bangla: "অর্জিত হয়েছে", explanation: "প্রগ্রেস নিজে অর্জন করে না, বরং অর্জিত হয়েছে (Present Perfect Passive) বুঝাতে 'has been achieved' বসেছে।" },
+                    c: { text: "have spread", bangla: "ছড়িয়ে পড়েছে", explanation: "Subject (Internet facilities) প্লুরাল নাম্বার হওয়ায় Present Perfect টেন্সে 'have spread' বসেছে।" },
+                    d: { text: "been brought", bangla: "আওতায় আনা হয়েছে", explanation: "গ্রামগুলোকে কানেক্টিভিটির আওতায় আনা হয়েছে (Passive), তাই 'have been brought' হয়েছে।" },
+                    e: { text: "being imparted / imparted", bangla: "প্রদান করা হচ্ছে", explanation: "বর্তমানে শিক্ষার্থীদের কম্পিউটার শিক্ষা দেওয়া হচ্ছে (Passive Voice), তাই 'being imparted' বসেছে।" },
+                    f: { text: "will develop", bangla: "উন্নত হবে", explanation: "If + Present Simple নিয়মের কারণে অপর ক্লজটি Future Simple Tense (will develop) হয়েছে।" },
+                    g: { text: "minimized", bangla: "কমিয়ে আনা", explanation: "Modal passive 'can be'-এর কারণে ভার্বের পাস্ট পার্টিসিপল ফর্ম 'minimized' বসেছে।" },
+                    h: { text: "save", bangla: "সঞ্চয় করে", explanation: "Subject (Online services) প্লুরাল থাকায় Present Simple-এ ভার্বের বেস ফর্ম 'save' বসেছে।" },
+                    i: { text: "seeing", bangla: "দেখার প্রত্যাশায়", explanation: "'look forward to' একটি ফ্রেজ প্রিপজিশন, যার পর সর্বদা ভার্বের সাথে ing যুক্ত হয়।" },
+                    j: { text: "contribute", bangla: "অবদান রাখা", explanation: "Modal verb (should)-এর পর স্বাভাবিক নিয়মে ভার্বের মূল রূপ 'contribute' বসে।" }
+                }
+            },
+            {
+                id: 7,
+                title: "Exercise 07: Global Warming Crisis",
+                passage: "The climate of the world (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (change)</span> rapidly. Global warming (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (be)</span> the main reason. Carbon dioxide (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (emit)</span> by factories daily. Due to this, ice caps are (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (melt)</span> fast. If the sea level (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (rise)</span> further, coastal areas will submerge. Severe disasters (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (experience)</span> recently. Deforestation must be (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (stop)</span> immediately. Laws should be (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (enforce)</span> strictly. We cannot survive unless we (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (plant)</span> more trees. Let us vow (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (save)</span> the earth.",
+                answers: {
+                    a: { text: "is changing", bangla: "পরিবর্তিত হচ্ছে", explanation: "বিশ্বের জলবায়ু বর্তমানে ক্রমাগত পরিবর্তিত হচ্ছে বুঝাতে Present Continuous Tense ব্যবহৃত হয়েছে।" },
+                    b: { text: "is", bangla: "হয়", explanation: "Subject (Global warming) সিঙ্গুলার হওয়ায় Present Simple অনুযায়ী 'is' বসেছে।" },
+                    c: { text: "is emitted", bangla: "নির্গত হয়", explanation: "কার্বন ডাই অক্সাইড কারখানার দ্বারা নির্গত হয় (Present Simple Passive), তাই 'is emitted' বসেছে।" },
+                    d: { text: "melting", bangla: "গলছে", explanation: "Auxiliary verb 'are'-এর পর চলমান প্রক্রিয়া বুঝাতে ভার্বের সাথে ing যুক্ত হয়ে 'melting' হয়েছে।" },
+                    e: { text: "rises", bangla: "বৃদ্ধি পায়", explanation: "First Conditional ক্লজে সিঙ্গুলার সাবজেক্ট (the sea level) এর জন্য ভার্বের শেষে s যোগ হয়ে 'rises' হয়েছে।" },
+                    f: { text: "have been experienced", bangla: "অভিজ্ঞতা বা সম্মুখীন হয়েছে", explanation: "'recently' শব্দ থাকলে Present Perfect হয় এবং দুর্যোগ নিজে সচেতন নয় (Passive) তাই 'have been experienced' বসেছে।" },
+                    g: { text: "stopped", bangla: "বন্ধ করা", explanation: "'must be' মোডাল প্যাসিভ ফরম্যাট অনুসরণ করে stop-এর V3 রূপ 'stopped' বসেছে (p দ্বিত্ব হয়েছে)।" },
+                    h: { text: "enforced", bangla: "প্রয়োগ করা", explanation: "'should be' মোডাল প্যাসিভ হওয়ার কারণে V3 ফরম্যাট 'enforced' বসেছে।" },
+                    i: { text: "plant", bangla: "রোপণ করি", explanation: "'unless' যুক্ত ক্লজে সাধারণ শর্ত অনুযায়ী Present Simple-এ Plural subject (we) এর পর 'plant' বসে।" },
+                    j: { text: "to save", bangla: "রক্ষা করতে", explanation: "Vow (প্রতিজ্ঞা করা) ভার্বের পর উদ্দেশ্যমূলক বা অবজেক্টিভ হিসেবে Infinitive (to + verb) বসে।" }
+                }
+            },
+            {
+                id: 8,
+                title: "Exercise 08: Mobile Phone & Youth",
+                passage: "Mobile phone (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (consider)</span> an essential gadget today. It (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (connect)</span> people globally within seconds. However, its misuse (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (harm)</span> the youth greatly. Many students are seen (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (waste)</span> hours on gaming. While (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (study)</span>, they keep notifications on. This habit (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (affect)</span> their academic results. Last exam, many boys (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (fail)</span> due to addiction. Mobile technology must be (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (utilize)</span> positively. Parents should (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (monitor)</span> their kids. It is high time we (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (limit)</span> phone screen time.",
+                answers: {
+                    a: { text: "is considered", bangla: "বিবেচনা করা হয়", explanation: "মোবাইল ফোন নিজে বিবেচনা করে না, মানুষের দ্বারা বিবেচিত হয় (Passive Voice) তাই 'is considered' বসেছে।" },
+                    b: { text: "connects", bangla: "যুক্ত করে", explanation: "Subject 'It' থার্ড পারসন সিঙ্গুলার নাম্বার হওয়ায় বর্তমান কালে ভার্বের শেষে s বসেছে।" },
+                    c: { text: "harms", bangla: "ক্ষতি করছে/করে", explanation: "Subject (its misuse) সিঙ্গুলার আনকাউন্টেবল হওয়ায় সাধারণ বর্তমান কালে 'harms' হয়েছে।" },
+                    d: { text: "wasting", bangla: "অপচয় করতে", explanation: "'see' বা passive 'seen' ভার্বের পর অন্য কোনো চলমান কর্ম বুঝাতে ভার্ব+ing (Participle) বসে।" },
+                    e: { text: "studying", bangla: "পড়ার সময়", explanation: "'While'-এর ঠিক পরেই কোনো সাবজেক্ট বা কর্তা না থাকলে ভার্বের সাথে সরাসরি ing যোগ করতে হয়।" },
+                    f: { text: "affects", bangla: "ক্ষতিগ্রস্ত করে", explanation: "Subject (This habit) থার্ড পারসন সিঙ্গুলার নাম্বার হওয়ায় ভার্ব 'affect'-এর সাথে 's' যুক্ত হয়েছে।" },
+                    g: { text: "failed", bangla: "অকৃতকার্য হয়েছিল", explanation: "'Last exam' দ্বারা অতীতকাল নির্দিষ্ট করার কারণে Past Simple Tense অনুযায়ী 'failed' বসেছে।" },
+                    h: { text: "utilized", bangla: "ব্যবহার করা", explanation: "'must be' মোডাল প্যাসিভ স্ট্রাকচার হওয়ার কারণে ভার্বের V3 রূপ 'utilized' হয়েছে।" },
+                    i: { text: "monitored / monitor", bangla: "পর্যবেক্ষণ করা উচিত", explanation: "Modal 'should'-এর পর অ্যাক্টিভ ভয়েসে সর্বদা ভার্বের বেইস ফর্ম 'monitor' বসে।" },
+                    j: { text: "limited", bangla: "সীমিত করলাম", explanation: "'It is high time' যুক্ত বাক্যাংশে সাবজেক্টের পর সর্বদা Past Simple Tense (V2) ব্যবহৃত হয়।" }
+                }
+            },
+            {
+                id: 9,
+                title: "Exercise 09: The Value of Discipline",
+                passage: "Discipline (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (be)</span> the secret of success. No organization can (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (run)</span> without it. Nature (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (teach)</span> us the lesson of discipline. Every morning, the sun (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (rise)</span> in the east on time. If a army (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (lack)</span> discipline, it will lose the battle. Students must (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (follow)</span> rules. A undisciplined boy (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (suffer)</span> everywhere. Long ago, great nations (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (build)</span> on this virtue. Discipline should be (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (maintain)</span> at all costs. We should avoid (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (break)</span> rules.",
+                answers: {
+                    a: { text: "is", bangla: "হয়", explanation: "Discipline একটি চিরন্তন গুণবাচক শব্দ, যা সিঙ্গুলার সাবজেক্ট হিসেবে 'is' গ্রহণ করে।" },
+                    b: { text: "run", bangla: "পরিচালিত হওয়া", explanation: "Modal auxiliary (can)-এর পর ভার্বের মূল base form বা প্রেজেন্ট ফর্ম 'run' বসে।" },
+                    c: { text: "teaches", bangla: "শিক্ষা দেয়", explanation: "Subject (Nature) থার্ড পারসন সিঙ্গুলার হওয়ায় সাধারণ সত্য প্রকাশে 'teaches' বসেছে।" },
+                    d: { text: "rises", bangla: "উদিত হয়", explanation: "সূর্য পূর্ব দিকে ওঠে এটি ইউনিভার্সাল ট্রুথ এবং Subject সিঙ্গুলার হওয়ায় 'rises' বসেছে।" },
+                    e: { text: "lacks", bangla: "অভাব ঘটে", explanation: "First conditional বাক্যে সিঙ্গুলার কালেক্টিভ নাউন (an army) এর জন্য 'lacks' বসেছে।" },
+                    f: { text: "follow", bangla: "অনুসরণ করা", explanation: "Modal auxiliary 'must'-এর পর সর্বদা ভার্বের মূল রূপ 'follow' অপরিবর্তিত থাকে।" },
+                    g: { text: "suffers", bangla: "কষ্ট পায়", explanation: "Subject (An undisciplined boy) থার্ড পারসন সিঙ্গুলার হওয়ায় সাধারণ বর্তমানে 'suffers' হয়েছে।" },
+                    h: { text: "were built", bangla: "গড়ে উঠেছিল", explanation: "অতীতের ঘটনা এবং জাতিগুলো গড়ে উঠেছিল (Past Passive) তাই 'were built' বসেছে।" },
+                    i: { text: "maintained", bangla: "বজায় রাখা", explanation: "'should be' মোডাল প্যাসিভ হওয়ার দরুন ভার্বের পাস্ট পার্টিসিপল রূপ 'maintained' বসেছে।" },
+                    j: { text: "breaking", bangla: "ভাঙা", explanation: "ইংরেজি গ্রামারের নিয়ম অনুসারে 'avoid' ভার্বের পর পরবর্তী ভার্বের সাথে ing বা Gerund বসে।" }
+                }
+            },
+            {
+                id: 10,
+                title: "Exercise 10: Digitalization and Corruption",
+                passage: "Digitalization (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (help)</span> to eliminate corruption. In the past, files (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (hide)</span> by dishonest officers. People (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (have)</span> to suffer immensely. Now, data is (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (store)</span> online. Transparency can be (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (ensure)</span> easily. Government (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (launch)</span> several citizen portals recently. If anyone (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (try)</span> to take a bribe, he is tracked. Accountability must be (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (establish)</span>. We look forward to (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (get)</span> a transparent system. Everyone should (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___ (support)</span> this transformation.",
+                answers: {
+                    a: { text: "helps", bangla: "সাহায্য করে", explanation: "Subject (Digitalization) থার্ড পারসন সিঙ্গুলার নাম্বার হওয়ায় Present Simple Tense-এ 'helps' বসেছে।" },
+                    b: { text: "were hidden", bangla: "লুকিয়ে রাখা হতো", explanation: "'In the past' অতীত নির্দেশক এবং ফাইলগুলো অফিসারদের দ্বারা লুকানো হতো (Past Passive) তাই 'were hidden' বসেছে।" },
+                    c: { text: "had", bangla: "হতো / বাধ্য ছিল", explanation: "অতীতের বাধ্যবাধকতা বা বাধ্য হওয়া বোঝাতে 'had to' স্ট্রাকচার বসে, তাই 'had' হয়েছে।" },
+                    d: { text: "stored", bangla: "সংরক্ষিত করা হয়", explanation: "ডাটা নিজেরা সংরক্ষিত হয় না (Present Simple Passive), তাই 'is'-এর পর V3 'stored' বসেছে।" },
+                    e: { text: "ensured", bangla: "নিশ্চিত করা", explanation: "'can be' মোডাল প্যাসিভ হওয়ার দরুন নিশ্চিতভাবে ভার্বের পাস্ট পার্টিসিপল 'ensured' বসেছে।" },
+                    f: { text: "has launched", bangla: "চালু করেছে", explanation: "বাক্যে 'recently' বা সম্প্রতি কথাটি উল্লেখ থাকলে তা Present Perfect Tense (has + V3) হয়।" },
+                    g: { text: "tries", bangla: "চেষ্টা করে", explanation: "Conditional ক্লজে অনির্দিষ্ট সিঙ্গুলার সাবজেক্ট (anyone)-এর সাথে 'tries' বসে (y উঠে ies হয়েছে)।" },
+                    h: { text: "established", bangla: "প্রতিষ্ঠিত করা", explanation: "'must be' প্যাসিভ ফরম্যাট অনুসরণ করার ফলে ভার্বের V3 রূপ 'established' বসেছে।" },
+                    i: { text: "getting", bangla: "পাওয়ার জন্য", explanation: "'look forward to' ফ্রেজের পর ব্যাকরণের নিয়ম অনুসারে সর্বদা ভার্ব+ing বসে (t দ্বিত্ব হয়েছে)।" },
+                    j: { text: "support", bangla: "সমর্থন করা", explanation: "Modal verb (should)-এর পর নিয়মিত নিয়মে ভার্বের প্রেজেন্ট base form 'support' বসে।" }
+                }
+            }
+        ];
+
+        // প্রোগ্রেস ট্র্যাকিং মেমোরি অবজেক্ট
+        let completedExercises = {};
+
+        // ফায়ারবেস কনফিগারেশন ও ইনিশিয়ালিলাইজেশন
+        let db = null;
+        let auth = null;
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'zamil-academy-verbs';
+
+        if (typeof __firebase_config !== 'undefined' && __firebase_config) {
+            try {
+                const firebaseConfig = JSON.parse(__firebase_config);
+                if (!firebase.apps.length) {
+                    firebase.initializeApp(firebaseConfig);
+                }
+                db = firebase.firestore();
+                auth = firebase.auth();
+                
+                // অথেনটিকেশন ও ডেটা লোড
+                initFirebaseSession();
+            } catch (err) {
+                console.warn("Firebase Setup Failed, falling back to local storage:", err);
+                loadFromLocalStorage();
+            }
+        } else {
+            loadFromLocalStorage();
+        }
+
+        // ফায়ারবেস সাইন ইন এবং ক্লাউড প্রোগ্রেস লোড
+        async function initFirebaseSession() {
+            try {
+                if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+                    await auth.signInWithCustomToken(__initial_auth_token);
+                } else {
+                    await auth.signInAnonymously();
+                }
+                
+                auth.onAuthStateChanged(user => {
+                    if (user) {
+                        loadCloudProgress(user.uid);
+                    } else {
+                        loadFromLocalStorage();
+                    }
+                });
+            } catch (e) {
+                console.error("Auth failed:", e);
+                loadFromLocalStorage();
+            }
+        }
+
+        // ক্লাউড ডেটাবেস থেকে অগ্রগতি লোড
+        function loadCloudProgress(userId) {
+            if (!db) return;
+            const docRef = db.collection('artifacts').doc(appId).collection('users').doc(userId).collection('progress').doc('verb_tasks');
+            docRef.get().then(doc => {
+                if (doc.exists) {
+                    completedExercises = doc.data().completed || {};
+                } else {
+                    loadFromLocalStorage();
+                    saveCloudProgress(userId);
+                }
+                renderAllExercises();
+            }).catch(err => {
+                console.error("Firestore read error:", err);
+                loadFromLocalStorage();
+                renderAllExercises();
+            });
+        }
+
+        // ক্লাউড ডেটাবেসে প্রোগ্রেস সংরক্ষণ
+        function saveCloudProgress(userId) {
+            if (!db) return;
+            const docRef = db.collection('artifacts').doc(appId).collection('users').doc(userId).collection('progress').doc('verb_tasks');
+            docRef.set({ completed: completedExercises }, { merge: true })
+                .catch(err => console.error("Firestore write error:", err));
+        }
+
+        // লোকাল মেমোরি (localStorage) থেকে লোড ( চিরস্থায়ী সেভ রাখার জন্য)
+        function loadFromLocalStorage() {
+            try {
+                const localData = localStorage.getItem('zamil_verbs_progress');
+                if (localData) {
+                    completedExercises = JSON.parse(localData);
+                }
+            } catch (e) {
+                console.warn("Local storage not supported:", e);
+            }
+        }
+
+        // লোকাল মেমোরিতে সংরক্ষণ
+        function saveToLocalStorage() {
+            try {
+                localStorage.setItem('zamil_verbs_progress', JSON.stringify(completedExercises));
+            } catch (e) {
+                console.warn(e);
+            }
+        }
+
+        // প্রোগ্রেস পরিবর্তন হ্যান্ডল করা
+        function toggleComplete(exerciseId) {
+            if (completedExercises[exerciseId]) {
+                delete completedExercises[exerciseId];
+            } else {
+                completedExercises[exerciseId] = true;
+            }
+
+            saveToLocalStorage();
+
+            if (auth && auth.currentUser) {
+                saveCloudProgress(auth.currentUser.uid);
+            }
+
+            updateCardStyle(exerciseId);
+        }
+
+        // নির্দিষ্ট কার্ডের ডিজাইন আপডেট করা
+        function updateCardStyle(exerciseId) {
+            const card = document.getElementById(`card-${exerciseId}`);
+            const badge = document.getElementById(`badge-${exerciseId}`);
+            const checkbox = document.getElementById(`check-${exerciseId}`);
+            const isCompleted = !!completedExercises[exerciseId];
+
+            if (isCompleted) {
+                card.className = "bg-green-50/90 border-2 border-green-500 rounded-2xl p-6 md:p-8 shadow-md relative transition-all duration-300 transform scale-[1.01] checkmark-animate";
+                badge.classList.remove('hidden');
+                checkbox.checked = true;
+            } else {
+                card.className = "bg-white border border-gray-100 rounded-2xl p-6 md:p-8 shadow-sm relative transition-all duration-300";
+                badge.classList.add('hidden');
+                checkbox.checked = false;
+            }
+        }
+
+        // নির্দিষ্ট বর্ণানুক্রমিক বাটন ক্লিক করলে ব্ল্যাংকের নির্দিষ্ট উত্তর দেখানো
+        function selectAnswer(exerciseId, letter) {
+            const displayBox = document.getElementById(`ans-display-${exerciseId}`);
+            const exercise = exercises.find(ex => ex.id === exerciseId);
+            if (!exercise || !exercise.answers[letter]) return;
+
+            const selectedAns = exercise.answers[letter];
+
+            // বাটন ডি-সিলেক্ট করে নতুনটি সিলেক্ট করা
+            const allBtnContainer = document.getElementById(`btns-${exerciseId}`);
+            const buttons = allBtnContainer.getElementsByTagName('button');
+            for (let btn of buttons) {
+                btn.className = "w-10 h-10 rounded-full font-bold transition flex items-center justify-center border border-gray-200 bg-gray-50 text-gray-700 hover:bg-gray-100";
+            }
+            
+            const activeBtn = document.getElementById(`btn-${exerciseId}-${letter}`);
+            if (activeBtn) {
+                activeBtn.className = "w-10 h-10 rounded-full font-bold transition flex items-center justify-center bg-green-800 text-white shadow-md scale-115";
+            }
+
+            // নির্দিষ্ট উত্তর রেন্ডার করা
+            displayBox.innerHTML = `
+                <div class="space-y-2 text-left">
+                    <p class="text-lg font-bold text-green-900 font-poppins">Blank (${letter}): <span class="underline text-red-700">${selectedAns.text}</span></p>
+                    <p class="text-gray-700"><span class="font-bold font-hind">বাংলা অর্থ:</span> ${selectedAns.bangla}</p>
+                    <p class="text-sm text-gray-500 italic"><span class="font-bold font-hind">ব্যাখ্যা:</span> ${selectedAns.explanation}</p>
+                </div>
+            `;
+        }
+
+        // উত্তর দেখার প্যানেলটি টগল করা
+        function toggleAnswerPanel(exerciseId) {
+            const panel = document.getElementById(`panel-${exerciseId}`);
+            const btn = document.getElementById(`toggle-btn-${exerciseId}`);
+            if (panel.classList.contains('hidden')) {
+                panel.classList.remove('hidden');
+                btn.innerHTML = `উত্তর বন্ধ করুন 
+                    <svg class="w-5 h-5 ml-1 transform rotate-180 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>`;
+            } else {
+                panel.classList.add('hidden');
+                btn.innerHTML = `উত্তর দেখুন 
+                    <svg class="w-5 h-5 ml-1 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>`;
+            }
+        }
+
+        // সম্পূর্ণ এক্সারসাইজ জেনারেট করা
+        function renderAllExercises() {
+            const container = document.getElementById('exercise-container');
+            container.innerHTML = ""; 
+
+            exercises.forEach(ex => {
+                const isCompleted = !!completedExercises[ex.id];
+                const cardClass = isCompleted 
+                    ? "bg-green-50/90 border-2 border-green-500 rounded-2xl p-6 md:p-8 shadow-md relative transition-all duration-300 transform scale-[1.01]" 
+                    : "bg-white border border-gray-100 rounded-2xl p-6 md:p-8 shadow-sm relative transition-all duration-300";
+                
+                const badgeClass = isCompleted ? "" : "hidden";
+                const isChecked = isCompleted ? "checked" : "";
+
+                // বর্ণানুক্রমিক বাটন জেনারেশন (a to j)
+                let letterButtons = "";
+                ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'].forEach(l => {
+                    letterButtons += `
+                        <button id="btn-${ex.id}-${l}" onclick="selectAnswer(${ex.id}, '${l}')" 
+                                class="w-10 h-10 rounded-full font-bold transition flex items-center justify-center border border-gray-200 bg-gray-50 text-gray-700 hover:bg-gray-100">
+                            ${l}
+                        </button>
+                    `;
+                });
+
+                const cardHTML = `
+                    <div id="card-${ex.id}" class="${cardClass}">
+                        
+                        <div id="badge-${ex.id}" class="absolute -top-3.5 right-6 bg-green-600 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-sm flex items-center gap-1.5 ${badgeClass}">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="font-hind">এটা আপনি কমপ্লিট করেছেন</span>
+                        </div>
+
+                        <div class="flex items-center justify-between mb-4 pb-2 border-b border-gray-100">
+                            <h3 class="text-xl font-bold text-gray-800 font-hind">${ex.title}</h3>
+                            
+                            <label class="flex items-center gap-2 cursor-pointer select-none">
+                                <span class="text-sm font-semibold text-gray-500 font-hind hidden sm:inline">কমপ্লিট চিহ্নিত করুন</span>
+                                <input type="checkbox" id="check-${ex.id}" onclick="toggleComplete(${ex.id})" ${isChecked}
+                                       class="w-6 h-6 rounded border-gray-300 text-green-700 focus:ring-green-500 cursor-pointer">
+                            </label>
+                        </div>
+
+                        <p class="text-gray-700 text-base md:text-lg leading-relaxed font-poppins mb-6 text-justify">
+                            ${ex.passage}
+                        </p>
+
+                        <div class="text-center">
+                            <button id="toggle-btn-${ex.id}" onclick="toggleAnswerPanel(${ex.id})" 
+                                    class="inline-flex items-center bg-green-800 hover:bg-green-900 text-white font-semibold py-2 px-6 rounded-full transition shadow-sm font-hind text-base">
+                                উত্তর দেখুন 
+                                <svg class="w-5 h-5 ml-1 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                        </div>
+
+                        <div id="panel-${ex.id}" class="hidden mt-6 pt-6 border-t border-gray-100">
+                            <p class="text-sm font-bold text-gray-500 mb-3 text-center font-hind">যেকোনো ব্ল্যাংকের বর্ণ সিলেক্ট করে ব্যাখ্যা ও অর্থ দেখুন:</p>
+                            
+                            <div id="btns-${ex.id}" class="flex flex-wrap justify-center gap-2.5 mb-6">
+                                ${letterButtons}
+                            </div>
+
+                            <div id="ans-display-${ex.id}" class="bg-gray-50 p-5 rounded-2xl border border-gray-200 text-center min-h-[100px] flex items-center justify-center">
+                                <p class="text-gray-400 font-hind">কোনো উত্তর সিলেক্ট করা হয়নি। উপরের বাটনে ক্লিক করুন।</p>
+                            </div>
+                        </div>
+
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', cardHTML);
+            });
+        }
+
+        // প্রথম পেজ রেন্ডার
+        window.onload = function() {
+            if (!db) {
+                loadFromLocalStorage();
+                renderAllExercises();
+            }
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAMIL ACADEMY - Changing Sentence Practice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Hind Siliguri', sans-serif; }
+        .completed-card {
+            background-color: #f0fdf4 !important;
+            border-color: #16a34a !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+    <!-- হেডার: পুরো বক্স সবুজ এবং নিচের দিকে কার্ভ করা -->
+    <header class="bg-green-800 text-white py-12 px-6 text-center shadow-lg rounded-b-[40px]">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white-400">ZAMIL ACADEMY</h1>
+    </header>
+
+    <!-- সাবস্ক্রাইব বক্স -->
+    <div class="flex justify-center -mt-8 px-6">
+        <div class="bg-white p-8 shadow-md border-t-4 border-green-800 rounded-2xl max-w-md w-full text-center">
+            <p class="text-gray-700 text-lg mb-6">
+                প্রিমিয়াম সেবা পেতে আমাদের ইউটিউব চ্যানেলটি সাবস্ক্রাইব করুন।
+            </p>
+            <a href="https://youtube.com/@zamil_academy?si=EbWJq_lwwbWrLar9" 
+               target="_blank"
+               class="inline-block bg-red-700 hover:bg-green-800 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-md">
+                চ্যানেল ভিজিট করুন
+            </a>
+        </div>
+    </div>
+
+    <!-- মূল কন্টেন্ট (Main Content) -->
+    <main class="flex-grow max-w-4xl w-full mx-auto px-4 md:px-6 py-12">
+        
+        <!-- রুলস পেজে যাওয়ার আকর্ষণীয় বক্স -->
+        <div class="mb-10">
+            <a href="changing-sentence-rules.html" class="block bg-gradient-to-r from-green-700 to-green-900 hover:from-green-800 hover:to-green-950 text-white p-6 rounded-2xl shadow-md text-center transition duration-300 transform hover:scale-[1.02]">
+                <h3 class="text-2xl font-bold mb-1">📖 চেইঞ্জিং সেন্টেন্স এর রুলস দেখুন</h3>
+                <p class="text-green-100 text-sm md:text-base">Assertive-Negative, Voice, Degree, এবং Simple-Complex-Compound এর রুলস সহজ ব্যাখ্যা ও উদাহরণ সহ দেখতে এখানে ক্লিক করুন।</p>
+            </a>
+        </div>
+
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">Changing Sentence Practice Board</h2>
+            <p class="text-green-700 font-semibold text-lg">HSC & Alim English 2nd Paper (Question No. 6)</p>
+            <div class="w-24 h-1 bg-green-700 mx-auto mt-3 rounded"></div>
+        </div>
+
+        <!-- এক্সারসাইজ সেকশনসমূহ -->
+        <div class="space-y-12" id="practice-container">
+            
+            <!-- Exercise 1 -->
+            <div id="ex-1" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 01</span>
+                    <button onclick="toggleComplete(1)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-1"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg">
+                    <p><strong>(a)</strong> Anger is a passion. (Negative)</p>
+                    <p><strong>(b)</strong> It is compared to fire. (Active)</p>
+                    <p><strong>(c)</strong> It is one of the most destructive passions. (Positive)</p>
+                    <p><strong>(d)</strong> Anger begets only worst things. (Negative)</p>
+                    <p><strong>(e)</strong> A man when angry loses his control. (Simple)</p>
+                    <p><strong>(f)</strong> We should control our anger. (Passive)</p>
+                    <p><strong>(g)</strong> None is spared from its bad effect. (Affirmative)</p>
+                    <p><strong>(h)</strong> What a dangerous thing anger is! (Assertive)</p>
+                    <p><strong>(i)</strong> It is time we controlled our anger. (Complex)</p>
+                    <p><strong>(j)</strong> By controlling anger, we can lead a peaceful life. (Compound)</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(1)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-1" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <script>
+                                for(let ch of ['a','b','c','d','e','f','g','h','i','j']) {
+                                    document.write(`<button onclick="showSpecificAnswer(1, '${ch}')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition uppercase mr-2 mb-2">${ch}</button>`);
+                                }
+                            </script>
+                        </div>
+                        <div id="specific-ans-1" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 2 -->
+            <div id="ex-2" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 02</span>
+                    <button onclick="toggleComplete(2)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-2"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg">
+                    <p><strong>(a)</strong> Hazrat Khan Jahan Ali was a great reformer of Islam. (Interrogative)</p>
+                    <p><strong>(b)</strong> He built some mosques in Bagerhat. (Passive)</p>
+                    <p><strong>(c)</strong> Shat Gombuj Mosque is the most famous mosque in Bangladesh. (Comparative)</p>
+                    <p><strong>(d)</strong> He was a very pious ruler. (Exclamatory)</p>
+                    <p><strong>(e)</strong> As he wanted to help the local people, he dug many big tanks. (Simple)</p>
+                    <p><strong>(f)</strong> Though he was a ruler, he lived a very simple life. (Compound)</p>
+                    <p><strong>(g)</strong> He did not lead a luxurious life. (Affirmative)</p>
+                    <p><strong>(h)</strong> He was loved by everybody. (Active)</p>
+                    <p><strong>(i)</strong> He came here to preach Islam. (Complex)</p>
+                    <p><strong>(j)</strong> He passed away and was buried at Bagerhat. (Simple)</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(2)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-2" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <script>
+                                for(let ch of ['a','b','c','d','e','f','g','h','i','j']) {
+                                    document.write(`<button onclick="showSpecificAnswer(2, '${ch}')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition uppercase mr-2 mb-2">${ch}</button>`);
+                                }
+                            </script>
+                        </div>
+                        <div id="specific-ans-2" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 3 -->
+            <div id="ex-3" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 03</span>
+                    <button onclick="toggleComplete(3)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-3"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg">
+                    <p><strong>(a)</strong> Education is more powerful than any other weapon. (Superlative)</p>
+                    <p><strong>(b)</strong> It removes the darkness of ignorance. (Passive)</p>
+                    <p><strong>(c)</strong> Only education can enlighten a nation. (Negative)</p>
+                    <p><strong>(d)</strong> Unless we educate all, we cannot prosper. (Simple)</p>
+                    <p><strong>(e)</strong> To make a nation strong, we must give priority to primary education. (Complex)</p>
+                    <p><strong>(f)</strong> Very few tools are as effective as education. (Comparative)</p>
+                    <p><strong>(g)</strong> An uneducated man is a burden to his family. (Negative)</p>
+                    <p><strong>(h)</strong> Who does not need education? (Assertive)</p>
+                    <p><strong>(i)</strong> Having achieved education, we can solve many social problems. (Compound)</p>
+                    <p><strong>(j)</strong> Education makes us polite and gentle. (Complex)</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(3)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-3" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <script>
+                                for(let ch of ['a','b','c','d','e','f','g','h','i','j']) {
+                                    document.write(`<button onclick="showSpecificAnswer(3, '${ch}')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition uppercase mr-2 mb-2">${ch}</button>`);
+                                }
+                            </script>
+                        </div>
+                        <div id="specific-ans-3" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 4 -->
+            <div id="ex-4" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 04</span>
+                    <button onclick="toggleComplete(4)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-4"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg">
+                    <p><strong>(a)</strong> The National Memorial at Savar is a highly remarkable monument. (Exclamatory)</p>
+                    <p><strong>(b)</strong> It is built to honor the martyrs of the liberation war. (Active)</p>
+                    <p><strong>(c)</strong> We must respect our valiant freedom fighters. (Negative)</p>
+                    <p><strong>(d)</strong> Their contribution is greater than any other sacrifice. (Positive)</p>
+                    <p><strong>(e)</strong> People who love their country are called patriots. (Simple)</p>
+                    <p><strong>(f)</strong> Though we are independent, we still have some struggles. (Compound)</p>
+                    <p><strong>(g)</strong> By working sincerely, we can pay tribute to them. (Complex)</p>
+                    <p><strong>(h)</strong> It is one of the most visited places in Bangladesh. (Comparative)</p>
+                    <p><strong>(i)</strong> No patriot can forget their sacrifice. (Affirmative)</p>
+                    <p><strong>(j)</strong> Let us make Bangladesh a prosperous country. (Passive)</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(4)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-4" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <script>
+                                for(let ch of ['a','b','c','d','e','f','g','h','i','j']) {
+                                    document.write(`<button onclick="showSpecificAnswer(4, '${ch}')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition uppercase mr-2 mb-2">${ch}</button>`);
+                                }
+                            </script>
+                        </div>
+                        <div id="specific-ans-4" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 5 -->
+            <div id="ex-5" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 05</span>
+                    <button onclick="toggleComplete(5)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-5"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg">
+                    <p><strong>(a)</strong> Computer is the most wonderful invention of modern science. (Positive)</p>
+                    <p><strong>(b)</strong> It is used in almost every sector. (Active)</p>
+                    <p><strong>(c)</strong> We cannot run modern business without computers. (Interrogative)</p>
+                    <p><strong>(d)</strong> Though it has made our lives easy, it has some demerits. (Compound)</p>
+                    <p><strong>(e)</strong> Only a corrupted student wastes his time on social media. (Negative)</p>
+                    <p><strong>(f)</strong> By making proper use of the internet, we can learn many things. (Complex)</p>
+                    <p><strong>(g)</strong> We must be careful while using it. (Negative)</p>
+                    <p><strong>(h)</strong> A computer can solve a mathematical calculation very quickly. (Passive)</p>
+                    <p><strong>(i)</strong> What a great impact it has on our daily life! (Assertive)</p>
+                    <p><strong>(j)</strong> A laptop is more portable than a desktop. (Positive)</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(5)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-5" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <script>
+                                for(let ch of ['a','b','c','d','e','f','g','h','i','j']) {
+                                    document.write(`<button onclick="showSpecificAnswer(5, '${ch}')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition uppercase mr-2 mb-2">${ch}</button>`);
+                                }
+                            </script>
+                        </div>
+                        <div id="specific-ans-5" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 6 -->
+            <div id="ex-6" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 06</span>
+                    <button onclick="toggleComplete(6)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-6"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg">
+                    <p><strong>(a)</strong> Truthfulness is a very noble virtue. (Exclamatory)</p>
+                    <p><strong>(b)</strong> All religions teach truthfulness. (Passive)</p>
+                    <p><strong>(c)</strong> A truthful man is respected by everybody. (Active)</p>
+                    <p><strong>(d)</strong> A liar can never be a happy man. (Affirmative)</p>
+                    <p><strong>(e)</strong> If we do not speak the truth, we cannot get respect. (Simple)</p>
+                    <p><strong>(f)</strong> Truthfulness is one of the greatest qualities of a man. (Comparative)</p>
+                    <p><strong>(g)</strong> Though it may seem difficult, we should practice it. (Compound)</p>
+                    <p><strong>(h)</strong> Everybody loves an honest person. (Negative)</p>
+                    <p><strong>(i)</strong> An honest man is happier than a corrupted man. (Positive)</p>
+                    <p><strong>(j)</strong> We must speak the truth and remain honest. (Simple)</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(6)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-6" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <script>
+                                for(let ch of ['a','b','c','d','e','f','g','h','i','j']) {
+                                    document.write(`<button onclick="showSpecificAnswer(6, '${ch}')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition uppercase mr-2 mb-2">${ch}</button>`);
+                                }
+                            </script>
+                        </div>
+                        <div id="specific-ans-6" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 7 -->
+            <div id="ex-7" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 07</span>
+                    <button onclick="toggleComplete(7)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-7"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg">
+                    <p><strong>(a)</strong> Books are very helpful in acquiring knowledge. (Interrogative)</p>
+                    <p><strong>(b)</strong> By reading books, we can enrich our minds. (Complex)</p>
+                    <p><strong>(c)</strong> Books are compared to old friends. (Active)</p>
+                    <p><strong>(d)</strong> They give us only pure joy. (Negative)</p>
+                    <p><strong>(e)</strong> Very few habits are as good as reading books. (Superlative)</p>
+                    <p><strong>(f)</strong> Unless we read books, we will remain ignorant. (Simple)</p>
+                    <p><strong>(g)</strong> We should buy books instead of buying toys. (Compound)</p>
+                    <p><strong>(h)</strong> A book that is written well can change our thinking. (Simple)</p>
+                    <p><strong>(i)</strong> What a priceless treasure books are! (Assertive)</p>
+                    <p><strong>(j)</strong> No other friend is as loyal as a good book. (Comparative)</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(7)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-7" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <script>
+                                for(let ch of ['a','b','c','d','e','f','g','h','i','j']) {
+                                    document.write(`<button onclick="showSpecificAnswer(7, '${ch}')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition uppercase mr-2 mb-2">${ch}</button>`);
+                                }
+                            </script>
+                        </div>
+                        <div id="specific-ans-7" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 8 -->
+            <div id="ex-8" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 08</span>
+                    <button onclick="toggleComplete(8)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-8"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg">
+                    <p><strong>(a)</strong> Standard of life cannot be improved without education. (Active)</p>
+                    <p><strong>(b)</strong> Very few resources are as valuable as education. (Comparative)</p>
+                    <p><strong>(c)</strong> Having acquired proper education, we can build a strong country. (Complex)</p>
+                    <p><strong>(d)</strong> Education is the best element of development. (Positive)</p>
+                    <p><strong>(e)</strong> We must ensure primary education for all children. (Negative)</p>
+                    <p><strong>(f)</strong> When we educate our women, our progress will double. (Compound)</p>
+                    <p><strong>(g)</strong> Though Bangladesh is poor, she is making progress in education. (Simple)</p>
+                    <p><strong>(h)</strong> An educated mother is very essential. (Exclamatory)</p>
+                    <p><strong>(i)</strong> Who does not respect an educated patriot? (Assertive)</p>
+                    <p><strong>(j)</strong> Government should take necessary steps. (Passive)</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(8)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-8" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <script>
+                                for(let ch of ['a','b','c','d','e','f','g','h','i','j']) {
+                                    document.write(`<button onclick="showSpecificAnswer(8, '${ch}')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition uppercase mr-2 mb-2">${ch}</button>`);
+                                }
+                            </script>
+                        </div>
+                        <div id="specific-ans-8" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 9 -->
+            <div id="ex-9" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 09</span>
+                    <button onclick="toggleComplete(9)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-9"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg">
+                    <p><strong>(a)</strong> No other thing is as sweet as mother's love. (Comparative)</p>
+                    <p><strong>(b)</strong> Only mothers are ready to sacrifice their comfort for children. (Negative)</p>
+                    <p><strong>(c)</strong> We must respect our mother. (Negative)</p>
+                    <p><strong>(d)</strong> Her love is always unconditional. (Negative)</p>
+                    <p><strong>(e)</strong> When a child falls in danger, the mother feels anxious. (Simple)</p>
+                    <p><strong>(f)</strong> She works hard so that she can raise her child properly. (Compound)</p>
+                    <p><strong>(g)</strong> A child is taken care of by a loving mother. (Active)</p>
+                    <p><strong>(h)</strong> Though she may remain hungry, she feeds her children. (Simple)</p>
+                    <p><strong>(i)</strong> What a great place mothers occupy in our hearts! (Assertive)</p>
+                    <p><strong>(j)</strong> Let us make our mothers happy. (Passive)</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(9)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-9" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <script>
+                                for(let ch of ['a','b','c','d','e','f','g','h','i','j']) {
+                                    document.write(`<button onclick="showSpecificAnswer(9, '${ch}')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition uppercase mr-2 mb-2">${ch}</button>`);
+                                }
+                            </script>
+                        </div>
+                        <div id="specific-ans-9" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 10 -->
+            <div id="ex-10" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 10</span>
+                    <button onclick="toggleComplete(10)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-10"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg">
+                    <p><strong>(a)</strong> Sundarbans is one of the most beautiful forests in the world. (Positive)</p>
+                    <p><strong>(b)</strong> It protects Bangladesh from natural disasters. (Passive)</p>
+                    <p><strong>(c)</strong> Royal Bengal Tiger is found only in this forest. (Negative)</p>
+                    <p><strong>(d)</strong> It is very charming in winter. (Exclamatory)</p>
+                    <p><strong>(e)</strong> People go there to enjoy the beauty of nature. (Complex)</p>
+                    <p><strong>(f)</strong> Though it is an attractive forest, its security needs improvement. (Compound)</p>
+                    <p><strong>(g)</strong> Sundarbans is larger than most other mangrove forests. (Superlative)</p>
+                    <p><strong>(h)</strong> No other forest is as rich in biodiversity as Sundarbans. (Comparative)</p>
+                    <p><strong>(i)</strong> We must preserve this natural asset. (Negative)</p>
+                    <p><strong>(j)</strong> By conserving Sundarbans, we can maintain ecological balance. (Compound)</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(10)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-10" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <script>
+                                for(let ch of ['a','b','c','d','e','f','g','h','i','j']) {
+                                    document.write(`<button onclick="showSpecificAnswer(10, '${ch}')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition uppercase mr-2 mb-2">${ch}</button>`);
+                                }
+                            </script>
+                        </div>
+                        <div id="specific-ans-10" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ফুটার -->
+    <footer class="text-center py-6 text-gray-500 text-sm border-t border-gray-200 mt-12 bg-white">
+        <p>&copy; ২০২৬ ZAMIL ACADEMY। সর্বস্বত্ব সংরক্ষিত।</p>
+    </footer>
+
+    <script>
+        // চেইঞ্জিং সেন্টেন্স ডেটাবেজ (সঠিক উত্তর, বাংলা অনুবাদ ও ব্যাকরণগত ব্যাখ্যা)
+        const answerDatabase = {
+            1: {
+                a: { ans: "Anger is not a calm feeling.", trans: "ক্রোধ কোনো শান্ত অনুভূতি নয়।", explain: "Assertive Affirmative বাক্যকে বিপরীত শব্দ বসিয়ে Negative করা হয়েছে (passion এর বিপরীত Calm feeling কল্পনা করে)।" },
+                b: { ans: "We compare it to fire.", trans: "আমরা এটিকে আগুনের সাথে তুলনা করি।", explain: "Passive থেকে Active করার জন্য বাক্যের প্রাসঙ্গিক সাবজেক্ট 'We' আনা হয়েছে।" },
+                c: { ans: "Very few passions are as destructive as anger.", trans: "খুব কম আবেগই ক্রোধের মতো এত ধ্বংসাত্মক।", explain: "One of the most থাকলে Positive করার সময় শুরুতে Very few + Plural Noun বসে।" },
+                d: { ans: "Anger begets nothing but worst things.", trans: "ক্রোধ খারাপ জিনিস ছাড়া অন্য কিছু বয়ে আনে না।", explain: "Only এর পরিবর্তে এখানে বস্তুর ক্ষেত্রে nothing but ব্যবহার করা হয়েছে।" },
+                e: { ans: "An angry man loses his control.", trans: "একজন রাগান্বিত মানুষ তার নিয়ন্ত্রণ হারায়।", explain: "Complex থেকে Simple করতে 'when angry' ক্লজটিকে ছোট করে Modifier (An angry man) করা হয়েছে।" },
+                f: { ans: "Our anger should be controlled by us.", trans: "আমাদের রাগ আমাদের দ্বারাই নিয়ন্ত্রিত হওয়া উচিত।", explain: "Modal (should) যুক্ত Active কে Passive করতে should + be + V3 ব্যবহার করতে হয়।" },
+                g: { ans: "Everyone is affected by its bad effect.", trans: "প্রত্যেকেই এর খারাপ প্রভাবের শিকার হয়।", explain: "None is spared এর বিপরীত রূপ হিসেবে Everyone is affected এনে Affirmative করা হয়েছে।" },
+                h: { ans: "Anger is a very dangerous thing.", trans: "ক্রোধ একটি অত্যন্ত বিপজ্জনক জিনিস।", explain: "What a যুক্ত বিস্ময়সূচক বাক্যকে Assertive করতে Subject + verb + a very + Adjective গঠন ব্যবহৃত হয়।" },
+                i: { ans: "It is time that we controlled our anger.", trans: "এটি উপযুক্ত সময় যে আমরা আমাদের রাগ নিয়ন্ত্রণ করি।", explain: "It is time-এর সাথে 'that' ক্লজ যুক্ত করে Complex করা হয়েছে।" },
+                j: { ans: "We must control anger and then we can lead a peaceful life.", trans: "আমাদের অবশ্যই রাগ নিয়ন্ত্রণ করতে হবে এবং তাহলে আমরা একটি শান্তিময় জীবন যাপন করতে পারব।", explain: "By + V-ing যুক্ত বাক্যকে Compound করতে and বসাতে হয়।" }
+            },
+            2: {
+                a: { ans: "Wasn't Hazrat Khan Jahan Ali a great reformer of Islam?", trans: "হযরত খান জাহান আলী কি ইসলামের মহান সংস্কারক ছিলেন না?", explain: "সাহায্যকারী ভার্ব 'was' বাক্যের শুরুতে এনে নেগেটিভ ইন্টারোগেটিভ করা হয়েছে।" },
+                b: { ans: "Some mosques were built in Bagerhat by him.", trans: "বাগেরহাটে তার দ্বারা কিছু মসজিদ নির্মিত হয়েছিল।", explain: "Active-এর Object (Some mosques) কে Passive-এর Subject করা হয়েছে, এবং Past simple থাকায় were built বসেছে।" },
+                c: { ans: "Shat Gombuj Mosque is more famous than any other mosque in Bangladesh.", trans: "ষাট গম্বুজ মসজিদ বাংলাদেশের যেকোনো মসজিদের চেয়ে বেশি বিখ্যাত।", explain: "The most famous (Superlative) থেকে Comparative করতে more famous than any other বসে।" },
+                d: { ans: "What a pious ruler he was!", trans: "তিনি কতই না ধার্মিক শাসক ছিলেন!", explain: "a very pious ruler এর পরিবর্তে বাক্যের শুরুতে What a pious ruler বসিয়ে বিস্ময়সূচক করা হয়েছে।" },
+                e: { ans: "Wanting to help the local people, he dug many big tanks.", trans: "স্থানীয় জনগণকে সাহায্য করতে চেয়ে তিনি অনেকগুলো বড় জলাশয় খনন করেছিলেন।", explain: "As ক্লজ উঠিয়ে দিয়ে প্রথম অংশের Verb-এর সাথে ing যুক্ত করে Simple করা হয়েছে।" },
+                f: { ans: "He was a ruler but lived a very simple life.", trans: "তিনি একজন শাসক ছিলেন কিন্তু অত্যন্ত সাধারণ জীবনযাপন করতেন।", explain: "Though যুক্ত Complex বাক্যকে Compound করতে but দ্বারা দুটি স্বাধীন বাক্য যুক্ত করতে হয়।" },
+                g: { ans: "He led a very simple life.", trans: "তিনি অত্যন্ত সাধারণ জীবনযাপন করতেন।", explain: "Not leading luxurious এর বিপরীতার্থক হিসেবে Led simple life দিয়ে Affirmative করা হয়েছে।" },
+                h: { ans: "Everybody loved him.", trans: "সবাই তাকে ভালোবাসত।", explain: "Passive-এর by transition বাদ দিয়ে Active Subject হিসেবে 'Everybody' আনা হয়েছে।" },
+                i: { ans: "He came here so that he could preach Islam.", trans: "তিনি এখানে এসেছিলেন যাতে তিনি ইসলাম প্রচার করতে পারেন।", explain: "উদ্দেশ্যমূলক 'to + V1' তুলে দিয়ে Complex এ 'so that + Sub + could + V1' ব্যবহার করা হয়েছে।" },
+                j: { ans: "Passing away, he was buried at Bagerhat.", trans: "পরলোকগমন করার পর বাগেরহাটে তাকে সমাহিত করা হয়েছিল।", explain: "দুটি সমসাময়িক কাজের প্রথম ভার্বকে ing যুক্ত পার্টিসিপলে রূপান্তর করে Simple করা হয়েছে।" }
+            },
+            3: {
+                a: { ans: "Education is the most powerful weapon.", trans: "শিক্ষা হলো সবচেয়ে শক্তিশালী হাতিয়ার।", explain: "Comparative-এর 'more powerful than any other' থেকে Superlative করতে 'the most powerful' বসে।" },
+                b: { ans: "The darkness of ignorance is removed by it.", trans: "এর দ্বারা অজ্ঞতার অন্ধকার দূর হয়।", explain: "Active-এর Object 'The darkness of ignorance' কে Passive-এর Subject করা হয়েছে।" },
+                c: { ans: "Nothing but education can enlighten a nation.", trans: "শিক্ষা ছাড়া অন্য কিছু একটি জাতিকে আলোকিত করতে পারে না।", explain: "Only এর পরিবর্তে বস্তুর ক্ষেত্রে negative বাক্যে nothing but বসে।" },
+                d: { ans: "Without educating all, we cannot prosper.", trans: "সবাইকে শিক্ষিত করা ছাড়া আমরা উন্নতি করতে পারি না।", explain: "Unless (যদি না) যুক্ত নেতিবাচক শর্তকে Simple করতে Without + V-ing রূপ ব্যবহার করতে হয়।" },
+                e: { ans: "If we want to make a nation strong, we must give priority to primary education.", trans: "যদি আমরা একটি জাতিকে শক্তিশালী করতে চাই, আমাদের অবশ্যই প্রাথমিক শিক্ষাকে অগ্রাধিকার দিতে হবে।", explain: "উদ্দেশ্যমূলক To + Simple অংশকে If যুক্ত শর্তাধীন বাক্যে রূপান্তর করে Complex করা হয়েছে।" },
+                f: { ans: "Education is more effective than most other tools.", trans: "শিক্ষা বেশিরভাগ অন্যান্য হাতিয়ারের চেয়ে বেশি কার্যকর।", explain: "Very few যুক্ত positive কে Comparative করার সময় Comparative form + than most other বসে।" },
+                g: { ans: "An uneducated man is not an asset to his family.", trans: "একজন অশিক্ষিত মানুষ তার পরিবারের জন্য কোনো সম্পদ নয়।", explain: "Affirmative-এর word (burden) এর বিপরীত শব্দ (not an asset) ব্যবহার করে Negative করা হয়েছে।" },
+                h: { ans: "Everybody needs education.", trans: "সবারই শিক্ষার প্রয়োজন রয়েছে।", explain: "Who does not need interrogative এর স্বাভাবিক বিবৃতি হলো Everybody needs." },
+                i: { ans: "We achieve education and then we can solve many social problems.", trans: "আমরা শিক্ষা অর্জন করি এবং তারপর আমরা অনেক সামাজিক সমস্যার সমাধান করতে পারি।", explain: "Having + V3 (Perfect Participle) যুক্ত Simple বাক্যকে and দিয়ে Compound করতে হয়।" },
+                j: { ans: "It is education which makes us polite and gentle.", trans: "এটি শিক্ষা যা আমাদের ভদ্র এবং নম্র করে তোলে।", explain: "সাধারণ বাক্যকে Clause split করে It is + noun + relative pronoun (which) যোগে Complex করা হয়েছে।" }
+            },
+            4: {
+                a: { ans: "What a remarkable monument the National Memorial at Savar is!", trans: "সাভারের জাতীয় স্মৃতিসৌধটি কতই না উল্লেখযোগ্য স্মৃতিস্তম্ভ!", explain: "Assertive-এর 'a highly remarkable monument' তুলে দিয়ে What a... দিয়ে Exclamatory করা হয়েছে।" },
+                b: { ans: "They built it to honor the martyrs of the liberation war.", trans: "তারা মুক্তিযুদ্ধের শহীদদের সম্মান জানাতে এটি নির্মাণ করেছিল।", explain: "Passive-এর গোপন সাবজেক্ট 'They' (কর্তৃপক্ষ/মানুষ) এনে Active করা হয়েছে।" },
+                c: { ans: "We cannot but respect our valiant freedom fighters.", trans: "আমরা আমাদের বীর মুক্তিযোদ্ধাদের সম্মান না করে পারি না।", explain: "Must তুলে দিয়ে negative করার জন্য cannot but + V1 গঠন ব্যবহার করা হয়েছে।" },
+                d: { ans: "No other sacrifice is as great as their contribution.", trans: "অন্য কোনো ত্যাগই তাদের অবদানের মতো এত মহান নয়।", explain: "greater than any other comparative থেকে positive এ No other... as great as বসে।" },
+                e: { ans: "Patriotic people are called patriots.", trans: "দেশপ্রেমিক মানুষদের দেশপ্রেমিক বলা হয়।", explain: "Relative Clause 'who love their country' কে সংকুচিত করে Adjective (Patriotic) এ রূপান্তর করা হয়েছে।" },
+                f: { ans: "We are independent but we still have some struggles.", trans: "আমরা স্বাধীন কিন্তু আমাদের এখনও কিছু সংগ্রাম রয়েছে।", explain: "Though যুক্ত বাক্যকে Compound করতে and/but এর মধ্যে বিপরীত ভাব প্রকাশে but বসে।" },
+                g: { ans: "If we work sincerely, we can pay tribute to them.", trans: "যদি আমরা আন্তরিকভাবে কাজ করি, তবে আমরা তাদের প্রতি শ্রদ্ধা নিবেদন করতে পারব।", explain: "By + V-ing যুক্ত সরল বাক্যকে If + affirmative বাক্য যোগে Complex করা হয়েছে।" },
+                h: { ans: "It is more visited than most other places in Bangladesh.", trans: "এটি বাংলাদেশের বেশিরভাগ অন্যান্য স্থানের চেয়ে বেশি পরিদর্শিত হয়।", explain: "One of the most visited Superlative থেকে Comparative করার সময় than most other বসে।" },
+                i: { ans: "Every patriot remembers their sacrifice.", trans: "প্রত্যেক দেশপ্রেমিক তাদের আত্মত্যাগ স্মরণ করেন।", explain: "No patriot can forget এর দ্বৈত নেতিবাচক অর্থ ভেঙে Affirmative বাক্য করা হয়েছে।" },
+                j: { ans: "Let Bangladesh be made a prosperous country by us.", trans: "আসুন আমাদের দ্বারা বাংলাদেশকে একটি সমৃদ্ধশালী দেশ হিসেবে গড়ে তোলা হোক।", explain: "Let যুক্ত Active বাক্যকে Passive করার সময় Let + Object + be + V3 ফর্মুলা বসে।" }
+            },
+            5: {
+                a: { ans: "No other invention of modern science is as wonderful as computer.", trans: "আধুনিক বিজ্ঞানের অন্য কোনো আবিষ্কার কম্পিউটারের মতো এত বিস্ময়কর নয়।", explain: "The most wonderful Superlative থেকে Positive করার নিয়ম: No other + Extension + as + Positive + as." },
+                b: { ans: "People use it in almost every sector.", trans: "মানুষ এটিকে প্রায় প্রতিটি ক্ষেত্রেই ব্যবহার করে।", explain: "Active করার জন্য প্রাসঙ্গিক সাবজেক্ট 'People' আনা হয়েছে।" },
+                c: { ans: "Can we run modern business without computers?", trans: "আমরা কি কম্পিউটার ছাড়া আধুনিক ব্যবসা পরিচালনা করতে পারি?", explain: "সাহায্যকারী ভার্ব 'cannot' তুলে দিয়ে শুরুতে 'Can' বসিয়ে প্রশ্নবোধক করা হয়েছে।" },
+                d: { ans: "It has made our lives easy but it has some demerits.", trans: "এটি আমাদের জীবনকে সহজ করেছে কিন্তু এর কিছু অপকারিতাও রয়েছে।", explain: "Though তুলে দিয়ে বাক্যের মাঝখানে but বসিয়ে Compound করা হয়েছে।" },
+                e: { ans: "None but a corrupted student wastes his time on social media.", trans: "দুর্নীতিগ্রস্ত শিক্ষার্থী ছাড়া অন্য কেউ সামাজিক যোগাযোগ মাধ্যমে সময় অপচয় করে না।", explain: "ব্যক্তির ক্ষেত্রে Only তুলে দিয়ে None but বসানো হয়েছে।" },
+                f: { ans: "If we make proper use of the internet, we can learn many things.", trans: "যদি আমরা ইন্টারনেটের সঠিক ব্যবহার করি, তবে আমরা অনেক কিছু শিখতে পারব।", explain: "By + V-ing সরল বাক্যটিকে If + Sub + V1 গঠনে Complex করা হয়েছে।" },
+                g: { ans: "We cannot but be careful while using it.", trans: "এটি ব্যবহারের সময় আমাদের অবশ্যই সতর্ক থাকতে হবে।", explain: "Must-এর পরিবর্তে cannot but + V1 বসানো হয়েছে।" },
+                h: { ans: "A mathematical calculation can be solved very quickly by a computer.", trans: "একটি গাণিতিক হিসাব কম্পিউটারের দ্বারা খুব দ্রুত সমাধান করা যেতে পারে।", explain: "Modal (can + V1) কে Passive করতে can + be + V3 করা হয়েছে।" },
+                i: { ans: "It has a very great impact on our daily life.", trans: "আমাদের দৈনন্দিন জীবনে এর একটি বিশাল প্রভাব রয়েছে।", explain: "What a যুক্ত বিস্ময়সূচক বাক্যকে Assertive করতে Subject + verb + a very + Adjective বসানো হয়েছে।" },
+                j: { ans: "A desktop is not as portable as a laptop.", trans: "একটি ডেস্কটপ ল্যাপটপের মতো সহজে বহনযোগ্য নয়।", explain: "দুটি বিষয়ের Comparative-কে Positive করতে Negative-এ as...as বসে।" }
+            },
+            6: {
+                a: { ans: "What a noble virtue truthfulness is!", trans: "সত্যবাদিতা কতই না মহান একটি গুণ!", explain: "Assertive-এর 'a very noble virtue' উঠে গিয়ে শুরুতে What a বসে বিস্ময়সূচক করা হয়েছে।" },
+                b: { ans: "Truthfulness is taught by all religions.", trans: "সত্যবাদিতা সব ধর্মের দ্বারা শেখানো হয়।", explain: "Active-এর Object (Truthfulness) কে Passive-এর Subject বানিয়ে is + taught (V3) করা হয়েছে।" },
+                c: { ans: "Everybody respects a truthful man.", trans: "সবাই একজন সত্যবাদী মানুষকে সম্মান করে।", explain: "Passive-এর by transition উঠিয়ে দিয়ে 'Everybody' কে Active Subject করা হয়েছে।" },
+                d: { ans: "A liar is always an unhappy man.", trans: "একজন মিথ্যাবাদী সর্বদাই একজন অসুখী মানুষ।", explain: "Liar never be happy এর দ্বৈত ভাব পাল্টে liar is always unhappy দিয়ে Affirmative করা হয়েছে।" },
+                e: { ans: "Without speaking the truth, we cannot get respect.", trans: "সত্য কথা বলা ছাড়া আমরা সম্মান পেতে পারি নেই।", explain: "If + negative শর্তকে সরল বাক্যে রূপান্তর করতে Without + V-ing ব্যবহার করা হয়।" },
+                f: { ans: "Truthfulness is greater than most other qualities of a man.", trans: "সত্যবাদিতা মানুষের বেশিরভাগ অন্যান্য গুণের চেয়ে মহান।", explain: "One of the greatest Superlative থেকে Comparative করতে comparative form + than most other বসে।" },
+                g: { ans: "It may seem difficult but we should practice it.", trans: "এটি কঠিন মনে হতে পারে কিন্তু আমাদের এটি চর্চা করা উচিত।", explain: "Though তুলে দিয়ে মাঝখানে Coordinating conjunction 'but' বসিয়ে Compound করা হয়েছে।" },
+                h: { ans: "There is nobody but loves an honest person.", trans: "এমন কেউ নেই যে একজন সৎ মানুষকে ভালোবাসে না।", explain: "Everybody loves এর নেতিবাচক রূপ হিসেবে There is nobody but... ব্যবহার করা হয়েছে।" },
+                i: { ans: "A corrupted man is not as happy as an honest man.", trans: "একজন দুর্নীতিগ্রস্ত মানুষ একজন সৎ মানুষের মতো সুখী নয়।", explain: "Comparative-এর 'happier than' থেকে Positive করতে 'not as happy as' ব্যবহৃত হয়।" },
+                j: { ans: "We must speak the truth to remain honest.", trans: "সৎ থাকার জন্য আমাদের অবশ্যই সত্য কথা বলতে হবে।", explain: "Compound-এর and তুলে দিয়ে উদ্দেশ্যমূলক Infinitve (to remain) যোগে Simple করা হয়েছে।" }
+            },
+            7: {
+                a: { ans: "Aren't books very helpful in acquiring knowledge?", trans: "বই কি জ্ঞান অর্জনে অত্যন্ত সহায়ক নয়?", explain: "সাহায্যকারী ভার্ব 'are' বাক্যের শুরুতে এনে নেগেটিভ ইন্টারোগেটিভ করা হয়েছে।" },
+                b: { ans: "If we read books, we can enrich our minds.", trans: "যদি আমরা বই পড়ি, তবে আমরা আমাদের মনকে সমৃদ্ধ করতে পারব।", explain: "By + V-ing সরল বাক্যকে If + affirmative বাক্য যোগে Complex করা হয়েছে।" },
+                c: { ans: "We compare books to old friends.", trans: "আমরা বইকে পুরনো বন্ধুদের সাথে তুলনা করি।", explain: "Passive-এর উহ্য সাবজেক্ট 'We' এনে Active করা হয়েছে।" },
+                d: { ans: "They give us nothing but pure joy.", trans: "তারা আমাদের বিশুদ্ধ আনন্দ ছাড়া আর কিছুই দেয় না।", explain: "Only তুলে দিয়ে নেতিবাচক বাক্যে nothing but ব্যবহার করা হয়েছে।" },
+                e: { ans: "Reading books is one of the best habits.", trans: "বই পড়া অন্যতম সেরা একটি অভ্যাস।", explain: "Very few... as good as Positive থেকে Superlative করার সময় 'one of the best' বসে।" },
+                f: { ans: "Without reading books, we will remain ignorant.", trans: "বই পড়া ছাড়া আমরা অজ্ঞ থেকে যাব।", explain: "Unless (যদি না) নেতিবাচক শর্তকে সরালে Without + V-ing বসে।" },
+                g: { ans: "We should not buy toys but buy books.", trans: "আমাদের খেলনা কেনা উচিত নয় বরং বই কেনা উচিত।", explain: "Instead of সরল বাক্যটিকে Compound করতে 'not... but' Conjunction ব্যবহার করা হয়েছে।" },
+                h: { ans: "A well-written book can change our thinking.", trans: "একটি সুলিখিত বই আমাদের চিন্তা পরিবর্তন করতে পারে।", explain: "Complex adjective clause 'that is written well' কে সংকুচিত করে Modifier (well-written) করা হয়েছে।" },
+                i: { ans: "Books are very priceless treasures.", trans: "বই অত্যন্ত অমূল্য সম্পদ।", explain: "Exclamatory থেকে Assertive করার সময় Subject + verb + very + Adjective বসে।" },
+                j: { ans: "A good book is more loyal than any other friend.", trans: "একটি ভালো বই অন্য যেকোনো বন্ধুর চেয়ে বেশি বিশ্বস্ত।", explain: "No other positive থেকে Comparative করতে comparative form + than any other বসে।" }
+            },
+            8: {
+                a: { ans: "We cannot improve standard of life without education.", trans: "শিক্ষা ছাড়া আমরা জীবনযাত্রার মান উন্নত করতে পারি না।", explain: "Passive-এর উহ্য অবজেক্ট 'We' কে সাবজেক্ট বানিয়ে Active করা হয়েছে।" },
+                b: { ans: "Education is more valuable than most other resources.", trans: "শিক্ষা বেশিরভাগ অন্যান্য সম্পদের চেয়ে বেশি মূল্যবান।", explain: "Very few... as valuable as Positive থেকে Comparative করতে Comparative form + than most other বসে।" },
+                c: { ans: "If we acquire proper education, we can build a strong country.", trans: "যদি আমরা সঠিক শিক্ষা অর্জন করি, তবে আমরা একটি শক্তিশালী দেশ গড়ে তুলতে পারব।", explain: "Having + V3 সরল বাক্যকে If + Present Tense ক্লজ যোগে Complex করা হয়েছে।" },
+                d: { ans: "No other element of development is as good as education.", trans: "উন্নয়নের অন্য কোনো উপাদান শিক্ষার মতো এত ভালো নয়।", explain: "The best Superlative থেকে Positive করার নিয়ম: No other... as good as." },
+                e: { ans: "We cannot but ensure primary education for all children.", trans: "আমাদের অবশ্যই সকল শিশুর জন্য প্রাথমিক শিক্ষা নিশ্চিত করতে হবে।", explain: "Must-এর পরিবর্তে cannot but + V1 বসানো হয়েছে।" },
+                f: { ans: "We educate our women and then our progress will double.", trans: "আমরা আমাদের নারীদের শিক্ষিত করব এবং তখন আমাদের অগ্রগতি দ্বিগুণ হবে।", explain: "When উঠে গিয়ে দুটি স্বাধীন বাক্যকে and দ্বারা যুক্ত করে Compound করা হয়েছে।" },
+                g: { ans: "In spite of Bangladesh being poor, she is making progress in education.", trans: "বাংলাদেশ দরিদ্র হওয়া সত্ত্বেও শিক্ষায় উন্নতি করছে।", explain: "Though যুক্ত Complex বাক্যকে সরল করতে In spite of + Possessive + V-ing বসে।" },
+                h: { ans: "What an essential thing an educated mother is!", trans: "একজন শিক্ষিত মা কতই না অপরিহার্য জিনিস!", explain: "Assertive-এর very তুলে দিয়ে What an... যোগে বিস্ময়সূচক করা হয়েছে।" },
+                i: { ans: "Everybody respects an educated patriot.", trans: "প্রত্যেকেই একজন শিক্ষিত দেশপ্রেমিককে সম্মান করেন।", explain: "Interrogative-এর 'Who does not' এর পরিবর্তে Assertive-এ 'Everybody' বসে।" },
+                j: { ans: "Necessary steps should be taken by government.", trans: "সরকারের দ্বারা প্রয়োজনীয় পদক্ষেপ নেওয়া উচিত।", explain: "Active-এর Object (Necessary steps) কে Passive-এর Subject বানিয়ে should + be + V3 করা হয়েছে।" }
+            },
+            9: {
+                a: { ans: "Mother's love is sweeter than any other thing.", trans: "মায়ের ভালোবাসা অন্য যেকোনো জিনিসের চেয়ে বেশি মিষ্টি।", explain: "No other... as sweet as positive থেকে comparative করার নিয়ম: sweeter than any other." },
+                b: { ans: "None but mothers are ready to sacrifice their comfort for children.", trans: "মায়েরা ছাড়া অন্য কেউ সন্তানদের জন্য তাদের আরাম ত্যাগ করতে প্রস্তুত নয়।", explain: "ব্যক্তির ক্ষেত্রে Only তুলে দিয়ে None but বসানো হয়েছে।" },
+                c: { ans: "We cannot but respect our mother.", trans: "আমরা আমাদের মাকে শ্রদ্ধা না করে পারি না।", explain: "Must এর পরিবর্তে cannot but + V1 বসে।" },
+                d: { ans: "Her love is never conditional.", trans: "তার ভালোবাসা কখনোই শর্তযুক্ত নয়।", explain: "always unconditional এর বিপরীত শব্দ (never conditional) বসিয়ে Negative করা হয়েছে।" },
+                e: { ans: "In time of a child's falling in danger, the mother feels anxious.", trans: "সন্তানের বিপদে পড়ার সময়ে মা উদ্বিগ্ন বোধ করেন।", explain: "When সময় ক্লজ তুলে দিয়ে In time of + Possessive + V-ing যোগে Simple করা হয়েছে।" },
+                f: { ans: "She works hard and so she can raise her child properly.", trans: "তিনি কঠোর পরিশ্রম করেন এবং তাই তিনি তার সন্তানকে সঠিকভাবে বড় করতে পারেন।", explain: "Complex-এর so that তুলে দিয়ে বাক্যের মাঝখানে and so বসিয়ে Compound করা হয়েছে।" },
+                g: { ans: "A loving mother takes care of a child.", trans: "একজন প্রেমময় মা একটি শিশুর যত্ন নেন।", explain: "Passive-এর by transition-এর 'A loving mother' কে Active Subject করা হয়েছে।" },
+                h: { ans: "In spite of remaining hungry, she feeds her children.", trans: "নিজে ক্ষুধার্ত থাকা সত্ত্বেও তিনি সন্তানদের খাওয়ান।", explain: "Though তুলে দিয়ে In spite of + V-ing বসিয়ে Simple করা হয়েছে।" },
+                i: { ans: "Mothers occupy a very great place in our hearts.", trans: "মায়েরা আমাদের হৃদয়ে একটি অত্যন্ত গুরুত্বপূর্ণ স্থান দখল করে আছেন।", explain: "What a বিস্ময়সূচক বাক্যটিকে Assertive করতে Subject + verb + a very + Adjective বসে।" },
+                j: { ans: "Let our mothers be made happy by us.", trans: "আসুন আমাদের দ্বারা আমাদের মায়েদের সুখী করা হোক।", explain: "Let যুক্ত Active বাক্যকে Passive করার সময় Let + Object + be + V3 ফর্মুলা বসে।" }
+            },
+            10: {
+                a: { ans: "Very few forests in the world are as beautiful as Sundarbans.", trans: "বিশ্বের খুব কম বনই সুন্দরবনের মতো এত সুন্দর।", explain: "One of the most beautiful Superlative থেকে Positive করতে শুরুতে Very few বসে।" },
+                b: { ans: "Bangladesh is protected from natural disasters by it.", trans: "এর দ্বারা বাংলাদেশ প্রাকৃতিক দুর্যোগ থেকে রক্ষিত হয়।", explain: "Active-এর Object (Bangladesh) কে Passive Subject করা হয়েছে।" },
+                c: { ans: "Royal Bengal Tiger is found nowhere but in this forest.", trans: "রয়্যাল বেঙ্গল টাইগার এই বন ছাড়া অন্য কোথাও পাওয়া যায় না।", explain: "স্থানের ক্ষেত্রে Only এর পরিবর্তে nowhere but বসানো হয়েছে।" },
+                d: { ans: "How charming it is in winter!", trans: "শীতকালে এটি কতই না চমৎকার!", explain: "Assertive-এর 'very charming' তুলে দিয়ে শুরুতে How বসিয়ে Exclamatory করা হয়েছে।" },
+                e: { ans: "People go there so that they can enjoy the beauty of nature.", trans: "মানুষ সেখানে যায় যাতে তারা প্রকৃতির সৌন্দর্য উপভোগ করতে পারে।", explain: "উদ্দেশ্যমূলক 'to + V1' সরল ক্লজ তুলে দিয়ে Complex এ 'so that + Sub + can + V1' ব্যবহার করা হয়েছে।" },
+                f: { ans: "It is an attractive forest but its security needs improvement.", trans: "এটি একটি আকর্ষণীয় বন কিন্তু এর নিরাপত্তা উন্নত করা প্রয়োজন।", explain: "Though তুলে দিয়ে মাঝখানে but Conjunction ব্যবহার করে Compound করা হয়েছে।" },
+                g: { ans: "Sundarbans is one of the largest mangrove forests.", trans: "সুন্দরবন অন্যতম বৃহত্তম ম্যানগ্রোভ বন।", explain: "larger than most other Comparative থেকে Superlative করার সময় 'one of the largest' বসে।" },
+                h: { ans: "Sundarbans is richer in biodiversity than any other forest.", trans: "সুন্দরবন অন্য যেকোনো বনের চেয়ে জীববৈচিত্র্যে সমৃদ্ধ।", explain: "No other positive থেকে Comparative করতে Comparative form + than any other বসে।" },
+                i: { ans: "We cannot but preserve this natural asset.", trans: "আমাদের অবশ্যই এই প্রাকৃতিক সম্পদটি সংরক্ষণ করতে হবে।", explain: "Must এর স্থানে cannot but + V1 বসেছে।" },
+                j: { ans: "We must conserve Sundarbans and then we can maintain ecological balance.", trans: "আমাদের অবশ্যই সুন্দরবন সংরক্ষণ করতে হবে এবং তাহলে আমরা পরিবেশগত ভারসাম্য বজায় রাখতে পারব।", explain: "By + V-ing সরল বাক্যকে Compound করতে and then বসাতে হয়।" }
+            }
+        };
+
+        // উত্তর প্যানেল চালু/বন্ধ করা
+        function toggleAnswerPanel(exNum) {
+            const panel = document.getElementById(`ans-panel-${exNum}`);
+            if (panel.classList.contains('hidden')) {
+                panel.classList.remove('hidden');
+            } else {
+                panel.classList.add('hidden');
+            }
+        }
+
+        // নির্দিষ্ট অক্ষরের উত্তর, অনুবাদ ও ব্যাকরণগত ব্যাখ্যা দেখানো
+        function showSpecificAnswer(exNum, letter) {
+            const ansBox = document.getElementById(`specific-ans-${exNum}`);
+            const data = answerDatabase[exNum][letter];
+            
+            if (data) {
+                ansBox.innerHTML = `
+                    <div class="flex items-start gap-3">
+                        <span class="bg-green-200 text-green-900 font-bold px-3 py-1 rounded-md text-sm uppercase">${letter}</span>
+                        <div class="space-y-1">
+                            <p class="font-bold text-lg text-green-950">Answer: <span class="underline text-red-600 font-mono">${data.ans}</span></p>
+                            <p class="text-sm text-gray-700"><strong>বাংলা অনুবাদ:</strong> ${data.trans}</p>
+                            <p class="text-xs text-green-800 bg-green-100/50 p-2 rounded-lg mt-1 border border-green-200/50"><strong>সহজ ব্যাখ্যা:</strong> ${data.explain}</p>
+                        </div>
+                    </div>
+                `;
+                ansBox.classList.remove('hidden');
+            }
+        }
+
+        // কমপ্লিট স্ট্যাটাস টগল এবং লোকাল স্টোরেজ আপডেট
+        function toggleComplete(exNum) {
+            const card = document.getElementById(`ex-${exNum}`);
+            const badge = card.querySelector('.completed-badge');
+            const checkbox = document.getElementById(`checkbox-${exNum}`);
+            
+            let completedList = JSON.parse(localStorage.getItem('changing_completed_exercises')) || [];
+
+            if (completedList.includes(exNum)) {
+                // আন-কমপ্লিট করা
+                completedList = completedList.filter(id => id !== exNum);
+                card.classList.remove('completed-card');
+                badge.classList.add('hidden');
+                badge.classList.remove('flex');
+                checkbox.innerHTML = '';
+                checkbox.classList.remove('bg-green-600', 'border-green-600');
+                checkbox.classList.add('bg-white', 'border-gray-300');
+            } else {
+                // কমপ্লিট করা
+                completedList.push(exNum);
+                card.classList.add('completed-card');
+                badge.classList.remove('hidden');
+                badge.classList.add('flex');
+                checkbox.innerHTML = '<svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>';
+                checkbox.classList.remove('bg-white', 'border-gray-300');
+                checkbox.classList.add('bg-green-600', 'border-green-600');
+            }
+
+            localStorage.setItem('changing_completed_exercises', JSON.stringify(completedList));
+        }
+
+        // পেজ লোড হওয়ার পর লোকাল স্টোরেজ থেকে প্রোগ্রেস লোড করা
+        window.addEventListener('DOMContentLoaded', () => {
+            const completedList = JSON.parse(localStorage.getItem('changing_completed_exercises')) || [];
+            completedList.forEach(exNum => {
+                const card = document.getElementById(`ex-${exNum}`);
+                if (card) {
+                    const badge = card.querySelector('.completed-badge');
+                    const checkbox = document.getElementById(`checkbox-${exNum}`);
+                    
+                    card.classList.add('completed-card');
+                    if (badge) {
+                        badge.classList.remove('hidden');
+                        badge.classList.add('flex');
+                    }
+                    if (checkbox) {
+                        checkbox.innerHTML = '<svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>';
+                        checkbox.classList.remove('bg-white', 'border-gray-300');
+                        checkbox.classList.add('bg-green-600', 'border-green-600');
+                    }
+                }
+            });
+        });
+    </script>
+
+<script type="module">
+    // Firebase Time Tracking Script
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
+    import { getDatabase, ref, update, increment } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-database.js";
+
+    // ফায়ারবেজ কনফিগারেশন
+    const firebaseConfig = {
+        apiKey: "AIzaSyABpKz4xjVKWb6kVR_mT8d13dt9lcDwipE",
+        authDomain: "zamil-4e08e.firebaseapp.com",
+        databaseURL: "https://zamil-4e08e-default-rtdb.firebaseio.com/",
+        projectId: "zamil-4e08e"
+    };
+
+    // ফায়ারবেজ অ্যাপ এবং ডেটাবেজ ইনিশিয়ালিলাইজেশন
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+
+    // ডেটাবেজ কানেকশনটিকে গ্লোবাল করা
+    window.db = db; 
+
+    // প্রতি ৩০ সেকেন্ডে সময় ট্র্যাকিং
+    const timeRef = ref(db, 'total_time_spent');
+
+    setInterval(() => {
+        // ইউজার ট্যাব অন্য ট্যাবে বা ব্যাকগ্রাউন্ডে থাকলে কোডটি রান করবে না
+        if (document.hidden) return; 
+
+        update(timeRef, {
+            "seconds": increment(30)
+        }).catch(err => console.error("Error updating time:", err));
+    }, 30000);
+
+    console.log("Firebase time tracking active (optimized).");
+</script>
+</body>
+</html>

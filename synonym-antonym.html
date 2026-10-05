@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAMIL ACADEMY - Synonym & Antonym Practice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Hind Siliguri', sans-serif; }
+        .completed-card {
+            background-color: #f0fdf4 !important;
+            border-color: #16a34a !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+    <!-- হেডার: পুরো বক্স সবুজ এবং নিচের দিকে কার্ভ করা -->
+    <header class="bg-green-800 text-white py-12 px-6 text-center shadow-lg rounded-b-[40px]">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white-400">ZAMIL ACADEMY</h1>
+    </header>
+
+    <!-- সাবস্ক্রাইব বক্স -->
+    <div class="flex justify-center -mt-8 px-6">
+        <div class="bg-white p-8 shadow-md border-t-4 border-green-800 rounded-2xl max-w-md w-full text-center">
+            <p class="text-gray-700 text-lg mb-6">
+                প্রিমিয়াম সেবা পেতে আমাদের ইউটিউব চ্যানেলটি সাবস্ক্রাইব করুন।
+            </p>
+            <a href="https://youtube.com/@zamil_academy?si=EbWJq_lwwbWrLar9" 
+               target="_blank"
+               class="inline-block bg-red-700 hover:bg-green-800 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-md">
+                চ্যানেল ভিজিট করুন
+            </a>
+        </div>
+    </div>
+
+    <!-- মূল কন্টেন্ট (Main Content) -->
+    <main class="flex-grow max-w-4xl w-full mx-auto px-4 md:px-6 py-12">
+        
+        <!-- রুলস বা গুরুত্বপূর্ণ শব্দের পেজে যাওয়ার বক্স -->
+        <div class="mb-10">
+            <a href="synonym-antonym-rules.html" class="block bg-gradient-to-r from-green-700 to-green-900 hover:from-green-800 hover:to-green-950 text-white p-6 rounded-2xl shadow-md text-center transition duration-300 transform hover:scale-[1.02]">
+                <h3 class="text-2xl font-bold mb-1">📖 Most Important Words List (Synonym & Antonym)</h3>
+                <p class="text-green-100 text-sm md:text-base">১০০টি অতি প্রয়োজনীয় শব্দের সমার্থক ও বিপরীতার্থক শব্দের বাংলা অর্থ সহ তালিকা দেখতে এখানে ক্লিক করুন।</p>
+            </a>
+        </div>
+
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">Synonym & Antonym Practice Board</h2>
+            <p class="text-green-700 font-semibold text-lg">HSC & Alim English 2nd Paper (Question No. 11)</p>
+            <div class="w-24 h-1 bg-green-700 mx-auto mt-3 rounded"></div>
+        </div>
+
+        <!-- এক্সারসাইজ সেকশনসমূহ -->
+        <div class="space-y-12" id="practice-container">
+            
+            <!-- Exercise 1 -->
+            <div id="ex-1" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 01</span>
+                    <button onclick="toggleComplete(1)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-1"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">Books are the greatest medium of acquiring knowledge. Those who read books find new horizons of thoughts. It is a very good habit. You should develop it from childhood. Books make us gentle and noble.</p>
+                    <p class="text-xs text-blue-800 font-bold bg-blue-50 p-2 rounded">
+                        Directions: (a) greatest (antonym) (b) acquiring (synonym) (c) knowledge (antonym) (d) read (synonym) (e) find (synonym) (f) new (antonym) (g) good (antonym) (h) develop (synonym) (i) gentle (antonym) (j) noble (antonym)
+                    </p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(1)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-1" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <script>
+                                for(let ch of ['a','b','c','d','e','f','g','h','i','j']) {
+                                    document.write(`<button onclick="showSpecificAnswer(1, '${ch}')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition uppercase mr-1 mb-1">${ch}</button>`);
+                                }
+                            </script>
+                        </div>
+                        <div id="specific-ans-1" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden mb-4"></div>
+
+                        <!-- সব উত্তর এক সিরিয়ালে -->
+                        <div class="mt-4 pt-4 border-t border-dashed border-gray-200">
+                            <h4 class="font-bold text-gray-800 mb-2">সব উত্তর এক নজরে:</h4>
+                            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-sm font-semibold text-gray-700 font-sans">
+                                <div>(a) worst / meanest</div><div>(b) gaining / earning</div><div>(c) ignorance</div><div>(d) study / peruse</div><div>(e) discover / obtain</div>
+                                <div>(f) old / ancient</div><div>(g) bad / evil</div><div>(h) grow / build</div><div>(i) rude / rough</div><div>(j) ignoble / mean</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 2 -->
+            <div id="ex-2" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 02</span>
+                    <button onclick="toggleComplete(2)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-2"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">An honest man is respected by everyone. He never tells a lie. He is always sincere to his duty. On the contrary, a dishonest man is hated by all. He leads a miserable life in the society.</p>
+                    <p class="text-xs text-blue-800 font-bold bg-blue-50 p-2 rounded">
+                        Directions: (a) honest (antonym) (b) respected (antonym) (c) never (antonym) (d) lie (antonym) (e) always (antonym) (f) sincere (synonym) (g) contrary (synonym) (h) hated (synonym) (i) leads (synonym) (j) miserable (antonym)
+                    </p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(2)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-2" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <script>
+                                for(let ch of ['a','b','c','d','e','f','g','h','i','j']) {
+                                    document.write(`<button onclick="showSpecificAnswer(2, '${ch}')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition uppercase mr-1 mb-1">${ch}</button>`);
+                                }
+                            </script>
+                        </div>
+                        <div id="specific-ans-2" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden mb-4"></div>
+
+                        <div class="mt-4 pt-4 border-t border-dashed border-gray-200">
+                            <h4 class="font-bold text-gray-800 mb-2">সব উত্তর এক নজরে:</h4>
+                            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-sm font-semibold text-gray-700 font-sans">
+                                <div>(a) dishonest / corrupt</div><div>(b) despised / hated</div><div>(c) always</div><div>(d) truth</div><div>(e) never</div>
+                                <div>(f) dedicated / faithful</div><div>(g) opposite / reverse</div><div>(h) disliked / despised</div><div>(i) guides / spends</div><div>(j) happy / cheerful</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 3 -->
+            <div id="ex-3" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 03</span>
+                    <button onclick="toggleComplete(3)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-3"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">Travelling is very helpful in expanding our mental faculty. It removes our dullness of mind. By visiting new places, we can gather vast experience. It makes us active and bold.</p>
+                    <p class="text-xs text-blue-800 font-bold bg-blue-50 p-2 rounded">
+                        Directions: (a) helpful (antonym) (b) expanding (synonym) (c) mental (synonym) (d) removes (synonym) (e) dullness (antonym) (f) new (antonym) (g) gather (synonym) (h) vast (antonym) (i) active (antonym) (j) bold (antonym)
+                    </p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(3)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-3" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <script>
+                                for(let ch of ['a','b','c','d','e','f','g','h','i','j']) {
+                                    document.write(`<button onclick="showSpecificAnswer(3, '${ch}')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition uppercase mr-1 mb-1">${ch}</button>`);
+                                }
+                            </script>
+                        </div>
+                        <div id="specific-ans-3" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden mb-4"></div>
+
+                        <div class="mt-4 pt-4 border-t border-dashed border-gray-200">
+                            <h4 class="font-bold text-gray-800 mb-2">সব উত্তর এক নজরে:</h4>
+                            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-sm font-semibold text-gray-700 font-sans">
+                                <div>(a) harmful / useless</div><div>(b) broadening / widening</div><div>(c) intellectual / cognitive</div><div>(d) eliminates / deletes</div><div>(e) brightness / sharpness</div>
+                                <div>(f) old / ancient</div><div>(g) collect / accumulate</div><div>(h) tiny / narrow</div><div>(i) idle / lazy</div><div>(j) timid / fearful</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 4 -->
+            <div id="ex-4" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 04</span>
+                    <button onclick="toggleComplete(4)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-4"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">Poverty is a great curse in our country. It blocks our national development. Many children are innocent but suffer from malnutrition. We must take steps to decrease poverty from the society.</p>
+                    <p class="text-xs text-blue-800 font-bold bg-blue-50 p-2 rounded">
+                        Directions: (a) poverty (antonym) (b) great (antonym) (c) curse (antonym) (d) blocks (synonym) (e) national (synonym) (f) development (synonym) (g) innocent (antonym) (h) suffer (synonym) (i) decrease (antonym) (j) society (synonym)
+                    </p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(4)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-4" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <script>
+                                for(let ch of ['a','b','c','d','e','f','g','h','i','j']) {
+                                    document.write(`<button onclick="showSpecificAnswer(4, '${ch}')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition uppercase mr-1 mb-1">${ch}</button>`);
+                                }
+                            </script>
+                        </div>
+                        <div id="specific-ans-4" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden mb-4"></div>
+
+                        <div class="mt-4 pt-4 border-t border-dashed border-gray-200">
+                            <h4 class="font-bold text-gray-800 mb-2">সব উত্তর এক নজরে:</h4>
+                            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-sm font-semibold text-gray-700 font-sans">
+                                <div>(a) wealth / affluence</div><div>(b) tiny / small</div><div>(c) blessing / boon</div><div>(d) obstructs / stops</div><div>(e) state / public</div>
+                                <div>(f) progress / growth</div><div>(g) guilty / sinful</div><div>(h) endure / undergo</div><div>(i) increase / enhance</div><div>(j) community / public</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 5 -->
+            <div id="ex-5" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 05</span>
+                    <button onclick="toggleComplete(5)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-5"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">Education is the key to progress. It removes the dark shadow of ignorance. We must ensure a bright future for our youth. Teachers play a noble role in this progressive process.</p>
+                    <p class="text-xs text-blue-800 font-bold bg-blue-50 p-2 rounded">
+                        Directions: (a) education (synonym) (b) key (synonym) (c) progress (antonym) (d) removes (synonym) (e) dark (antonym) (f) ignorance (antonym) (g) bright (antonym) (h) youth (antonym) (i) noble (antonym) (j) progressive (antonym)
+                    </p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(5)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-5" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <script>
+                                for(let ch of ['a','b','c','d','e','f','g','h','i','j']) {
+                                    document.write(`<button onclick="showSpecificAnswer(5, '${ch}')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition uppercase mr-1 mb-1">${ch}</button>`);
+                                }
+                            </script>
+                        </div>
+                        <div id="specific-ans-5" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden mb-4"></div>
+
+                        <div class="mt-4 pt-4 border-t border-dashed border-gray-200">
+                            <h4 class="font-bold text-gray-800 mb-2">সব উত্তর এক নজরে:</h4>
+                            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-sm font-semibold text-gray-700 font-sans">
+                                <div>(a) learning / instruction</div><div>(b) solution / chief</div><div>(c) regress / decline</div><div>(d) eliminates / deletes</div><div>(e) bright / illuminated</div>
+                                <div>(f) knowledge / wisdom</div><div>(g) dark / dull</div><div>(h) old age / senility</div><div>(i) ignoble / mean</div><div>(j) conservative / backward</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercises 6 to 10 dynamically generated for cleaner code but fully structured -->
+            <!-- Exercise 6 -->
+            <div id="ex-6" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 06</span>
+                    <button onclick="toggleComplete(6)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-6"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">Health is wealth. It is very difficult to remain healthy without physical exercise. A busy man can easily stay active by walking. A regular walk makes our body strong and mind calm.</p>
+                    <p class="text-xs text-blue-800 font-bold bg-blue-50 p-2 rounded">
+                        Directions: (a) wealth (antonym) (b) difficult (antonym) (c) remain (synonym) (d) healthy (antonym) (e) busy (antonym) (f) active (antonym) (g) regular (antonym) (h) makes (synonym) (i) strong (antonym) (j) calm (antonym)
+                    </p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(6)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-6" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <script>
+                                for(let ch of ['a','b','c','d','e','f','g','h','i','j']) {
+                                    document.write(`<button onclick="showSpecificAnswer(6, '${ch}')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition uppercase mr-1 mb-1">${ch}</button>`);
+                                }
+                            </script>
+                        </div>
+                        <div id="specific-ans-6" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden mb-4"></div>
+
+                        <div class="mt-4 pt-4 border-t border-dashed border-gray-200">
+                            <h4 class="font-bold text-gray-800 mb-2">সব উত্তর এক নজরে:</h4>
+                            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-sm font-semibold text-gray-700 font-sans">
+                                <div>(a) poverty / indigence</div><div>(b) easy / simple</div><div>(c) stay / continue</div><div>(d) sick / ill</div><div>(e) idle / free</div>
+                                <div>(f) inactive / lazy</div><div>(g) irregular / casual</div><div>(h) builds / creates</div><div>(i) weak / fragile</div><div>(j) noisy / wild</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 7 -->
+            <div id="ex-7" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 07</span>
+                    <button onclick="toggleComplete(7)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-7"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">Mina is a very polite and gentle girl. She is obedient to her parents. She believes that truthfulness is the greatest asset in life. Everyone loves and praises her sincere behavior.</p>
+                    <p class="text-xs text-blue-800 font-bold bg-blue-50 p-2 rounded">
+                        Directions: (a) polite (antonym) (b) gentle (antonym) (c) obedient (antonym) (d) believes (synonym) (e) truthfulness (antonym) (f) greatest (antonym) (g) asset (synonym) (h) loves (antonym) (h) praises (synonym) (j) sincere (synonym)
+                    </p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(7)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-7" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <script>
+                                for(let ch of ['a','b','c','d','e','f','g','h','i','j']) {
+                                    document.write(`<button onclick="showSpecificAnswer(7, '${ch}')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition uppercase mr-1 mb-1">${ch}</button>`);
+                                }
+                            </script>
+                        </div>
+                        <div id="specific-ans-7" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden mb-4"></div>
+
+                        <div class="mt-4 pt-4 border-t border-dashed border-gray-200">
+                            <h4 class="font-bold text-gray-800 mb-2">সব উত্তর এক নজরে:</h4>
+                            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-sm font-semibold text-gray-700 font-sans">
+                                <div>(a) rude / impolite</div><div>(b) rough / harsh</div><div>(c) disobedient / rebellious</div><div>(d) trusts / accepts</div><div>(e) falsehood / dishonesty</div>
+                                <div>(f) worst / meanest</div><div>(g) wealth / resource</div><div>(h) hates / dislikes</div><div>(i) admires / lauds</div><div>(j) honest / truthful</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 8 -->
+            <div id="ex-8" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 08</span>
+                    <button onclick="toggleComplete(8)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-8"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">Computers can solve complex mathematical calculations very quickly. It has become popular worldwide. But its excessive usage has a few demerits. We must use this wonderful device with safety.</p>
+                    <p class="text-xs text-blue-800 font-bold bg-blue-50 p-2 rounded">
+                        Directions: (a) solve (synonym) (b) complex (antonym) (c) quickly (antonym) (d) popular (antonym) (e) worldwide (synonym) (f) excessive (synonym) (g) few (antonym) (h) demerits (antonym) (i) wonderful (synonym) (j) safety (antonym)
+                    </p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(8)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-8" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <script>
+                                for(let ch of ['a','b','c','d','e','f','g','h','i','j']) {
+                                    document.write(`<button onclick="showSpecificAnswer(8, '${ch}')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition uppercase mr-1 mb-1">${ch}</button>`);
+                                }
+                            </script>
+                        </div>
+                        <div id="specific-ans-8" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden mb-4"></div>
+
+                        <div class="mt-4 pt-4 border-t border-dashed border-gray-200">
+                            <h4 class="font-bold text-gray-800 mb-2">সব উত্তর এক নজরে:</h4>
+                            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-sm font-semibold text-gray-700 font-sans">
+                                <div>(a) resolve / figure out</div><div>(b) simple / easy</div><div>(c) slowly / late</div><div>(d) unpopular / obscure</div><div>(e) globally / universally</div>
+                                <div>(f) extreme / immoderate</div><div>(g) many / numerous</div><div>(h) merits / benefits</div><div>(i) marvelous / amazing</div><div>(j) danger / risk</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 9 -->
+            <div id="ex-9" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 09</span>
+                    <button onclick="toggleComplete(9)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-9"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">Patriotism is a noble virtue. A true patriot loves his motherland. He always works for its development and protects its freedom. In contrast, an ignoble traitor harms his country.</p>
+                    <p class="text-xs text-blue-800 font-bold bg-blue-50 p-2 rounded">
+                        Directions: (a) patriotism (antonym) (b) noble (antonym) (c) true (antonym) (d) patriot (antonym) (e) loves (synonym) (f) development (synonym) (g) protects (synonym) (h) freedom (antonym) (i) ignoble (synonym) (j) traitor (synonym)
+                    </p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(9)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-9" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <script>
+                                for(let ch of ['a','b','c','d','e','f','g','h','i','j']) {
+                                    document.write(`<button onclick="showSpecificAnswer(9, '${ch}')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition uppercase mr-1 mb-1">${ch}</button>`);
+                                }
+                            </script>
+                        </div>
+                        <div id="specific-ans-9" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden mb-4"></div>
+
+                        <div class="mt-4 pt-4 border-t border-dashed border-gray-200">
+                            <h4 class="font-bold text-gray-800 mb-2">সব উত্তর এক নজরে:</h4>
+                            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-sm font-semibold text-gray-700 font-sans">
+                                <div>(a) treachery / betray</div><div>(b) mean / ignoble</div><div>(c) false / fake</div><div>(d) traitor / betrayer</div><div>(e) adores / cares</div>
+                                <div>(f) progress / growth</div><div>(g) defends / guards</div><div>(h) slavery / bondage</div><div>(i) mean / low-born</div><div>(j) betrayer / rebel</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 10 -->
+            <div id="ex-10" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 10</span>
+                    <button onclick="toggleComplete(10)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-10"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">Deforestation is a savage threat to our ecology. Cutting down trees on a large scale makes the planet dry and warm. We should take immediate measures to create clean air.</p>
+                    <p class="text-xs text-blue-800 font-bold bg-blue-50 p-2 rounded">
+                        Directions: (a) deforestation (antonym) (b) savage (antonym) (c) threat (synonym) (d) large (antonym) (e) scale (synonym) (f) dry (antonym) (g) warm (antonym) (h) immediate (synonym) (i) create (synonym) (j) clean (antonym)
+                    </p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(10)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-10" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <script>
+                                for(let ch of ['a','b','c','d','e','f','g','h','i','j']) {
+                                    document.write(`<button onclick="showSpecificAnswer(10, '${ch}')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition uppercase mr-1 mb-1">${ch}</button>`);
+                                }
+                            </script>
+                        </div>
+                        <div id="specific-ans-10" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden mb-4"></div>
+
+                        <div class="mt-4 pt-4 border-t border-dashed border-gray-200">
+                            <h4 class="font-bold text-gray-800 mb-2">সব উত্তর এক নজরে:</h4>
+                            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-sm font-semibold text-gray-700 font-sans">
+                                <div>(a) afforestation / reforestation</div><div>(b) civilized / humane</div><div>(c) danger / risk</div><div>(d) small / tiny</div><div>(e) level / extent</div>
+                                <div>(f) wet / moist</div><div>(g) cold / cool</div><div>(h) instant / urgent</div><div>(i) make / produce</div><div>(j) dirty / polluted</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ফুটার -->
+    <footer class="text-center py-6 text-gray-500 text-sm border-t border-gray-200 mt-12 bg-white">
+        <p>&copy; ২০২৬ ZAMIL ACADEMY। সর্বস্বত্ব সংরক্ষিত।</p>
+    </footer>
+
+    <script>
+        // সিনোনিম এবং অ্যান্টনিম প্র্যাকটিস ডেটাবেজ
+        const answerDatabase = {
+            1: {
+                a: { ans: "worst / meanest", bangla: "সবচেয়ে খারাপ / সবচেয়ে হীন", explain: "greatest (সর্বোত্তম/সর্বশ্রেষ্ঠ) এর বিপরীতার্থক বা Antonym শব্দ হলো worst/meanest।" },
+                b: { ans: "gaining / earning", bangla: "অর্জন করা / কামানো", explain: "acquiring (অর্জন করা) এর সমার্থক বা Synonym শব্দ হলো gaining/earning।" },
+                c: { ans: "ignorance", bangla: "অজ্ঞতা", explain: "knowledge (জ্ঞান) এর বিপরীতার্থক বা Antonym শব্দ হলো ignorance।" },
+                d: { ans: "study / peruse", bangla: "অধ্যয়ন করা / মনোযোগ সহকারে পড়া", explain: "read (পড়া) এর সমার্থক বা Synonym শব্দ হলো study/peruse।" },
+                e: { ans: "discover / obtain", bangla: "আবিষ্কার করা / লাভ করা", explain: "find (খুঁজে পাওয়া) এর সমার্থক বা Synonym শব্দ হলো discover/obtain।" },
+                f: { ans: "old / ancient", bangla: "পুরানো / প্রাচীন", explain: "new (নতুন) এর বিপরীতার্থক বা Antonym শব্দ হলো old/ancient।" },
+                g: { ans: "bad / evil", bangla: "খারাপ / মন্দ", explain: "good (ভালো) এর বিপরীতার্থক বা Antonym শব্দ হলো bad/evil।" },
+                h: { ans: "grow / build", bangla: "বড় করা / গড়ে তোলা", explain: "develop (উন্নতি করা/গড়ে তোলা) এর সমার্থক বা Synonym শব্দ হলো grow/build।" },
+                i: { ans: "rude / rough", bangla: "অভদ্র / কর্কশ", explain: "gentle (নম্র/ভদ্র) এর বিপরীতার্থক বা Antonym শব্দ হলো rude/rough।" },
+                j: { ans: "ignoble / mean", bangla: "মহৎহীন / নিচু মনমানসিকতাসম্পন্ন", explain: "noble (মহৎ) এর বিপরীতার্থক বা Antonym শব্দ হলো ignoble/mean।" }
+            },
+            2: {
+                a: { ans: "dishonest / corrupt", bangla: "অসৎ / দুর্নীতিগ্রস্ত", explain: "honest (সৎ) এর Antonym হলো dishonest/corrupt।" },
+                b: { ans: "despised / hated", bangla: "ঘৃণিত / নিন্দিত", explain: "respected (সম্মানিত) এর Antonym হলো despised/hated।" },
+                c: { ans: "always", bangla: "সর্বদা", explain: "never (কখনো নয়) এর Antonym হলো always।" },
+                d: { ans: "truth", bangla: "সত্য", explain: "lie (মিথ্যা) এর Antonym হলো truth।" },
+                e: { ans: "never", bangla: "কখনো নয়", explain: "always (সর্বদা) এর Antonym হলো never।" },
+                f: { ans: "dedicated / faithful", bangla: "উৎসর্গীকৃত / বিশ্বাসী", explain: "sincere (আন্তরিক/নিষ্ঠাবান) এর Synonym হলো dedicated/faithful।" },
+                g: { ans: "opposite / reverse", bangla: "বিপরীত / উল্টো", explain: "contrary (বিপরীত) এর Synonym হলো opposite/reverse।" },
+                h: { ans: "disliked / despised", bangla: "অপছন্দনীয় / ঘৃণিত", explain: "hated (ঘৃণিত) এর Synonym হলো disliked/despised।" },
+                i: { ans: "guides / spends", bangla: "পরিচালনা করা / অতিবাহিত করা", explain: "leads (পরিচালনা করা/যাপন করা) এর Synonym হলো guides/spends।" },
+                j: { ans: "happy / cheerful", bangla: "সুখী / আনন্দিত", explain: "miserable (দুর্দশাময়) এর Antonym হলো happy/cheerful।" }
+            },
+            3: {
+                a: { ans: "harmful / useless", bangla: "ক্ষতিকারক / অপদার্থ বা অকেজো", explain: "helpful (সহায়ক) এর Antonym হলো harmful/useless।" },
+                b: { ans: "broadening / widening", bangla: "প্রসারিত করা / বিস্তৃত করা", explain: "expanding (প্রসারণ করা) এর Synonym হলো broadening/widening।" },
+                c: { ans: "intellectual / cognitive", bangla: "বুদ্ধিবৃত্তিক / জ্ঞানীয়", explain: "mental (মানসিক) এর Synonym হলো intellectual/cognitive।" },
+                d: { ans: "eliminates / deletes", bangla: "দূর করে / মুছে ফেলে", explain: "removes (দূর করা) এর Synonym হলো eliminates/deletes।" },
+                e: { ans: "brightness / sharpness", bangla: "উজ্জ্বলতা / তীক্ষ্ণতা", explain: "dullness (অনুজ্জ্বলতা/অসারতা) এর Antonym হলো brightness/sharpness।" },
+                f: { ans: "old / ancient", bangla: "পুরাতন / প্রাচীন", explain: "new (নতুন) এর Antonym হলো old/ancient।" },
+                g: { ans: "collect / accumulate", bangla: "সংগ্রহ করা / পুঞ্জীভূত করা", explain: "gather (সংগ্রহ করা) এর Synonym হলো collect/accumulate।" },
+                h: { ans: "tiny / narrow", bangla: "ক্ষুদ্র / সংকীর্ণ", explain: "vast (বিশাল) এর Antonym হলো tiny/narrow।" },
+                i: { ans: "idle / lazy", bangla: "অলস / কুঁড়ে", explain: "active (সক্রিয়) এর Antonym হলো idle/lazy।" },
+                j: { ans: "timid / fearful", bangla: "ভীরু / ভীতু", explain: "bold (সাহসী) এর Antonym হলো timid/fearful।" }
+            },
+            4: {
+                a: { ans: "wealth / affluence", bangla: "সম্পদ / প্রাচুর্য", explain: "poverty (দারিদ্র্য) এর Antonym হলো wealth/affluence।" },
+                b: { ans: "tiny / small", bangla: "ক্ষুদ্র / ছোট", explain: "great (বিশাল/মহান) এর Antonym হলো tiny/small।" },
+                c: { ans: "blessing / boon", bangla: "আশীর্বাদ / বর", explain: "curse (অভিশাপ) এর Antonym হলো blessing/boon।" },
+                d: { ans: "obstructs / stops", bangla: "বাধা দেয় / থামায়", explain: "blocks (বাধা দেওয়া) এর Synonym হলো obstructs/stops।" },
+                e: { ans: "state / public", bangla: "রাষ্ট্রীয় / সরকারি বা সাধারণ", explain: "national (জাতীয়) এর Synonym হলো state/public।" },
+                f: { ans: "progress / growth", bangla: "উন্নতি / প্রবৃদ্ধি", explain: "development (উন্নয়ন) এর Synonym হলো progress/growth।" },
+                g: { ans: "guilty / sinful", bangla: "দোষী / পাপী", explain: "innocent (নির্দোষ) এর Antonym হলো guilty/sinful।" },
+                h: { ans: "endure / undergo", bangla: "সহ্য করা / ভোগ করা", explain: "suffer (কষ্ট ভোগ করা) এর Synonym হলো endure/undergo।" },
+                i: { ans: "increase / enhance", bangla: "বৃদ্ধি করা / বাড়ানো", explain: "decrease (হ্রাস করা) এর Antonym হলো increase/enhance।" },
+                j: { ans: "community / public", bangla: "সম্প্রদায় / জনসমষ্টি", explain: "society (সমাজ) এর Synonym হলো community/public।" }
+            },
+            5: {
+                a: { ans: "learning / instruction", bangla: "শিক্ষা / নির্দেশনা", explain: "education (শিক্ষা) এর Synonym হলো learning/instruction।" },
+                b: { ans: "solution / chief", bangla: "সমাধান / প্রধান চাবিকাঠি", explain: "key (প্রধান উপায়/চাবিকাঠি) এর Synonym হলো solution/chief।" },
+                c: { ans: "regress / decline", bangla: "পশ্চাদপসরণ / পতন বা অবনতি", explain: "progress (উন্নতি) এর Antonym হলো regress/decline।" },
+                d: { ans: "eliminates / deletes", bangla: "দূর করে / মুছে ফেলে", explain: "removes (দূর করা) এর Synonym হলো eliminates/deletes।" },
+                e: { ans: "bright / illuminated", bangla: "উজ্জ্বল / আলোকিত", explain: "dark (অন্ধকার) এর Antonym হলো bright/illuminated।" },
+                f: { ans: "knowledge / wisdom", bangla: "জ্ঞান / প্রজ্ঞা", explain: "ignorance (অজ্ঞতা) এর Antonym হলো knowledge/wisdom।" },
+                g: { ans: "dark / dull", bangla: "অন্ধকার / অনুজ্জ্বল", explain: "bright (উজ্জ্বল) এর Antonym হলো dark/dull।" },
+                h: { ans: "old age / senility", bangla: "বার্ধক্য / জরাগ্রস্ততা", explain: "youth (যৌবন) এর Antonym হলো old age/senility।" },
+                i: { ans: "ignoble / mean", bangla: "মহৎহীন / নিচু", explain: "noble (মহৎ) এর Antonym হলো ignoble/mean।" },
+                j: { ans: "conservative / backward", bangla: "রক্ষণশীল / পশ্চাদপদ", explain: "progressive (প্রগতিশীল) এর Antonym হলো conservative/backward।" }
+            },
+            6: {
+                a: { ans: "poverty / indigence", bangla: "দারিদ্র্য / অতি অভাব", explain: "wealth (সম্পদ) এর Antonym হলো poverty/indigence।" },
+                b: { ans: "easy / simple", bangla: "সহজ / সরল", explain: "difficult (কঠিন) এর Antonym হলো easy/simple।" },
+                c: { ans: "stay / continue", bangla: "থাকা / চলমান থাকা", explain: "remain (থাকা/অবস্থান করা) এর Synonym হলো stay/continue।" },
+                d: { ans: "sick / ill", bangla: "অসুস্থ / রুগ্ন", explain: "healthy (সুস্থ) এর Antonym হলো sick/ill।" },
+                e: { ans: "idle / free", bangla: "অলস / অবসর বা মুক্ত", explain: "busy (ব্যস্ত) এর Antonym হলো idle/free।" },
+                f: { ans: "inactive / lazy", bangla: "নিষ্ক্রিয় / অলস", explain: "active (সক্রিয়) এর Antonym হলো inactive/lazy।" },
+                g: { ans: "irregular / casual", bangla: "অনিয়মিত / নৈমিত্তিক", explain: "regular (নিয়মিত) এর Antonym হলো irregular/casual।" },
+                h: { ans: "builds / creates", bangla: "গড়ে তোলে / তৈরি করে", explain: "makes (তৈরি করা) এর Synonym হলো builds/creates।" },
+                i: { ans: "weak / fragile", bangla: "দুর্বল / ভঙ্গুর", explain: "strong (শক্তিশালী) এর Antonym হলো weak/fragile।" },
+                j: { ans: "noisy / wild", bangla: "কোলাহলপূর্ণ / বন্য বা অস্থির", explain: "calm (শান্ত) এর Antonym হলো noisy/wild।" }
+            },
+            7: {
+                a: { ans: "rude / impolite", bangla: "রুক্ষ / অভদ্র", explain: "polite (ভদ্র) এর Antonym হলো rude/impolite।" },
+                b: { ans: "rough / harsh", bangla: "কর্কশ / কঠোর বা রুক্ষ", explain: "gentle (নম্র/ভদ্র) এর Antonym হলো rough/harsh।" },
+                c: { ans: "disobedient / rebellious", bangla: "অবাধ্য / বিদ্রোহী", explain: "obedient (বাধ্য) এর Antonym হলো disobedient/rebellious।" },
+                d: { ans: "trusts / accepts", bangla: "বিশ্বাস করে / গ্রহণ করে", explain: "believes (বিশ্বাস করা) এর Synonym হলো trusts/accepts।" },
+                e: { ans: "falsehood / dishonesty", bangla: "মিথ্যাচার / অসততা", explain: "truthfulness (সত্যবাদিতা) এর Antonym হলো falsehood/dishonesty।" },
+                f: { ans: "worst / meanest", bangla: "সবচেয়ে খারাপ / সবচেয়ে হীন", explain: "greatest (সর্বশ্রেষ্ঠ) এর Antonym হলো worst/meanest।" },
+                g: { ans: "wealth / resource", bangla: "সম্পদ / উৎস বা সম্পদ", explain: "asset (সম্পদ) এর Synonym হলো wealth/resource।" },
+                h: { ans: "hates / dislikes", bangla: "ঘৃণা করে / অপছন্দ করে", explain: "loves (ভালোবাসে) এর Antonym হলো hates/dislikes।" },
+                i: { ans: "admires / lauds", bangla: "প্রশংসা করে / স্তুতি করে", explain: "praises (প্রশংসা করা) এর Synonym হলো admires/lauds।" },
+                j: { ans: "honest / truthful", bangla: "সৎ / সত্যনিষ্ঠ", explain: "sincere (আন্তরিক) এর Synonym হলো honest/truthful।" }
+            },
+            8: {
+                a: { ans: "resolve / figure out", bangla: "সমাধান করা / হিসাব কষে বের করা", explain: "solve (সমাধান করা) এর Synonym হলো resolve/figure out।" },
+                b: { ans: "simple / easy", bangla: "সরল / সহজ", explain: "complex (জটিল) এর Antonym হলো simple/easy।" },
+                c: { ans: "slowly / late", bangla: "ধীরে / দেরিতে", explain: "quickly (দ্রুত) এর Antonym হলো slowly/late।" },
+                d: { ans: "unpopular / obscure", bangla: "অজনপ্রিয় / পরিচিতিহীন বা অখ্যাত", explain: "popular (জনপ্রিয়) এর Antonym হলো unpopular/obscure।" },
+                e: { ans: "globally / universally", bangla: "বিশ্বব্যাপী / সার্বজনীনভাবে", explain: "worldwide (বিশ্বব্যাপী) এর Synonym হলো globally/universally।" },
+                f: { ans: "extreme / immoderate", bangla: "চরম / অতিরিক্ত বা লাগামহীন", explain: "excessive (অতিরিক্ত) এর Synonym হলো extreme/immoderate।" },
+                g: { ans: "many / numerous", bangla: "অনেক / প্রচুর বা বহু", explain: "few (অল্প কিছু) এর Antonym হলো many/numerous।" },
+                h: { ans: "merits / benefits", bangla: "গুণ বা সুবিধা / উপকারিতা", explain: "demerits (অপকারিতা/ত্রুটি) এর Antonym হলো merits/benefits।" },
+                i: { ans: "marvelous / amazing", bangla: "চমৎকার / আশ্চর্যজনক বা চমৎকার", explain: "wonderful (বিস্ময়কর) এর Synonym হলো marvelous/amazing।" },
+                j: { ans: "danger / risk", bangla: "বিপদ / ঝুঁকি", explain: "safety (নিরাপত্তা) এর Antonym হলো danger/risk।" }
+            },
+            9: {
+                a: { ans: "treachery / betray", bangla: "বিশ্বাসঘাতকতা / বিশ্বাস ভঙ্গ করা", explain: "patriotism (দেশপ্রেম) এর Antonym হলো treachery/betray।" },
+                b: { ans: "mean / ignoble", bangla: "হীন / মহৎহীন", explain: "noble (মহৎ) এর Antonym হলো mean/ignoble।" },
+                c: { ans: "false / fake", bangla: "মিথ্যা / নকল", explain: "true (সত্য) এর Antonym হলো false/fake।" },
+                d: { ans: "traitor / betrayer", bangla: "দেশদ্রোহী / বিশ্বাসঘাতক", explain: "patriot (দেশপ্রেমিক) এর Antonym হলো traitor/betrayer।" },
+                e: { ans: "adores / cares", bangla: "ভক্তি করে / যত্ন নেয় বা ভালোবাসে", explain: "loves (ভালোবাসে) এর Synonym হলো adores/cares।" },
+                f: { ans: "progress / growth", bangla: "উন্নতি / প্রবৃদ্ধি", explain: "development (উন্নয়ন) এর Synonym হলো progress/growth।" },
+                g: { ans: "defends / guards", bangla: "রক্ষা করে / পাহারা দেয়", explain: "protects (রক্ষা করা) এর Synonym হলো defends/guards।" },
+                h: { ans: "slavery / bondage", bangla: "দাসত্ব / বন্দীত্ব", explain: "freedom (স্বাধীনতা) এর Antonym হলো slavery/bondage।" },
+                i: { ans: "mean / low-born", bangla: "হীন / নিচু বংশীয় বা হীন", explain: "ignoble (মহৎহীন) এর Synonym হলো mean/low-born।" },
+                j: { ans: "betrayer / rebel", bangla: "বিশ্বাসঘাতক / বিদ্রোহী", explain: "traitor (দেশদ্রোহী) এর Synonym হলো betrayer/rebel।" }
+            },
+            10: {
+                a: { ans: "afforestation / reforestation", bangla: "বনায়ন / পুনঃবনায়ন", explain: "deforestation (বন উজাড়করণ) এর Antonym হলো afforestation/reforestation।" },
+                b: { ans: "civilized / humane", bangla: "সভ্য / মানবিক", explain: "savage (বন্য/নিষ্ঠুর) এর Antonym হলো civilized/humane।" },
+                c: { ans: "danger / risk", bangla: "বিপদ / ঝুঁকি", explain: "threat (হুমকি) এর Synonym হলো danger/risk।" },
+                d: { ans: "small / tiny", bangla: "ছোট / ক্ষুদ্র", explain: "large (বিশাল) এর Antonym হলো small/tiny।" },
+                e: { ans: "level / extent", bangla: "পরিমাপ / মাত্রা বা ব্যাপ্তি", explain: "scale (স্কেল/পরিমাপের মাত্রা) এর Synonym হলো level/extent।" },
+                f: { ans: "wet / moist", bangla: "ভেজা / আর্দ্র", explain: "dry (শুষ্ক) এর Antonym হলো wet/moist।" },
+                g: { ans: "cold / cool", bangla: "ঠান্ডা / শীতল", explain: "warm (উষ্ণ) এর Antonym হলো cold/cool।" },
+                h: { ans: "instant / urgent", bangla: "তাৎক্ষণিক / জরুরি", explain: "immediate (তাত্ক্ষণিক) এর Synonym হলো instant/urgent।" },
+                i: { ans: "make / produce", bangla: "তৈরি করা / উৎপাদন করা", explain: "create (সৃষ্টি করা) এর Synonym হলো make/produce।" },
+                j: { ans: "dirty / polluted", bangla: "নোংরা / দূষিত", explain: "clean (পরিষ্কার) এর Antonym হলো dirty/polluted।" }
+            }
+        };
+
+        // উত্তর প্যানেল শো বা হাইড করার ফাংশন
+        function toggleAnswerPanel(exNum) {
+            const panel = document.getElementById(`ans-panel-${exNum}`);
+            if (panel.classList.contains('hidden')) {
+                panel.classList.remove('hidden');
+            } else {
+                panel.classList.add('hidden');
+            }
+        }
+
+        // নির্দিষ্ট অক্ষরের উত্তর, অনুবাদ ও ব্যাকরণগত ব্যাখ্যা দেখানো
+        function showSpecificAnswer(exNum, letter) {
+            const ansBox = document.getElementById(`specific-ans-${exNum}`);
+            const data = answerDatabase[exNum][letter];
+            
+            if (data) {
+                ansBox.innerHTML = `
+                    <div class="flex items-start gap-3">
+                        <span class="bg-green-200 text-green-900 font-bold px-3 py-1 rounded-md text-sm uppercase">${letter}</span>
+                        <div class="space-y-1">
+                            <p class="font-bold text-lg text-green-955">Correct Answer: <span class="underline text-red-600 font-mono">${data.ans}</span></p>
+                            <p class="text-sm text-gray-700"><strong>বাংলা অর্থ:</strong> ${data.bangla}</p>
+                            <p class="text-xs text-green-800 bg-green-100/50 p-2 rounded-lg mt-1 border border-green-200/50 font-sans"><strong>সহজ ব্যাখ্যা:</strong> ${data.explain}</p>
+                        </div>
+                    </div>
+                `;
+                ansBox.classList.remove('hidden');
+            }
+        }
+
+        // কমপ্লিট স্ট্যাটাস টগল এবং লোকাল স্টোরেজ আপডেট
+        function toggleComplete(exNum) {
+            const card = document.getElementById(`ex-${exNum}`);
+            const badge = card.querySelector('.completed-badge');
+            const checkbox = document.getElementById(`checkbox-${exNum}`);
+            
+            let completedList = JSON.parse(localStorage.getItem('synonym_completed_exercises')) || [];
+
+            if (completedList.includes(exNum)) {
+                // আন-কমপ্লিট করা
+                completedList = completedList.filter(id => id !== exNum);
+                card.classList.remove('completed-card');
+                badge.classList.add('hidden');
+                badge.classList.remove('flex');
+                checkbox.innerHTML = '';
+                checkbox.classList.remove('bg-green-600', 'border-green-600');
+                checkbox.classList.add('bg-white', 'border-gray-300');
+            } else {
+                // কমপ্লিট করা
+                completedList.push(exNum);
+                card.classList.add('completed-card');
+                badge.classList.remove('hidden');
+                badge.classList.add('flex');
+                checkbox.innerHTML = '<svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>';
+                checkbox.classList.remove('bg-white', 'border-gray-300');
+                checkbox.classList.add('bg-green-600', 'border-green-600');
+            }
+
+            localStorage.setItem('synonym_completed_exercises', JSON.stringify(completedList));
+        }
+
+        // পেজ লোড হওয়ার পর লোকাল স্টোরেজ থেকে প্রোগ্রেস পুনরুদ্ধার
+        window.addEventListener('DOMContentLoaded', () => {
+            const completedList = JSON.parse(localStorage.getItem('synonym_completed_exercises')) || [];
+            completedList.forEach(exNum => {
+                const card = document.getElementById(`ex-${exNum}`);
+                if (card) {
+                    const badge = card.querySelector('.completed-badge');
+                    const checkbox = document.getElementById(`checkbox-${exNum}`);
+                    
+                    card.classList.add('completed-card');
+                    if (badge) {
+                        badge.classList.remove('hidden');
+                        badge.classList.add('flex');
+                    }
+                    if (checkbox) {
+                        checkbox.innerHTML = '<svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>';
+                        checkbox.classList.remove('bg-white', 'border-gray-300');
+                        checkbox.classList.add('bg-green-600', 'border-green-600');
+                    }
+                }
+            });
+        });
+    </script>
+<script type="module">
+    // Firebase Time Tracking Script
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
+    import { getDatabase, ref, update, increment } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-database.js";
+
+    // ফায়ারবেজ কনফিগারেশন
+    const firebaseConfig = {
+        apiKey: "AIzaSyABpKz4xjVKWb6kVR_mT8d13dt9lcDwipE",
+        authDomain: "zamil-4e08e.firebaseapp.com",
+        databaseURL: "https://zamil-4e08e-default-rtdb.firebaseio.com/",
+        projectId: "zamil-4e08e"
+    };
+
+    // ফায়ারবেজ অ্যাপ এবং ডেটাবেজ ইনিশিয়ালিলাইজেশন
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+
+    // ডেটাবেজ কানেকশনটিকে গ্লোবাল করা
+    window.db = db; 
+
+    // প্রতি ৩০ সেকেন্ডে সময় ট্র্যাকিং
+    const timeRef = ref(db, 'total_time_spent');
+
+    setInterval(() => {
+        // ইউজার ট্যাব অন্য ট্যাবে বা ব্যাকগ্রাউন্ডে থাকলে কোডটি রান করবে না
+        if (document.hidden) return; 
+
+        update(timeRef, {
+            "seconds": increment(30)
+        }).catch(err => console.error("Error updating time:", err));
+    }, 30000);
+
+    console.log("Firebase time tracking active (optimized).");
+</script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSC English 2nd Paper - ZAMIL ACADEMY</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'hind': ['"Hind Siliguri"', 'sans-serif'],
+                        'poppins': ['"Poppins"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Hind Siliguri', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+    <!-- হেডার: পুরো বক্স সবুজ এবং নিচের দিকে কার্ভ করা -->
+    <header class="relative bg-green-800 text-white py-12 px-6 text-center shadow-lg rounded-b-[40px]">
+        
+        <!-- ব্যাক বাটন (পূর্বের পেজে ফিরে যাওয়ার জন্য) -->
+        <a href="javascript:history.back()" 
+           class="absolute top-6 left-4 md:left-8 flex items-center gap-2 text-white/90 hover:text-white bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full transition-all duration-300 backdrop-blur-sm text-sm font-semibold shadow-sm border border-white/10">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            <span class="hidden md:inline font-hind">ফিরে যান</span>
+        </a>
+
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white font-hind mt-4 md:mt-0">ZAMIL ACADEMY</h1>
+        <p class="mt-2 text-green-100 text-sm md:text-base font-hind opacity-90">ALIM & HSC English 2nd Paper • প্রিমিয়াম ব্যাকরণ সহায়িকা</p>
+    </header>
+
+    <!-- সাবস্ক্রাইব বক্স -->
+    <div class="flex justify-center -mt-8 px-6 relative z-10">
+        <div class="bg-white p-8 shadow-md border-t-4 border-green-800 rounded-2xl max-w-md w-full text-center">
+            <p class="text-gray-700 text-lg mb-6 font-hind">
+                প্রিমিয়াম সেবা পেতে আমাদের ইউটিউব চ্যানেলটি সাবস্ক্রাইব করুন।
+            </p>
+            <a href="https://youtube.com/@zamil_academy?si=EbWJq_lwwbWrLar9" 
+               target="_blank"
+               class="inline-block bg-red-700 hover:bg-green-800 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-md font-hind">
+                চ্যানেল ভিজিট করুন
+            </a>
+        </div>
+    </div>
+
+    <!-- মূল কন্টেন্ট এরিয়া -->
+    <main class="flex-grow flex flex-col items-center pt-16 pb-12 px-6">
+        
+        <!-- টাইটেল -->
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 font-poppins tracking-wide uppercase">
+                English Grammar topics
+            </h2>
+            <div class="w-20 h-1.5 bg-green-600 rounded-full mx-auto mt-3"></div>
+        </div>
+
+        <!-- ১২টি গ্রামার টপিকের গ্রিড লিংক -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
+            
+            <!-- ১. Modifiers -->
+            <a href="modifiers.html" class="group relative bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-xl border border-gray-100 hover:border-green-300 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden flex flex-col items-center justify-center min-h-[180px] w-full">
+                <div class="absolute inset-0 bg-gradient-to-b from-green-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative z-10">
+                    <div class="w-14 h-14 mx-auto bg-green-100 text-green-700 rounded-full flex items-center justify-center mb-3 shadow-inner group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 font-poppins group-hover:text-green-700 transition-colors">Modifiers</h3>
+                    <p class="text-sm text-gray-500 mt-1 font-hind">Pre/Post Modifier-এর বিস্তারিত নিয়মাবলী</p>
+                </div>
+            </a>
+
+            <!-- ২. Article -->
+            <a href="article.html" class="group relative bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-xl border border-gray-100 hover:border-green-300 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden flex flex-col items-center justify-center min-h-[180px] w-full">
+                <div class="absolute inset-0 bg-gradient-to-b from-green-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative z-10">
+                    <div class="w-14 h-14 mx-auto bg-blue-100 text-blue-700 rounded-full flex items-center justify-center mb-3 shadow-inner group-hover:scale-110 transition-transform duration-300">
+                        <span class="text-lg font-bold font-poppins">A/An</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 font-poppins group-hover:text-green-700 transition-colors">Article</h3>
+                    <p class="text-sm text-gray-500 mt-1 font-hind">A, An, The ও Cross-এর সঠিক ব্যবহার</p>
+                </div>
+            </a>
+
+            <!-- ৩. Preposition -->
+            <a href="preposition.html" class="group relative bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-xl border border-gray-100 hover:border-green-300 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden flex flex-col items-center justify-center min-h-[180px] w-full">
+                <div class="absolute inset-0 bg-gradient-to-b from-green-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative z-10">
+                    <div class="w-14 h-14 mx-auto bg-indigo-100 text-indigo-700 rounded-full flex items-center justify-center mb-3 shadow-inner group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 font-poppins group-hover:text-green-700 transition-colors">Preposition</h3>
+                    <p class="text-sm text-gray-500 mt-1 font-hind">উপযুক্ত Preposition ও নিয়মাবলী</p>
+                </div>
+            </a>
+
+            <!-- ৪. Phrases/Words -->
+            <a href="phrases-words.html" class="group relative bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-xl border border-gray-100 hover:border-green-300 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden flex flex-col items-center justify-center min-h-[180px] w-full">
+                <div class="absolute inset-0 bg-gradient-to-b from-green-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative z-10">
+                    <div class="w-14 h-14 mx-auto bg-purple-100 text-purple-700 rounded-full flex items-center justify-center mb-3 shadow-inner group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 font-poppins group-hover:text-green-700 transition-colors">Phrases/Words</h3>
+                    <p class="text-sm text-gray-500 mt-1 font-hind">Special use of some phrases/words</p>
+                </div>
+            </a>
+
+            <!-- ৫. Completing Sentence -->
+            <a href="completing-sentence.html" class="group relative bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-xl border border-gray-100 hover:border-green-300 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden flex flex-col items-center justify-center min-h-[180px] w-full">
+                <div class="absolute inset-0 bg-gradient-to-b from-green-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative z-10">
+                    <div class="w-14 h-14 mx-auto bg-pink-100 text-pink-700 rounded-full flex items-center justify-center mb-3 shadow-inner group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 font-poppins group-hover:text-green-700 transition-colors">Completing Sentence</h3>
+                    <p class="text-sm text-gray-500 mt-1 font-hind">শর্তযুক্ত ও বিশেষ লিঙ্কিং বাক্য গঠন</p>
+                </div>
+            </a>
+
+            <!-- ৬. Right Form of Verbs -->
+            <a href="right-form-of-verbs.html" class="group relative bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-xl border border-gray-100 hover:border-green-300 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden flex flex-col items-center justify-center min-h-[180px] w-full">
+                <div class="absolute inset-0 bg-gradient-to-b from-green-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative z-10">
+                    <div class="w-14 h-14 mx-auto bg-teal-100 text-teal-700 rounded-full flex items-center justify-center mb-3 shadow-inner group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 8H17"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 font-poppins group-hover:text-green-700 transition-colors">Right Form Of Verbs</h3>
+                    <p class="text-sm text-gray-500 mt-1 font-hind">ভার্বের সঠিক রূপ বসানোর নিয়ম</p>
+                </div>
+            </a>
+
+            <!-- ৭. Changing Sentence -->
+            <a href="changing-sentence.html" class="group relative bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-xl border border-gray-100 hover:border-green-300 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden flex flex-col items-center justify-center min-h-[180px] w-full">
+                <div class="absolute inset-0 bg-gradient-to-b from-green-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative z-10">
+                    <div class="w-14 h-14 mx-auto bg-amber-100 text-amber-700 rounded-full flex items-center justify-center mb-3 shadow-inner group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 font-poppins group-hover:text-green-700 transition-colors">Changing Sentence</h3>
+                    <p class="text-sm text-gray-500 mt-1 font-hind">Voice, Degree ও বাক্য রূপান্তর</p>
+                </div>
+            </a>
+
+            <!-- ৮. Narration -->
+            <a href="narration.html" class="group relative bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-xl border border-gray-100 hover:border-green-300 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden flex flex-col items-center justify-center min-h-[180px] w-full">
+                <div class="absolute inset-0 bg-gradient-to-b from-green-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative z-10">
+                    <div class="w-14 h-14 mx-auto bg-rose-100 text-rose-700 rounded-full flex items-center justify-center mb-3 shadow-inner group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 font-poppins group-hover:text-green-700 transition-colors">Narration</h3>
+                    <p class="text-sm text-gray-500 mt-1 font-hind">Direct ও Indirect উক্তি পরিবর্তনের নিয়ম</p>
+                </div>
+            </a>
+
+            <!-- ৯. Pronoun Reference -->
+            <a href="pronoun-reference.html" class="group relative bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-xl border border-gray-100 hover:border-green-300 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden flex flex-col items-center justify-center min-h-[180px] w-full">
+                <div class="absolute inset-0 bg-gradient-to-b from-green-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative z-10">
+                    <div class="w-14 h-14 mx-auto bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mb-3 shadow-inner group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 font-poppins group-hover:text-green-700 transition-colors">Pronoun Reference</h3>
+                    <p class="text-sm text-gray-500 mt-1 font-hind">অস্পষ্ট Pronoun শনাক্ত ও সংশোধন</p>
+                </div>
+            </a>
+
+            <!-- ১০. Sentence Connector -->
+            <a href="sentence-connector.html" class="group relative bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-xl border border-gray-100 hover:border-green-300 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden flex flex-col items-center justify-center min-h-[180px] w-full">
+                <div class="absolute inset-0 bg-gradient-to-b from-green-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative z-10">
+                    <div class="w-14 h-14 mx-auto bg-orange-100 text-orange-700 rounded-full flex items-center justify-center mb-3 shadow-inner group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 font-poppins group-hover:text-green-700 transition-colors">Sentence Connector</h3>
+                    <p class="text-sm text-gray-500 mt-1 font-hind">বাক্যের অর্থসঙ্গতি রক্ষাকারী শব্দসমূহ</p>
+                </div>
+            </a>
+
+            <!-- ১১. Synonym & Antonym -->
+            <a href="synonym-antonym.html" class="group relative bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-xl border border-gray-100 hover:border-green-300 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden flex flex-col items-center justify-center min-h-[180px] w-full">
+                <div class="absolute inset-0 bg-gradient-to-b from-green-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative z-10">
+                    <div class="w-14 h-14 mx-auto bg-cyan-100 text-cyan-700 rounded-full flex items-center justify-center mb-3 shadow-inner group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2zm0 4h18M9 21V11m6 10V11"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 font-poppins group-hover:text-green-700 transition-colors">Synonym & Antonym</h3>
+                    <p class="text-sm text-gray-500 mt-1 font-hind">সমার্থক ও বিপরীতার্থক শব্দ বিশ্লেষণ</p>
+                </div>
+            </a>
+
+            <!-- ১২. Punctuation -->
+            <a href="punctuation.html" class="group relative bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-xl border border-gray-100 hover:border-green-300 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden flex flex-col items-center justify-center min-h-[180px] w-full">
+                <div class="absolute inset-0 bg-gradient-to-b from-green-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative z-10">
+                    <div class="w-14 h-14 mx-auto bg-violet-100 text-violet-700 rounded-full flex items-center justify-center mb-3 shadow-inner group-hover:scale-110 transition-transform duration-300">
+                        <span class="text-2xl font-extrabold font-poppins">?,!</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 font-poppins group-hover:text-green-700 transition-colors">Punctuation</h3>
+                    <p class="text-sm text-gray-500 mt-1 font-hind">বিরাম চিহ্ন ও বড় হাতের অক্ষরের সঠিক ব্যবহার</p>
+                </div>
+            </a>
+
+        </div>
+    </main>
+
+    <!-- ফুটার -->
+    <footer class="text-center py-6 text-gray-500 text-sm border-t border-gray-200 bg-white">
+        <p class="font-hind">&copy; ২০২৬ ZAMIL ACADEMY। সর্বস্বত্ব সংরক্ষিত।</p>
+    </footer>
+
+</body>
+</html>

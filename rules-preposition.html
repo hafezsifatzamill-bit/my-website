@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preposition Rules - ZAMIL ACADEMY</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'hind': ['"Hind Siliguri"', 'sans-serif'],
+                        'poppins': ['"Poppins"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Hind Siliguri', sans-serif; }
+        .fade-in { animation: fadeIn 0.4s ease-out forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+    <!-- হেডার -->
+    <header class="relative bg-green-800 text-white py-12 px-6 text-center shadow-lg rounded-b-[40px]">
+        <!-- ব্যাক বাটন (ড্যাশবোর্ডে ফিরে যাওয়ার জন্য) -->
+        <a href="index.html" 
+           class="absolute top-6 left-4 md:left-8 flex items-center gap-2 text-white/90 hover:text-white bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full transition-all duration-300 backdrop-blur-sm text-sm font-semibold shadow-sm border border-white/10">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            <span class="hidden md:inline font-hind">ড্যাশবোর্ড</span>
+        </a>
+
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white font-hind mt-4 md:mt-0">ZAMIL ACADEMY</h1>
+        <p class="mt-2 text-green-100 text-sm md:text-base font-hind opacity-90">Alim & HSC English 2nd Paper • Preposition Complete Grammar Guide</p>
+    </header>
+
+    <!-- সাবস্ক্রাইব বক্স -->
+    <div class="flex justify-center -mt-8 px-6 relative z-10">
+        <div class="bg-white p-8 shadow-md border-t-4 border-green-800 rounded-2xl max-w-md w-full text-center">
+            <p class="text-gray-700 text-lg mb-6 font-hind">
+                প্রিমিয়াম সেবা পেতে আমাদের ইউটিউব চ্যানেলটি সাবস্ক্রাইব করুন।
+            </p>
+            <a href="https://youtube.com/@zamil_academy?si=EbWJq_lwwbWrLar9" 
+               target="_blank"
+               class="inline-block bg-red-700 hover:bg-green-800 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-md font-hind">
+                চ্যানেল ভিজিট করুন
+            </a>
+        </div>
+    </div>
+
+    <!-- মূল কন্টেন্ট এরিয়া -->
+    <main class="flex-grow flex flex-col items-center pt-16 pb-12 px-6">
+        
+        <!-- টাইটেল -->
+        <div class="text-center mb-10">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-gray-800 font-hind">প্রিপজিশন (Preposition) ব্যবহারের ২০টি গুরুত্বপূর্ণ নিয়ম</h2>
+            <div class="w-16 h-1 bg-green-600 rounded-full mx-auto mt-3"></div>
+        </div>
+
+        <!-- ফিল্টার বা ক্যাটাগরি ট্যাব -->
+        <div class="flex flex-wrap justify-center gap-3 mb-10 w-full max-w-2xl">
+            <button onclick="filterRules('all')" id="btn-all" class="px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind bg-green-800 text-white text-xs md:text-sm">সবগুলো নিয়ম</button>
+            <button onclick="filterRules('time-place')" id="btn-time-place" class="px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind bg-white text-gray-700 border border-gray-200 hover:bg-gray-50 text-xs md:text-sm">সময় ও স্থান</button>
+            <button onclick="filterRules('motion-position')" id="btn-motion-position" class="px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind bg-white text-gray-700 border border-gray-200 hover:bg-gray-50 text-xs md:text-sm">গতি ও অবস্থান</button>
+            <button onclick="filterRules('special-rules')" id="btn-special-rules" class="px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind bg-white text-gray-700 border border-gray-200 hover:bg-gray-50 text-xs md:text-sm">অন্যান্য বিশেষ নিয়ম</button>
+        </div>
+
+        <!-- নিয়মসমূহের গ্রিড কন্টেইনার -->
+        <div id="rules-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-5xl">
+            
+            <!-- Category: time-place (Rules 1-8) -->
+            <div class="rule-card time-place bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-blue-100 text-blue-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 01</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">At এবং In (ছোট ও বড় স্থানের পূর্বে)</h4>
+                <div class="bg-blue-50 text-blue-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-blue-500 font-poppins">
+                    <span class="font-bold">Example:</span> He lives <span class="text-blue-700 font-bold underline">at</span> Sherpur <span class="text-blue-700 font-bold underline">in</span> Mymensingh.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> সাধারণত ছোট স্থান, গ্রাম বা নির্দিষ্ট এলাকার আগে 'at' বসে এবং বড় স্থান, জেলা, বিভাগ বা দেশের নামের আগে 'in' বসে।</p>
+            </div>
+
+            <div class="rule-card time-place bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-blue-100 text-blue-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 02</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">At, On এবং In (সময়ের ব্যবহারে পার্থক্য)</h4>
+                <div class="bg-blue-50 text-blue-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-blue-500 font-poppins">
+                    <span class="font-bold">Example:</span> Our class starts <span class="text-blue-700 font-bold underline">at</span> 9 AM <span class="text-blue-700 font-bold underline">on</span> Sunday <span class="text-blue-700 font-bold underline">in</span> June.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> সুনির্দিষ্ট ছোট বা ঘড়ির সময়ের পূর্বে 'at', বার (Day) বা নির্দিষ্ট তারিখের পূর্বে 'on', এবং মাস (Month), বছর বা ঋতুর পূর্বে 'in' বসে।</p>
+            </div>
+
+            <div class="rule-card time-place bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-blue-100 text-blue-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 03</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">Since এবং For (সময়ের ব্যাপ্তি ও শুরুর সময়)</h4>
+                <div class="bg-blue-50 text-blue-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-blue-500 font-poppins">
+                    <span class="font-bold">Example:</span> It has been raining <span class="text-blue-700 font-bold underline">since</span> morning. We have lived here <span class="text-blue-700 font-bold underline">for</span> five years.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> কোনো কাজ নির্দিষ্ট কোন শুরু হওয়া পয়েন্ট থেকে চলতে থাকলে (Point of time) 'since' বসে এবং কত সময় ধরে কাজটি চলছে (Period of time) বোঝাতে 'for' বসে।</p>
+            </div>
+
+            <div class="rule-card time-place bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-blue-100 text-blue-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 04</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">By এবং With (কাজ সম্পাদনকারী ও মাধ্যম)</h4>
+                <div class="bg-blue-50 text-blue-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-blue-500 font-poppins">
+                    <span class="font-bold">Example:</span> The tiger was killed <span class="text-blue-700 font-bold underline">by</span> the hunter <span class="text-blue-700 font-bold underline">with</span> a gun.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> কোনো ব্যক্তি বা প্রাণীর দ্বারা কাজটি সম্পন্ন হলে 'by' বসে এবং কাজটি করার জন্য যে বস্তু বা হাতিয়ার ব্যবহার করা হয় তার পূর্বে 'with' বসে।</p>
+            </div>
+
+            <div class="rule-card time-place bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-blue-100 text-blue-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 05</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">Between এবং Among (দুই বা ততোধিকের মধ্যে তুলনা)</h4>
+                <div class="bg-blue-50 text-blue-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-blue-500 font-poppins">
+                    <span class="font-bold">Example:</span> Distribute the mangoes <span class="text-blue-700 font-bold underline">between</span> Kamal and Jamal, and share the rest <span class="text-blue-700 font-bold underline">among</span> all students.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> ঠিক দুই ব্যক্তি বা বস্তুর মধ্যে কোনো কিছু ভাগ করা বা তুলনা করা বোঝালে 'between' এবং দুইয়ের অধিক ব্যক্তি বা বস্তুর ক্ষেত্রে 'among' বসে।</p>
+            </div>
+
+            <div class="rule-card time-place bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-blue-100 text-blue-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 06</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">Beside এবং Besides (পাশে বনাম অধিকন্তু)</h4>
+                <div class="bg-blue-50 text-blue-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-blue-500 font-poppins">
+                    <span class="font-bold">Example:</span> He sat <span class="text-blue-700 font-bold underline">beside</span> me. <span class="text-blue-700 font-bold underline">Besides</span> English, he knows Arabic.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> 'Beside' (S ছাড়া) অর্থ হলো পাশে বা কোনো কিছুর পার্শবর্তী স্থান। অন্যদিকে 'Besides' (S সহ) অর্থ হলো 'তা ছাড়াও' বা অধিকন্তু (In addition to)।</p>
+            </div>
+
+            <div class="rule-card time-place bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-blue-100 text-blue-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 07</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">In এবং Within (সময়ের ক্ষেত্রে চমৎকার পার্থক্য)</h4>
+                <div class="bg-blue-50 text-blue-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-blue-500 font-poppins">
+                    <span class="font-bold">Example:</span> I will return <span class="text-blue-700 font-bold underline">in</span> a week (at the end of a week). I will return <span class="text-blue-700 font-bold underline">within</span> a week (before the end of a week).
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> ভবিষ্যতের কোনো সময়সীমার ঠিক শেষ মূহুর্তে বা পরে কাজ শেষ হবে বোঝাতে 'in' এবং নির্ধারিত সীমার কিছু সময় পূর্বেই সম্পন্ন হতে বোঝাতে 'within' বসে।</p>
+            </div>
+
+            <div class="rule-card time-place bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-blue-100 text-blue-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 08</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">In এবং Into (স্থিরতা বনাম গতিশীলতা)</h4>
+                <div class="bg-blue-50 text-blue-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-blue-500 font-poppins">
+                    <span class="font-bold">Example:</span> The teacher is <span class="text-blue-700 font-bold underline">in</span> the classroom. He walked <span class="text-blue-700 font-bold underline">into</span> the classroom.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> কোনো কিছুর ভেতরের স্থির অবস্থান প্রকাশ করতে 'in' বসে এবং বাইরে থেকে ভেতরে গতিশীলভাবে প্রবেশ করা বা রূপান্তর বোঝাতে 'into' বসে।</p>
+            </div>
+
+            <!-- Category: motion-position (Rules 9-14) -->
+            <div class="rule-card motion-position bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-purple-100 text-purple-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 09</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">On, Over এবং Above (উপরে থাকার পার্থক্য)</h4>
+                <div class="bg-purple-50 text-purple-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-purple-500 font-poppins">
+                    <span class="font-bold">Example:</span> The book is <span class="text-purple-700 font-bold underline">on</span> the table. The fan is <span class="text-purple-700 font-bold underline">over</span> my head. The sun is <span class="text-purple-700 font-bold underline">above</span> us.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> কোনো তল স্পর্শ করে উপরে থাকলে 'on', স্পর্শ ছাড়া লম্বালম্বি মাথার সোজা উপরে বা গতিশীল অবস্থায় থাকলে 'over' এবং নাগালের বাইরে অনেক উঁচুতে থাকলে 'above' বসে।</p>
+            </div>
+
+            <div class="rule-card motion-position bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-purple-100 text-purple-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 10</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">To এবং Towards (নির্দিষ্ট গন্তব্য বনাম অভিমুখ)</h4>
+                <div class="bg-purple-50 text-purple-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-purple-500 font-poppins">
+                    <span class="font-bold">Example:</span> He is going <span class="text-purple-700 font-bold underline">to</span> school. He walked <span class="text-purple-700 font-bold underline">towards</span> the river.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> একদম নির্দিষ্ট গন্তব্যে যাওয়া বোঝালে গন্তব্যের আগে 'to' বসে এবং সুনির্দিষ্ট গন্তব্য না বুঝিয়ে কেবল সেদিকে বা তার মুখে অগ্রসর হওয়া বোঝালে 'towards' বসে।</p>
+            </div>
+
+            <div class="rule-card motion-position bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-purple-100 text-purple-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 11</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">Under, Below এবং Beneath (নিচে থাকার অবস্থান)</h4>
+                <div class="bg-purple-50 text-purple-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-purple-500 font-poppins">
+                    <span class="font-bold">Example:</span> The cat is sleeping <span class="text-purple-700 font-bold underline">under</span> the table. Your marks are <span class="text-purple-700 font-bold underline">below</span> average.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> সরাসরি কোনো দ্বিমাত্রিক বা ত্রিমাত্রিক তলের নিচে থাকলে 'under', কোনো পরিমাপ বা মানের তুলনায় নিচে হলে 'below' এবং কোনো কিছুর সাথে লেগে বা চাপা পড়া অবস্থায় নিচে থাকলে 'beneath' বসে।</p>
+            </div>
+
+            <div class="rule-card motion-position bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-purple-100 text-purple-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 12</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">Through এবং Across (মধ্য দিয়ে বনাম আড়াআড়ি)</h4>
+                <div class="bg-purple-50 text-purple-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-purple-500 font-poppins">
+                    <span class="font-bold">Example:</span> He walked <span class="text-purple-700 font-bold underline">through</span> the forest. He ran <span class="text-purple-700 font-bold underline">across</span> the road.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> কোনো ঘন বা আবদ্ধ এলাকার ভেতর বা ত্রিমাত্রিক মাধ্যমের 'মধ্য দিয়ে' অতিক্রম করতে 'through' বসে এবং সমতল এলাকা একপাশ থেকে অন্যপাশে আড়াআড়ি পার হতে 'across' বসে।</p>
+            </div>
+
+            <div class="rule-card motion-position bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-purple-100 text-purple-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 13</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">Along এবং Round / Around (বরাবর বনাম বৃত্তাকার)</h4>
+                <div class="bg-purple-50 text-purple-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-purple-500 font-poppins">
+                    <span class="font-bold">Example:</span> We walked <span class="text-purple-700 font-bold underline">along</span> the river bank. The earth moves <span class="text-purple-700 font-bold underline">around</span> the sun.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> রাস্তা, নদী বা লাইনের সোজা বা সমান্তরাল 'বরাবর' চলতে থাকলে 'along' বসে এবং কোনো কিছুর চারপাশ ঘিরে বৃত্তাকারে বা এলোমেলো ঘুরতে 'around' বসে।</p>
+            </div>
+
+            <div class="rule-card motion-position bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-purple-100 text-purple-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 14</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">Off এবং Out of (বিচ্ছিন্নতা বনাম উৎস)</h4>
+                <div class="bg-purple-50 text-purple-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-purple-500 font-poppins">
+                    <span class="font-bold">Example:</span> He jumped <span class="text-purple-700 font-bold underline">off</span> the roof. Get <span class="text-purple-700 font-bold underline">out of</span> my sight.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> কোনো তল বা উঁচু স্থান থেকে সম্পূর্ণরূপে বিচ্ছিন্ন বা নিচে পড়া বোঝাতে 'off' বসে এবং কোনো ঘেরাটোপ বা সীমানার ভেতর থেকে বাইরে বের হওয়া প্রকাশে 'out of' বসে।</p>
+            </div>
+
+            <!-- Category: special-rules (Rules 15-20) -->
+            <div class="rule-card special-rules bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-red-100 text-red-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 15</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">Die Of, Die From, Die For (মৃত্যুর কারণভেদে প্রিপজিশন)</h4>
+                <div class="bg-red-50 text-red-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-red-500 font-poppins">
+                    <span class="font-bold">Example:</span> He died <span class="text-red-700 font-bold underline">of</span> cholera. He died <span class="text-red-700 font-bold underline">from</span> overeating. He died <span class="text-red-700 font-bold underline">for</span> his country.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> কোনো নির্দিষ্ট রোগে মারা গেলে 'of', অতিরিক্ত কোনো বাহ্যিক কারণে (যেমন অতিভোজন, আঘাত) মারা গেলে 'from' এবং কোনো মহৎ উৎসর্গ বা দেশের জন্য মারা গেলে 'for' বসে।</p>
+            </div>
+
+            <div class="rule-card special-rules bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-red-100 text-red-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 16</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">Made of এবং Made from (তৈরির উপকরণ ও উপাদানের অবস্থা)</h4>
+                <div class="bg-red-50 text-red-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-red-500 font-poppins">
+                    <span class="font-bold">Example:</span> This table is made <span class="text-red-700 font-bold underline">of</span> wood. Paper is made <span class="text-red-700 font-bold underline">from</span> bamboo.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> জিনিসটি তৈরির পর তার মূল উপাদানটি যদি চাক্ষুষ চোখে দেখে চেনা যায় (Physical change), তবে 'of' বসে। আর উপাদানটির বাহ্যিক রূপ যদি সম্পূর্ণরূপে পরিবর্তিত হয়ে চেনা না যায় (Chemical change), তবে 'from' বসে।</p>
+            </div>
+
+            <div class="rule-card special-rules bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-red-100 text-red-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 17</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">Preposition + Gerund (ক্রিয়াশীল শব্দের রূপ)</h4>
+                <div class="bg-red-50 text-red-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-red-500 font-poppins">
+                    <span class="font-bold">Example:</span> He is fond <span class="text-red-700 font-bold underline">of</span> catching fish. We cannot survive without <span class="text-red-700 font-bold underline">taking</span> oxygen.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> 'To' ব্যতীত অন্য যেকোনো Preposition-এর ঠিক পরে যদি কোনো Verb বসাতে হয়, তবে সেই Verb-এর সাথে 'ing' যুক্ত হয়ে Gerund রূপ ধারণ করে।</p>
+            </div>
+
+            <div class="rule-card special-rules bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-red-100 text-red-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 18</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">Compare to এবং Compare with (অসম বনাম সমতুল্য তুলনা)</h4>
+                <div class="bg-red-50 text-red-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-red-500 font-poppins">
+                    <span class="font-bold">Example:</span> Anger is compared <span class="text-red-700 font-bold underline">to</span> fire. Rabindranath is compared <span class="text-red-700 font-bold underline">with</span> Shakespeare.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> সম্পূর্ণ ভিন্ন ও অসম দুটি বস্তুর বা গুণের মধ্যে রূপক তুলনা বোঝাতে 'compare to' এবং সমজাতীয় দুটি সমতুল্য ব্যক্তি বা বিষয়ের তুলনা প্রকাশে 'compare with' ব্যবহৃত হয়।</p>
+            </div>
+
+            <div class="rule-card special-rules bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-red-100 text-red-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 19</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">Omission of Prepositions (যেখানে প্রিপজিশন বসে না)</h4>
+                <div class="bg-red-50 text-red-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-red-500 font-poppins">
+                    <span class="font-bold">Example:</span> He went <span class="text-red-700 font-bold underline">[✕]</span> home yesterday. Let's discuss <span class="text-red-700 font-bold underline">[✕]</span> the matter.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> Home, abroad, yesterday, tomorrow ইত্যাদি Adverbial Noun বা Adverb-এর ঠিক আগে সাধারণত কোনো প্রিপজিশন বসে না। এছাড়া transitive verb 'discuss' এর পরে সরাসরি অবজেক্ট বসে, কোনো প্রিপজিশন লাগে না।</p>
+            </div>
+
+            <div class="rule-card special-rules bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-red-100 text-red-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 20</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">Preposition after Adjective or Verb (ফিক্সড স্ট্রাকচার)</h4>
+                <div class="bg-red-50 text-red-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-red-500 font-poppins">
+                    <span class="font-bold">Example:</span> We are confident <span class="text-red-700 font-bold underline">of</span> winning. She is good <span class="text-red-700 font-bold underline">at</span> English.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> কিছু বিশেষ Adjective এবং Verb-এর পর উপযুক্ত প্রিপজিশন নির্দিষ্ট থাকে। যেমন: confident-এর সাথে 'of', দক্ষ বোঝাতে 'good'-এর সাথে 'at' ইত্যাদি বসে।</p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- ফুটার -->
+    <footer class="text-center py-8 text-gray-500 text-sm border-t border-gray-200 bg-white">
+        <p class="font-hind">&copy; ২০২৬ ZAMIL ACADEMY। সর্বস্বত্ব সংরক্ষিত।</p>
+    </footer>
+
+    <!-- স্ক্রিপ্ট এবং লজিক হ্যান্ডলিং -->
+    <script>
+        function filterRules(category) {
+            // সকল কার্ড সংগ্রহ করা
+            const cards = document.querySelectorAll('.rule-card');
+            
+            // ট্যাব বাটনের ক্লাস ক্লিয়ার করা
+            const btnAll = document.getElementById('btn-all');
+            const btnTimePlace = document.getElementById('btn-time-place');
+            const btnMotionPosition = document.getElementById('btn-motion-position');
+            const btnSpecialRules = document.getElementById('btn-special-rules');
+            
+            const activeClass = "bg-green-800 text-white";
+            const inactiveClass = "bg-white text-gray-700 border border-gray-200 hover:bg-gray-50";
+            
+            btnAll.className = `px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind ${inactiveClass} text-xs md:text-sm`;
+            btnTimePlace.className = `px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind ${inactiveClass} text-xs md:text-sm`;
+            btnMotionPosition.className = `px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind ${inactiveClass} text-xs md:text-sm`;
+            btnSpecialRules.className = `px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind ${inactiveClass} text-xs md:text-sm`;
+
+            // সিলেক্টেড ট্যাবে একটিভ ক্লাস দেওয়া
+            if (category === 'all') {
+                btnAll.className = `px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind ${activeClass} text-xs md:text-sm`;
+            } else if (category === 'time-place') {
+                btnTimePlace.className = `px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind ${activeClass} text-xs md:text-sm`;
+            } else if (category === 'motion-position') {
+                btnMotionPosition.className = `px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind ${activeClass} text-xs md:text-sm`;
+            } else if (category === 'special-rules') {
+                btnSpecialRules.className = `px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind ${activeClass} text-xs md:text-sm`;
+            }
+
+            // কার্ড ফিল্টারিং লুপ
+            cards.forEach(card => {
+                card.classList.add('fade-in');
+                if (category === 'all') {
+                    card.classList.remove('hidden');
+                } else {
+                    if (card.classList.contains(category)) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                }
+            });
+        }
+    </script>
+
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+    import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyABpKz4xjVKWb6kVR_mT8d13dt9lcDwipE",
+        authDomain: "zamil-4e08e.firebaseapp.com",
+        projectId: "zamil-4e08e",
+        storageBucket: "zamil-4e08e.firebasestorage.app",
+        messagingSenderId: "696619411784",
+        appId: "1:696619411784:web:3dce390ed5b840cbc32b7d"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+
+    // পেজ লোড হওয়ার সাথে সাথে চেক করবে
+    onAuthStateChanged(auth, async (user) => {
+        if (!user) {
+            // লগইন করা না থাকলে login.html এ পাঠিয়ে দিবে
+            window.location.href = "/paid.html";
+        } else {
+            // লগইন করা থাকলে Firestore এ চেক করবে সে পেইড কি না
+            const docRef = doc(db, "/paid_students", user.email);
+            const docSnap = await getDoc(docRef);
+
+            if (!docSnap.exists()) {
+                // পেইড না হলে paid.html এ পাঠিয়ে দিবে
+                window.location.href = "/paid.html";
+            }
+            // পেইড হলে পেজটি লোড হবে (অর্থাৎ কুইজ দেখতে পাবে)
+        }
+    });
+</script>
+</body>
+</html>

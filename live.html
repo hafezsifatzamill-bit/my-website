@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamil Academy Analytics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .glass-card {
+            background: #ffffff; /* সাদা ব্যাকগ্রাউন্ড */
+            border: 2px solid #D2B48C; /* বাদামি বর্ডার */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .text-brown { color: #8B4513; }
+        .bg-sky { background-color: #87CEEB; }
+        .text-sky { color: #00BFFF; }
+        .text-red { color: #DC2626; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex items-center justify-center p-4">
+
+    <div class="glass-card p-8 rounded-[2rem] w-full max-w-lg">
+        <h1 class="text-3xl font-extrabold mb-8 text-center text-brown border-b-2 border-red-500 pb-4">
+            ওয়েবসাইট পরিসংখ্যান
+        </h1>
+        
+        <div class="grid grid-cols-1 gap-6">
+            <div class="flex justify-between items-center bg-sky/10 p-6 rounded-3xl border border-sky/30">
+                <span class="text-gray-600 font-semibold">বর্তমান ভিজিটর</span>
+                <span id="active" class="text-4xl font-extrabold text-sky">০</span>
+            </div>
+
+            <div class="flex justify-between items-center bg-red-50 p-6 rounded-3xl border border-red-200">
+                <span class="text-gray-600 font-semibold">মোট ভিজিট</span>
+                <span id="total" class="text-4xl font-extrabold text-red">০</span>
+            </div>
+
+            <div class="flex flex-col bg-stone-100 p-6 rounded-3xl border border-stone-200">
+                <span class="text-gray-600 font-semibold mb-3">মোট সময় ব্যয়</span>
+                <div id="time" class="text-xl md:text-2xl font-bold text-brown text-center bg-white py-4 rounded-2xl border border-brown/20">
+                    ০ ঘণ্টা ০ মিনিট ০ সেকেন্ড
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
+        import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyABpKz4xjVKWb6kVR_mT8d13dt9lcDwipE",
+            authDomain: "zamil-4e08e.firebaseapp.com",
+            databaseURL: "https://zamil-4e08e-default-rtdb.firebaseio.com/",
+            projectId: "zamil-4e08e"
+        };
+
+        const db = getDatabase(initializeApp(firebaseConfig));
+
+        onValue(ref(db, 'active_visitors'), (s) => document.getElementById('active').innerText = s.val() || 0);
+        onValue(ref(db, 'total_visits'), (s) => document.getElementById('total').innerText = s.val() || 0);
+
+        onValue(ref(db, 'total_time_spent/seconds'), (s) => {
+            const total = s.val() || 0;
+            const h = Math.floor(total / 3600);
+            const m = Math.floor((total % 3600) / 60);
+            const sec = total % 60;
+            document.getElementById('time').innerText = `${h} ঘণ্টা ${m} মিনিট ${sec} সেকেন্ড`;
+        });
+    </script>
+</body>
+</html>

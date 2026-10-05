@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAMIL ACADEMY - Synonym & Antonym List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Hind Siliguri', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+    <!-- হেডার: পুরো বক্স সবুজ এবং নিচের দিকে কার্ভ করা -->
+    <header class="bg-green-800 text-white py-12 px-6 text-center shadow-lg rounded-b-[40px]">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white-400">ZAMIL ACADEMY</h1>
+    </header>
+
+    <!-- সাবস্ক্রাইব বক্স -->
+    <div class="flex justify-center -mt-8 px-6">
+        <div class="bg-white p-8 shadow-md border-t-4 border-green-800 rounded-2xl max-w-md w-full text-center">
+            <p class="text-gray-700 text-lg mb-6">
+                প্রিমিয়াম সেবা পেতে আমাদের ইউটিউব চ্যানেলটি সাবস্ক্রাইব করুন।
+            </p>
+            <a href="https://youtube.com/@zamil_academy?si=EbWJq_lwwbWrLar9" 
+               target="_blank"
+               class="inline-block bg-red-700 hover:bg-green-800 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-md">
+                চ্যানেল ভিজিট করুন
+            </a>
+        </div>
+    </div>
+
+    <!-- মূল কন্টেন্ট (Main Content) -->
+    <main class="flex-grow max-w-5xl w-full mx-auto px-4 md:px-6 py-12">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">Most Important 100 Synonym & Antonym List</h2>
+            <p class="text-green-700 font-semibold text-lg">HSC & Alim English 2nd Paper (Target 100%)</p>
+            <div class="w-24 h-1 bg-green-700 mx-auto mt-4 rounded"></div>
+        </div>
+
+        <!-- সার্চ এবং ফিল্টার প্যানেল -->
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-150 mb-8 space-y-4">
+            <div class="relative">
+                <input type="text" id="search-input" placeholder="যেকোনো ইংরেজি শব্দ, বাংলা অর্থ, সিনোনিম বা অ্যান্টনিম লিখে খুঁজুন..." 
+                       class="w-full pl-12 pr-4 py-3.5 bg-gray-50 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-green-600 transition text-lg">
+                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-xl">🔍</span>
+            </div>
+            
+            <!-- অ্যালফাবেট ফিল্টার বাটনসমূহ -->
+            <div>
+                <p class="text-xs text-gray-500 font-bold uppercase mb-2">অক্ষর অনুযায়ী খুঁজুন:</p>
+                <div class="flex flex-wrap gap-1.5" id="alphabet-filters">
+                    <button onclick="filterByLetter('ALL')" class="px-3 py-1 bg-green-800 text-white font-bold rounded-lg text-xs hover:bg-green-900 transition tracking-wide active-letter">ALL</button>
+                    <!-- JavaScript dynamically adds A-Z here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- শব্দের পরিসংখ্যান ও ফলাফল কাউন্ট -->
+        <div class="flex justify-between items-center mb-4 px-2">
+            <p class="text-sm text-gray-500 font-bold" id="result-count">মোট শব্দ প্রদর্শিত হচ্ছে: ১০০টি</p>
+            <button onclick="clearSearch()" class="text-xs font-semibold text-red-600 hover:text-red-800 hover:underline">রিসেট করুন</button>
+        </div>
+
+        <!-- শব্দের ডাইনামিক কার্ড লিস্ট -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="words-grid">
+            <!-- JavaScript will render the 100 words here -->
+        </div>
+
+        <!-- শূন্য ফলাফল বার্তা -->
+        <div id="no-results" class="hidden text-center py-12 bg-white rounded-2xl border border-gray-150 shadow-sm">
+            <p class="text-lg text-gray-500 font-bold">দুঃখিত! আপনার খোঁজা শব্দটি তালিকায় পাওয়া যায়নি।</p>
+            <p class="text-sm text-gray-400 mt-1">দয়া করে সঠিক বানান লিখে পুনরায় চেষ্টা করুন।</p>
+        </div>
+    </main>
+
+    <!-- ফুটার -->
+    <footer class="text-center py-6 text-gray-500 text-sm border-t border-gray-200 mt-12 bg-white">
+        <p>&copy; ২০২৬ ZAMIL ACADEMY। সর্বস্বত্ব সংরক্ষিত।</p>
+    </footer>
+
+    <script>
+        // ১০০টি গোল্ডেন বোর্ড-স্ট্যান্ডার্ড শব্দের ডেটাবেজ
+        const wordDatabase = [
+            { id: 1, word: "Ability", bangla: "ক্ষমта", syn: ["Capacity (ধারণক্ষমতা)", "Skill (দক্ষতা)"], ant: ["Inability (অক্ষমতা)", "Weakness (দুর্বলতা)"] },
+            { id: 2, word: "Active", bangla: "সক্রিয়", syn: ["Busy (ব্যস্ত)", "Energetic (কর্মঠ)"], ant: ["Idle (অলস)", "Passive (নিষ্ক্রিয়)"] },
+            { id: 3, word: "Admire", bangla: "প্রশংসা করা", syn: ["Praise (প্রশংসা করা)", "Appreciate (মূল্যায়ন করা)"], ant: ["Hate (ঘৃণা করা)", "Criticize (সমালোচনা করা)"] },
+            { id: 4, word: "Ancient", bangla: "প্রাচীন", syn: ["Old (পুরানো)", "Antique (পুরাকীর্তি)"], ant: ["Modern (আধুনিক)", "New (নতুন)"] },
+            { id: 5, word: "Beautiful", bangla: "সুন্দর", syn: ["Pretty (মনোহারী)", "Lovely (চমৎকার)"], ant: ["Ugly (কুৎসিত)", "Unattractive (আকর্ষণহীন)"] },
+            { id: 6, word: "Bold", bangla: "সাহসী", syn: ["Brave (সাহসী)", "Fearless (ভয়হীন)"], ant: ["Timid (ভীরু)", "Cowardly (কাপুরুষ)"] },
+            { id: 7, word: "Brief", bangla: "সংক্ষিপ্ত", syn: ["Short (সংক্ষিপ্ত)", "Concise (সংক্ষিপ্ত)"], ant: ["Long (দীর্ঘ)", "Detailed (বিস্তারিত)"] },
+            { id: 8, word: "Bright", bangla: "উজ্জ্বল", syn: ["Shining (চকচকে)", "Brilliant (দীপ্তিময়)"], ant: ["Dark (অন্ধকার)", "Dull (অনুজ্জ্বল)"] },
+            { id: 9, word: "Busy", bangla: "ব্যস্ত", syn: ["Active (সক্রিয়)", "Engaged (লিপ্ত)"], ant: ["Idle (অলস)", "Free (মুক্ত)"] },
+            { id: 10, word: "Calm", bangla: "শান্ত", syn: ["Quiet (শান্ত)", "Peaceful (শান্তিময়)"], ant: ["Noisy (কোলাহলপূর্ণ)", "Stormy (ঝড়ো)"] },
+            { id: 11, word: "Clever", bangla: "চালাক", syn: ["Smart (বুদ্ধিমান)", "Cunning (ধূর্ত)"], ant: ["Foolish (বোকা)", "Dull (নির্বোধ)"] },
+            { id: 12, word: "Common", bangla: "সাধারণ", syn: ["Ordinary (সাধারণ)", "Regular (নিয়মিত)"], ant: ["Rare (বিরল)", "Uncommon (অসাধারণ)"] },
+            { id: 13, word: "Cruel", bangla: "নিষ্ঠুর", syn: ["Brutal (নিষ্ঠুর)", "Merciless (দয়াহীন)"], ant: ["Kind (দয়ালু)", "Merciful (দয়াশীল)"] },
+            { id: 14, word: "Danger", bangla: "বিপদ", syn: ["Risk (ঝুঁকি)", "Threat (হুমকি)"], ant: ["Safety (নিরাপত্তা)", "Security (সুরক্ষা)"] },
+            { id: 15, word: "Dark", bangla: "অন্ধকার", syn: ["Gloomy (মনমরা/অন্ধকার)", "Dim (অনুজ্জ্বল)"], ant: ["Bright (উজ্জ্বল)", "Light (আলোকিত)"] },
+            { id: 16, word: "Decrease", bangla: "হ্রাস করা", syn: ["Reduce (কমানো)", "Diminish (হ্রাস করা)"], ant: ["Increase (বৃদ্ধি করা)", "Grow (বাড়ানো)"] },
+            { id: 17, word: "Deep", bangla: "গভীর", syn: ["Profound (গভীর)", "Intense (তীব্র)"], ant: ["Shallow (অগভীর)", "Superficial (ভাসমান)"] },
+            { id: 18, word: "Defeat", bangla: "পরাজয়", syn: ["Loss (ক্ষতি/হার)", "Failure (ব্যর্থতা)"], ant: ["Victory (বিজয়)", "Success (সাফল্য)"] },
+            { id: 19, word: "Difficult", bangla: "কঠিন", syn: ["Hard (কঠিন)", "Tough (কঠিন)"], ant: ["Easy (সহজ)", "Simple (সহজ)"] },
+            { id: 20, word: "Empty", bangla: "খালি", syn: ["Vacant (খালি)", "Blank (ফাঁকা)"], ant: ["Full (পূর্ণ)", "Filled (ভর্তি)"] },
+            { id: 21, word: "Enemy", bangla: "শত্রু", syn: ["Foe (শত্রু)", "Opponent (প্রতিপক্ষ)"], ant: ["Friend (বন্ধু)", "Ally (মিত্র)"] },
+            { id: 22, word: "Famous", bangla: "বিখ্যাত", syn: ["Renowned (বিখ্যাত)", "Popular (জনপ্রিয়)"], ant: ["Unknown (অপরিচিত)", "Obscure (অখ্যাত)"] },
+            { id: 23, word: "Fast", bangla: "দ্রুত", syn: ["Quick (দ্রুত)", "Rapid (উত্তাল/দ্রুত)"], ant: ["Slow (ধীর)", "Sluggish (মন্থর)"] },
+            { id: 24, word: "Foolish", bangla: "বোকা", syn: ["Silly (মূর্খ)", "Stupid (বোকা)"], ant: ["Wise (জ্ঞানী)", "Intelligent (বুদ্ধিমান)"] },
+            { id: 25, word: "Freedom", bangla: "স্বাধীনতা", syn: ["Liberty (স্বাধীনতা)", "Independence (স্বাধীনতা)"], ant: ["Slavery (দাসত্ব)", "Bondage (বন্দীত্ব)"] },
+            { id: 26, word: "Friendly", bangla: "বন্ধুসুলভ", syn: ["Amiable (মিশুক)", "Cordial (আন্তরিক)"], ant: ["Hostile (শত্রুভাবাপন্ন)", "Unfriendly (অবন্ধুসুলভ)"] },
+            { id: 27, word: "Gain", bangla: "লাভ করা", syn: ["Achieve (অর্জন করা)", "Obtain (পাওয়া)"], ant: ["Lose (হারানো)", "Loss (ক্ষতি)"] },
+            { id: 28, word: "Gentle", bangla: "নম্র", syn: ["Polite (নম্র)", "Mild (মৃদু/নম্র)"], ant: ["Rough (রুক্ষ)", "Rude (অসভ্য)"] },
+            { id: 29, word: "Great", bangla: "মহান", syn: ["Grand (বিশাল/মহৎ)", "Famous (বিখ্যাত)"], ant: ["Small (ছোট)", "Ordinary (সাধারণ)"] },
+            { id: 30, word: "Happy", bangla: "সুখী", syn: ["Cheerful (আনন্দিত)", "Glad (খুশি)"], ant: ["Sad (দুঃখিত)", "Unhappy (অসুখী)"] },
+            { id: 31, word: "Hard", bangla: "কঠিন", syn: ["Difficult (কঠিন)", "Solid (শক্ত)"], ant: ["Easy (সহজ)", "Soft (নরম)"] },
+            { id: 32, word: "Hate", bangla: "ঘৃণা করা", syn: ["Dislike (অপছন্দ করা)", "Abhor (ঘৃণা করা)"], ant: ["Love (ভালোবাসা)", "Like (পছন্দ করা)"] },
+            { id: 33, word: "Honest", bangla: "সৎ", syn: ["Sincere (আন্তরিক)", "Truthful (সত্যবাদী)"], ant: ["Dishonest (অসৎ)", "Corrupt (দুর্নীতিগ্রস্ত)"] },
+            { id: 34, word: "Humble", bangla: "নম্র/বিনীত", syn: ["Modest (নম্র)", "Polite (ভদ্র)"], ant: ["Proud (অহংকারী)", "Arrogant (দাম্ভিক)"] },
+            { id: 35, word: "Idle", bangla: "অলস", syn: ["Lazy (অলস)", "Inactive (নিষ্ক্রিয়)"], ant: ["Active (সক্রিয়)", "Busy (ব্যস্ত)"] },
+            { id: 36, word: "Important", bangla: "গুরুত্বপূর্ণ", syn: ["Significant (তাৎপর্যপূর্ণ)", "Essential (প্রয়োজনীয়)"], ant: ["Trivial (তুচ্ছ)", "Unimportant (গুরুত্বহীন)"] },
+            { id: 37, word: "Increase", bangla: "বৃদ্ধি করা", syn: ["Grow (বৃদ্ধি পাওয়া)", "Raise (বৃদ্ধি করা)"], ant: ["Decrease (হ্রাস করা)", "Reduce (কমানো)"] },
+            { id: 38, word: "Innocent", bangla: "নির্দোষ", syn: ["Guiltless (নির্দোষ)", "Pure (পবিত্র/নিষ্পাপ)"], ant: ["Guilty (দোষী)", "Sinful (পাপী)"] },
+            { id: 39, word: "Joy", bangla: "অনন্দ", syn: ["Happiness (সুখ)", "Delight (আনন্দ)"], ant: ["Sorrow (দুঃখ)", "Grief (বেদনা)"] },
+            { id: 40, word: "Kind", bangla: "দয়ালু", syn: ["Generous (উদার)", "Merciful (দয়াশীল)"], ant: ["Cruel (নিষ্ঠুর)", "Unkind (নির্দয়)"] },
+            { id: 41, word: "Knowledge", bangla: "জ্ঞান", syn: ["Wisdom (প্রজ্ঞা)", "Learning (শিক্ষা)"], ant: ["Ignorance (অজ্ঞতা)", "Illiteracy (নিরক্ষরতা)"] },
+            { id: 42, word: "Lazy", bangla: "অলস", syn: ["Idle (অলস)", "Sluggish (মন্থর)"], ant: ["Active (সক্রিয়)", "Industrious (পরিশ্রমী)"] },
+            { id: 43, word: "Large", bangla: "বিশাল/বড়", syn: ["Huge (বিশাল)", "Big (বড়)"], ant: ["Small (ছোট)", "Tiny (ক্ষুদ্র)"] },
+            { id: 44, word: "Love", bangla: "ভালোবাসা", syn: ["Affection (স্নেহ/মমতা)", "Adoration (ভক্তি)"], ant: ["Hate (ঘৃণা করা)", "Dislike (অপছন্দ করা)"] },
+            { id: 45, word: "Many", bangla: "অনেক", syn: ["Numerous (প্রচুর)", "A lot of (অনেক)"], ant: ["Few (অল্প কিছু)", "Some (সামান্য)"] },
+            { id: 46, word: "Modern", bangla: "আধুনিক", syn: ["Recent (সাম্প্রতিক)", "New (নতুন)"], ant: ["Ancient (প্রাচীন)", "Old (পুরানো)"] },
+            { id: 47, word: "Narrow", bangla: "সংকীর্ণ", syn: ["Thin (চিকন)", "Limited (সীমাবদ্ধ)"], ant: ["Wide (প্রশস্ত)", "Broad (প্রশস্ত)"] },
+            { id: 48, word: "New", bangla: "নতুন", syn: ["Recent (সাম্প্রতিক)", "Fresh (তাজা/নতুন)"], ant: ["Old (পুরানো)", "Ancient (প্রাচীন)"] },
+            { id: 49, word: "Noble", bangla: "মহৎ", syn: ["Aristocratic (অভিজাত)", "Great (মহৎ/উত্তম)"], ant: ["Mean (নীচ)", "Ignoble (হীন)"] },
+            { id: 50, word: "Obedient", bangla: "বাধ্য", syn: ["Dutiful (কর্তব্যপরায়ণ)", "Submissive (নমনীয়)"], ant: ["Disobedient (অবাধ্য)", "Rebellious (বিদ্রোহী)"] },
+            { id: 51, word: "Old", bangla: "পুরানো", syn: ["Ancient (প্রাচীন)", "Elderly (বয়স্ক)"], ant: ["Young (তরুণ)", "Modern (আধুনিক)"] },
+            { id: 52, word: "Optimistic", bangla: "আশাবাদী", syn: ["Hopeful (আশাবাদী)", "Positive (ইতিবাচক)"], ant: ["Pessimistic (হতাশাবাদী)", "Gloomy (হতাশ)"] },
+            { id: 53, word: "Ordinary", bangla: "সাধারণ", syn: ["Common (সাধারণ)", "Normal (স্বাভাবিক)"], ant: ["Extraordinary (অসাধারণ)", "Unusual (ব্যতিক্রমী)"] },
+            { id: 54, word: "Pain", bangla: "বেদনা", syn: ["Ache (ব্যথা)", "Sorrow (দুঃখ)"], ant: ["Pleasure (আনন্দ)", "Comfort (আরাম)"] },
+            { id: 55, word: "Patience", bangla: "ধৈর্য", syn: ["Tolerance (সহনশীলতা)", "Forbearance (ধৈর্য)"], ant: ["Impatience (অধৈর্য)", "Restlessness (অস্থিরতা)"] },
+            { id: 56, word: "Peaceful", bangla: "শান্তিময়", syn: ["Calm (শান্ত)", "Quiet (শান্ত)"], ant: ["Violent (হিংস্র)", "Noisy (কোলাহলপূর্ণ)"] },
+            { id: 57, word: "Permanent", bangla: "স্থায়ী", syn: ["Lasting (দীর্ঘস্থায়ী)", "Stable (দৃঢ়/স্থায়ী)"], ant: ["Temporary (অস্থায়ী)", "Transient (ক্ষণস্থায়ী)"] },
+            { id: 58, word: "Polite", bangla: "নম্র", syn: ["Gentle (ভদ্র)", "Courteous (শিষ্ট)"], ant: ["Rude (অসভ্য)", "Impolite (অশালীন)"] },
+            { id: 59, word: "Poor", bangla: "দরিদ্র", syn: ["Needy (অভাবী)", "Poverty-stricken (দরিদ্র)"], ant: ["Rich (ধনী)", "Wealthy (ধনী)"] },
+            { id: 60, word: "Popular", bangla: "জনপ্রিয়", syn: ["Famous (বিখ্যাত)", "Well-liked (পছন্দনীয়)"], ant: ["Unpopular (অজনপ্রিয়)", "Obscure (অপরিচিত)"] },
+            { id: 61, word: "Poverty", bangla: "দারিদ্র্য", syn: ["Need (অভাব)", "Scarcity (স্বল্পতা)"], ant: ["Affluence (প্রাচুর্য)", "Wealth (সম্পদ)"] },
+            { id: 62, word: "Praise", bangla: "প্রশংসা করা", syn: ["Admire (প্রশংসা করা)", "Laud (স্তুতি করা)"], ant: ["Blame (দোষ দেওয়া)", "Criticize (সমালোচনা করা)"] },
+            { id: 63, word: "Pride", bangla: "অহংকার", syn: ["Vanity (অসার দম্ভ)", "Arrogance (ঔদ্ধত্য)"], ant: ["Humility (নম্রতা)", "Modesty (বিনয়)"] },
+            { id: 64, word: "Progressive", bangla: "প্রগতিশীল", syn: ["Advanced (উন্নত)", "Forward-looking (অগ্রগামী)"], ant: ["Conservative (রক্ষণশীল)", "Backward (পশ্চাৎপদ)"] },
+            { id: 65, word: "Pure", bangla: "বিশুদ্ধ", syn: ["Clean (পরিষ্কার)", "Genuine (খাঁটি)"], ant: ["Impure (অবিশুদ্ধ)", "Dirty (ময়লা)"] },
+            { id: 66, word: "Quick", bangla: "দ্রুত", syn: ["Fast (দ্রুত)", "Swift (ত্বরিত/দ্রুত)"], ant: ["Slow (ধীর)", "Late (দেরি)"] },
+            { id: 67, word: "Quiet", bangla: "শান্ত", syn: ["Silent (নীরব)", "Calm (শান্ত)"], ant: ["Noisy (কোলাহলপূর্ণ)", "Loud (উচ্চৈঃস্বরে)"] },
+            { id: 68, word: "Rare", bangla: "বিরল", syn: ["Uncommon (অসাধারণ)", "Scarce (দুষ্প্রাপ্য)"], ant: ["Common (সাধারণ)", "Frequent (ঘনঘন)"] },
+            { id: 69, word: "Real", bangla: "বাস্তব", syn: ["True (সত্য)", "Actual (আসল)"], ant: ["Fake (নকল)", "Artificial (কৃত্রিম)"] },
+            { id: 70, word: "Remember", bangla: "স্মরণ করা", syn: ["Recall (স্মরণ করা)", "Memorize (স্মরণ রাখা)"], ant: ["Forget (ভুলে যাওয়া)", "Ignore (উপেক্ষা করা)"] },
+            { id: 71, word: "Rich", bangla: "ধনী", syn: ["Wealthy (সম্পদশালী)", "Affluent (ধনী)"], ant: ["Poor (দরিদ্র)", "Needy (অভাবী)"] },
+            { id: 72, word: "Rough", bangla: "রুক্ষ", syn: ["Uneven (অসমতল)", "Harsh (কর্কশ/রুক্ষ)"], ant: ["Smooth (মসৃণ)", "Gentle (নম্র/কোমল)"] },
+            { id: 73, word: "Sad", bangla: "দুঃখিত", syn: ["Unhappy (অসুখী)", "Gloomy (বিষণ্ন)"], ant: ["Happy (সুখী)", "Joyful (আনন্দিত)"] },
+            { id: 74, word: "Safe", bangla: "নিরাপদ", syn: ["Secure (সুরক্ষিত)", "Protected (নিরাপদ)"], ant: ["Risky (ঝুঁকিপূর্ণ)", "Dangerous (বিপজ্জনক)"] },
+            { id: 75, word: "Savage", bangla: "বন্য/নিষ্ঠুর", syn: ["Wild (বন্য)", "Cruel (নিষ্ঠুর)"], ant: ["Civilized (সভ্য)", "Tame (পোষা/শান্ত)"] },
+            { id: 76, word: "Sharp", bangla: "ধারালো", syn: ["Keen (তীক্ষ্ণ/ধারালো)", "Acute (তীক্ষ্ণ)"], ant: ["Blunt (ভোঁতা)", "Dull (ভোঁতা)"] },
+            { id: 77, word: "Simple", bangla: "সহজ", syn: ["Easy (সহজ)", "Plain (সাধারণ/সহজ)"], ant: ["Complex (জটিল)", "Complicated (জটিল)"] },
+            { id: 78, word: "Sincere", bangla: "আন্তরিক", syn: ["Honest (সৎ)", "Earnest (আন্তরিক)"], ant: ["Insincere (আন্তরিকতাহীন)", "Hypocritical (কপট)"] },
+            { id: 79, word: "Small", bangla: "ছোট", syn: ["Little (ছোট)", "Tiny (ক্ষুদ্র)"], ant: ["Big (বড়)", "Large (বিশাল)"] },
+            { id: 80, word: "Smooth", bangla: "মসৃণ", syn: ["Even (সমতল)", "Flat (সমতল)"], ant: ["Rough (রুক্ষ)", "Uneven (অসমতল)"] },
+            { id: 81, word: "Strong", bangla: "শক্তিশালী", syn: ["Powerful (শক্তিশালী)", "Robust (সবল)"], ant: ["Weak (দুর্বল)", "Fragile (ভঙ্গুর)"] },
+            { id: 82, word: "Success", bangla: "সাফল্য", syn: ["Victory (বিজয়)", "Achievement (অর্জন)"], ant: ["Failure (ব্যর্থতা)", "Defeat (পরাজয়)"] },
+            { id: 83, word: "Sweet", bangla: "মিষ্টি", syn: ["Sugary (মিষ্টি)", "Melodious (সুরলা)"], ant: ["Sour (টক)", "Bitter (তিক্ত)"] },
+            { id: 84, word: "Tame", bangla: "পোষা/গৃহপালিত", syn: ["Domesticated (গৃহপালিত)", "Gentle (নম্র/শান্ত)"], ant: ["Wild (বন্য)", "Savage (হিংস্র)"] },
+            { id: 85, word: "Temporary", bangla: "অস্থায়ী", syn: ["Brief (স্বল্পস্থায়ী)", "Transient (ক্ষণস্থায়ী)"], ant: ["Permanent (স্থায়ী)", "Eternal (চিরন্তন)"] },
+            { id: 86, word: "Thick", bangla: "ঘন/পুরু", syn: ["Dense (ঘন)", "Heavy (পুরু)"], ant: ["Thin (পাতলা)", "Slim (চিকন)"] },
+            { id: 87, word: "Timid", bangla: "ভীরু", syn: ["Fearful (ভীতু)", "Shy (লাজুক)"], ant: ["Brave (সাহসী)", "Bold (সাহসী)"] },
+            { id: 88, word: "Tiny", bangla: "ক্ষুদ্র", syn: ["Small (ছোট)", "Microscopic (অতি ক্ষুদ্র)"], ant: ["Huge (বিশাল)", "Vast (অসীম/বিশাল)"] },
+            { id: 89, word: "True", bangla: "সত্য", syn: ["Real (বাস্তব)", "Genuine (প্রকৃত)"], ant: ["False (মিথ্যা)", "Unreal (অবাস্তব)"] },
+            { id: 90, word: "Ugly", bangla: "কুৎসিত", syn: ["Hideous (কদর্য)", "Unattractive (আকর্ষণহীন)"], ant: ["Beautiful (সুন্দর)", "Attractive (আকর্ষণীয়)"] },
+            { id: 91, word: "Unfair", bangla: "অন্যায্য", syn: ["Unjust (অন্যায্য)", "Biased (পক্ষপাতদুষ্ট)"], ant: ["Fair (ন্যায্য)", "Just (ন্যায়পরায়ণ)"] },
+            { id: 92, word: "Unique", bangla: "অনন্য", syn: ["Single (একক)", "Incomparable (অতুলনীয়)"], ant: ["Common (সাধারণ)", "Ordinary (সাধারণ)"] },
+            { id: 93, word: "Union", bangla: "ঐক্য", syn: ["Unity (ঐক্য)", "Alliance (জোট)"], ant: ["Division (বিভক্তি)", "Disunity (অনৈক্য)"] },
+            { id: 94, word: "Vast", bangla: "বিশাল", syn: ["Huge (বিশাল)", "Immense (অসীম)"], ant: ["Small (ছোট)", "Narrow (সংকীর্ণ)"] },
+            { id: 95, word: "Victory", bangla: "বিজয়", syn: ["Triumph (বিজয়)", "Success (সাফল্য)"], ant: ["Defeat (পরাজয়)", "Loss (পরাজয়)"] },
+            { id: 96, word: "Warm", bangla: "উষ্ণ", syn: ["Mildly hot (ঈষদুষ্ণ)", "Friendly (উষ্ণ/বন্ধুসুলভ)"], ant: ["Cold (ঠান্ডা)", "Cool (শীতল)"] },
+            { id: 97, word: "Weak", bangla: "দুর্বল", syn: ["Feeble (দুর্বল)", "Fragile (ভঙ্গুর)"], ant: ["Strong (শক্তিশালী)", "Powerful (ক্ষমতাশালী)"] },
+            { id: 98, word: "Wealthy", bangla: "ধনী", syn: ["Rich (ধনী)", "Affluent (প্রাচুর্যময়)"], ant: ["Poor (দরিদ্র)", "Needy (অভাবী)"] },
+            { id: 99, word: "Wise", bangla: "জ্ঞানী", syn: ["Learned (পণ্ডিত)", "Prudent (বিচক্ষণ)"], ant: ["Foolish (বোকা)", "Ignorant (অজ্ঞ)"] },
+            { id: 100, word: "Youth", bangla: "যৌবন", syn: ["Adolescence (কৈশোর)", "Young age (তরুণ বয়স)"], ant: ["Old age (বার্ধক্য)", "Senility (বার্ধক্য)"] }
+        ];
+
+        // অক্ষর দিয়ে বাটন তৈরি করার ফাংশন
+        function createAlphabetFilters() {
+            const container = document.getElementById('alphabet-filters');
+            const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+            
+            letters.forEach(letter => {
+                const btn = document.createElement('button');
+                btn.textContent = letter;
+                btn.className = "px-3 py-1 bg-white hover:bg-green-100 border border-gray-300 rounded-lg text-xs font-bold text-gray-700 hover:text-green-800 transition tracking-wide letter-btn";
+                btn.onclick = () => filterByLetter(letter, btn);
+                container.appendChild(btn);
+            });
+        }
+
+        // গ্রিডে শব্দগুলো রেন্ডার করার ফাংশন
+        function renderWords(wordsList) {
+            const grid = document.getElementById('words-grid');
+            const noResults = document.getElementById('no-results');
+            const resultCount = document.getElementById('result-count');
+            
+            grid.innerHTML = "";
+            resultCount.textContent = `মোট শব্দ প্রদর্শিত হচ্ছে: ${wordsList.length}টি`;
+            
+            if (wordsList.length === 0) {
+                noResults.classList.remove('hidden');
+                return;
+            }
+            noResults.classList.add('hidden');
+
+            wordsList.forEach(data => {
+                const card = document.createElement('div');
+                card.className = "bg-white p-6 rounded-2xl shadow-sm border border-gray-150 hover:shadow-md transition duration-200";
+                card.innerHTML = `
+                    <div class="flex justify-between items-start mb-4 border-b border-gray-100 pb-3">
+                        <div>
+                            <h3 class="text-2xl font-bold text-green-800 tracking-tight font-sans">${data.word}</h3>
+                            <p class="text-sm font-semibold text-gray-500 mt-0.5">বাংলা অর্থ: <span class="text-green-700">${data.bangla}</span></p>
+                        </div>
+                        <span class="bg-green-50 text-green-800 font-bold px-2.5 py-1 rounded-lg text-xs border border-green-100">#${data.id}</span>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- Synonym Box -->
+                        <div class="bg-blue-50/50 p-4 rounded-xl border border-blue-100">
+                            <h4 class="text-sm font-bold text-blue-900 mb-2 flex items-center gap-1.5">
+                                <span class="bg-blue-200 text-blue-900 rounded-full w-5 h-5 flex items-center justify-center text-xs">S</span>
+                                Synonyms (সমার্থক শব্দ)
+                            </h4>
+                            <ul class="text-sm text-gray-700 space-y-1.5 font-sans">
+                                <li class="flex items-center gap-1.5">
+                                    <span class="text-blue-500 text-xs">✓</span> ${data.syn[0]}
+                                </li>
+                                <li class="flex items-center gap-1.5">
+                                    <span class="text-blue-500 text-xs">✓</span> ${data.syn[1]}
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Antonym Box -->
+                        <div class="bg-red-50/50 p-4 rounded-xl border border-red-100">
+                            <h4 class="text-sm font-bold text-red-900 mb-2 flex items-center gap-1.5">
+                                <span class="bg-red-200 text-red-900 rounded-full w-5 h-5 flex items-center justify-center text-xs">A</span>
+                                Antonyms (বিপরীত শব্দ)
+                            </h4>
+                            <ul class="text-sm text-gray-700 space-y-1.5 font-sans">
+                                <li class="flex items-center gap-1.5">
+                                    <span class="text-red-500 text-xs">✗</span> ${data.ant[0]}
+                                </li>
+                                <li class="flex items-center gap-1.5">
+                                    <span class="text-red-500 text-xs">✗</span> ${data.ant[1]}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // অক্ষর অনুযায়ী ফিল্টার করার লজিক
+        let currentLetterFilter = "ALL";
+        function filterByLetter(letter, btnElement) {
+            currentLetterFilter = letter;
+            
+            // বাটন অ্যাক্টিভ ক্লাস চেঞ্জিং
+            document.querySelectorAll('#alphabet-filters button').forEach(btn => {
+                btn.className = "px-3 py-1 bg-white hover:bg-green-100 border border-gray-300 rounded-lg text-xs font-bold text-gray-700 hover:text-green-800 transition tracking-wide letter-btn";
+            });
+            
+            if (letter === 'ALL') {
+                const allBtn = document.querySelector('#alphabet-filters button:first-child');
+                allBtn.className = "px-3 py-1 bg-green-800 text-white font-bold rounded-lg text-xs hover:bg-green-900 transition tracking-wide active-letter";
+            } else if (btnElement) {
+                btnElement.className = "px-3 py-1 bg-green-800 text-white font-bold rounded-lg text-xs hover:bg-green-900 transition tracking-wide active-letter";
+            }
+
+            applyFilters();
+        }
+
+        // রিয়েল-টাইম সার্চ এবং ফিল্টার একত্রীকরণ লজিক
+        function applyFilters() {
+            const searchQuery = document.getElementById('search-input').value.toLowerCase().trim();
+            
+            const filteredWords = wordDatabase.filter(item => {
+                // ১. অক্ষর ফিল্টার চেক
+                const matchesLetter = currentLetterFilter === "ALL" || item.word.toUpperCase().startsWith(currentLetterFilter);
+                
+                // ২. সার্চ ফিল্টার চেক
+                const matchesSearch = item.word.toLowerCase().includes(searchQuery) ||
+                                      item.bangla.toLowerCase().includes(searchQuery) ||
+                                      item.syn[0].toLowerCase().includes(searchQuery) ||
+                                      item.syn[1].toLowerCase().includes(searchQuery) ||
+                                      item.ant[0].toLowerCase().includes(searchQuery) ||
+                                      item.ant[1].toLowerCase().includes(searchQuery);
+                                      
+                return matchesLetter && matchesSearch;
+            });
+            
+            renderWords(filteredWords);
+        }
+
+        // সম্পূর্ণ সার্চ ক্লিয়ার করার ফাংশন
+        function clearSearch() {
+            document.getElementById('search-input').value = "";
+            filterByLetter('ALL');
+        }
+
+        // পেজ রেন্ডারিং ইনিশিয়েট করা
+        window.addEventListener('DOMContentLoaded', () => {
+            createAlphabetFilters();
+            renderWords(wordDatabase);
+            
+            // রিয়েল-টাইম সার্চ লিসেনার
+            document.getElementById('search-input').addEventListener('input', applyFilters);
+        });
+    </script>
+
+<script type="module">
+    // Firebase Time Tracking Script
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
+    import { getDatabase, ref, update, increment } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-database.js";
+
+    // ফায়ারবেজ কনফিগারেশন
+    const firebaseConfig = {
+        apiKey: "AIzaSyABpKz4xjVKWb6kVR_mT8d13dt9lcDwipE",
+        authDomain: "zamil-4e08e.firebaseapp.com",
+        databaseURL: "https://zamil-4e08e-default-rtdb.firebaseio.com/",
+        projectId: "zamil-4e08e"
+    };
+
+    // ফায়ারবেজ অ্যাপ এবং ডেটাবেজ ইনিশিয়ালিলাইজেশন
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+
+    // ডেটাবেজ কানেকশনটিকে গ্লোবাল করা
+    window.db = db; 
+
+    // প্রতি ৩০ সেকেন্ডে সময় ট্র্যাকিং
+    const timeRef = ref(db, 'total_time_spent');
+
+    setInterval(() => {
+        // ইউজার ট্যাব অন্য ট্যাবে বা ব্যাকগ্রাউন্ডে থাকলে কোডটি রান করবে না
+        if (document.hidden) return; 
+
+        update(timeRef, {
+            "seconds": increment(30)
+        }).catch(err => console.error("Error updating time:", err));
+    }, 30000);
+
+    console.log("Firebase time tracking active (optimized).");
+</script>
+
+
+
+
+
+
+
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyABpKz4xjVKWb6kVR_mT8d13dt9lcDwipE",
+    authDomain: "zamil-4e08e.firebaseapp.com",
+    projectId: "zamil-4e08e",
+    storageBucket: "zamil-4e08e.firebasestorage.app",
+    messagingSenderId: "696619411784",
+    appId: "1:696619411784:web:3dce390ed5b840cbc32b7d"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+onAuthStateChanged(auth, async (user) => {
+
+    // লগইন না থাকলে
+    if (!user) {
+        window.location.replace("/paid.html");
+        return;
+    }
+
+    try {
+        // paid_students collection এ email দিয়ে খুঁজবে
+        const paidRef = doc(db, "paid_students", user.email);
+        const paidDoc = await getDoc(paidRef);
+
+        // ডকুমেন্ট না থাকলে
+        if (!paidDoc.exists()) {
+            window.location.replace("/paid.html");
+            return;
+        }
+
+        // status paid না হলে
+        const data = paidDoc.data();
+
+        if (data.status !== "paid") {
+            window.location.replace("/paid.html");
+            return;
+        }
+
+        console.log("Paid User Verified");
+
+    } catch (error) {
+        console.error(error);
+        window.location.replace("/paid.html");
+    }
+
+});
+</script>
+</body>
+</html>

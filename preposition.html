@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prepositions Practice - ZAMIL ACADEMY</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Firebase Imports -->
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore-compat.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'hind': ['"Hind Siliguri"', 'sans-serif'],
+                        'poppins': ['"Poppins"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Hind Siliguri', sans-serif; }
+        .checkmark-animate {
+            animation: pop 0.3s ease-out;
+        }
+        @keyframes pop {
+            0% { transform: scale(0.8); opacity: 0.5; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+    <!-- হেডার -->
+    <header class="relative bg-green-800 text-white py-12 px-6 text-center shadow-lg rounded-b-[40px]">
+        <!-- ব্যাক বাটন -->
+        <a href="index.html" 
+           class="absolute top-6 left-4 md:left-8 flex items-center gap-2 text-white/90 hover:text-white bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full transition-all duration-300 backdrop-blur-sm text-sm font-semibold shadow-sm border border-white/10">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            <span class="hidden md:inline font-hind">ড্যাশবোর্ড</span>
+        </a>
+
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white font-hind mt-4 md:mt-0">ZAMIL ACADEMY</h1>
+        <p class="mt-2 text-green-100 text-sm md:text-base font-hind opacity-90">HSC English 2nd Paper • Prepositions Interactive Practice</p>
+    </header>
+
+    <!-- সাবস্ক্রাইব বক্স -->
+    <div class="flex justify-center -mt-8 px-6 relative z-10">
+        <div class="bg-white p-8 shadow-md border-t-4 border-green-800 rounded-2xl max-w-md w-full text-center">
+            <p class="text-gray-700 text-lg mb-6 font-hind">
+                প্রিমিয়াম সেবা পেতে আমাদের ইউটিউব চ্যানেলটি সাবস্ক্রাইব করুন।
+            </p>
+            <a href="https://youtube.com/@zamil_academy?si=EbWJq_lwwbWrLar9" 
+               target="_blank"
+               class="inline-block bg-red-700 hover:bg-green-800 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-md font-hind">
+                চ্যানেল ভিজিট করুন
+            </a>
+        </div>
+    </div>
+
+    <!-- মূল কন্টেন্ট এরিয়া -->
+    <main class="flex-grow flex flex-col items-center pt-16 pb-12 px-6">
+        
+        <!-- প্রিপজিশন কুইক লিংক ব্যানারদ্বয় -->
+        <div class="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+            
+            <!-- ব্যানার ১: Rules Link -->
+            <a href="rules-preposition.html" class="flex items-center justify-between bg-gradient-to-r from-green-800 to-emerald-700 text-white p-5 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold font-hind">প্রিপজিশন এর নিয়মাবলী (Rules)</h3>
+                        <p class="text-green-100 text-xs font-hind">সহজ ২০টি নিয়ম উদাহরণ সহ দেখতে ক্লিক করুন।</p>
+                    </div>
+                </div>
+                <span class="bg-white/20 text-white hover:bg-white hover:text-green-800 text-xs font-bold px-4 py-2 rounded-full transition">দেখুন &rarr;</span>
+            </a>
+
+            <!-- ব্যানার ২: Appropriate Preposition Link -->
+            <a href="appropriate-preposition.html" class="flex items-center justify-between bg-gradient-to-r from-blue-850 to-indigo-800 bg-indigo-900 text-white p-5 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold font-hind">উপযুক্ত প্রিপজিশন (১৭০টি ডিকশনারি)</h3>
+                        <p class="text-indigo-100 text-xs font-hind">বাছাইকৃত ১৭০টি উপযুক্ত প্রিপজিশন অর্থসহ দেখতে ক্লিক করুন।</p>
+                    </div>
+                </div>
+                <span class="bg-white/20 text-white hover:bg-white hover:text-indigo-900 text-xs font-bold px-4 py-2 rounded-full transition">দেখুন &rarr;</span>
+            </a>
+
+        </div>
+
+        <!-- টাইটেল -->
+        <div class="text-center mb-10">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-gray-800 font-hind">১০টি প্রিপজিশন অনুশীলন সেট (HSC Standard)</h2>
+            <div class="w-16 h-1 bg-green-600 rounded-full mx-auto mt-3"></div>
+        </div>
+
+        <!-- এক্সারসাইজ কার্ডস কন্টেইনার -->
+        <div id="exercise-container" class="w-full max-w-5xl space-y-8">
+            <!-- JavaScript এর মাধ্যমে ডায়নামিকালি লোড হবে -->
+        </div>
+
+    </main>
+
+    <!-- ফুটার -->
+    <footer class="text-center py-8 text-gray-500 text-sm border-t border-gray-200 bg-white">
+        <p class="font-hind">&copy; ২০২৬ ZAMIL ACADEMY। সর্বস্বত্ব সংরক্ষিত।</p>
+    </footer>
+
+    <!-- স্ক্রিপ্ট এবং লজিক হ্যান্ডলিং -->
+    <script>
+        // ১০টি HSC বোর্ড স্ট্যান্ডার্ড প্রিপজিশন এক্সারসাইজ ডেটাবেস
+        const exercises = [
+            {
+                id: 1,
+                title: "Exercise 01: Patriotism (দেশপ্রেম)",
+                passage: "Patriotism is love (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> one's country. It is a noble virtue. A man devoid (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> patriotism is no better than a beast. He is indifferent (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> the welfare of his country. He thinks only (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> his own interest. He doesn't hesitate to betray (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> his nation. On the contrary, a true patriot is ready to die (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> his country. He is respected (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> all. His name is written (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> golden letters. We should hanker (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> patriotism. It leads us (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> a prosperous life.",
+                answers: {
+                    a: { text: "for", bangla: "প্রতি / দেশের জন্য", explanation: "Love for (ভালোবাসা) - কারো বা কোনো দেশের প্রতি প্রগাঢ় ভালোবাসা প্রকাশে 'for' বসে।" },
+                    b: { text: "of", bangla: "হীন / বর্জিত", explanation: "Devoid of (হীন বা বিবর্জিত) - এটি একটি উপযুক্ত প্রিপজিশন (Appropriate Preposition)।" },
+                    c: { text: "to", bangla: "প্রতি উদাসীন", explanation: "Indifferent to (উদাসীন) - কোনো দায়িত্বে অমনোযোগী হওয়া বোঝাতে 'to' বসে।" },
+                    d: { text: "of / about", bangla: "বিষয়ে চিন্তা করা", explanation: "Think of/about - কোনো বিষয়ে গভীরভাবে ভাবা বা মনে করা।" },
+                    e: { text: "✕ / against", bangla: "বিশ্বাসঘাতকতা করা", explanation: "Betray একটি Transitive Verb হওয়ায় এর পরে সাধারণত কোনো প্রিপজিশন প্রয়োজন হয় না; তবে 'against' ও ব্যবহার করা যায়।" },
+                    f: { text: "for", bangla: "দেশের জন্য উৎসর্গ হওয়া", explanation: "Die for - কোনো মহৎ কারণ বা দেশের জন্য জীবন উৎসর্গ করার ক্ষেত্রে 'for' বসে।" },
+                    g: { text: "by", bangla: "সবার দ্বারা", explanation: "Passive Voice-এ কাজ সম্পাদনকারীর আগে 'by' বসে।" },
+                    h: { text: "in", bangla: "অক্ষরে লেখা", explanation: "Written in golden letters - কোনো ভাষায় বা কালিতে লেখার ক্ষেত্রে 'in' প্রিপজিশন বসে।" },
+                    i: { text: "after", bangla: "পিছে ছোটা", explanation: "Hanker after - কোনো বিষয়ের প্রতি তীব্র আকাঙ্ক্ষা বা পেছনে ছোটার অর্থে 'after' বসে।" },
+                    j: { text: "to", bangla: "পরিচালিত করে", explanation: "Lead to - কোনো অবস্থার দিকে ধাবিত করা বা নিয়ে যাওয়া।" }
+                }
+            },
+            {
+                id: 2,
+                title: "Exercise 02: Importance of Trees",
+                passage: "Trees are very useful (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> us. They protect us (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> natural disasters. They prevent soil (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> erosion. They supply us (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> oxygen. We take (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> oxygen to survive. Trees also provide us (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> shade. They are a source (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> food and shelter. Many animals depend (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> trees. We must stop cutting trees (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> random. We must plant more trees (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> our own survival.",
+                answers: {
+                    a: { text: "to / for", bangla: "আমাদের জন্য উপকারী", explanation: "Useful to/for - কোনো ব্যক্তির জন্য প্রয়োজনীয় বা উপকারী হওয়ার ক্ষেত্রে 'to' বা 'for' বসে।" },
+                    b: { text: "from / against", bangla: "দুর্যোগ থেকে রক্ষা করা", explanation: "Protect from - কোনো ক্ষতিকর বিষয় থেকে নিরাপদ রাখা।" },
+                    c: { text: "from", bangla: "ক্ষয় থেকে রোধ করা", explanation: "Prevent from - কোনো কিছু ঘটা থেকে বিরত রাখা বা বাধা দেওয়া।" },
+                    d: { text: "with", bangla: "অক্সিজেন সরবরাহ করা", explanation: "Supply someone with something - কাউকে কোনো জিনিস দিয়ে সরবরাহ করা।" },
+                    e: { text: "in", bangla: "গ্রহণ করা", explanation: "Take in - শ্বাস-প্রশ্বাসের মাধ্যমে বাতাস বা গ্যাস শরীরে নেওয়া।" },
+                    f: { text: "with", bangla: "ছায়া প্রদান করা", explanation: "Provide with - কাউকে প্রয়োজনীয় কোনো জিনিস প্রদান বা জোগান দেওয়া।" },
+                    g: { text: "of", bangla: "উৎস্য", explanation: "Source of - কোনো কিছুর আদি উৎস বা ভাণ্ডার বোঝাতে 'of' বসে।" },
+                    h: { text: "on / upon", bangla: "গাছের ওপর নির্ভরশীল", explanation: "Depend on/upon - কোনো কিছুর ওপর জীবিকার জন্য বা সহায়তার জন্য নির্ভর করা।" },
+                    i: { text: "at", bangla: "বেপরোয়াভাবে / এলোমেলো", explanation: "At random - এটি একটি জনপ্রিয় ফ্রেজ যার অর্থ হলো কোনো পরিকল্পনা ছাড়া এলোমেলো বা নির্বিচারে।" },
+                    j: { text: "for", bangla: "আমাদের নিজেদের বেঁচে থাকার স্বার্থে", explanation: "For survival - কোনো নির্দিষ্ট উদ্দেশ্য বা প্রয়োজনের স্বার্থে 'for' বসে।" }
+                }
+            },
+            {
+                id: 3,
+                title: "Exercise 03: Discipline (শৃঙ্খলা)",
+                passage: "Discipline is a must (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> student life. It is the key (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> success. A life without discipline is like a ship (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> a rudder. It drifts (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> the wind. One should abide (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> the rules of discipline. We must look (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> the lives of great men. They maintained discipline (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> every step of life. If we do not pay attention (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> discipline, we will suffer (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> the long run. Let us build our career (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> discipline.",
+                answers: {
+                    a: { text: "in", bangla: "ছাত্রজীবনে", explanation: "In student life - জীবনের কোনো বিশেষ সময়কালের ব্যাপ্তি নির্দেশ করতে 'in' বসে।" },
+                    b: { text: "to", bangla: "সফলতার চাবিকাঠি", explanation: "Key to - কোনো লক্ষ্যের দিকে নিয়ে যাওয়ার প্রধান মাধ্যম বা পথ।" },
+                    c: { text: "without", bangla: "হালবিহীন বা হাল ছাড়া", explanation: "Without a rudder - কোনো গুরুত্বপূর্ণ উপাদানের অভাব বা অনুপস্থিতি বোঝাতে 'without' বসে।" },
+                    d: { text: "with / towards", bangla: "বাতাসের অনুকূলে বা অভিমুখে ভেসে যাওয়া", explanation: "Drift with/towards - কোনো প্রবাহের সাথে বা অভিমুখে ভেসে চলা।" },
+                    e: { text: "by", bangla: "নিয়ম মেনে চলা", explanation: "Abide by - নিয়মকানুন বা আদেশ মেনে চলা (Appropriate Preposition)।" },
+                    f: { text: "into / at", bangla: "মহৎ ব্যক্তিদের জীবন পর্যবেক্ষণ বা বিশ্লেষণ করা", explanation: "Look into/at - কোনো বিষয় খতিয়ে দেখা বা মনোযোগ দিয়ে লক্ষ করা।" },
+                    g: { text: "in", bangla: "প্রতিটি পদক্ষেপে", explanation: "In every step of life - জীবনের বিভিন্ন ক্ষেত্রে বা পর্যায় নির্দেশ করতে 'in' বসে।" },
+                    h: { text: "to", bangla: "মনোযোগ দেওয়া", explanation: "Pay attention to - কোনো বিষয়ে গভীর মনোযোগ দেওয়া।" },
+                    i: { text: "in", bangla: "পরিশেষে কষ্ট পাওয়া", explanation: "Suffer in the long run - পরিশেষে বা পরিণামে কষ্ট পাওয়া বোঝাতে 'in the long run' ফ্রেজটি বসে।" },
+                    j: { text: "with / on", bangla: "শৃঙ্খলার মাধ্যমে গড়া", explanation: "Build with/on - কোনো মৌলিক ভিত্তির সাহায্যে জীবন বা ক্যারিয়ার গঠন করা।" }
+                }
+            },
+            {
+                id: 4,
+                title: "Exercise 04: Sincerity (আন্তরিকতা)",
+                passage: "Sincerity is the secret (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> success. A sincere man is attentive (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> his duties. He does not hanker (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> wealth. He relies (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> his hard work. He is never indifferent (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> his responsibilities. Sincerity is essential (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> progress. It plays a vital role (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> every sphere. Those who are devoid (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> sincerity cannot shine. Let us work (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> sincerity (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> a better future.",
+                answers: {
+                    a: { text: "of / to", bangla: "সফলতার রহস্য", explanation: "Secret of/to - কোনো সাফল্যের পেছনের মূল কারণ বা সূত্র নির্দেশ করতে 'of' বা 'to' বসে।" },
+                    b: { text: "to", bangla: "কাজে মনোযোগী", explanation: "Attentive to - কোনো কাজ বা পড়াশোনায় মনোযোগী হওয়া।" },
+                    c: { text: "after", bangla: "সম্পদের পিছে ছোটা", explanation: "Hanker after - সম্পদের পেছনে অন্ধভাবে ছোটা (Appropriate Preposition)।" },
+                    d: { text: "on / upon", bangla: "কঠোর পরিশ্রমের ওপর নির্ভর করা", explanation: "Rely on/upon - কারো ওপর বা নিজের কর্মের ওপর ভরসা রাখা।" },
+                    e: { text: "to", bangla: "দায়িত্বের প্রতি উদাসীন নয়", explanation: "Indifferent to - কোনো দায়িত্বের প্রতি বিমুখ বা উদাসীন না হওয়া।" },
+                    f: { text: "for", bangla: "উন্নতির জন্য অপরিহার্য", explanation: "Essential for - অগ্রগতির জন্য অত্যন্ত জরুরি বা অপরিহার্য।" },
+                    g: { text: "in", bangla: "প্রতিটি ক্ষেত্রে ভূমিকা রাখে", explanation: "Play a role in - কোনো ক্ষেত্রের কার্যক্রমে অবদান রাখা বা ভূমিকা রাখা।" },
+                    h: { text: "of", bangla: "আন্তরিকতাহীন", explanation: "Devoid of - গুণ বা বৈশিষ্ট্যের অভাব থাকা।" },
+                    i: { text: "with", bangla: "আন্তরিকতার সাথে কাজ করা", explanation: "Work with sincerity - কোনো গুণের সহচর্যে বা কাজের ধরনের সাথে 'with' বসে।" },
+                    j: { text: "for", bangla: "উজ্জ্বল ভবিষ্যতের জন্য", explanation: "For a better future - কোনো মহৎ কল্যাণের স্বার্থে বা উদ্দেশ্যে 'for' প্রিপজিশন বসে।" }
+                }
+            },
+            {
+                id: 5,
+                title: "Exercise 05: Mobile Phone",
+                passage: "Mobile phone is a great blessing (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> us. It has brought (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> a revolutionary change. We can talk (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> anyone. We can send messages (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> a moment. But it has some bad effects (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> youth. Children are addicted (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> mobile games. They are moving away (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> books. They waste time (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> useless browsing. We must be aware (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> its dark sides and use it (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> good purposes.",
+                answers: {
+                    a: { text: "to / for", bangla: "আমাদের জন্য আর্শীবাদ", explanation: "Blessing to/for - কারো জীবনের জন্য সৃষ্টিকর্তার পক্ষ থেকে আর্শীবাদ স্বরূপ হওয়া।" },
+                    b: { text: "about", bangla: "পরিবর্তন বয়ে আনা", explanation: "Bring about - কোনো বড় ধরনের পরিবর্তন বা ঘটনা ঘটানো।" },
+                    c: { text: "to / with", bangla: "কারো সাথে কথা বলা", explanation: "Talk to/with - কারো সাথে ভাব বিনিময় করা বা কথা বলা।" },
+                    d: { text: "in", bangla: "এক মুহূর্তের মধ্যে", explanation: "In a moment - অত্যন্ত দ্রুত বা অল্প সময়ের মধ্যে কোনো কাজ সম্পাদন করা।" },
+                    e: { text: "on", bangla: "তরুণদের ওপর ক্ষতিকর প্রভাব", explanation: "Effect on - কোনো কিছুর ওপর প্রভাব বিস্তার করা।" },
+                    f: { text: "to", bangla: "মোবাইল গেমে আসক্ত", explanation: "Addicted to - ক্ষতিকর বা অনুচিত কোনো অভ্যাসে মাত্রাতিরিক্ত আসক্ত হওয়া।" },
+                    g: { text: "from", bangla: "বই থেকে দূরে সরে যাওয়া", explanation: "Move away from - মূল জায়গা বা ভালো অভ্যাস থেকে ছিটকে পড়া।" },
+                    h: { text: "on / in", bangla: "অপ্রয়োজনীয় ব্রাউজিংয়ে সময় নষ্ট করা", explanation: "Waste time on - কোনো অহেতুক বা নির্দিষ্ট কাজে সময় অপচয় করা।" },
+                    i: { text: "of", bangla: "অন্ধকার দিক সম্পর্কে সচেতন", explanation: "Aware of - কোনো ক্ষতিকর দিক বা বাস্তবতা সম্পর্কে অবগত থাকা।" },
+                    j: { text: "for", bangla: "ভালো কাজের উদ্দেশ্যে", explanation: "For good purposes - কোনো কল্যাণকর কাজের উদ্দেশ্যে 'for' বসে।" }
+                }
+            },
+            {
+                id: 6,
+                title: "Exercise 06: Travel and Knowledge",
+                passage: "Travelling is a source (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> knowledge. It frees our mind (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> narrowness. It gives a glimpse (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> different cultures. We can escape (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> the dull monotony of life. Many people are fond (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> travelling. Some travel (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> train, others (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> bus. We can learn a lot (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> new places. It adds (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> our experience. It prepares us (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> challenges.",
+                answers: {
+                    a: { text: "of", bangla: "জ্ঞানের উৎস", explanation: "Source of - কোনো বিষয়ের মূল উৎস বা ভাণ্ডার।" },
+                    b: { text: "from", bangla: "সংকীর্ণতা থেকে মুক্ত করে", explanation: "Free from - মনকে সংকীর্ণতা বা আবদ্ধ অবস্থা থেকে মুক্ত করা।" },
+                    c: { text: "of", bangla: "বিভিন্ন সংস্কৃতির আভাস", explanation: "Glimpse of - কোনো বড় বিষয়ের এক পলকের সুন্দর দৃশ্য বা সামান্য আভাস।" },
+                    d: { text: "from", bangla: "একঘেয়েমি থেকে নিস্তার পাওয়া", explanation: "Escape from - কোনো একঘেয়ে বা বন্দি অবস্থা থেকে মুক্তি লাভ করা।" },
+                    e: { text: "of", bangla: "ভ্রমণের ভক্ত বা প্রিয়", explanation: "Fond of - কোনো বিষয় বা কাজের প্রতি অনুরক্ত হওয়া।" },
+                    f: { text: "by", bangla: "ট্রেনে ভ্রমণ", explanation: "Travel by train - যাতায়াত বা পরিবহনের মাধ্যমের পূর্বে 'by' বসে।" },
+                    g: { text: "by", bangla: "বাসে ভ্রমণ", explanation: "Travel by bus - পরিবহনের মাধ্যম হিসেবে 'by' বসেছে।" },
+                    h: { text: "about / of", bangla: "নতুন জায়গা সম্পর্কে", explanation: "Learn about/of - কোনো নতুন স্থান বা বিষয় সম্পর্কে বিশদ জ্ঞান লাভ করা।" },
+                    i: { text: "to", bangla: "অভিজ্ঞতা বৃদ্ধি করে", explanation: "Add to - কোনো গুণ বা অবস্থার মাত্রা বাড়িয়ে তোলা।" },
+                    j: { text: "for", bangla: "চ্যালেঞ্জের জন্য প্রস্তুত করে", explanation: "Prepare for - ভবিষ্যৎ পরিস্থিতির মোকাবেলা করার জন্য নিজেকে তৈরি করা।" }
+                }
+            },
+            {
+                id: 7,
+                title: "Exercise 07: Water Pollution",
+                passage: "Water is essential (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> life. Clean water is necessary (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> health. But our rivers are teeming (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> waste. Polluted water leads (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> diseases. People suffer (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> various illnesses. We must protect water (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> pollution. People should not throw garbage (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> rivers. We should rely (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> pure drinking water. Rainwater can be stored (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> dry seasons. Let us raise awareness (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> people.",
+                answers: {
+                    a: { text: "for", bangla: "জীবনের জন্য অপরিহার্য", explanation: "Essential for - বেঁচে থাকার জন্য অত্যন্ত আবশ্যক।" },
+                    b: { text: "for", bangla: "স্বাস্থ্যের জন্য জরুরি", explanation: "Necessary for - সুস্বাস্থ্যের জন্য বিশুদ্ধ পানি প্রয়োজন।" },
+                    c: { text: "with", bangla: "আবর্জনায় ভরপুর", explanation: "Teeming with - কোনো কিছু দ্বারা পরিপূর্ণ বা গিজগিজ করা।" },
+                    d: { text: "to", bangla: "রোগব্যাধির দিকে ঠেলে দেয়", explanation: "Lead to - খারাপ ফলাফলের দিকে ধাবিত করা।" },
+                    e: { text: "from", bangla: "রোগে ভোগা", explanation: "Suffer from - কোনো রোগে বা শারীরিক যন্ত্রণায় কষ্ট পাওয়া।" },
+                    f: { text: "from / against", bangla: "দূষণ থেকে রক্ষা করা", explanation: "Protect from/against - দূষণ বা খারাপ প্রভাব থেকে রক্ষা করা।" },
+                    g: { text: "into / in", bangla: "নদীতে ফেলা", explanation: "Throw into - বাইরে থেকে গতিশীলভাবে ভেতরের দিকে নিক্ষেপ করা।" },
+                    h: { text: "on / upon", bangla: "বিশুদ্ধ পানির ওপর নির্ভর করা", explanation: "Rely on/upon - কোনো কিছুর ওপর পূর্ণ আস্থা রাখা বা নির্ভর করা।" },
+                    i: { text: "for", bangla: "শুকনো মৌসুমের জন্য", explanation: "Stored for - ভবিষ্যতের কোনো নির্দিষ্ট সময়ের জন্য জমিয়ে রাখা।" },
+                    j: { text: "among", bangla: "মানুষের মাঝে", explanation: "Raise among - বহু মানুষের মাঝে সচেতনতা ছড়িয়ে দেওয়া।" }
+                }
+            },
+            {
+                id: 8,
+                title: "Exercise 08: Student Life Period",
+                passage: "Student life is a period (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> preparation. Students must prepare (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> the future. They should be attentive (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> their studies. They must stay away (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> bad company. They should abide (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> the rules of school. Time should not be wasted (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> idle gossiping. They should participate (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> co-curricular activities. It helps them to grow (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> properly. They must stick (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> their goals (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> succeed.",
+                answers: {
+                    a: { text: "of", bangla: "প্রস্তুতির সময়", explanation: "Period of - কোনো বিশেষ কাজের বা অবস্থার সময়কাল।" },
+                    b: { text: "for", bangla: "ভবিষ্যতের জন্য প্রস্তুত হওয়া", explanation: "Prepare for - ভবিষ্যতের লক্ষ্যে নিজেকে তৈরি করা।" },
+                    c: { text: "to", bangla: "পড়াশোনায় মনোযোগী", explanation: "Attentive to - পড়াশোনায় গভীর মনোনিবেশ করা।" },
+                    d: { text: "from", bangla: "খারাপ সঙ্গ থেকে দূরে থাকা", explanation: "Stay away from - ক্ষতিকর বা অনাকাঙ্ক্ষিত বিষয় থেকে দূরত্ব বজায় রাখা।" },
+                    e: { text: "by", bangla: "স্কুলের নিয়ম মেনে চলা", explanation: "Abide by - প্রাতিষ্ঠানিক নিয়মকানুন ও শৃঙ্খলা মেনে চলা।" },
+                    f: { text: "on / in", bangla: "অহেতুক গল্পে সময় নষ্ট করা", explanation: "Wasted on/in - অলস আড্ডায় মূল্যবান সময় অপচয় করা।" },
+                    g: { text: "in", bangla: "সহশিক্ষা কার্যক্রমে অংশগ্রহণ", explanation: "Participate in - কোনো খেলাধুলা বা কার্যক্রমে অংশ নেওয়া।" },
+                    h: { text: "up", bangla: "সঠিকভাবে বড় হয়ে ওঠা", explanation: "Grow up - শারীরিক বা মানসিকভাবে বড় হওয়া।" },
+                    i: { text: "to", bangla: "লক্ষ্যে অটল থাকা", explanation: "Stick to - নিজের কাঙ্ক্ষিত লক্ষ্যে স্থির থাকা।" },
+                    j: { text: "to", bangla: "সফল হওয়ার জন্য", explanation: "To succeed - ইনফিনিটিভ হিসেবে কাজের উদ্দেশ্য বোঝাতে 'to + verb' বসে।" }
+                }
+            },
+            {
+                id: 9,
+                title: "Exercise 09: Hazrat Khan Jahan Ali",
+                passage: "Hazrat Khan Jahan Ali was famous (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> his noble deeds. He came (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> Bagerhat (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> the fifteenth century. Bagerhat was then covered (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> dense forest. He cleared the forest (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> his followers. He dug a big dighi known (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> Khanjali dighi. It solved the lack (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> drinking water. He dedicated his life (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> the welfare of people. He passed away (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> a great age. He is remembered (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> all.",
+                answers: {
+                    a: { text: "for", bangla: "মহৎ কাজের জন্য বিখ্যাত", explanation: "Famous for - কোনো ভালো গুণের জন্য পরিচিত বা সুখ্যাত হওয়া।" },
+                    b: { text: "to", bangla: "বাগেরহাটে আগমন", explanation: "Come to - কোনো নির্দিষ্ট স্থানে আগমন বোঝাতে 'to' বসে।" },
+                    c: { text: "in", bangla: "পঞ্চদশ শতাব্দীতে", explanation: "In the fifteenth century - শতাব্দীর মতো দীর্ঘ সময়কালের পূর্বে 'in' বসে।" },
+                    d: { text: "with / by", bangla: "ঘন বনে ঢাকা", explanation: "Covered with/by - কোনো উপাদান দ্বারা আবৃত থাকা।" },
+                    e: { text: "with", bangla: "অনুসারীদের সাথে নিয়ে", explanation: "Cleared with - অনুসারী বা সাথীদের সহায়তায় কাজ করা।" },
+                    f: { text: "as", bangla: "খাঁঞ্জালি দীঘি হিসেবে পরিচিত", explanation: "Known as - কোনো বিশেষ নাম বা পরিচয় পরিচিত হওয়া।" },
+                    g: { text: "of", bangla: "বিশুদ্ধ পানির অভাব", explanation: "Lack of - কোনো প্রয়োজনীয় বিষয়ের ঘাটতি বা অভাব।" },
+                    h: { text: "to", bangla: "জনকল্যাণে জীবন উৎসর্গ করা", explanation: "Dedicated to - ভালো কাজে নিজেকে বা নিজের জীবনকে নিয়োজিত করা।" },
+                    i: { text: "at", bangla: "পরিণত বয়সে মারা যাওয়া", explanation: "Passed away at a great age - বয়সের পূর্বে নির্দিষ্ট করে 'at' বসে।" },
+                    j: { text: "by", bangla: "সবার দ্বারা স্মরিত", explanation: "Remembered by - প্যাসিভ ভয়েস অনুযায়ী এজেন্ট বা ব্যক্তির পূর্বে 'by' বসে।" }
+                }
+            },
+            {
+                id: 10,
+                title: "Exercise 10: Road Accidents in Bangladesh",
+                passage: "Road accidents occur (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> our country almost daily. Many people die (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> these accidents. Drivers are mostly responsible (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> this. They drive (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> a high speed. They do not care (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> traffic rules. Overtaking other vehicles leads (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> disaster. Pedestrians must be careful (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> crossing roads. They should use overbridges (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> cross. We must bring accidents (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> control (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> public safety.",
+                answers: {
+                    a: { text: "in", bangla: "আমাদের দেশে", explanation: "Occur in - কোনো বড় ভৌগোলিক সীমায় কোনো ঘটনা সংঘটিত হওয়া।" },
+                    b: { text: "in / by", bangla: "দুর্ঘটনায় মারা যাওয়া", explanation: "Die in/by - কোনো যুদ্ধ বা সড়ক দুর্ঘটনায় মারা যাওয়ার ক্ষেত্রে 'in' বা 'by' বসে।" },
+                    c: { text: "for", bangla: "এর জন্য দায়ী", explanation: "Responsible for - কোনো অবহেলার বা কাজের জন্য দায়ী হওয়া।" },
+                    d: { text: "at", bangla: "উচ্চ গতিতে", explanation: "At a high speed - গতি বা হারের পূর্বে 'at' বসে।" },
+                    e: { text: "for / about", bangla: "নিয়ম কানুনের তোয়াক্কা না করা", explanation: "Care for/about - কোনো নিয়মের প্রতি ভ্রূক্ষেপ বা তোয়াক্কা করা।" },
+                    f: { text: "to", bangla: "বিপর্যয় ডেকে আনা", explanation: "Leads to - ধ্বংস বা বিপদের দিকে ধাবিত করা।" },
+                    g: { text: "about / while", bangla: "রাস্তা পারাপারের সময় সতর্ক", explanation: "Careful about/while - কোনো কাজের সময় বা বিষয়ে অনেক সতর্ক হওয়া।" },
+                    h: { text: "to", bangla: "পারাপার হতে", explanation: "To cross - ইনফিনিটিভ হিসেবে পারাপারের উদ্দেশ্য প্রকাশ করতে 'to' বসে।" },
+                    i: { text: "under", bangla: "নিয়ন্ত্রণের মধ্যে নিয়ে আসা", explanation: "Under control - কোনো বিশৃঙ্খল পরিস্থিতি নিজের আয়ত্তে বা নিয়ন্ত্রণের মধ্যে রাখা।" },
+                    j: { text: "for", bangla: "জননিরাপত্তার স্বার্থে", explanation: "For public safety - কোনো বিশেষ উদ্দেশ্য বা সুরক্ষার স্বার্থে 'for' বসে।" }
+                }
+            }
+        ];
+
+        // প্রোগ্রেস ট্র্যাকিং মেমোরি অবজেক্ট
+        let completedExercises = {};
+
+        // ফায়ারবেস কনফিগারেশন ও ইনিশিয়ালিলাইজেশন
+        let db = null;
+        let auth = null;
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'zamil-academy-prepositions';
+
+        if (typeof __firebase_config !== 'undefined' && __firebase_config) {
+            try {
+                const firebaseConfig = JSON.parse(__firebase_config);
+                if (!firebase.apps.length) {
+                    firebase.initializeApp(firebaseConfig);
+                }
+                db = firebase.firestore();
+                auth = firebase.auth();
+                
+                // অথেনটিকেশন ও ডেটা লোড
+                initFirebaseSession();
+            } catch (err) {
+                console.warn("Firebase Setup Failed, falling back to local storage:", err);
+                loadFromLocalStorage();
+            }
+        } else {
+            loadFromLocalStorage();
+        }
+
+        // ফায়ারবেস সাইন ইন এবং ক্লাউড প্রোগ্রেস লোড
+        async function initFirebaseSession() {
+            try {
+                if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+                    await auth.signInWithCustomToken(__initial_auth_token);
+                } else {
+                    await auth.signInAnonymously();
+                }
+                
+                auth.onAuthStateChanged(user => {
+                    if (user) {
+                        loadCloudProgress(user.uid);
+                    } else {
+                        loadFromLocalStorage();
+                    }
+                });
+            } catch (e) {
+                console.error("Auth failed:", e);
+                loadFromLocalStorage();
+            }
+        }
+
+        // ক্লাউড ডেটাবেস থেকে অগ্রগতি লোড
+        function loadCloudProgress(userId) {
+            if (!db) return;
+            const docRef = db.collection('artifacts').doc(appId).collection('users').doc(userId).collection('progress').doc('preposition_tasks');
+            docRef.get().then(doc => {
+                if (doc.exists) {
+                    completedExercises = doc.data().completed || {};
+                } else {
+                    // লোকাল মেমোরি থেকে ডেটা থাকলে তা ক্লাউডে সিঙ্ক করা
+                    loadFromLocalStorage();
+                    saveCloudProgress(userId);
+                }
+                renderAllExercises();
+            }).catch(err => {
+                console.error("Firestore read error:", err);
+                loadFromLocalStorage();
+                renderAllExercises();
+            });
+        }
+
+        // ক্লাউড ডেটাবেসে প্রোগ্রেস সংরক্ষণ
+        function saveCloudProgress(userId) {
+            if (!db) return;
+            const docRef = db.collection('artifacts').doc(appId).collection('users').doc(userId).collection('progress').doc('preposition_tasks');
+            docRef.set({ completed: completedExercises }, { merge: true })
+                .catch(err => console.error("Firestore write error:", err));
+        }
+
+        // লোকাল মেমোরি (localStorage) থেকে লোড (লগইন থাকুক বা না থাকুক চিরস্থায়ী সেভ রাখার জন্য)
+        function loadFromLocalStorage() {
+            try {
+                const localData = localStorage.getItem('zamil_prepositions_progress');
+                if (localData) {
+                    completedExercises = JSON.parse(localData);
+                }
+            } catch (e) {
+                console.warn("Local storage not supported or allowed:", e);
+            }
+        }
+
+        // লোকাল মেমোরিতে সংরক্ষণ
+        function saveToLocalStorage() {
+            try {
+                localStorage.setItem('zamil_prepositions_progress', JSON.stringify(completedExercises));
+            } catch (e) {
+                console.warn(e);
+            }
+        }
+
+        // প্রোগ্রেস পরিবর্তন হ্যান্ডল করা
+        function toggleComplete(exerciseId) {
+            if (completedExercises[exerciseId]) {
+                delete completedExercises[exerciseId];
+            } else {
+                completedExercises[exerciseId] = true;
+            }
+
+            // লোকাল সংরক্ষণ
+            saveToLocalStorage();
+
+            // ক্লাউড সংরক্ষণ (যদি অথেনটিকেটেড থাকে)
+            if (auth && auth.currentUser) {
+                saveCloudProgress(auth.currentUser.uid);
+            }
+
+            // পেজ রি-রেন্ডার না করে শুধুমাত্র নির্দিষ্ট কার্ডের ইন্টারফেস আপডেট করা
+            updateCardStyle(exerciseId);
+        }
+
+        // নির্দিষ্ট কার্ডের ডিজাইন আপডেট করা
+        function updateCardStyle(exerciseId) {
+            const card = document.getElementById(`card-${exerciseId}`);
+            const badge = document.getElementById(`badge-${exerciseId}`);
+            const checkbox = document.getElementById(`check-${exerciseId}`);
+            const isCompleted = !!completedExercises[exerciseId];
+
+            if (isCompleted) {
+                card.className = "bg-green-50/90 border-2 border-green-500 rounded-2xl p-6 md:p-8 shadow-md relative transition-all duration-300 transform scale-[1.01] checkmark-animate";
+                badge.classList.remove('hidden');
+                checkbox.checked = true;
+            } else {
+                card.className = "bg-white border border-gray-100 rounded-2xl p-6 md:p-8 shadow-sm relative transition-all duration-300";
+                badge.classList.add('hidden');
+                checkbox.checked = false;
+            }
+        }
+
+        // নির্দিষ্ট বর্ণানুক্রমিক বাটন ক্লিক করলে নির্দিষ্ট ব্ল্যাংকের উত্তর দেখানো
+        function selectAnswer(exerciseId, letter) {
+            const displayBox = document.getElementById(`ans-display-${exerciseId}`);
+            const exercise = exercises.find(ex => ex.id === exerciseId);
+            if (!exercise || !exercise.answers[letter]) return;
+
+            const selectedAns = exercise.answers[letter];
+
+            // পূর্বের বাটন ডি-সিলেক্ট করে নতুনটি সিলেক্ট করা
+            const allBtnContainer = document.getElementById('btns-' + exerciseId);
+            const buttons = allBtnContainer.getElementsByTagName('button');
+            for (let btn of buttons) {
+                btn.className = "w-10 h-10 rounded-full font-bold transition flex items-center justify-center border border-gray-200 bg-gray-50 text-gray-700 hover:bg-gray-100";
+            }
+            
+            const activeBtn = document.getElementById(`btn-${exerciseId}-${letter}`);
+            if (activeBtn) {
+                activeBtn.className = "w-10 h-10 rounded-full font-bold transition flex items-center justify-center bg-green-800 text-white shadow-md scale-115";
+            }
+
+            // উত্তর রেন্ডার করা
+            displayBox.innerHTML = `
+                <div class="space-y-2 text-left fade-in">
+                    <p class="text-lg font-bold text-green-900 font-poppins">Blank (${letter}): <span class="underline text-red-700">${selectedAns.text}</span></p>
+                    <p class="text-gray-700"><span class="font-bold font-hind">বাংলা অর্থ:</span> ${selectedAns.bangla}</p>
+                    <p class="text-sm text-gray-500 italic"><span class="font-bold font-hind">ব্যাখ্যা:</span> ${selectedAns.explanation}</p>
+                </div>
+            `;
+        }
+
+        // উত্তর দেখার প্যানেলটি টগল করা
+        function toggleAnswerPanel(exerciseId) {
+            const panel = document.getElementById(`panel-${exerciseId}`);
+            const btn = document.getElementById(`toggle-btn-${exerciseId}`);
+            if (panel.classList.contains('hidden')) {
+                panel.classList.remove('hidden');
+                btn.innerHTML = `উত্তর বন্ধ করুন 
+                    <svg class="w-5 h-5 ml-1 transform rotate-180 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>`;
+            } else {
+                panel.classList.add('hidden');
+                btn.innerHTML = `উত্তর দেখুন 
+                    <svg class="w-5 h-5 ml-1 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>`;
+            }
+        }
+
+        // সম্পূর্ণ এক্সারসাইজ জেনারেট করা
+        function renderAllExercises() {
+            const container = document.getElementById('exercise-container');
+            container.innerHTML = ""; // ক্লিয়ার করা
+
+            exercises.forEach(ex => {
+                const isCompleted = !!completedExercises[ex.id];
+                const cardClass = isCompleted 
+                    ? "bg-green-50/90 border-2 border-green-500 rounded-2xl p-6 md:p-8 shadow-md relative transition-all duration-300 transform scale-[1.01]" 
+                    : "bg-white border border-gray-100 rounded-2xl p-6 md:p-8 shadow-sm relative transition-all duration-300";
+                
+                const badgeClass = isCompleted ? "" : "hidden";
+                const isChecked = isCompleted ? "checked" : "";
+
+                // বর্ণানুক্রমিক বাটন জেনারেশন (a to j)
+                let letterButtons = "";
+                ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'].forEach(l => {
+                    letterButtons += `
+                        <button id="btn-${ex.id}-${l}" onclick="selectAnswer(${ex.id}, '${l}')" 
+                                class="w-10 h-10 rounded-full font-bold transition flex items-center justify-center border border-gray-200 bg-gray-50 text-gray-700 hover:bg-gray-100">
+                            ${l}
+                        </button>
+                    `;
+                });
+
+                const cardHTML = `
+                    <div id="card-${ex.id}" class="${cardClass}">
+                        
+                        <!-- কমপ্লিট ব্যাজ -->
+                        <div id="badge-${ex.id}" class="absolute -top-3.5 right-6 bg-green-600 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-sm flex items-center gap-1.5 ${badgeClass}">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="font-hind">এটা আপনি কমপ্লিট করেছেন</span>
+                        </div>
+
+                        <!-- কার্ড টপ বার (হেডার এবং টিক বক্স) -->
+                        <div class="flex items-center justify-between mb-4 pb-2 border-b border-gray-100">
+                            <h3 class="text-xl font-bold text-gray-800 font-hind">${ex.title}</h3>
+                            
+                            <!-- টিক মার্ক বোতাম -->
+                            <label class="flex items-center gap-2 cursor-pointer select-none">
+                                <span class="text-sm font-semibold text-gray-500 font-hind hidden sm:inline">কমপ্লিট চিহ্নিত করুন</span>
+                                <input type="checkbox" id="check-${ex.id}" onclick="toggleComplete(${ex.id})" ${isChecked}
+                                       class="w-6 h-6 rounded border-gray-300 text-green-700 focus:ring-green-500 cursor-pointer">
+                            </label>
+                        </div>
+
+                        <!-- প্যাসেজ প্যারাগ্রাফ -->
+                        <p class="text-gray-700 text-base md:text-lg leading-relaxed font-poppins mb-6 text-justify">
+                            ${ex.passage}
+                        </p>
+
+                        <!-- উত্তর দেখুন বাটন -->
+                        <div class="text-center">
+                            <button id="toggle-btn-${ex.id}" onclick="toggleAnswerPanel(${ex.id})" 
+                                    class="inline-flex items-center bg-green-800 hover:bg-green-900 text-white font-semibold py-2 px-6 rounded-full transition shadow-sm font-hind text-base">
+                                উত্তর দেখুন 
+                                <svg class="w-5 h-5 ml-1 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                        </div>
+
+                        <!-- উত্তর দেখুন সাব-প্যানেল (ডিফল্ট হিডেন) -->
+                        <div id="panel-${ex.id}" class="hidden mt-6 pt-6 border-t border-gray-100">
+                            <p class="text-sm font-bold text-gray-500 mb-3 text-center font-hind">যেকোনো ব্ল্যাংকের বর্ণ সিলেক্ট করে ব্যাখ্যা ও অর্থ দেখুন:</p>
+                            
+                            <!-- বর্ণানুক্রমিক বাটন গ্রিড -->
+                            <div id="btns-${ex.id}" class="flex flex-wrap justify-center gap-2.5 mb-6">
+                                ${letterButtons}
+                            </div>
+
+                            <!-- নির্দিষ্ট উত্তর শো করার ডিসপ্লে বক্স -->
+                            <div id="ans-display-${ex.id}" class="bg-gray-50 p-5 rounded-2xl border border-gray-200 text-center min-h-[100px] flex items-center justify-center">
+                                <p class="text-gray-400 font-hind">কোনো উত্তর সিলেক্ট করা হয়নি। উপরের বাটনে ক্লিক করুন।</p>
+                            </div>
+                        </div>
+
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', cardHTML);
+            });
+        }
+
+        // ফায়ারবেস বা লোকাল লোডের জন্য প্রথম পেজ রেন্ডার
+        window.onload = function() {
+            if (!db) {
+                loadFromLocalStorage();
+                renderAllExercises();
+            }
+        };
+    </script>
+<script type="module">
+    // Firebase Time Tracking Script
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
+    import { getDatabase, ref, update, increment } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-database.js";
+
+    // ফায়ারবেজ কনফিগারেশন
+    const firebaseConfig = {
+        apiKey: "AIzaSyABpKz4xjVKWb6kVR_mT8d13dt9lcDwipE",
+        authDomain: "zamil-4e08e.firebaseapp.com",
+        databaseURL: "https://zamil-4e08e-default-rtdb.firebaseio.com/",
+        projectId: "zamil-4e08e"
+    };
+
+    // ফায়ারবেজ অ্যাপ এবং ডেটাবেজ ইনিশিয়ালিলাইজেশন
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+
+    // ডেটাবেজ কানেকশনটিকে গ্লোবাল করা
+    window.db = db; 
+
+    // প্রতি ৩০ সেকেন্ডে সময় ট্র্যাকিং
+    const timeRef = ref(db, 'total_time_spent');
+
+    setInterval(() => {
+        // ইউজার ট্যাব অন্য ট্যাবে বা ব্যাকগ্রাউন্ডে থাকলে কোডটি রান করবে না
+        if (document.hidden) return; 
+
+        update(timeRef, {
+            "seconds": increment(30)
+        }).catch(err => console.error("Error updating time:", err));
+    }, 30000);
+
+    console.log("Firebase time tracking active (optimized).");
+</script>
+
+
+</body>
+</html>

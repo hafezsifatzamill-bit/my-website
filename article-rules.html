@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Rules - ZAMIL ACADEMY</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'hind': ['"Hind Siliguri"', 'sans-serif'],
+                        'poppins': ['"Poppins"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Hind Siliguri', sans-serif; }
+        .fade-in { animation: fadeIn 0.4s ease-out forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+    <!-- হেডার -->
+    <header class="relative bg-green-800 text-white py-12 px-6 text-center shadow-lg rounded-b-[40px]">
+        <!-- ব্যাক বাটন (ড্যাশবোর্ডে ফিরে যাওয়ার জন্য) -->
+        <a href="index.html" 
+           class="absolute top-6 left-4 md:left-8 flex items-center gap-2 text-white/90 hover:text-white bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full transition-all duration-300 backdrop-blur-sm text-sm font-semibold shadow-sm border border-white/10">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            <span class="hidden md:inline font-hind">ড্যাশবোর্ড</span>
+        </a>
+
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white font-hind mt-4 md:mt-0">ZAMIL ACADEMY</h1>
+        <p class="mt-2 text-green-100 text-sm md:text-base font-hind opacity-90">Alim & HSC English 2nd Paper • Article Complete Grammar Guide</p>
+    </header>
+
+    <!-- সাবস্ক্রাইব বক্স -->
+    <div class="flex justify-center -mt-8 px-6 relative z-10">
+        <div class="bg-white p-8 shadow-md border-t-4 border-green-800 rounded-2xl max-w-md w-full text-center">
+            <p class="text-gray-700 text-lg mb-6 font-hind">
+                প্রিমিয়াম সেবা পেতে আমাদের ইউটিউব চ্যানেলটি সাবস্ক্রাইব করুন।
+            </p>
+            <a href="https://youtube.com/@zamil_academy?si=EbWJq_lwwbWrLar9" 
+               target="_blank"
+               class="inline-block bg-red-700 hover:bg-green-800 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-md font-hind">
+                চ্যানেল ভিজিট করুন
+            </a>
+        </div>
+    </div>
+
+    <!-- মূল কন্টেন্ট এরিয়া -->
+    <main class="flex-grow flex flex-col items-center pt-16 pb-12 px-6">
+        
+        <!-- টাইটেল -->
+        <div class="text-center mb-10">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-gray-800 font-hind">আর্টিকেল (A, An, The) ব্যবহারের ২৪টি নিয়মের সংকলন</h2>
+            <div class="w-16 h-1 bg-green-600 rounded-full mx-auto mt-3"></div>
+        </div>
+
+        <!-- ফিল্টার বা ক্যাটাগরি ট্যাব -->
+        <div class="flex flex-wrap justify-center gap-3 mb-10 w-full max-w-xl">
+            <button onclick="filterRules('all')" id="btn-all" class="px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind bg-green-800 text-white">সবগুলো নিয়ম</button>
+            <button onclick="filterRules('a-an')" id="btn-a-an" class="px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind bg-white text-gray-700 border border-gray-200 hover:bg-gray-50">A / An এর ব্যবহার</button>
+            <button onclick="filterRules('the')" id="btn-the" class="px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind bg-white text-gray-700 border border-gray-200 hover:bg-gray-50">The এর ব্যবহার</button>
+            <button onclick="filterRules('omission')" id="btn-omission" class="px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind bg-white text-gray-700 border border-gray-200 hover:bg-gray-50">Article না বসার নিয়ম</button>
+        </div>
+
+        <!-- নিয়মসমূহের গ্রিড কন্টেইনার -->
+        <div id="rules-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-5xl">
+            
+            <!-- Category 1: A / An (Rules 1-8) -->
+            <div class="rule-card a-an bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-blue-100 text-blue-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 01</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">ব্যঞ্জনবর্ণের (Consonant) আগে 'a'</h4>
+                <div class="bg-blue-50 text-blue-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-blue-500 font-poppins">
+                    <span class="font-bold">Example:</span> He wants to live <span class="text-blue-700 font-bold underline">a</span> better life. Rahim is <span class="text-blue-700 font-bold underline">a</span> student.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> কোনো শব্দের প্রথম অক্ষর বা উচ্চারণ যদি Consonant হয়, তবে তার আগে 'a' বসে।</p>
+            </div>
+
+            <div class="rule-card a-an bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-blue-100 text-blue-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 02</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">স্বরবর্ণের (Vowel) আগে 'an'</h4>
+                <div class="bg-blue-50 text-blue-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-blue-500 font-poppins">
+                    <span class="font-bold">Example:</span> It was <span class="text-blue-700 font-bold underline">an</span> easy work. He is <span class="text-blue-700 font-bold underline">an</span> honest man.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> কোনো শব্দের প্রথম অক্ষর বা উচ্চারণ যদি Vowel (a, e, i, o, u) হয়, তবে তার আগে 'an' বসে।</p>
+            </div>
+
+            <div class="rule-card a-an bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-blue-100 text-blue-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 03</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">'Many' এর পর 'a/an'</h4>
+                <div class="bg-blue-50 text-blue-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-blue-500 font-poppins">
+                    <span class="font-bold">Example:</span> <span class="text-blue-700 font-bold underline">Many a</span> time he visited the place. <span class="text-blue-700 font-bold underline">Many a</span> flower wastes its beauty.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> অনেকগুলো বোঝাতে 'Many' এর পর singular countable noun থাকলে তার আগে 'a/an' বসে।</p>
+            </div>
+
+            <div class="rule-card a-an bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-blue-100 text-blue-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 04</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">পরিচয় দিতে 'It is' এর পর 'a/an'</h4>
+                <div class="bg-blue-50 text-blue-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-blue-500 font-poppins">
+                    <span class="font-bold">Example:</span> It is <span class="text-blue-700 font-bold underline">a</span> matter of fact. It is <span class="text-blue-700 font-bold underline">a</span> unique question.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> কোনো কিছুর সাধারণ বর্ণনা বা পরিচয় দিতে 'It is' এর পর 'a/an' বসে।</p>
+            </div>
+
+            <div class="rule-card a-an bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-blue-100 text-blue-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 05</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">আবেগ প্রকাশে (Exclamatory sentence)</h4>
+                <div class="bg-blue-50 text-blue-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-blue-500 font-poppins">
+                    <span class="font-bold">Example:</span> What <span class="text-blue-700 font-bold underline">a</span> beautiful scenery! What <span class="text-blue-700 font-bold underline">an</span> excellent idea!
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> 'What' দিয়ে শুরু হওয়া বিস্ময়সূচক বা আবেগ প্রকাশকারী বাক্যে singular countable noun-এর আগে 'a/an' ব্যবহৃত হয়।</p>
+            </div>
+
+            <div class="rule-card a-an bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-blue-100 text-blue-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 06</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">Adverb এর আগে 'a/an'</h4>
+                <div class="bg-blue-50 text-blue-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-blue-500 font-poppins">
+                    <span class="font-bold">Example:</span> She is <span class="text-blue-700 font-bold underline">a</span> very pious lady. This is <span class="text-blue-700 font-bold underline">an</span> extremely exclusive item.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> যদি গঠনটি এমন হয়: [a/an + adverb + adjective + noun], তবে ঠিক পরের প্রথম শব্দটির উচ্চারণ অনুযায়ী আর্টিকেল বসে।</p>
+            </div>
+
+            <div class="rule-card a-an bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-blue-100 text-blue-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 07</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">সংক্ষিপ্ত শব্দের (Abbreviation) আগে</h4>
+                <div class="bg-blue-50 text-blue-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-blue-500 font-poppins">
+                    <span class="font-bold">Example:</span> My uncle is <span class="text-blue-700 font-bold underline">an</span> MBBS. He is <span class="text-blue-700 font-bold underline">a</span> BA graduate.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> সংক্ষিপ্ত শব্দের প্রথম অক্ষরের উচ্চারণ Vowel এর মতো হলে 'an' এবং Consonant এর মতো হলে 'a' বসে।</p>
+            </div>
+
+            <div class="rule-card a-an bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-blue-100 text-blue-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 08</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">নির্দিষ্ট কিছু ফ্রেজ (Phrases)</h4>
+                <div class="bg-blue-50 text-blue-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-blue-500 font-poppins">
+                    <span class="font-bold">Example:</span> Independence Day is <span class="text-blue-700 font-bold underline">a</span> red letter day. Books play <span class="text-blue-700 font-bold underline">a</span> vital role.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> কিছু কিছু নির্দিষ্ট ইডিওম্যাটিক ফ্রেজে সব সময় আর্টিকেল 'a' বসে।</p>
+            </div>
+
+            <!-- Category 2: The (Rules 9-16) -->
+            <div class="rule-card the bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-purple-100 text-purple-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 09</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">নির্দিষ্ট কিছু বোঝাতে</h4>
+                <div class="bg-purple-50 text-purple-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-purple-500 font-poppins">
+                    <span class="font-bold">Example:</span> <span class="text-purple-700 font-bold underline">The</span> boys are playing in the field. <span class="text-purple-700 font-bold underline">The</span> water of this pond is pure.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> কোনো Noun-কে নির্দিষ্ট করে বোঝাতে 'the' বসে। এটি গণনাযোগ্য বা অগণনযোগ্য উভয় ক্ষেত্রেই হতে পারে।</p>
+            </div>
+
+            <div class="rule-card the bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-purple-100 text-purple-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 10</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">'Of' যুক্ত Noun Phrase</h4>
+                <div class="bg-purple-50 text-purple-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-purple-500 font-poppins">
+                    <span class="font-bold">Example:</span> He works for <span class="text-purple-700 font-bold underline">the</span> welfare of his friend. I love <span class="text-purple-700 font-bold underline">the</span> beauties of nature.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> সাধারণত 'Noun + of + Noun' দিয়ে গঠিত ফ্রেজের প্রথম Noun টির পূর্বে 'the' বসে।</p>
+            </div>
+
+            <div class="rule-card the bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-purple-100 text-purple-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 11</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">দ্বিতীয়বার উল্লেখ করলে</h4>
+                <div class="bg-purple-50 text-purple-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-purple-500 font-poppins">
+                    <span class="font-bold">Example:</span> I saw a lamp on the table. <span class="text-purple-700 font-bold underline">The</span> lamp was mysterious.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> কোনো Common Noun প্রথমবার উল্লেখ করলে 'a/an' বসে, কিন্তু দ্বিতীয়বার ওই একই Noun উল্লেখ করলে তা নির্দিষ্ট হয়ে যায় এবং 'the' বসে।</p>
+            </div>
+
+            <div class="rule-card the bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-purple-100 text-purple-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 12</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">পুরো শ্রেণিকে বোঝাতে</h4>
+                <div class="bg-purple-50 text-purple-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-purple-500 font-poppins">
+                    <span class="font-bold">Example:</span> <span class="text-purple-700 font-bold underline">The</span> rich are not always happy. We should help <span class="text-purple-700 font-bold underline">the</span> poor.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> যখন কোনো Adjective বাক্যের Subject বা Object হিসেবে বসে পুরো নির্দিষ্ট একটি মানব শ্রেণিকে বোঝায়, তখন তার আগে 'the' বসে এবং সেটি Plural Common Noun হয়ে যায়।</p>
+            </div>
+
+            <div class="rule-card the bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-purple-100 text-purple-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 13</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">'One of' এর পর Superlative</h4>
+                <div class="bg-purple-50 text-purple-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-purple-500 font-poppins">
+                    <span class="font-bold">Example:</span> He is one of <span class="text-purple-700 font-bold underline">the</span> wisest persons. It is one of <span class="text-purple-700 font-bold underline">the</span> biggest problems.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> 'One of the' স্ট্রাকচারের সুপারলেটিভ ডিগ্রি এডজেক্টিভটির আগে সব সময় নির্দিষ্ট করে 'the' বসে।</p>
+            </div>
+
+            <div class="rule-card the bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-purple-100 text-purple-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 14</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">মহাবিশ্ব বা নির্দিষ্ট শব্দ</h4>
+                <div class="bg-purple-50 text-purple-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-purple-500 font-poppins">
+                    <span class="font-bold">Example:</span> Cybercrime is rising in <span class="text-purple-700 font-bold underline">the</span> modern world. He got <span class="text-purple-700 font-bold underline">the</span> first prize.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> World, first, examination, competition, top, country—এই ভৌগোলিক বা নির্দিষ্ট নির্দেশকারী সাধারণ শব্দগুলোর আগে সাধারণত 'the' বসে।</p>
+            </div>
+
+            <div class="rule-card the bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-purple-100 text-purple-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 15</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">অদ্বিতীয় বা বিখ্যাত কিছু</h4>
+                <div class="bg-purple-50 text-purple-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-purple-500 font-poppins">
+                    <span class="font-bold">Example:</span> We visited <span class="text-purple-700 font-bold underline">the</span> Taj Mahal. <span class="text-purple-700 font-bold underline">The</span> Sun rises in <span class="text-purple-700 font-bold underline">the</span> East. Read <span class="text-purple-700 font-bold underline">the</span> Holy Quran.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> মহাবিশ্বের অদ্বিতীয় বস্তু, বিখ্যাত ইমারত, দিক, সংবাদপত্র বা ধর্মীয় গ্রন্থরাজির নামের পূর্বে সব সময় 'the' বসে।</p>
+            </div>
+
+            <div class="rule-card the bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-purple-100 text-purple-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 16</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">বিশেষ কিছু ফ্রেজ</h4>
+                <div class="bg-purple-50 text-purple-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-purple-500 font-poppins">
+                    <span class="font-bold">Example:</span> On <span class="text-purple-700 font-bold underline">the</span> other hand, he is lazy. He did this at <span class="text-purple-700 font-bold underline">the</span> cost of his health.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> ইংরেজি ব্যাকরণে কিছু ব্যাকরণগত ফ্রেজে নির্দিষ্টভাবে 'the' ব্যবহারের ঐতিহ্য রয়েছে।</p>
+            </div>
+
+            <!-- Category 3: No Article / Omission (Rules 17-24) -->
+            <div class="rule-card omission bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-red-100 text-red-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 17</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">Possessive এর আগে/পরে</h4>
+                <div class="bg-red-50 text-red-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-red-500 font-poppins">
+                    <span class="font-bold">Example:</span> This is his <span class="text-red-700 font-bold underline">[✕]</span> idea. I love my <span class="text-red-700 font-bold underline">[✕]</span> country.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> Possessive Pronouns (যেমন: my, our, your, his, her, their, its) এর ঠিক আগে বা পরে কোনো প্রকার আর্টিকেল বসে না।</p>
+            </div>
+
+            <div class="rule-card omission bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-red-100 text-red-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 18</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">Demonstrative এর আগে/পরে</h4>
+                <div class="bg-red-50 text-red-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-red-500 font-poppins">
+                    <span class="font-bold">Example:</span> This <span class="text-red-700 font-bold underline">[✕]</span> building is very old. I want those <span class="text-red-700 font-bold underline">[✕]</span> books.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> Demonstrative (যেমন: this, that, these, those) এর আগে বা পরে কোনো আর্টিকেল ব্যবহৃত হয় না।</p>
+            </div>
+
+            <div class="rule-card omission bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-red-100 text-red-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 19</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">Adjective ও Noun এর মাঝে</h4>
+                <div class="bg-red-50 text-red-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-red-500 font-poppins">
+                    <span class="font-bold">Example:</span> He passed a miserable <span class="text-red-700 font-bold underline">[✕]</span> life. She is a beautiful <span class="text-red-700 font-bold underline">[✕]</span> girl.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> Adjective এবং Noun এর ঠিক মাঝখানে কোনো গ্যাপ থাকলে সেখানে কোনো আর্টিকেল বসে না। আর্টিকেল সর্বদা Adjective-এর পূর্বে বসে।</p>
+            </div>
+
+            <div class="rule-card omission bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-red-100 text-red-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 20</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">নির্দিষ্ট Group Verb বা Phrasal Verb এর পর</h4>
+                <div class="bg-red-50 text-red-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-red-500 font-poppins">
+                    <span class="font-bold">Example:</span> The shirt is made of <span class="text-red-700 font-bold underline">[✕]</span> cotton. Our class consists of <span class="text-red-700 font-bold underline">[✕]</span> fifty students.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> Consist of, made of, full of ইত্যাদি ফ্রেজের পরে সাধারণত সরাসরি Noun বসে, কোনো আর্টিকেলের প্রয়োজন হয় না।</p>
+            </div>
+
+            <div class="rule-card omission bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-red-100 text-red-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 21</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">Abstract, Material এবং Proper Noun</h4>
+                <div class="bg-red-50 text-red-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-red-500 font-poppins">
+                    <span class="font-bold">Example:</span> <span class="text-red-700 font-bold underline">[✕]</span> Honesty is the best policy. <span class="text-red-700 font-bold underline">[✕]</span> Paper is very useful.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> সাধারণত গুণবাচক (Abstract), বস্তুবাচক (Material) এবং নির্দিষ্ট নামবাচক (Proper) Noun এর পূর্বে কোনো সাধারণ আর্টিকেল বসে না।</p>
+            </div>
+
+            <div class="rule-card omission bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-red-100 text-red-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 22</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">'And' দিয়ে যুক্ত সমজাতীয় শব্দ</h4>
+                <div class="bg-red-50 text-red-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-red-500 font-poppins">
+                    <span class="font-bold">Example:</span> We need mental and <span class="text-red-700 font-bold underline">[✕]</span> physical fitness. He was honest and <span class="text-red-700 font-bold underline">[✕]</span> industrious.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> 'And' দিয়ে সমজাতীয় দুটি সমান্তরাল Noun বা Adjective যুক্ত হলে, দ্বিতীয় শব্দটির পূর্বে পুনরায় আর্টিকেল বসে না।</p>
+            </div>
+
+            <div class="rule-card omission bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-red-100 text-red-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 23</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">ভাষার নামের আগে</h4>
+                <div class="bg-red-50 text-red-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-red-500 font-poppins">
+                    <span class="font-bold">Example:</span> He speaks <span class="text-red-700 font-bold underline">[✕]</span> English fluently. <span class="text-red-700 font-bold underline">[✕]</span> Bengali is our mother tongue.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> যেকোনো ভাষার নামের আগে সাধারণত কোনো প্রকার আর্টিকেল বসে না। তবে ভাষার নামের শেষে 'Language' শব্দটি থাকলে 'the' বসে (যেমন: The English Language)।</p>
+            </div>
+
+            <div class="rule-card omission bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-red-100 text-red-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 24</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">Verb+ing এর পরের Noun</h4>
+                <div class="bg-red-50 text-red-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-red-500 font-poppins">
+                    <span class="font-bold">Example:</span> We cannot gain knowledge without reading <span class="text-red-700 font-bold underline">[✕]</span> newspaper. He is fond of catching <span class="text-red-700 font-bold underline">[✕]</span> fish.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> Preposition-এর পর 'Verb+ing' বা Gerund থাকলে এবং তার ঠিক পরেই সাধারণ অবজেক্ট Noun থাকলে তার পূর্বে কোনো আর্টিকেল বসানো প্রয়োজন হয় না।</p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- ফুটার -->
+    <footer class="text-center py-8 text-gray-500 text-sm border-t border-gray-200 bg-white">
+        <p class="font-hind">&copy; ২০২৬ ZAMIL ACADEMY। সর্বস্বত্ব সংরক্ষিত।</p>
+    </footer>
+
+    <!-- স্ক্রিপ্ট এবং লজিক হ্যান্ডলিং -->
+    <script>
+        function filterRules(category) {
+            // সকল কার্ড সংগ্রহ করা
+            const cards = document.querySelectorAll('.rule-card');
+            
+            // ট্যাব বাটনের ক্লাস ক্লিয়ার করা
+            const btnAll = document.getElementById('btn-all');
+            const btnAAn = document.getElementById('btn-a-an');
+            const btnThe = document.getElementById('btn-the');
+            const btnOmission = document.getElementById('btn-omission');
+            
+            const activeClass = "bg-green-800 text-white";
+            const inactiveClass = "bg-white text-gray-700 border border-gray-200 hover:bg-gray-50";
+            
+            btnAll.className = `px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind ${inactiveClass}`;
+            btnAAn.className = `px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind ${inactiveClass}`;
+            btnThe.className = `px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind ${inactiveClass}`;
+            btnOmission.className = `px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind ${inactiveClass}`;
+
+            // সিলেক্টেড ট্যাবে একটিভ ক্লাস দেওয়া
+            if (category === 'all') {
+                btnAll.className = `px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind ${activeClass}`;
+            } else if (category === 'a-an') {
+                btnAAn.className = `px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind ${activeClass}`;
+            } else if (category === 'the') {
+                btnThe.className = `px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind ${activeClass}`;
+            } else if (category === 'omission') {
+                btnOmission.className = `px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind ${activeClass}`;
+            }
+
+            // কার্ড ফিল্টারিং লুপ
+            cards.forEach(card => {
+                card.classList.add('fade-in');
+                if (category === 'all') {
+                    card.classList.remove('hidden');
+                } else {
+                    if (card.classList.contains(category)) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                }
+            });
+        }
+    </script>
+
+<script type="module">
+    // Firebase Time Tracking Script
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
+    import { getDatabase, ref, update, increment } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-database.js";
+
+    // ফায়ারবেজ কনফিগারেশন
+    const firebaseConfig = {
+        apiKey: "AIzaSyABpKz4xjVKWb6kVR_mT8d13dt9lcDwipE",
+        authDomain: "zamil-4e08e.firebaseapp.com",
+        databaseURL: "https://zamil-4e08e-default-rtdb.firebaseio.com/",
+        projectId: "zamil-4e08e"
+    };
+
+    // ফায়ারবেজ অ্যাপ এবং ডেটাবেজ ইনিশিয়ালিলাইজেশন
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+
+    // ডেটাবেজ কানেকশনটিকে গ্লোবাল করা
+    window.db = db; 
+
+    // প্রতি ৩০ সেকেন্ডে সময় ট্র্যাকিং
+    const timeRef = ref(db, 'total_time_spent');
+
+    setInterval(() => {
+        // ইউজার ট্যাব অন্য ট্যাবে বা ব্যাকগ্রাউন্ডে থাকলে কোডটি রান করবে না
+        if (document.hidden) return; 
+
+        update(timeRef, {
+            "seconds": increment(30)
+        }).catch(err => console.error("Error updating time:", err));
+    }, 30000);
+
+    console.log("Firebase time tracking active (optimized).");
+</script>
+
+</body>
+</html>

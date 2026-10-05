@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>পেইড ব্যাচ ভর্তি | জামিল একাডেমি</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Hind Siliguri', sans-serif; }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #065f46, #047857);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col justify-between selection:bg-green-200">
+
+    <!-- নোটিফিকেশন টোস্ট -->
+    <div id="toast" class="fixed top-5 right-5 z-50 transform translate-y-[-100px] opacity-0 transition-all duration-300 pointer-events-none">
+        <div class="bg-gray-900 text-white px-6 py-4 rounded-xl shadow-2xl flex items-center gap-3">
+            <span id="toast-icon" class="text-xl">✨</span>
+            <p id="toast-text" class="font-medium text-sm md:text-base"></p>
+        </div>
+    </div>
+
+    <!-- হেডার -->
+    <header class="bg-gradient-to-r from-green-900 to-green-700 text-white py-12 px-4 md:px-6 text-center shadow-xl rounded-b-[40px] relative z-10">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-2 drop-shadow-md">ZAMIL ACADEMY</h1>
+        <p class="text-green-100 mt-2 text-sm md:text-base font-medium max-w-2xl mx-auto">আলিম (ALIM) ও এইচএসসি (HSC) পরীক্ষার্থীদের জন্য বাংলাদেশের সেরা গোছানো প্রস্তুতি কোর্স</p>
+        
+        <!-- সোশ্যাল ও কন্টাক্ট লিংকসমূহ (উপরে নিয়ে আসা হয়েছে) -->
+        <div class="flex flex-wrap justify-center gap-3 mt-8 max-w-4xl mx-auto">
+            <a href="https://youtube.com/@zamil_academy?si=mnc2vilPnYtTGtC4" target="_blank" class="bg-white/10 hover:bg-white/20 transition px-4 py-2.5 rounded-full text-sm font-semibold flex items-center gap-2 border border-white/20 shadow-sm backdrop-blur-sm">
+                <i class="fa-brands fa-youtube text-red-500 text-lg"></i> YouTube
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61590877342889" target="_blank" class="bg-white/10 hover:bg-white/20 transition px-4 py-2.5 rounded-full text-sm font-semibold flex items-center gap-2 border border-white/20 shadow-sm backdrop-blur-sm">
+                <i class="fa-brands fa-facebook text-blue-400 text-lg"></i> Facebook Page
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61586021619177" target="_blank" class="bg-white/10 hover:bg-white/20 transition px-4 py-2.5 rounded-full text-sm font-semibold flex items-center gap-2 border border-white/20 shadow-sm backdrop-blur-sm">
+                <i class="fa-solid fa-user-tie text-blue-200 text-lg"></i> Personal ID
+            </a>
+            <a href="mailto:penpoems854@gmail.com" class="bg-white/10 hover:bg-white/20 transition px-4 py-2.5 rounded-full text-sm font-semibold flex items-center gap-2 border border-white/20 shadow-sm backdrop-blur-sm">
+                <i class="fa-solid fa-envelope text-red-300 text-lg"></i> Email Us
+            </a>
+        </div>
+    </header>
+
+    <!-- মূল কন্টেন্ট -->
+    <main class="flex-grow flex flex-col items-center justify-center px-4 py-8 -mt-6 relative z-20 w-full max-w-5xl mx-auto space-y-8">
+
+        <!-- কোর্সের বিস্তারিত ও সাইকোলজিক্যাল হুক -->
+        <div class="bg-white p-6 md:p-8 shadow-xl border-t-4 border-green-700 rounded-2xl w-full">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2"><i class="fa-solid fa-graduation-cap text-green-700 mr-2"></i>আসসালামু আলাইকুম!</h2>
+            <p class="text-gray-700 leading-relaxed mb-6 text-sm md:text-base">
+                বিশেষ করে যারা <span class="font-bold text-green-800 bg-green-100 px-1.5 rounded">এসএসসি (HSC)</span> এবং <span class="font-bold text-green-800 bg-green-100 px-1.5 rounded">আলিম (ALIM)</span> পরীক্ষার্থী আছো, এই কোর্সটি তোমাদের জন্যই ডিজাইন করা। পরীক্ষার আগে হাজারো  পৃষ্ঠার ভিড়ে দিক হারিয়ে ফেলছো? চিন্তার কিছু নেই, আমাদের গোছানো প্রস্তুতি তোমাকে পৌঁছে দেবে কাঙ্ক্ষিত লক্ষ্যে।
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-5 mb-6">
+                <!-- ইংলিশ সেকশন -->
+                <div class="bg-blue-50 p-5 rounded-xl border border-blue-100">
+                    <h3 class="font-bold text-blue-800 mb-2 flex items-center gap-2"><i class="fa-solid fa-language text-lg"></i> ইংরেজি ১ম ও ২য় পত্র + বাংলা </h3>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        ইংরেজির A to Z প্রিপারেশন! গ্রামারের যত রুলস আছে, সব এতো সহজে বুঝিয়ে দেওয়া হয়েছে যে, তুমি যদি মোটামুটি ইংরেজি পারো—তাহলে গ্যারান্টি দিচ্ছি, <b>আর কোথাও প্রাইভেট পড়তে হবে না! ইন শা আল্লাহ </b>
+                    </p>
+                </div>
+              
+
+                <!-- সাপোর্ট সেকশন -->
+                <div class="bg-orange-50 p-5 rounded-xl border border-orange-100 flex flex-col justify-center">
+                    <h3 class="font-bold text-orange-800 mb-2 flex items-center gap-2"><i class="fa-brands fa-whatsapp text-xl"></i> বিস্তারিত জানতে চান?</h3>
+                    <p class="text-sm text-gray-700 mb-4">যেকোনো প্রশ্ন, কনফিউশন বা ভর্তি সংক্রান্ত বিস্তারিত তথ্য জানতে সরাসরি আমাদের হোয়াটসঅ্যাপে মেসেজ দিন।</p>
+                    <a href="https://wa.me/+8801327417474" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2.5 px-4 rounded-xl text-center transition flex items-center justify-center gap-2 shadow-md">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp-এ মেসেজ দিন
+                    </a>
+                </div>
+            </div>
+            <p class="text-xs text-center text-gray-500 italic mt-2">* সঠিক গাইডলাইন পেলে এ+ পাওয়া শুধু সময়ের ব্যাপার। আজই যুক্ত হও আমাদের সাথে!</p>
+        </div>
+
+        <!-- ১. অথেনটিকেশন সেকশন (যদি ইউজার লগইন না থাকে) -->
+        <div id="auth-section" class="bg-white p-6 md:p-8 shadow-xl border-t-4 border-gray-800 rounded-2xl max-w-md w-full transition-all duration-300">
+            <div class="text-center mb-6">
+                <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <i class="fa-solid fa-user-lock text-2xl text-gray-700"></i>
+                </div>
+                <h2 class="text-xl font-bold text-gray-800 mt-2">অ্যাকাউন্ট প্যানেল</h2>
+                <p class="text-xs text-gray-500 mt-1">ভর্তি হতে বা পেমেন্ট করতে প্রথমে লগইন বা রেজিস্ট্রেশন করুন।</p>
+            </div>
+
+            <!-- ট্যাব বাটন -->
+            <div class="flex border-b border-gray-200 mb-6 text-sm">
+                <button id="tab-login" class="flex-1 py-2.5 text-center font-bold text-green-700 border-b-2 border-green-700 transition duration-200">লগইন</button>
+                <button id="tab-register" class="flex-1 py-2.5 text-center font-bold text-gray-400 hover:text-green-700 transition duration-200">নতুন রেজিস্ট্রেশন</button>
+            </div>
+
+            <!-- লগইন ফর্ম -->
+            <form id="login-form" class="space-y-4">
+                <div>
+                    <label class="block text-gray-700 text-xs mb-1.5 font-semibold">আপনার রেজিস্টার্ড ইমেইল</label>
+                    <div class="relative">
+                        <i class="fa-regular fa-envelope absolute left-3 top-3.5 text-gray-400"></i>
+                        <input type="email" id="login-email" required class="w-full pl-10 pr-4 py-2.5 bg-gray-50 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 focus:outline-none transition text-sm" placeholder="example@mail.com">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-gray-700 text-xs mb-1.5 font-semibold">পাসওয়ার্ড</label>
+                    <div class="relative">
+                        <i class="fa-solid fa-lock absolute left-3 top-3.5 text-gray-400"></i>
+                        <input type="password" id="login-password" required class="w-full pl-10 pr-4 py-2.5 bg-gray-50 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 focus:outline-none transition text-sm" placeholder="••••••••">
+                    </div>
+                </div>
+                <button type="submit" class="w-full bg-gray-800 hover:bg-gray-900 text-white font-bold py-3 rounded-xl transition duration-300 shadow-lg text-sm mt-2">লগইন করুন <i class="fa-solid fa-arrow-right ml-1"></i></button>
+            </form>
+
+            <!-- রেজিস্ট্রেশন ফর্ম -->
+            <form id="register-form" class="space-y-4 hidden">
+                <div>
+                    <label class="block text-gray-700 text-xs mb-1.5 font-semibold">আপনার নাম</label>
+                    <input type="text" id="reg-name" required class="w-full px-4 py-2.5 bg-gray-50 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:outline-none transition text-sm" placeholder="মোহাম্মদ জামিল">
+                </div>
+                <div>
+                    <label class="block text-gray-700 text-xs mb-1.5 font-semibold">ইমেইল ঠিকানা</label>
+                    <input type="email" id="reg-email" required class="w-full px-4 py-2.5 bg-gray-50 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:outline-none transition text-sm" placeholder="example@mail.com">
+                </div>
+                <div>
+                    <label class="block text-gray-700 text-xs mb-1.5 font-semibold">মোবাইল নাম্বার</label>
+                    <input type="tel" id="reg-phone" required class="w-full px-4 py-2.5 bg-gray-50 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:outline-none transition text-sm" placeholder="017XXXXXXXX">
+                </div>
+                <div>
+                    <label class="block text-gray-700 text-xs mb-1.5 font-semibold">পাসওয়ার্ড (কমপক্ষে ৬টি সংখ্যা/অক্ষর)</label>
+                    <input type="password" id="reg-password" required class="w-full px-4 py-2.5 bg-gray-50 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:outline-none transition text-sm" placeholder="••••••••">
+                </div>
+                <button type="submit" class="w-full bg-green-700 hover:bg-green-800 text-white font-bold py-3 rounded-xl transition duration-300 shadow-lg text-sm mt-2">রেজিস্ট্রেশন করুন</button>
+            </form>
+        </div>
+
+        <!-- ২. ভর্তি ও পেমেন্ট সেকশন (লগইন করা থাকলে এটি দেখাবে) -->
+        <div id="payment-section" class="bg-white p-6 md:p-8 shadow-xl border-t-4 border-green-700 rounded-2xl max-w-md w-full transition-all duration-300 hidden">
+            <div class="flex justify-between items-center border-b border-gray-100 pb-4 mb-5">
+                <div>
+                    <p class="text-xs text-gray-500">লগইন অবস্থায় আছেন</p>
+                    <p class="text-sm font-bold text-gray-800 truncate w-48" id="user-display-email"></p>
+                </div>
+                <button id="btn-logout" class="bg-red-50 text-red-600 hover:bg-red-100 px-3 py-1.5 rounded-lg text-xs font-bold transition">লগআউট</button>
+            </div>
+
+            <div class="text-center mb-6">
+                <div class="inline-block bg-orange-100 border border-orange-200 px-4 py-1.5 rounded-full mb-3">
+                    <span class="font-bold text-orange-600 text-sm flex items-center gap-2"><i class="fa-solid fa-money-bill-wave"></i> কোর্স ফি: মাত্র ৮০ টাকা</span>
+                </div>
+                <p class="text-gray-700 text-sm mb-3">
+                    নিচের নগদ নম্বরে <span class="font-bold text-red-600">সেন্ডমানি (Send Money)</span> করে ফর্মটি পূরণ করুন।
+                </p>
+                
+                <!-- পেমেন্ট নাম্বার বক্স -->
+                <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-orange-500"></div>
+                    <p class="text-xs text-gray-500 font-semibold mb-1 uppercase tracking-wider">নগদ পার্সোনাল নাম্বার</p>
+                    <div class="flex items-center justify-center gap-3">
+                        <img src="https://download.logo.wine/logo/Nagad/Nagad-Logo.wine.png" alt="Nagad" class="h-8 object-contain">
+                        <span class="text-2xl font-extrabold text-gray-800 tracking-wider">01327417474</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- পেমেন্ট ফরম -->
+            <form id="payment-form" class="space-y-4">
+                <div>
+                    <label class="block text-gray-700 text-xs mb-1.5 font-semibold">আপনার অ্যাকাউন্টের জিমেইল</label>
+                    <input type="email" id="pay-email" readonly class="w-full px-4 py-2.5 bg-gray-100 border border-gray-200 rounded-xl focus:outline-none text-sm font-semibold text-gray-500 cursor-not-allowed">
+                </div>
+                <div>
+                    <label class="block text-gray-700 text-xs mb-1.5 font-semibold">যে নম্বর থেকে ৮০ টাকা পাঠিয়েছেন</label>
+                    <input type="tel" id="pay-phone" required class="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:outline-none transition text-sm" placeholder="01XXXXXXXXX">
+                </div>
+                <div>
+                    <label class="block text-gray-700 text-xs mb-1.5 font-semibold">নগদ ট্রানজেকশন আইডি (TxID)</label>
+                    <input type="text" id="pay-txid" required class="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:outline-none transition text-sm font-mono uppercase tracking-widest" placeholder="7A8B9C0D">
+                </div>
+                <button type="submit" id="submitBtn" class="w-full bg-gradient-to-r from-green-600 to-green-800 hover:from-green-700 hover:to-green-900 text-white font-bold py-3.5 rounded-xl transition duration-300 shadow-lg text-sm mt-4 flex justify-center items-center gap-2">
+                    <i class="fa-solid fa-paper-plane"></i> পেমেন্ট যাচাইয়ের অনুরোধ পাঠান
+                </button>
+            </form>
+        </div>
+
+    </main>
+
+    <!-- ফুটার -->
+    <footer class="bg-gray-900 text-white pt-10 pb-6 border-t border-gray-800 mt-10">
+        <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-center md:text-left">
+            <div>
+                <h3 class="text-xl font-bold mb-3">ZAMIL ACADEMY</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">আলিম ও এইচএসসি পরীক্ষার্থীদের জন্য নির্ভরযোগ্য অনলাইন প্লাটফর্ম। ঘরে বসেই নাও সেরা প্রস্তুতি।</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold mb-3 text-green-400">গুরুত্বপূর্ণ লিংক</h3>
+                <ul class="space-y-2 text-sm text-gray-300">
+                    <li><a href="https://www.facebook.com/profile.php?id=61586021619177" target="_blank" class="hover:text-white transition"><i class="fa-solid fa-user-tie mr-2"></i>প্রধান শিক্ষক (Personal ID)</a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61590877342889" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-facebook mr-2"></i>অফিশিয়াল পেজ</a></li>
+                    <li><a href="mailto:penpoems854@gmail.com" class="hover:text-white transition"><i class="fa-solid fa-envelope mr-2"></i>penpoems854@gmail.com</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold mb-3 text-green-400">যোগাযোগ</h3>
+                <ul class="space-y-2 text-sm text-gray-300">
+                    <li><i class="fa-brands fa-whatsapp mr-2 text-green-500"></i>01327417474</li>
+                    <li class="text-xs text-gray-500 mt-2">যেকোনো টেকনিক্যাল সমস্যা বা ভর্তির বিষয়ে আমাদের হোয়াটসঅ্যাপে বা জিমেইলে মেসেজ দিন।</li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center mt-10 pt-4 border-t border-gray-800 text-gray-500 text-xs">
+            <p>&copy; ২০২৬ ZAMIL ACADEMY। সর্বস্বত্ব সংরক্ষিত।</p>
+        </div>
+    </footer>
+
+    <!-- ফায়ারবেস স্ক্রিপ্ট -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, addDoc, doc, setDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyABpKz4xjVKWb6kVR_mT8d13dt9lcDwipE",
+            authDomain: "zamil-4e08e.firebaseapp.com",
+            projectId: "zamil-4e08e",
+            storageBucket: "zamil-4e08e.firebasestorage.app",
+            messagingSenderId: "696619411784",
+            appId: "1:696619411784:web:3dce390ed5b840cbc32b7d"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+        const authSection = document.getElementById('auth-section');
+        const paymentSection = document.getElementById('payment-section');
+        const tabLogin = document.getElementById('tab-login');
+        const tabRegister = document.getElementById('tab-register');
+        const loginForm = document.getElementById('login-form');
+        const registerForm = document.getElementById('register-form');
+        const btnLogout = document.getElementById('btn-logout');
+        const userDisplayEmail = document.getElementById('user-display-email');
+        const payEmailInput = document.getElementById('pay-email');
+        const paymentForm = document.getElementById('payment-form');
+
+        function showToast(text, type = "success") {
+            const toast = document.getElementById('toast');
+            const toastText = document.getElementById('toast-text');
+            const toastIcon = document.getElementById('toast-icon');
+
+            toastText.innerText = text;
+            toastIcon.innerText = type === "success" ? "✅" : "⚠️";
+            toastIcon.className = type === "success" ? "text-green-400 text-xl" : "text-red-400 text-xl";
+            
+            toast.classList.remove('translate-y-[-100px]', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.add('translate-y-[-100px]', 'opacity-0');
+                toast.classList.remove('translate-y-0', 'opacity-100');
+            }, 4000);
+        }
+
+        tabLogin.addEventListener('click', () => {
+            tabLogin.className = "flex-1 py-2.5 text-center font-bold text-green-700 border-b-2 border-green-700 transition duration-200";
+            tabRegister.className = "flex-1 py-2.5 text-center font-bold text-gray-400 hover:text-green-700 transition duration-200";
+            loginForm.classList.remove('hidden');
+            registerForm.classList.add('hidden');
+        });
+
+        tabRegister.addEventListener('click', () => {
+            tabRegister.className = "flex-1 py-2.5 text-center font-bold text-green-700 border-b-2 border-green-700 transition duration-200";
+            tabLogin.className = "flex-1 py-2.5 text-center font-bold text-gray-400 hover:text-green-700 transition duration-200";
+            registerForm.classList.remove('hidden');
+            loginForm.classList.add('hidden');
+        });
+
+        registerForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = registerForm.querySelector('button[type="submit"]');
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> অপেক্ষা করুন...';
+            btn.disabled = true;
+
+            const name = document.getElementById('reg-name').value;
+            const email = document.getElementById('reg-email').value;
+            const phone = document.getElementById('reg-phone').value;
+            const password = document.getElementById('reg-password').value;
+
+            try {
+                const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+                const user = userCredential.user;
+
+                await setDoc(doc(db, "academyUsers", user.uid), {
+                    uid: user.uid,
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    createdAt: new Date().toISOString()
+                });
+
+                showToast("অ্যাকাউন্ট সফলভাবে তৈরি হয়েছে! এখন লগইন করুন।");
+                registerForm.reset();
+                tabLogin.click(); // Switch to login tab
+            } catch (error) {
+                let msg = "রেজিস্ট্রেশন ব্যর্থ হয়েছে। পুনরায় চেষ্টা করুন।";
+                if (error.code === 'auth/email-already-in-use') msg = "এই ইমেইলটি আগে থেকেই নিবন্ধিত।";
+                if (error.code === 'auth/weak-password') msg = "পাসওয়ার্ড কমপক্ষে ৬ অক্ষরের হতে হবে।";
+                showToast(msg, "error");
+            } finally {
+                btn.innerHTML = 'রেজিস্ট্রেশন করুন';
+                btn.disabled = false;
+            }
+        });
+
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = loginForm.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> লগইন হচ্ছে...';
+            btn.disabled = true;
+
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+
+            try {
+                await signInWithEmailAndPassword(auth, email, password);
+                showToast("লগইন সফল হয়েছে!");
+                loginForm.reset();
+            } catch (error) {
+                showToast("ভুল ইমেইল অথবা পাসওয়ার্ড!", "error");
+            } finally {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }
+        });
+
+        btnLogout.addEventListener('click', async () => {
+            await signOut(auth);
+            showToast("লগআউট সম্পন্ন হয়েছে।");
+        });
+
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                authSection.classList.add('hidden');
+                paymentSection.classList.remove('hidden');
+                userDisplayEmail.innerText = user.email;
+                payEmailInput.value = user.email;
+                
+                // Scroll to payment section smoothly
+                paymentSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } else {
+                authSection.classList.remove('hidden');
+                paymentSection.classList.add('hidden');
+            }
+        });
+
+        paymentForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const submitBtn = document.getElementById('submitBtn');
+            const originalText = submitBtn.innerHTML;
+            
+            const email = payEmailInput.value;
+            const phone = document.getElementById('pay-phone').value;
+            const txid = document.getElementById('pay-txid').value;
+
+            if(!email || !phone || !txid) {
+                showToast("অনুগ্রহ করে সব তথ্য প্রদান করুন।", "error");
+                return;
+            }
+
+            try {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> সাবমিট করা হচ্ছে...';
+
+                await addDoc(collection(db, "pending_payments"), {
+                    email: email,
+                    phone: phone,
+                    txid: txid.toUpperCase(),
+                    status: 'pending',
+                    submittedAt: new Date().toISOString()
+                });
+
+                showToast("অনুরোধ সফল! আমরা দ্রুত চেক করে আপনাকে পেইড গ্রুপে যুক্ত করে নিবো।");
+                document.getElementById('pay-phone').value = '';
+                document.getElementById('pay-txid').value = '';
+            } catch (error) {
+                showToast("ইন্টারনেট সমস্যা বা সার্ভার ত্রুটি। আবার চেষ্টা করুন।", "error");
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            }
+        });
+
+    </script>
+</body>
+</html>

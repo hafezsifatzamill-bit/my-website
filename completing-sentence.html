@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAMIL ACADEMY - Completing Sentence Practice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Hind Siliguri', sans-serif; }
+        .completed-card {
+            background-color: #f0fdf4 !important;
+            border-color: #16a34a !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+    <!-- হেডার: পুরো বক্স সবুজ এবং নিচের দিকে কার্ভ করা -->
+    <header class="bg-green-800 text-white py-12 px-6 text-center shadow-lg rounded-b-[40px]">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white-400">ZAMIL ACADEMY</h1>
+    </header>
+
+    <!-- সাবস্ক্রাইব বক্স -->
+    <div class="flex justify-center -mt-8 px-6">
+        <div class="bg-white p-8 shadow-md border-t-4 border-green-800 rounded-2xl max-w-md w-full text-center">
+            <p class="text-gray-700 text-lg mb-6">
+                প্রিমিয়াম সেবা পেতে আমাদের ইউটিউব চ্যানেলটি সাবস্ক্রাইব করুন।
+            </p>
+            <a href="https://youtube.com/@zamil_academy?si=EbWJq_lwwbWrLar9" 
+               target="_blank"
+               class="inline-block bg-red-700 hover:bg-green-800 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-md">
+                চ্যানেল ভিজিট করুন
+            </a>
+        </div>
+    </div>
+
+    <!-- মূল কন্টেন্ট (Main Content) -->
+    <main class="flex-grow max-w-4xl w-full mx-auto px-4 md:px-6 py-12">
+        
+        <!-- রুলস পেজে যাওয়ার আকর্ষণীয় বক্স -->
+        <div class="mb-10">
+            <a href="completing-sentence-rules.html" class="block bg-gradient-to-r from-green-700 to-green-900 hover:from-green-800 hover:to-green-950 text-white p-6 rounded-2xl shadow-md text-center transition duration-300 transform hover:scale-[1.02]">
+                <h3 class="text-2xl font-bold mb-1">📖 কমপ্লিটিং সেন্টেন্স এর রুলস দেখুন</h3>
+                <p class="text-green-100 text-sm md:text-base">১ম, ২য়, ৩য় কন্ডিশনাল এবং সকল রুলস সহজ ব্যাখ্যা ও উদাহরণ সহ দেখতে এখানে ক্লিক করুন।</p>
+            </a>
+        </div>
+
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">Completing Sentence Practice Board</h2>
+            <p class="text-green-700 font-semibold text-lg">HSC & Alim English 2nd Paper (Question No. 4)</p>
+            <div class="w-24 h-1 bg-green-700 mx-auto mt-3 rounded"></div>
+        </div>
+
+        <!-- এক্সারসাইজ সেকশনসমূহ -->
+        <div class="space-y-12" id="practice-container">
+            
+            <!-- Exercise 1 -->
+            <div id="ex-1" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 01</span>
+                    <button onclick="toggleComplete(1)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-1"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg">
+                    <p><strong>(a)</strong> Books are our best friends. If we read books, ________.</p>
+                    <p><strong>(b)</strong> We must save money for the future. It is high time we ________.</p>
+                    <p><strong>(c)</strong> Walk fast lest ________.</p>
+                    <p><strong>(d)</strong> The load is too heavy ________.</p>
+                    <p><strong>(e)</strong> Since they had played well, ________.</p>
+                    <p><strong>(f)</strong> Five years have passed since ________.</p>
+                    <p><strong>(g)</strong> Would you mind ________?</p>
+                    <p><strong>(h)</strong> 1971 is the year when ________.</p>
+                    <p><strong>(i)</strong> He talks as if ________.</p>
+                    <p><strong>(j)</strong> Although he is poor, ________.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(1)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-1" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <button onclick="showSpecificAnswer(1, 'a')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">A</button>
+                            <button onclick="showSpecificAnswer(1, 'b')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">B</button>
+                            <button onclick="showSpecificAnswer(1, 'c')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">C</button>
+                            <button onclick="showSpecificAnswer(1, 'd')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">D</button>
+                            <button onclick="showSpecificAnswer(1, 'e')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">E</button>
+                            <button onclick="showSpecificAnswer(1, 'f')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">F</button>
+                            <button onclick="showSpecificAnswer(1, 'g')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">G</button>
+                            <button onclick="showSpecificAnswer(1, 'h')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">H</button>
+                            <button onclick="showSpecificAnswer(1, 'i')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">I</button>
+                            <button onclick="showSpecificAnswer(1, 'j')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">J</button>
+                        </div>
+                        <div id="specific-ans-1" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 2 -->
+            <div id="ex-2" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 02</span>
+                    <button onclick="toggleComplete(2)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-2"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg">
+                    <p><strong>(a)</strong> If I had a computer, ________.</p>
+                    <p><strong>(b)</strong> Had I seen him before, ________.</p>
+                    <p><strong>(c)</strong> No sooner had the thief seen the police ________.</p>
+                    <p><strong>(d)</strong> The weather was so cold that ________.</p>
+                    <p><strong>(e)</strong> We must work hard so that ________.</p>
+                    <p><strong>(f)</strong> I wish ________.</p>
+                    <p><strong>(g)</strong> Strike the iron while ________.</p>
+                    <p><strong>(h)</strong> Where there is a will, ________.</p>
+                    <p><strong>(i)</strong> He could not come to school because of ________.</p>
+                    <p><strong>(j)</strong> Stand here until ________.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(2)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-2" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <button onclick="showSpecificAnswer(2, 'a')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">A</button>
+                            <button onclick="showSpecificAnswer(2, 'b')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">B</button>
+                            <button onclick="showSpecificAnswer(2, 'c')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">C</button>
+                            <button onclick="showSpecificAnswer(2, 'd')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">D</button>
+                            <button onclick="showSpecificAnswer(2, 'e')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">E</button>
+                            <button onclick="showSpecificAnswer(2, 'f')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">F</button>
+                            <button onclick="showSpecificAnswer(2, 'g')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">G</button>
+                            <button onclick="showSpecificAnswer(2, 'h')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">H</button>
+                            <button onclick="showSpecificAnswer(2, 'i')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">I</button>
+                            <button onclick="showSpecificAnswer(2, 'j')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">J</button>
+                        </div>
+                        <div id="specific-ans-2" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 3 -->
+            <div id="ex-3" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 03</span>
+                    <button onclick="toggleComplete(3)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-3"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg">
+                    <p><strong>(a)</strong> Education is the backbone of a nation. No nation can prosper unless ________.</p>
+                    <p><strong>(b)</strong> It was long ago since ________.</p>
+                    <p><strong>(c)</strong> If we are not careful about our health, ________.</p>
+                    <p><strong>(d)</strong> Corruption is a curse. It is high time we ________.</p>
+                    <p><strong>(e)</strong> The girl talks as though ________.</p>
+                    <p><strong>(f)</strong> Danger often comes where ________.</p>
+                    <p><strong>(g)</strong> Industry is the ________.</p>
+                    <p><strong>(h)</strong> She studied hard lest ________.</p>
+                    <p><strong>(i)</strong> United we stand, ________.</p>
+                    <p><strong>(j)</strong> While walking in the street, ________.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(3)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-3" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <button onclick="showSpecificAnswer(3, 'a')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">A</button>
+                            <button onclick="showSpecificAnswer(3, 'b')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">B</button>
+                            <button onclick="showSpecificAnswer(3, 'c')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">C</button>
+                            <button onclick="showSpecificAnswer(3, 'd')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">D</button>
+                            <button onclick="showSpecificAnswer(3, 'e')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">E</button>
+                            <button onclick="showSpecificAnswer(3, 'f')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">F</button>
+                            <button onclick="showSpecificAnswer(3, 'g')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">G</button>
+                            <button onclick="showSpecificAnswer(3, 'h')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">H</button>
+                            <button onclick="showSpecificAnswer(3, 'i')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">I</button>
+                            <button onclick="showSpecificAnswer(3, 'j')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">J</button>
+                        </div>
+                        <div id="specific-ans-3" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercises 4 to 10 (সহজে কপি ও রিড করতে সুবিধার জন্য জাভাস্ক্রিপ্ট ডেটা এবং এইচটিএমএল স্ট্রাকচার সমন্বয় করা হয়েছে) -->
+            <!-- Exercise 4 -->
+            <div id="ex-4" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 04</span>
+                    <button onclick="toggleComplete(4)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-4"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg">
+                    <p><strong>(a)</strong> Scarcity of water is a big problem. If it does not rain, ________.</p>
+                    <p><strong>(b)</strong> He behaves so rudely that ________.</p>
+                    <p><strong>(c)</strong> We reached the station after ________.</p>
+                    <p><strong>(d)</strong> Ten years passed since my grandfather ________.</p>
+                    <p><strong>(e)</strong> Would you mind ________?</p>
+                    <p><strong>(f)</strong> He studied diligently so that ________.</p>
+                    <p><strong>(g)</strong> Though he practiced hard, ________.</p>
+                    <p><strong>(h)</strong> A proverb goes that time and tide ________.</p>
+                    <p><strong>(i)</strong> If I had known your arrival, ________.</p>
+                    <p><strong>(j)</strong> Bangladesh is a small country, but she has ________.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(4)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-4" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <!-- A to J Buttons -->
+                            <script>
+                                for(let ch of ['a','b','c','d','e','f','g','h','i','j']) {
+                                    document.write(`<button onclick="showSpecificAnswer(4, '${ch}')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition uppercase mr-2 mb-2">${ch}</button>`);
+                                }
+                            </script>
+                        </div>
+                        <div id="specific-ans-4" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 5 -->
+            <div id="ex-5" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 05</span>
+                    <button onclick="toggleComplete(5)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-5"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg">
+                    <p><strong>(a)</strong> She ran fast lest ________.</p>
+                    <p><strong>(b)</strong> If you do not make a habit of reading, ________.</p>
+                    <p><strong>(c)</strong> It is high time we ________ our environment from pollution.</p>
+                    <p><strong>(d)</strong> The old man is too weak ________.</p>
+                    <p><strong>(e)</strong> Many years have passed since ________.</p>
+                    <p><strong>(f)</strong> No sooner had we entered the classroom ________.</p>
+                    <p><strong>(g)</strong> Since he was very tired, ________.</p>
+                    <p><strong>(h)</strong> Where there is life, ________.</p>
+                    <p><strong>(i)</strong> If I were a bird, ________.</p>
+                    <p><strong>(j)</strong> I wish I ________.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(5)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-5" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <script>
+                                for(let ch of ['a','b','c','d','e','f','g','h','i','j']) {
+                                    document.write(`<button onclick="showSpecificAnswer(5, '${ch}')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition uppercase mr-2 mb-2">${ch}</button>`);
+                                }
+                            </script>
+                        </div>
+                        <div id="specific-ans-5" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 6 -->
+            <div id="ex-6" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 06</span>
+                    <button onclick="toggleComplete(6)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-6"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg">
+                    <p><strong>(a)</strong> If the driver had been careful, ________.</p>
+                    <p><strong>(b)</strong> Had I knew his address, ________.</p>
+                    <p><strong>(c)</strong> It is the book which ________.</p>
+                    <p><strong>(d)</strong> The boy talks as if ________.</p>
+                    <p><strong>(e)</strong> He cannot write a line properly, let alone ________.</p>
+                    <p><strong>(f)</strong> Time is so valuable that ________.</p>
+                    <p><strong>(g)</strong> We study hard so that ________.</p>
+                    <p><strong>(h)</strong> A stitch in time ________.</p>
+                    <p><strong>(i)</strong> While sleeping, ________.</p>
+                    <p><strong>(j)</strong> If you help me, ________.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(6)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-6" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <script>
+                                for(let ch of ['a','b','c','d','e','f','g','h','i','j']) {
+                                    document.write(`<button onclick="showSpecificAnswer(6, '${ch}')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition uppercase mr-2 mb-2">${ch}</button>`);
+                                }
+                            </script>
+                        </div>
+                        <div id="specific-ans-6" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 7 -->
+            <div id="ex-7" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 07</span>
+                    <button onclick="toggleComplete(7)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-7"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg">
+                    <p><strong>(a)</strong> There is a banyan tree where ________.</p>
+                    <p><strong>(b)</strong> Although she studied sincerely, ________.</p>
+                    <p><strong>(c)</strong> Since he didn't follow my advice, ________.</p>
+                    <p><strong>(d)</strong> The problem was too difficult for him ________.</p>
+                    <p><strong>(e)</strong> No sooner had the bell rung than ________.</p>
+                    <p><strong>(f)</strong> I wish I had ________.</p>
+                    <p><strong>(g)</strong> Had they played according to plan, ________.</p>
+                    <p><strong>(h)</strong> Where there is a will, ________.</p>
+                    <p><strong>(i)</strong> Would you mind ________?</p>
+                    <p><strong>(j)</strong> If it rains tomorrow, ________.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(7)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-7" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <script>
+                                for(let ch of ['a','b','c','d','e','f','g','h','i','j']) {
+                                    document.write(`<button onclick="showSpecificAnswer(7, '${ch}')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition uppercase mr-2 mb-2">${ch}</button>`);
+                                }
+                            </script>
+                        </div>
+                        <div id="specific-ans-7" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 8 -->
+            <div id="ex-8" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 08</span>
+                    <button onclick="toggleComplete(8)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-8"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg">
+                    <p><strong>(a)</strong> English is an international language. You should ________.</p>
+                    <p><strong>(b)</strong> Since he made a mistake, ________.</p>
+                    <p><strong>(c)</strong> As you sow, ________.</p>
+                    <p><strong>(d)</strong> Unless you work hard, ________.</p>
+                    <p><strong>(e)</strong> Walk fast lest you should ________.</p>
+                    <p><strong>(f)</strong> What is done ________.</p>
+                    <p><strong>(g)</strong> Because of his illness, ________.</p>
+                    <p><strong>(h)</strong> If he had studied well, ________.</p>
+                    <p><strong>(i)</strong> Five years passed since we ________.</p>
+                    <p><strong>(j)</strong> No sooner had they reached the river ________.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(8)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-8" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <script>
+                                for(let ch of ['a','b','c','d','e','f','g','h','i','j']) {
+                                    document.write(`<button onclick="showSpecificAnswer(8, '${ch}')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition uppercase mr-2 mb-2">${ch}</button>`);
+                                }
+                            </script>
+                        </div>
+                        <div id="specific-ans-8" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 9 -->
+            <div id="ex-9" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 09</span>
+                    <button onclick="toggleComplete(9)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-9"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg">
+                    <p><strong>(a)</strong> I wish I could fly ________.</p>
+                    <p><strong>(b)</strong> Had I been a rich man, ________.</p>
+                    <p><strong>(c)</strong> We must plant trees because ________.</p>
+                    <p><strong>(d)</strong> The river is so deep that ________.</p>
+                    <p><strong>(e)</strong> He ran fast to school so that ________.</p>
+                    <p><strong>(f)</strong> It is high time we got rid of ________.</p>
+                    <p><strong>(g)</strong> Would you mind taking ________?</p>
+                    <p><strong>(h)</strong> Where there is smoke, ________.</p>
+                    <p><strong>(i)</strong> Walk slowly lest you should ________.</p>
+                    <p><strong>(j)</strong> Although he started early, ________.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(9)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-9" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <script>
+                                for(let ch of ['a','b','c','d','e','f','g','h','i','j']) {
+                                    document.write(`<button onclick="showSpecificAnswer(9, '${ch}')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition uppercase mr-2 mb-2">${ch}</button>`);
+                                }
+                            </script>
+                        </div>
+                        <div id="specific-ans-9" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 10 -->
+            <div id="ex-10" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 10</span>
+                    <button onclick="toggleComplete(10)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-10"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg">
+                    <p><strong>(a)</strong> If you make a proper use of time, ________.</p>
+                    <p><strong>(b)</strong> Had they listened to me, ________.</p>
+                    <p><strong>(c)</strong> It is high time they ________.</p>
+                    <p><strong>(d)</strong> The old man was so tired that ________.</p>
+                    <p><strong>(e)</strong> Walk carefully lest ________.</p>
+                    <p><strong>(f)</strong> No sooner had the police fired a shot ________.</p>
+                    <p><strong>(g)</strong> Since he did not practice swimming, ________.</p>
+                    <p><strong>(h)</strong> Where there is love, ________.</p>
+                    <p><strong>(i)</strong> What is done cannot ________.</p>
+                    <p><strong>(j)</strong> While cross the road, ________.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(10)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-10" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <script>
+                                for(let ch of ['a','b','c','d','e','f','g','h','i','j']) {
+                                    document.write(`<button onclick="showSpecificAnswer(10, '${ch}')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition uppercase mr-2 mb-2">${ch}</button>`);
+                                }
+                            </script>
+                        </div>
+                        <div id="specific-ans-10" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ফুটার -->
+    <footer class="text-center py-6 text-gray-500 text-sm border-t border-gray-200 mt-12 bg-white">
+        <p>&copy; ২০২৬ ZAMIL ACADEMY। সর্বস্বত্ব সংরক্ষিত।</p>
+    </footer>
+
+    <script>
+        // কমপ্লিটিং সেন্টেন্স ডেটাবেজ (সঠিক উত্তর, বাংলা অনুবাদ ও ব্যাকরণগত সহজ ব্যাখ্যা)
+        const answerDatabase = {
+            1: {
+                a: { ans: "we can gain vast knowledge.", trans: "যদি আমরা বই পড়ি, তবে আমরা বিশাল জ্ঞান অর্জন করতে পারব।", explain: "If + Present Indefinite হলে পরের অংশ Present / Future Indefinite (shall/will/can + V1) হয়।" },
+                b: { ans: "started saving money.", trans: "এটাই উপযুক্ত সময় যে আমরা টাকা সঞ্চয় করা শুরু করি।", explain: "It is high time এর পর Subject থাকলে Verb-এর Past Form (V2) বসে।" },
+                c: { ans: "you should miss the train.", trans: "দ্রুত হাঁটো পাছে তুমি ট্রেনটি মিস করো।", explain: "Lest-এর নিয়মানুযায়ী Subject + should/might + V1 বসে।" },
+                d: { ans: "for me to carry on my head.", trans: "বোঝাটি আমার মাথায় বহন করার পক্ষে খুবই ভারী।", explain: "Too + adjective + for + objective pronoun + to + V1 গঠনে বাক্য সম্পন্ন করতে হয়।" },
+                e: { ans: "they could win the match.", trans: "যেহেতু তারা ভালো খেলেছিল, তারা ম্যাচে জিততে পেরেছিল।", explain: "Since যুক্ত ক্লজটি Past Perfect এ থাকায় পরের বাক্যটি সংগতিপূর্ণভাবে Past Simple এ করতে হবে।" },
+                f: { ans: "we met last.", trans: "আমাদের শেষ দেখা হওয়ার পর ৫ বছর কেটে গেছে।", explain: "Since-এর আগের অংশ Present Perfect হলে পরের অংশ Past Indefinite (V2) হয়।" },
+                g: { ans: "opening the door?", trans: "কিছু মনে না করলে দরজাটি একটু খুলে দেবেন কি?", explain: "Would you mind-এর পরে Verb-এর সাথে ing যুক্ত হয় এবং শেষে প্রশ্নবোধক চিহ্ন বসে।" },
+                h: { ans: "Bangladesh achieved her independence.", trans: "১৯৭১ হলো সেই বছর যখন বাংলাদেশ তার স্বাধীনতা অর্জন করেছিল।", explain: "When মূলত সময় নির্দেশ করে, অতীত সালের সাথে সংগতি রেখে Past Indefinite ক্লজ যুক্ত করতে হয়।" },
+                i: { ans: "he knew everything.", trans: "সে এমনভাবে কথা বলে যেন সে সবকিছু জানত।", explain: "As if-এর আগের অংশ Present Indefinite হলে পরের অংশে Subject + V2 বসে।" },
+                j: { ans: "he is completely honest.", trans: "যদিও সে দরিদ্র, সে সম্পূর্ণ সৎ।", explain: "Although যুক্ত ক্লজের বিপরীত অর্থ প্রকাশ করে এমন একটি বাক্য বসাতে হয়।" }
+            },
+            2: {
+                a: { ans: "I would learn programming.", trans: "যদি আমার একটি কম্পিউটার থাকত, তবে আমি প্রোগ্রামিং শিখতাম।", explain: "এটি ২য় কন্ডিশনাল (If + V2), তাই পরবর্তী ক্লজে would + V1 বসে।" },
+                b: { ans: "I would have helped him.", trans: "আমি যদি তাকে আগে দেখতাম, তবে আমি তাকে সাহায্য করতাম।", explain: "Had + Sub + V3 দিয়ে ৩য় কন্ডিশনাল শুরু হলে পরের অংশে would have + V3 বসে।" },
+                c: { ans: "than he ran away from the spot.", trans: "চোরটি পুলিশকে দেখতে না দেখতেই সেখান থেকে পালিয়ে গেল।", explain: "No sooner had... এর পর দ্বিতীয় বাক্যটি than দিয়ে শুরু করতে হয় এবং Tense-টি Past Indefinite (V2) হয়।" },
+                d: { ans: "we could not go outside.", trans: "আবহাওয়া এতই ঠান্ডা ছিল যে আমরা বাইরে যেতে পারিনি।", explain: "So... that এর প্রথম অংশ Past Tense এ থাকায় পরের অংশে Subject + could not + V1 বসে।" },
+                e: { ans: "we can prosper in life.", trans: "আমাদের অবশ্যই কঠোর পরিশ্রম করতে হবে যাতে আমরা জীবনে উন্নতি করতে পারি।", explain: "So that এর আগের অংশ Present এ থাকায় পরের অংশে Subject + can + V1 বসে।" },
+                f: { ans: "I were a child again.", trans: "ইশ! আমি যদি আবার শিশু হতে পারতাম।", explain: "I wish-এর পর অবাস্তব ইচ্ছা প্রকাশে Be Verb হিসেবে সর্বদা were বসে।" },
+                g: { ans: "it is hot.", trans: "লোহা গরম থাকতেই আঘাত করো (ঝোপ বুঝে কোপ মারো)।", explain: "এটি একটি বিখ্যাত প্রবাদ বাক্য। Strike the iron while it is hot." },
+                h: { ans: "there is a way.", trans: "যেখানে ইচ্ছা থাকে, সেখানে পথ বের হয়।", explain: "ইচ্ছা থাকলে উপায় হয়—প্রবাদ বাক্যটি সম্পন্ন করতে 'there is a way' বসে।" },
+                i: { ans: "his severe illness.", trans: "তার মারাত্মক অসুস্থতার কারণে সে স্কুলে আসতে পারেনি।", explain: "Because of এর পর কোনো পূর্ণ বাক্য বসে না, বরং Noun Phrase বসে।" },
+                j: { ans: "I return.", trans: "আমি ফিরে না আসা পর্যন্ত এখানে দাঁড়িয়ে থাকো।", explain: "Until একটি নেতিবাচক শব্দ, তাই এর পর সরাসরি Affirmative Present Simple বাক্য বসাতে হয়।" }
+            },
+            3: {
+                a: { ans: "they educate their population.", trans: "কোনো জাতি উন্নতি করতে পারে না যদি না তারা তাদের জনগণকে শিক্ষিত করে।", explain: "Unless (যদি না) নিজে নেতিবাচক হওয়ায় এর পরের ক্লজে no বা not ব্যবহার করা যাবে না।" },
+                b: { ans: "I had seen her last.", trans: "তার সাথে আমার শেষ দেখা হওয়ার পর অনেক সময় পেরিয়ে গিয়েছিল।", explain: "Since-এর আগের অংশ Past Indefinite হলে পরের অংশে Past Perfect (had + V3) বসে।" },
+                c: { ans: "we will fall sick easily.", trans: "যদি আমরা আমাদের স্বাস্থ্যের প্রতি যত্নবান না হই, তবে আমরা সহজেই অসুস্থ হয়ে পড়ব।", explain: "১ম কন্ডিশনাল (If + Present), তাই পরের অংশে Subject + will + V1 বসে।" },
+                d: { ans: "took strict actions against it.", trans: "দুর্নীতির বিরুদ্ধে কঠোর ব্যবস্থা নেওয়ার এটাই উপযুক্ত সময়।", explain: "It is high time-এর পর Subject থাকায় আমরা Verb-এর Past Simple (V2) রূপ ব্যবহার করেছি।" },
+                e: { ans: "she were mad.", trans: "মেয়েটি এমনভাবে কথা বলে যেন সে পাগল।", explain: "As though-এর পর Be verb আসলে সাবজেক্ট যাই হোক না কেন were বসে।" },
+                f: { ans: "danger is feared.", trans: "যেখানেই বাঘের ভয়, সেখানেই সন্ধ্যা হয়।", explain: "এটি একটি জনপ্রিয় প্রবাদ বাক্য: Danger often comes where danger is feared." },
+                g: { ans: "key to success.", trans: "পরিশ্রমই সৌভাগ্যের চাবিকাঠি।", explain: "প্রবাদ বাক্যটি সম্পূর্ণ করতে 'key to success' অংশটি বসানো হয়েছে।" },
+                h: { ans: "she should fail in the final exam.", trans: "সে কঠোর পড়াশোনা করেছিল পাছে সে বার্ষিক পরীক্ষায় ফেল করে।", explain: "Lest এর পর Subject + should + V1 বসে।" },
+                i: { ans: "divided we fall.", trans: "একতায় উত্থান, বিভেদে পতন।", explain: "প্রবাদ বাক্যটি সম্পূর্ণ করতে 'divided we fall' ব্যবহৃত হয়।" },
+                j: { ans: "I saw a terrible accident.", trans: "রাস্তায় হাঁটার সময় আমি একটি ভয়াবহ দুর্ঘটনা দেখেছিলাম।", explain: "While এর পর চলমান কাজের সমসাময়িক অন্য একটি অতীত ঘটনার জন্য Past Indefinite বসে।" }
+            },
+            4: {
+                a: { ans: "crops will not grow.", trans: "যদি বৃষ্টি না হয়, তবে ফসল জন্মাবে না।", explain: "If + Present tense (১ম কন্ডিশনাল), তাই পরবর্তী ক্লজে will + V1 বসে।" },
+                b: { ans: "everyone dislikes him.", trans: "সে এত রুক্ষ আচরণ করে যে সবাই তাকে অপছন্দ করে।", explain: "So + Adjective + that এর পরের অংশটি মূল বাক্যের সাথে সংগতি রেখে করতে হয়।" },
+                c: { ans: "the train had left.", trans: "ট্রেনটি চলে যাওয়ার পর আমরা স্টেশনে পৌঁছেছিলাম।", explain: "After-এর পূর্বের অংশ Past Indefinite হলে পরের অংশ Past Perfect (had + V3) হয়।" },
+                d: { ans: "had died.", trans: "আমার দাদা মারা যাওয়ার পর দশ বছর পার হয়ে গিয়েছে।", explain: "Since-এর আগের অংশ Past Simple এ থাকলে পরের অংশ Past Perfect এ করতে হয়।" },
+                e: { ans: "giving me your phone for a minute?", trans: "কিছু মনে না করলে এক মিনিটের জন্য তোমার ফোনটি দেবে কি?", explain: "Would you mind এর পর Verb-ing + Extension + ? বসে।" },
+                f: { ans: "he could secure a good rank.", trans: "সে মনোযোগ দিয়ে পড়েছিল যাতে সে ভালো একটি র‍্যাংক অর্জন করতে পারে।", explain: "So that এর আগের অংশ Past Tense এ থাকায় পরের অংশে could + V1 বসে।" },
+                g: { ans: "he could not win the race.", trans: "যদিও সে কঠোর অনুশীলন করেছিল, সে দৌড়ে জিততে পারেনি।", explain: "Though যুক্ত বাক্যের বিপরীত ভাব প্রকাশ করতে অন্য ক্লজটি সাজাতে হয়।" },
+                h: { ans: "wait for none.", trans: "সময় ও নদীর স্রোত কারও জন্য অপেক্ষা করে না।", explain: "Time and tide wait for none একটি চিরন্তন সত্য প্রবাদ বাক্য।" },
+                i: { ans: "I would have gone to the station.", trans: "যদি আমি তোমার আসার কথা জানতাম, তবে আমি স্টেশনে যেতাম।", explain: "If + Past Perfect (৩য় কন্ডিশনাল), তাই পরের অংশে would have + V3 বসে।" },
+                j: { ans: "a large population.", trans: "বাংলাদেশ একটি ছোট দেশ, কিন্তু তার একটি বিশাল জনসংখ্যা রয়েছে।", explain: "But দ্বারা যুক্ত বিপরীতধর্মী তথ্যের বাক্য বসানো হয়েছে।" }
+            },
+            5: {
+                a: { ans: "she should miss the flight.", trans: "সে দ্রুত দৌড়েছিল পাছে সে ফ্লাইটটি মিস করে।", explain: "Lest এর পর নিয়ম মেনে Subject + should + V1 বসানো হয়েছে।" },
+                b: { ans: "you will not gain knowledge.", trans: "যদি তুমি পড়ার অভ্যাস না করো, তবে তুমি জ্ঞান অর্জন করতে পারবে না।", explain: "If + Present Negative (১ম কন্ডিশনাল), তাই পরের অংশে will not + V1 বসে।" },
+                c: { ans: "protected", trans: "দূষণ থেকে আমাদের পরিবেশ রক্ষা করার এটাই উপযুক্ত সময়।", explain: "It is high time + Subject + V2 বসিয়ে বাক্য সম্পূর্ণ করা হয়েছে।" },
+                d: { ans: "to walk without a stick.", trans: "বৃদ্ধ লোকটি লাঠি ছাড়া হাঁটার পক্ষে খুবই দুর্বল।", explain: "Too + Adjective + to + V1 গঠনে বাক্যটি সাজানো হয়েছে।" },
+                e: { ans: "we last met in our school.", trans: "আমাদের স্কুলে শেষ দেখা হওয়ার পর অনেক বছর কেটে গেছে।", explain: "Since এর প্রথম অংশ Present Perfect এ থাকায় পরের অংশ Past Indefinite (V2) হবে।" },
+                f: { ans: "than the exam started.", trans: "আমরা ক্লাসরুমে প্রবেশ করতে না করতেই পরীক্ষা শুরু হয়ে গেল।", explain: "No sooner had... এর নিয়মানুযায়ী পরের অংশটি than + Subject + V2 দিয়ে শুরু হয়।" },
+                g: { ans: "he went to sleep early.", trans: "যেহেতু সে খুব ক্লান্ত ছিল, সে তাড়াতাড়ি ঘুমাতে গিয়েছিল।", explain: "Since কারণ নির্দেশ করে, দুই ক্লজের Tense সমান রাখা হয়েছে।" },
+                h: { ans: "there is hope.", trans: "যতক্ষণ শ্বাস, ততক্ষণ আশ (যেখানে জীবন আছে, সেখানে আশা আছে)।", explain: "এটি একটি চমৎকার ইংরেজি প্রবাদ বাক্য।" },
+                i: { ans: "I would fly in the sky.", trans: "যদি আমি পাখি হতাম, তবে আকাশে উড়ে বেড়াতাম।", explain: "If + were (২য় কন্ডিশনাল), তাই পরের অংশে would + V1 বসে।" },
+                j: { ans: "could speak English fluently.", trans: "ইশ! আমি যদি অনর্গল ইংরেজি বলতে পারতাম।", explain: "I wish এর পর সামর্থ্য প্রকাশে could + V1 ব্যবহার করা হয়।" }
+            },
+            6: {
+                a: { ans: "the accident might not have occurred.", trans: "যদি চালক সতর্ক থাকতেন, তবে দুর্ঘটনাটি নাও ঘটতে পারত।", explain: "If + Past Perfect (৩য় কন্ডিশনাল), তাই পরবর্তী ক্লজে might not have + V3 বসে।" },
+                b: { ans: "I would have met him.", trans: "যদি আমি তার ঠিকানা জানতাম, তবে আমি তার সাথে দেখা করতাম।", explain: "Had + Sub + V3 (৩য় কন্ডিশনাল), তাই পরের অংশে would have + V3 বসে।" },
+                c: { ans: "I bought yesterday.", trans: "এটি সেই বইটি যেটি আমি গতকাল কিনেছিলাম।", explain: "Which বস্তুবাচক Relative Pronoun, এটি বইটিকে নির্দেশ করছে।" },
+                d: { ans: "he knew everything.", trans: "ছেলেটি এমনভাবে কথা বলে যেন সে সবকিছু জানে।", explain: "As if এর নিয়মানুযায়ী পরের অংশে Past Indefinite (V2) বসে।" },
+                e: { ans: "writing a full essay.", trans: "সে একটি লাইনই ঠিকমতো লিখতে পারে না, পুরো প্রবন্ধ লেখা তো দূরের কথা।", explain: "Let alone এর পর আগের বিষয়ের চেয়েও বড় বা কঠিন বিষয় উল্লেখ করতে হয়।" },
+                f: { ans: "we should not waste it.", trans: "সময় এতই মূল্যবান যে আমাদের এটি অপচয় করা উচিত নয়।", explain: "So + Adjective + that এর পর একটি যুক্তিযুক্ত নাবাচক বা হাবাচক ক্লজ বসে।" },
+                g: { ans: "we can pass with flying colors.", trans: "আমরা কঠোর পড়াশোনা করি যাতে আমরা দারুণভাবে উত্তীর্ণ হতে পারি।", explain: "So that এর আগে Present Tense থাকায় পরের অংশে can + V1 বসে।" },
+                h: { ans: "saves nine.", trans: "সময়ের এক ফোঁড় অসময়ের দশ ফোঁড়।", explain: "এটি একটি বহুল প্রচলিত প্রবাদ বাক্য: A stitch in time saves nine." },
+                i: { ans: "I had a sweet dream.", trans: "ঘুমানোর সময় আমি একটি মিষ্টি স্বপ্ন দেখেছিলাম।", explain: "While এর পর সরাসরি ing যুক্ত কাজ সম্পন্ন হওয়ার সময় অপর একটি ঘটনা প্রকাশে Past Indefinite বসে।" },
+                j: { ans: "I will do the work.", trans: "যদি তুমি আমাকে সাহায্য করো, তবে আমি কাজটি করব।", explain: "If + Present (১ম কন্ডিশনাল), তাই পরের অংশে will + V1 বসে।" }
+            },
+            7: {
+                a: { ans: "we used to play in childhood.", trans: "সেখানে একটি বটগাছ আছে যেখানে আমরা শৈশবে খেলতাম।", explain: "Where স্থানকে নির্দেশ করে, তাই বটগাছের সাথে সম্পর্কযুক্ত স্থান-ভিত্তিক তথ্য দেওয়া হয়েছে।" },
+                b: { ans: "she could not pass the exam.", trans: "যদিও সে আন্তরিকভাবে পড়াশোনা করেছিল, সে পরীক্ষায় পাস করতে পারেনি।", explain: "Although বিপরীত অর্থ প্রকাশ করে, তাই study করার পরও fail করার বাক্যটি এসেছে।" },
+                c: { ans: "he had to suffer in the long run.", trans: "যেহেতু সে আমার উপদেশ শোনেনি, তাকে শেষ পর্যন্ত ভুগতে হয়েছিল।", explain: "Since কারণ নির্দেশ করছে এবং অতীত ঘটনার Tense-এর সামঞ্জস্য রাখা হয়েছে।" },
+                d: { ans: "to solve in the class.", trans: "সমস্যাটি ক্লাসে তার সমাধান করার পক্ষে খুবই কঠিন ছিল।", explain: "Too + Adjective + for + object + to + V1 গঠনে বাক্য পূরণ করা হয়েছে।" },
+                e: { ans: "the students left the classroom.", trans: "ঘণ্টা বাজতে না বাজতেই ছাত্ররা ক্লাসরুম ত্যাগ করল।", explain: "No sooner had... than এর পর Past Indefinite (V2) বসে।" },
+                f: { ans: "a car.", trans: "ইশ! আমার যদি একটি গাড়ি থাকত।", explain: "I wish I had + Noun বসিয়ে অসম্ভব ইচ্ছা প্রকাশ করা হয়েছে।" },
+                g: { ans: "they would have won the tournament.", trans: "তারা যদি পরিকল্পনা অনুযায়ী খেলত, তবে তারা টুর্নামেন্টটি জিততে পারত।", explain: "Had + Sub + V3 (৩য় কন্ডিশনাল), তাই পরবর্তী অংশে would have + V3 বসে।" },
+                h: { ans: "there is a way.", trans: "ইচ্ছা থাকলে উপায় হয়।", explain: "প্রবাদ বাক্যটি সম্পূর্ণ করতে 'there is a way' বসেছে।" },
+                i: { ans: "taking a cup of green tea?", trans: "কিছু মনে না করলে এক কাপ গ্রিন টি নেবেন কি?", explain: "Would you mind এর পর Verb-ing + বাকি অংশ + ? বসে।" },
+                j: { ans: "we will not go to the picnic.", trans: "যদি আগামীকাল বৃষ্টি হয়, তবে আমরা পিকনিকে যাব না।", explain: "If + Present (১ম কন্ডিশনাল), তাই পরের ক্লজে will not + V1 বসে।" }
+            },
+            8: {
+                a: { ans: "learn it carefully.", trans: "ইংরেজি একটি আন্তর্জাতিক ভাষা। তোমার উচিত এটি মনোযোগ দিয়ে শেখা।", explain: "Should একটি মোডাল ভার্ব, তাই এর পর সরাসরি Verb-এর Base Form (V1) বসে।" },
+                b: { ans: "he was punished.", trans: "যেহেতু সে ভুল করেছিল, তাকে শাস্তি দেওয়া হয়েছিল।", explain: "Since (যেহেতু) যুক্ত ক্লজটি Past Tense এ থাকায় পরের ক্লজটিও Past Tense এ করা হয়েছে।" },
+                c: { ans: "so shall you reap.", trans: "যেমন কর্ম, তেমন ফল।", explain: "এটি একটি বিখ্যাত প্রবাদ বাক্য: As you sow, so shall you reap." },
+                d: { ans: "you will not succeed in life.", trans: "যদি না তুমি কঠোর পরিশ্রম করো, তবে তুমি জীবনে সফল হতে পারবে না।", explain: "Unless মানে 'যদি না'। ১ম কন্ডিশনালের নিয়মে পরবর্তী ক্লজে will not + V1 বসে।" },
+                e: { ans: "miss the class.", trans: "দ্রুত হাঁটো পাছে তুমি ক্লাসটি মিস করো।", explain: "Lest এর পর Subject + should + V1 বসে। should দেওয়া থাকায় শুধু V1 বসানো হয়েছে।" },
+                f: { ans: "cannot be undone.", trans: "যা ঘটে গেছে তা পরিবর্তন করা যায় না (গতস্য শোচনা নাস্তি)।", explain: "এটি একটি বিখ্যাত প্রবাদ বাক্য: What is done cannot be undone." },
+                g: { ans: "he could not attend the meeting.", trans: "তার অসুস্থতার কারণে সে মিটিংয়ে উপস্থিত হতে পারেনি।", explain: "Because of এর পর Noun Phrase বসে। এটি কারণ প্রকাশ করে।" },
+                h: { ans: "he would have secured A+.", trans: "সে যদি ভালো পড়াশোনা করত, তবে সে এ+ পেয়ে যেত।", explain: "If + Past Perfect (৩য় কন্ডিশনাল), তাই পরের অংশে would have + V3 বসে।" },
+                i: { ans: "met last.", trans: "আমাদের শেষ দেখা হওয়ার পর ৫ বছর কেটে গিয়েছে।", explain: "Since এর প্রথম অংশ Past Indefinite থাকায় পরের অংশ Past Perfect (had + met) করা হয়েছে।" },
+                j: { ans: "than the boat sank.", trans: "তারা নদীতে পৌঁছাতে না পৌঁছাতেই নৌকাটি ডুবে গেল।", explain: "No sooner had... than এর পর Past Indefinite (V2) বসে।" }
+            },
+            9: {
+                a: { ans: "like a bird.", trans: "ইশ! আমি যদি পাখির মতো উড়তে পারতাম।", explain: "I wish I could fly এর সাথে সংগতি রেখে 'like a bird' যুক্ত করা হয়েছে।" },
+                b: { ans: "I would have built a hospital.", trans: "আমি যদি ধনী লোক হতাম, তবে আমি একটি হাসপাতাল তৈরি করতাম।", explain: "Had I been (৩য় কন্ডিশনাল), তাই পরের ক্লজে would have + V3 বসে।" },
+                c: { ans: "they give us oxygen.", trans: "আমাদের অবশ্যই গাছ লাগাতে হবে কারণ তারা আমাদের অক্সিজেন দেয়।", explain: "Because এর পর একটি সম্পূর্ণ অর্থপূর্ণ ক্লজ (Subject + Verb + Object) বসে।" },
+                d: { ans: "we cannot cross it by walking.", trans: "নদীটি এতই গভীর যে আমরা এটি হেঁটে পার হতে পারি না।", explain: "So + Adjective + that এর পর সামঞ্জস্যপূর্ণ নেতিবাচক বাক্য বসে।" },
+                e: { ans: "he could reach in time.", trans: "সে দ্রুত স্কুলে দৌড়েছিল যাতে সে সময়ে পৌঁছাতে পারে।", explain: "So that এর আগে ran (Past) থাকায় পরের অংশে could + V1 বসে।" },
+                f: { ans: "corruption.", trans: "আমাদের দুর্নীতি থেকে মুক্তি পাওয়ার এখনই উপযুক্ত সময়।", explain: "It is high time we got rid of এর পর Noun হিসেবে corruption বসানো হয়েছে।" },
+                g: { ans: "a cup of coffee with me?", trans: "কিছু মনে না করলে আমার সাথে এক কাপ কফি খাবেন কি?", explain: "Would you mind এর পর Verb-ing দেওয়া আছে, তাই বাকী অংশ ও প্রশ্নবোধক চিহ্ন বসেছে।" },
+                h: { ans: "there is fire.", trans: "যেখানে ধোঁয়া আছে, সেখানে আগুনও আছে (বিনা মেঘে বৃষ্টি হয় না)।", explain: "এটি একটি চিরন্তন সত্য প্রবাদ বাক্য: Where there is smoke, there is fire." },
+                i: { ans: "fall down.", trans: "ধীরে হাঁটো পাছে তুমি পড়ে যাও।", explain: "Lest এর পর Sub + should দেওয়া আছে, তাই কেবল V1 (fall down) বসেছে।" },
+                j: { ans: "he could not reach on time.", trans: "যদিও সে খুব সকালে শুরু করেছিল, সে সময়ে পৌঁছাতে পারেনি।", explain: "Although যুক্ত বাক্যের অপ্রত্যাশিত বা বিপরীত ফলাফল প্রকাশ করতে অন্য ক্লজটি সাজাতে হয়।" }
+            },
+            10: {
+                a: { ans: "you will shine in life.", trans: "যদি তুমি সময়ের সঠিক ব্যবহার করো, তবে তুমি জীবনে উন্নতি করবে।", explain: "If + Present (১ম কন্ডিশনাল), তাই পরের অংশে will + V1 বসে।" },
+                b: { ans: "they would have avoided the loss.", trans: "তারা যদি আমার কথা শুনত, তবে তারা ক্ষতি এড়াতে পারত।", explain: "Had + Sub + V3 (৩য় কন্ডিশনাল), তাই পরের অংশে would have + V3 বসে।" },
+                c: { ans: "realized their mistakes.", trans: "তাদের নিজেদের ভুলগুলো বুঝতে পারার এখনই উপযুক্ত সময়।", explain: "It is high time-এর পর Subject (they) থাকায় Past Form (V2) বসেছে।" },
+                d: { ans: "he could not walk further.", trans: "বৃদ্ধ লোকটি এতই ক্লান্ত ছিলেন যে তিনি আর হাঁটতে পারছিলেন না।", explain: "So + Adjective + that এর নিয়মানুযায়ী Past tense-এ could not + V1 বসে।" },
+                e: { ans: "you should trip over.", trans: "সাবধানে হাঁটো পাছে তুমি হোঁচট খেয়ে পড়ে যাও।", explain: "Lest এর পর নিয়মানুযায়ী Subject + should + V1 বসে।" },
+                f: { ans: "than the robbers ran away.", trans: "পুলিশ গুলি ছুড়তে না ছুড়তেই ডাকাতরা পালিয়ে গেল।", explain: "No sooner had... than এর নিয়মানুযায়ী than + Subject + V2 বসে।" },
+                g: { ans: "he drowned in the pond.", trans: "যেহেতু সে সাঁতার কাটা অনুশীলন করেনি, সে পুকুরে ডুবে গিয়েছিল।", explain: "Since কারণ ও ফলাফল নির্দেশক বাক্য গঠন করে এবং উভয় অংশের Tense একই থাকে।" },
+                h: { ans: "there is happiness.", trans: "যেখানে ভালোবাসা থাকে, সেখানে সুখ থাকে।", explain: "প্রাসঙ্গিক চিরন্তন বাক্য গঠন করতে 'there is happiness' বসেছে।" },
+                i: { ans: "be undone.", trans: "যা ঘটে গেছে তা আর পরিবর্তন করা যায় না।", explain: "এটি একটি প্রবাদ বাক্য: What is done cannot be undone." },
+                j: { ans: "one should be very careful.", trans: "রাস্তা পার হওয়ার সময় প্রত্যেকের অত্যন্ত সতর্ক হওয়া উচিত।", explain: "While এর পর সরাসরি V-ing থাকলে অন্য বাক্যটি বিষয়ের সাথে সামঞ্জস্য রেখে করতে হয়।" }
+            }
+        };
+
+        // উত্তর প্যানেল চালু/বন্ধ করা
+        function toggleAnswerPanel(exNum) {
+            const panel = document.getElementById(`ans-panel-${exNum}`);
+            if (panel.classList.contains('hidden')) {
+                panel.classList.remove('hidden');
+            } else {
+                panel.classList.add('hidden');
+            }
+        }
+
+        // নির্দিষ্ট অক্ষরের উত্তর, অনুবাদ ও ব্যাকরণগত ব্যাখ্যা দেখানো
+        function showSpecificAnswer(exNum, letter) {
+            const ansBox = document.getElementById(`specific-ans-${exNum}`);
+            const data = answerDatabase[exNum][letter];
+            
+            if (data) {
+                ansBox.innerHTML = `
+                    <div class="flex items-start gap-3">
+                        <span class="bg-green-200 text-green-900 font-bold px-3 py-1 rounded-md text-sm uppercase">${letter}</span>
+                        <div class="space-y-1">
+                            <p class="font-bold text-lg text-green-950">Answer: <span class="underline text-red-600 font-mono">${data.ans}</span></p>
+                            <p class="text-sm text-gray-700"><strong>বাংলা অনুবাদ:</strong> ${data.trans}</p>
+                            <p class="text-xs text-green-800 bg-green-100/50 p-2 rounded-lg mt-1 border border-green-200/50"><strong>সহজ ব্যাখ্যা:</strong> ${data.explain}</p>
+                        </div>
+                    </div>
+                `;
+                ansBox.classList.remove('hidden');
+            }
+        }
+
+        // কমপ্লিট স্ট্যাটাস টগল এবং লোকাল স্টোরেজ আপডেট
+        function toggleComplete(exNum) {
+            const card = document.getElementById(`ex-${exNum}`);
+            const badge = card.querySelector('.completed-badge');
+            const checkbox = document.getElementById(`checkbox-${exNum}`);
+            
+            let completedList = JSON.parse(localStorage.getItem('completing_completed_exercises')) || [];
+
+            if (completedList.includes(exNum)) {
+                // আন-কমপ্লিট করা
+                completedList = completedList.filter(id => id !== exNum);
+                card.classList.remove('completed-card');
+                badge.classList.add('hidden');
+                badge.classList.remove('flex');
+                checkbox.innerHTML = '';
+                checkbox.classList.remove('bg-green-600', 'border-green-600');
+                checkbox.classList.add('bg-white', 'border-gray-300');
+            } else {
+                // কমপ্লিট করা
+                completedList.push(exNum);
+                card.classList.add('completed-card');
+                badge.classList.remove('hidden');
+                badge.classList.add('flex');
+                checkbox.innerHTML = '<svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>';
+                checkbox.classList.remove('bg-white', 'border-gray-300');
+                checkbox.classList.add('bg-green-600', 'border-green-600');
+            }
+
+            localStorage.setItem('completing_completed_exercises', JSON.stringify(completedList));
+        }
+
+        // পেজ লোড হওয়ার পর লোকাল স্টোরেজ থেকে প্রোগ্রেস লোড করা
+        window.addEventListener('DOMContentLoaded', () => {
+            const completedList = JSON.parse(localStorage.getItem('completing_completed_exercises')) || [];
+            completedList.forEach(exNum => {
+                const card = document.getElementById(`ex-${exNum}`);
+                if (card) {
+                    const badge = card.querySelector('.completed-badge');
+                    const checkbox = document.getElementById(`checkbox-${exNum}`);
+                    
+                    card.classList.add('completed-card');
+                    if (badge) {
+                        badge.classList.remove('hidden');
+                        badge.classList.add('flex');
+                    }
+                    if (checkbox) {
+                        checkbox.innerHTML = '<svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>';
+                        checkbox.classList.remove('bg-white', 'border-gray-300');
+                        checkbox.classList.add('bg-green-600', 'border-green-600');
+                    }
+                }
+            });
+        });
+    </script>
+
+<script type="module">
+    // Firebase Time Tracking Script
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
+    import { getDatabase, ref, update, increment } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-database.js";
+
+    // ফায়ারবেজ কনফিগারেশন
+    const firebaseConfig = {
+        apiKey: "AIzaSyABpKz4xjVKWb6kVR_mT8d13dt9lcDwipE",
+        authDomain: "zamil-4e08e.firebaseapp.com",
+        databaseURL: "https://zamil-4e08e-default-rtdb.firebaseio.com/",
+        projectId: "zamil-4e08e"
+    };
+
+    // ফায়ারবেজ অ্যাপ এবং ডেটাবেজ ইনিশিয়ালিলাইজেশন
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+
+    // ডেটাবেজ কানেকশনটিকে গ্লোবাল করা
+    window.db = db; 
+
+    // প্রতি ৩০ সেকেন্ডে সময় ট্র্যাকিং
+    const timeRef = ref(db, 'total_time_spent');
+
+    setInterval(() => {
+        // ইউজার ট্যাব অন্য ট্যাবে বা ব্যাকগ্রাউন্ডে থাকলে কোডটি রান করবে না
+        if (document.hidden) return; 
+
+        update(timeRef, {
+            "seconds": increment(30)
+        }).catch(err => console.error("Error updating time:", err));
+    }, 30000);
+
+    console.log("Firebase time tracking active (optimized).");
+</script>
+
+
+
+
+
+
+
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyABpKz4xjVKWb6kVR_mT8d13dt9lcDwipE",
+    authDomain: "zamil-4e08e.firebaseapp.com",
+    projectId: "zamil-4e08e",
+    storageBucket: "zamil-4e08e.firebasestorage.app",
+    messagingSenderId: "696619411784",
+    appId: "1:696619411784:web:3dce390ed5b840cbc32b7d"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+onAuthStateChanged(auth, async (user) => {
+
+    // লগইন না থাকলে
+    if (!user) {
+        window.location.replace("/paid.html");
+        return;
+    }
+
+    try {
+        // paid_students collection এ email দিয়ে খুঁজবে
+        const paidRef = doc(db, "paid_students", user.email);
+        const paidDoc = await getDoc(paidRef);
+
+        // ডকুমেন্ট না থাকলে
+        if (!paidDoc.exists()) {
+            window.location.replace("/paid.html");
+            return;
+        }
+
+        // status paid না হলে
+        const data = paidDoc.data();
+
+        if (data.status !== "paid") {
+            window.location.replace("/paid.html");
+            return;
+        }
+
+        console.log("Paid User Verified");
+
+    } catch (error) {
+        console.error(error);
+        window.location.replace("/paid.html");
+    }
+
+});
+</script>
+</body>
+</html>

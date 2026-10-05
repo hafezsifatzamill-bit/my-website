@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAMIL ACADEMY - Practice Exercises</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Hind Siliguri', sans-serif; }
+        .completed-card {
+            background-color: #f0fdf4 !important;
+            border-color: #16a34a !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+    <!-- হেডার: পুরো বক্স সবুজ এবং নিচের দিকে কার্ভ করা -->
+    <header class="bg-green-800 text-white py-12 px-6 text-center shadow-lg rounded-b-[40px]">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white-400">ZAMIL ACADEMY</h1>
+    </header>
+
+    <!-- সাবস্ক্রাইব বক্স -->
+    <div class="flex justify-center -mt-8 px-6">
+        <div class="bg-white p-8 shadow-md border-t-4 border-green-800 rounded-2xl max-w-md w-full text-center">
+            <p class="text-gray-700 text-lg mb-6">
+                প্রিমিয়াম সেবা পেতে আমাদের ইউটিউব চ্যানেলটি সাবস্ক্রাইব করুন।
+            </p>
+            <a href="https://youtube.com/@zamil_academy?si=EbWJq_lwwbWrLar9" 
+               target="_blank"
+               class="inline-block bg-red-700 hover:bg-green-800 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-md">
+                চ্যানেল ভিজিট করুন
+            </a>
+        </div>
+    </div>
+
+    <!-- মূল কন্টেন্ট (Main Content) -->
+    <main class="flex-grow max-w-4xl w-full mx-auto px-4 md:px-6 py-12">
+        
+        <!-- রুলস পেজে যাওয়ার আকর্ষণীয় বক্স -->
+        <div class="mb-10">
+            <a href="phrases-words-rules.html" class="block bg-gradient-to-r from-green-700 to-green-900 hover:from-green-800 hover:to-green-950 text-white p-6 rounded-2xl shadow-md text-center transition duration-300 transform hover:scale-[1.02]">
+                <h3 class="text-2xl font-bold mb-1">📖 ফ্রেজ এবং ওয়ার্ড এর রুলস দেখুন</h3>
+                <p class="text-green-100 text-sm md:text-base">সহজ ব্যাখ্যা, শর্টকাট ট্রিকস ও ৩টি করে উদাহরণ দেখতে এখানে ক্লিক করুন।</p>
+            </a>
+        </div>
+
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">Practice Exercises on Special Phrases & Words</h2>
+            <p class="text-green-700 font-semibold text-lg">HSC & Alim English 2nd Paper (Question No. 3)</p>
+            <div class="w-24 h-1 bg-green-700 mx-auto mt-3 rounded"></div>
+        </div>
+
+        <!-- এক্সারসাইজ সেকশনসমূহ -->
+        <div class="space-y-12" id="exercise-container">
+            
+            <!-- Exercise 1 -->
+            <div id="ex-1" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 01</span>
+                    <!-- চেক করার চেকবক্স বাটন -->
+                    <button onclick="toggleComplete(1)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-1"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+                
+                <!-- ক্লু বক্স -->
+                <div class="bg-blue-50 border border-blue-100 p-4 rounded-xl mb-6 grid grid-cols-2 sm:grid-cols-5 gap-2 text-center text-sm font-semibold text-blue-900">
+                    <div>was born</div><div>let alone</div><div>had better</div><div>would rather</div><div>as soon as</div>
+                    <div>as if</div><div>what if</div><div>there</div><div>it</div><div>what's it like</div>
+                </div>
+
+                <!-- প্রশ্নপত্র -->
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg">
+                    <p><strong>(a)</strong> We ________ pay a visit to Cox's Bazar. We have not gone there for a long time.</p>
+                    <p><strong>(b)</strong> He cannot write a single page properly, ________ a complete novel.</p>
+                    <p><strong>(c)</strong> ________ is a fine park in our town. We often go there for evening walks.</p>
+                    <p><strong>(d)</strong> The boy talks ________ he knew everything. He is actually a fool.</p>
+                    <p><strong>(e)</strong> ________ traveling by boat in a moonlit night? It feels heavenly.</p>
+                    <p><strong>(f)</strong> Kazi Nazrul Islam ________ in 1899. He is our national poet.</p>
+                    <p><strong>(g)</strong> I ________ starve than beg in the street. Begging is a disgraceful act.</p>
+                    <p><strong>(h)</strong> ________ the train is late? I will miss the important job interview.</p>
+                    <p><strong>(i)</strong> ________ is raining heavily. We should stay indoors today.</p>
+                    <p><strong>(j)</strong> ________ the bell rang, the students rushed out of the classroom.</p>
+                </div>
+
+                <!-- ইন্টারেক্টিভ উত্তর দেখুন প্যানেল -->
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(1)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <!-- অ্যালফাবেট বাটনসমূহ -->
+                    <div id="ans-panel-1" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <button onclick="showSpecificAnswer(1, 'a')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">A</button>
+                            <button onclick="showSpecificAnswer(1, 'b')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">B</button>
+                            <button onclick="showSpecificAnswer(1, 'c')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">C</button>
+                            <button onclick="showSpecificAnswer(1, 'd')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">D</button>
+                            <button onclick="showSpecificAnswer(1, 'e')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">E</button>
+                            <button onclick="showSpecificAnswer(1, 'f')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">F</button>
+                            <button onclick="showSpecificAnswer(1, 'g')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">G</button>
+                            <button onclick="showSpecificAnswer(1, 'h')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">H</button>
+                            <button onclick="showSpecificAnswer(1, 'i')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">I</button>
+                            <button onclick="showSpecificAnswer(1, 'j')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">J</button>
+                        </div>
+                        
+                        <!-- নির্দিষ্ট উত্তর প্রদর্শনী স্থান -->
+                        <div id="specific-ans-1" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden"></div>
+
+                        <!-- সব উত্তর এক সিরিয়ালে -->
+                        <div class="mt-6 pt-4 border-t border-dashed border-gray-200">
+                            <h4 class="font-bold text-gray-800 mb-2">সব উত্তর এক নজরে:</h4>
+                            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-sm font-semibold text-gray-700">
+                                <div>(a) had better</div><div>(b) let alone</div><div>(c) There</div><div>(d) as if</div><div>(e) What's it like</div>
+                                <div>(f) was born</div><div>(g) would rather</div><div>(h) What if</div><div>(i) It</div><div>(j) As soon as</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 2 -->
+            <div id="ex-2" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 02</span>
+                    <button onclick="toggleComplete(2)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-2"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+                
+                <div class="bg-blue-50 border border-blue-100 p-4 rounded-xl mb-6 grid grid-cols-2 sm:grid-cols-5 gap-2 text-center text-sm font-semibold text-blue-900">
+                    <div>have to</div><div>would rather</div><div>had better</div><div>was born</div><div>let alone</div>
+                    <div>there</div><div>as soon as</div><div>what if</div><div>it</div><div>what does...look like</div>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg">
+                    <p><strong>(a)</strong> You ________ start immediately. You are already getting late for the train.</p>
+                    <p><strong>(b)</strong> The poor man cannot manage even one square meal, ________ three times a day.</p>
+                    <p><strong>(c)</strong> ________ we miss the flight? Will the airlines refund our money?</p>
+                    <p><strong>(d)</strong> Bangladesh ________ in the year 1971. We are proud of our country.</p>
+                    <p><strong>(e)</strong> We ________ build a strong moral character. It is the ornament of life.</p>
+                    <p><strong>(f)</strong> My sister ________ buy a notebook than a mobile phone.</p>
+                    <p><strong>(g)</strong> ________ lived a happy cobbler in a small village. He was happy with his job.</p>
+                    <p><strong>(h)</strong> ________ is 10 miles from here. It is a long way indeed.</p>
+                    <p><strong>(i)</strong> My little brother asked, "Sister, ________ a peacock ________?"</p>
+                    <p><strong>(j)</strong> ________ the teacher entered the class, the noise stopped instantly.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(2)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-2" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <button onclick="showSpecificAnswer(2, 'a')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">A</button>
+                            <button onclick="showSpecificAnswer(2, 'b')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">B</button>
+                            <button onclick="showSpecificAnswer(2, 'c')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">C</button>
+                            <button onclick="showSpecificAnswer(2, 'd')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">D</button>
+                            <button onclick="showSpecificAnswer(2, 'e')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">E</button>
+                            <button onclick="showSpecificAnswer(2, 'f')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">F</button>
+                            <button onclick="showSpecificAnswer(2, 'g')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">G</button>
+                            <button onclick="showSpecificAnswer(2, 'h')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">H</button>
+                            <button onclick="showSpecificAnswer(2, 'i')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">I</button>
+                            <button onclick="showSpecificAnswer(2, 'j')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">J</button>
+                        </div>
+                        
+                        <div id="specific-ans-2" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden"></div>
+
+                        <div class="mt-6 pt-4 border-t border-dashed border-gray-200">
+                            <h4 class="font-bold text-gray-800 mb-2">সব উত্তর এক নজরে:</h4>
+                            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-sm font-semibold text-gray-700">
+                                <div>(a) had better</div><div>(b) let alone</div><div>(c) What if</div><div>(d) was born</div><div>(e) have to</div>
+                                <div>(f) would rather</div><div>(g) There</div><div>(h) It</div><div>(i) what does...look like</div><div>(j) As soon as</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 3 -->
+            <div id="ex-3" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 03</span>
+                    <button onclick="toggleComplete(3)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-3"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+                
+                <div class="bg-blue-50 border border-blue-100 p-4 rounded-xl mb-6 grid grid-cols-2 sm:grid-cols-5 gap-2 text-center text-sm font-semibold text-blue-900">
+                    <div>what if</div><div>let alone</div><div>was born</div><div>no sooner had</div><div>as soon as</div>
+                    <div>would rather</div><div>had better</div><div>as if</div><div>there</div><div>it</div>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg">
+                    <p><strong>(a)</strong> You ________ take an umbrella. It may rain today.</p>
+                    <p><strong>(b)</strong> He behaves ________ he were a millionaire. In reality, he is poor.</p>
+                    <p><strong>(c)</strong> ________ we missed the class? Will the teacher allow us tomorrow?</p>
+                    <p><strong>(d)</strong> Albert Einstein ________ in Germany in 1879.</p>
+                    <p><strong>(e)</strong> ________ she got the message, she started crying in joy.</p>
+                    <p><strong>(f)</strong> I ________ resign than do this dishonest job.</p>
+                    <p><strong>(g)</strong> We cannot walk even 1 kilometer, ________ 10 kilometers.</p>
+                    <p><strong>(h)</strong> ________ is no alternative to hard work to secure a bright future.</p>
+                    <p><strong>(i)</strong> ________ is high time we changed our bad habits.</p>
+                    <p><strong>(j)</strong> ________ we stepped out of the house than it started pouring.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(3)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-3" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <button onclick="showSpecificAnswer(3, 'a')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">A</button>
+                            <button onclick="showSpecificAnswer(3, 'b')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">B</button>
+                            <button onclick="showSpecificAnswer(3, 'c')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">C</button>
+                            <button onclick="showSpecificAnswer(3, 'd')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">D</button>
+                            <button onclick="showSpecificAnswer(3, 'e')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">E</button>
+                            <button onclick="showSpecificAnswer(3, 'f')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">F</button>
+                            <button onclick="showSpecificAnswer(3, 'g')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">G</button>
+                            <button onclick="showSpecificAnswer(3, 'h')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">H</button>
+                            <button onclick="showSpecificAnswer(3, 'i')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">I</button>
+                            <button onclick="showSpecificAnswer(3, 'j')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">J</button>
+                        </div>
+                        
+                        <div id="specific-ans-3" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden"></div>
+
+                        <div class="mt-6 pt-4 border-t border-dashed border-gray-200">
+                            <h4 class="font-bold text-gray-800 mb-2">সব উত্তর এক নজরে:</h4>
+                            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-sm font-semibold text-gray-700">
+                                <div>(a) had better</div><div>(b) as if</div><div>(c) what if</div><div>(d) was born</div><div>(e) as soon as</div>
+                                <div>(f) would rather</div><div>(g) let alone</div><div>(h) there</div><div>(i) it</div><div>(j) no sooner had</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 4 -->
+            <div id="ex-4" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 04</span>
+                    <button onclick="toggleComplete(4)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-4"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+                
+                <div class="bg-blue-50 border border-blue-100 p-4 rounded-xl mb-6 grid grid-cols-2 sm:grid-cols-5 gap-2 text-center text-sm font-semibold text-blue-900">
+                    <div>what's it like</div><div>what does...look like</div><div>was born</div><div>would rather</div><div>had better</div>
+                    <div>there</div><div>it</div><div>as if</div><div>let alone</div><div>as soon as</div>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg">
+                    <p><strong>(a)</strong> You ________ do the work on time. Otherwise, you will be penalized.</p>
+                    <p><strong>(b)</strong> We ________ starve than take any bribe from anyone.</p>
+                    <p><strong>(c)</strong> ________ is no secret that he is a thoroughly corrupted person.</p>
+                    <p><strong>(d)</strong> Rabindranath Tagore ________ in Kolkata in 1861.</p>
+                    <p><strong>(e)</strong> Child: Father, ________ an albatross ________?</p>
+                    <p><strong>(f)</strong> ________ walking inside a thick forest during the day? It is scary but exciting.</p>
+                    <p><strong>(g)</strong> The patient died ________ he was taken to the hospital.</p>
+                    <p><strong>(h)</strong> ________ is a huge mango tree in front of our school building.</p>
+                    <p><strong>(i)</strong> He talks ________ he were the leader of the country.</p>
+                    <p><strong>(j)</strong> I cannot buy a normal mobile phone, ________ a laptop.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(4)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-4" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <button onclick="showSpecificAnswer(4, 'a')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">A</button>
+                            <button onclick="showSpecificAnswer(4, 'b')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">B</button>
+                            <button onclick="showSpecificAnswer(4, 'c')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">C</button>
+                            <button onclick="showSpecificAnswer(4, 'd')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">D</button>
+                            <button onclick="showSpecificAnswer(4, 'e')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">E</button>
+                            <button onclick="showSpecificAnswer(4, 'f')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">F</button>
+                            <button onclick="showSpecificAnswer(4, 'g')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">G</button>
+                            <button onclick="showSpecificAnswer(4, 'h')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">H</button>
+                            <button onclick="showSpecificAnswer(4, 'i')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">I</button>
+                            <button onclick="showSpecificAnswer(4, 'j')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">J</button>
+                        </div>
+                        
+                        <div id="specific-ans-4" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden"></div>
+
+                        <div class="mt-6 pt-4 border-t border-dashed border-gray-200">
+                            <h4 class="font-bold text-gray-800 mb-2">সব উত্তর এক নজরে:</h4>
+                            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-sm font-semibold text-gray-700">
+                                <div>(a) had better</div><div>(b) would rather</div><div>(c) It</div><div>(d) was born</div><div>(e) what does...look like</div>
+                                <div>(f) What's it like</div><div>(g) as soon as</div><div>(h) There</div><div>(i) as if</div><div>(j) let alone</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 5 -->
+            <div id="ex-5" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 05</span>
+                    <button onclick="toggleComplete(5)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-5"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+                
+                <div class="bg-blue-50 border border-blue-100 p-4 rounded-xl mb-6 grid grid-cols-2 sm:grid-cols-5 gap-2 text-center text-sm font-semibold text-blue-900">
+                    <div>what if</div><div>as soon as</div><div>would rather</div><div>had better</div><div>have to</div>
+                    <div>was born</div><div>there</div><div>it</div><div>no sooner had</div><div>let alone</div>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg">
+                    <p><strong>(a)</strong> We ________ follow the rules of health. Otherwise, we will fall sick.</p>
+                    <p><strong>(b)</strong> I ________ lose my life than yield to a tyrant.</p>
+                    <p><strong>(c)</strong> ________ we miss the last train tonight? Where will we stay?</p>
+                    <p><strong>(d)</strong> Begum Rokeya ________ in Rangpur. She was a pioneer of women's rights.</p>
+                    <p><strong>(e)</strong> ________ the bell rang than the teacher entered the classroom.</p>
+                    <p><strong>(f)</strong> You ________ prepare well for the HSC exam. Time is running out.</p>
+                    <p><strong>(g)</strong> She cannot cook rice, ________ biryani.</p>
+                    <p><strong>(h)</strong> ________ is a famous library in our college. It has a great collection.</p>
+                    <p><strong>(i)</strong> ________ is a long time since I met my old school friends.</p>
+                    <p><strong>(j)</strong> We left the playground ________ the storm began.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(5)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-5" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <button onclick="showSpecificAnswer(5, 'a')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">A</button>
+                            <button onclick="showSpecificAnswer(5, 'b')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">B</button>
+                            <button onclick="showSpecificAnswer(5, 'c')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">C</button>
+                            <button onclick="showSpecificAnswer(5, 'd')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">D</button>
+                            <button onclick="showSpecificAnswer(5, 'e')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">E</button>
+                            <button onclick="showSpecificAnswer(5, 'f')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">F</button>
+                            <button onclick="showSpecificAnswer(5, 'g')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">G</button>
+                            <button onclick="showSpecificAnswer(5, 'h')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">H</button>
+                            <button onclick="showSpecificAnswer(5, 'i')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">I</button>
+                            <button onclick="showSpecificAnswer(5, 'j')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">J</button>
+                        </div>
+                        
+                        <div id="specific-ans-5" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden"></div>
+
+                        <div class="mt-6 pt-4 border-t border-dashed border-gray-200">
+                            <h4 class="font-bold text-gray-800 mb-2">সব উত্তর এক নজরে:</h4>
+                            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-sm font-semibold text-gray-700">
+                                <div>(a) have to</div><div>(b) would rather</div><div>(c) what if</div><div>(d) was born</div><div>(e) no sooner had</div>
+                                <div>(f) had better</div><div>(g) let alone</div><div>(h) there</div><div>(i) it</div><div>(j) as soon as</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 6 -->
+            <div id="ex-6" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 06</span>
+                    <button onclick="toggleComplete(6)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-6"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+                
+                <div class="bg-blue-50 border border-blue-100 p-4 rounded-xl mb-6 grid grid-cols-2 sm:grid-cols-5 gap-2 text-center text-sm font-semibold text-blue-900">
+                    <div>as if</div><div>what's it like</div><div>let alone</div><div>had better</div><div>no sooner had</div>
+                    <div>was born</div><div>would rather</div><div>there</div><div>it</div><div>what does...look like</div>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg">
+                    <p><strong>(a)</strong> The man is very weak. He cannot lift 10 kg, ________ 50 kg.</p>
+                    <p><strong>(b)</strong> We ________ book our tickets online. The train gets very crowded.</p>
+                    <p><strong>(c)</strong> Nelson Mandela ________ in South Africa. He fought against racism.</p>
+                    <p><strong>(d)</strong> ________ playing football in a heavy rain? It feels so refreshing.</p>
+                    <p><strong>(e)</strong> Student: Sir, ________ a kangaroo ________?</p>
+                    <p><strong>(f)</strong> She speaks English fluently ________ she were a native speaker.</p>
+                    <p><strong>(g)</strong> ________ are many trees and birds in this beautiful forest.</p>
+                    <p><strong>(h)</strong> ________ is Sunday today. It is a government holiday.</p>
+                    <p><strong>(i)</strong> I ________ tell a lie than hurt her feelings. I respect her too much.</p>
+                    <p><strong>(j)</strong> ________ had we reached the school than the exam started.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(6)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-6" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <button onclick="showSpecificAnswer(6, 'a')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">A</button>
+                            <button onclick="showSpecificAnswer(6, 'b')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">B</button>
+                            <button onclick="showSpecificAnswer(6, 'c')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">C</button>
+                            <button onclick="showSpecificAnswer(6, 'd')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">D</button>
+                            <button onclick="showSpecificAnswer(6, 'e')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">E</button>
+                            <button onclick="showSpecificAnswer(6, 'f')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">F</button>
+                            <button onclick="showSpecificAnswer(6, 'g')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">G</button>
+                            <button onclick="showSpecificAnswer(6, 'h')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">H</button>
+                            <button onclick="showSpecificAnswer(6, 'i')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">I</button>
+                            <button onclick="showSpecificAnswer(6, 'j')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">J</button>
+                        </div>
+                        
+                        <div id="specific-ans-6" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden"></div>
+
+                        <div class="mt-6 pt-4 border-t border-dashed border-gray-200">
+                            <h4 class="font-bold text-gray-800 mb-2">সব উত্তর এক নজরে:</h4>
+                            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-sm font-semibold text-gray-700">
+                                <div>(a) let alone</div><div>(b) had better</div><div>(c) was born</div><div>(d) what's it like</div><div>(e) what does...look like</div>
+                                <div>(f) as if</div><div>(g) there</div><div>(h) it</div><div>(i) would rather</div><div>(j) no sooner had</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 7 -->
+            <div id="ex-7" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 07</span>
+                    <button onclick="toggleComplete(7)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-7"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+                
+                <div class="bg-blue-50 border border-blue-100 p-4 rounded-xl mb-6 grid grid-cols-2 sm:grid-cols-5 gap-2 text-center text-sm font-semibold text-blue-900">
+                    <div>what if</div><div>as soon as</div><div>have to</div><div>was born</div><div>would rather</div>
+                    <div>there</div><div>it</div><div>as if</div><div>let alone</div><div>had better</div>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg">
+                    <p><strong>(a)</strong> Thomas Alva Edison ________ in Milan, Ohio. He invented the light bulb.</p>
+                    <p><strong>(b)</strong> We ________ walk fast. The gates of the hall will close in 5 minutes.</p>
+                    <p><strong>(c)</strong> My mother cannot buy a simple cotton saree, ________ a silk saree.</p>
+                    <p><strong>(d)</strong> ________ is very cold today. We must wear warm clothes.</p>
+                    <p><strong>(e)</strong> I ________ fail the exam than pass by adopting unfair means.</p>
+                    <p><strong>(f)</strong> ________ is a small playground behind our school.</p>
+                    <p><strong>(g)</strong> You ________ take some rest. You have been studying since morning.</p>
+                    <p><strong>(h)</strong> She looked ________ she had seen a horrifying ghost.</p>
+                    <p><strong>(i)</strong> ________ we miss the entry gate pass? Will they let us in?</p>
+                    <p><strong>(j)</strong> ________ the police arrived, the thieves fled from the spot.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(7)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-7" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <button onclick="showSpecificAnswer(7, 'a')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">A</button>
+                            <button onclick="showSpecificAnswer(7, 'b')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">B</button>
+                            <button onclick="showSpecificAnswer(7, 'c')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">C</button>
+                            <button onclick="showSpecificAnswer(7, 'd')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">D</button>
+                            <button onclick="showSpecificAnswer(7, 'e')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">E</button>
+                            <button onclick="showSpecificAnswer(7, 'f')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">F</button>
+                            <button onclick="showSpecificAnswer(7, 'g')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">G</button>
+                            <button onclick="showSpecificAnswer(7, 'h')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">H</button>
+                            <button onclick="showSpecificAnswer(7, 'i')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">I</button>
+                            <button onclick="showSpecificAnswer(7, 'j')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">J</button>
+                        </div>
+                        
+                        <div id="specific-ans-7" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden"></div>
+
+                        <div class="mt-6 pt-4 border-t border-dashed border-gray-200">
+                            <h4 class="font-bold text-gray-800 mb-2">সব উত্তর এক নজরে:</h4>
+                            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-sm font-semibold text-gray-700">
+                                <div>(a) was born</div><div>(b) have to</div><div>(c) let alone</div><div>(d) it</div><div>(e) would rather</div>
+                                <div>(f) there</div><div>(g) had better</div><div>(h) as if</div><div>(i) what if</div><div>(j) as soon as</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 8 -->
+            <div id="ex-8" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 08</span>
+                    <button onclick="toggleComplete(8)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-8"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+                
+                <div class="bg-blue-50 border border-blue-100 p-4 rounded-xl mb-6 grid grid-cols-2 sm:grid-cols-5 gap-2 text-center text-sm font-semibold text-blue-900">
+                    <div>no sooner had</div><div>let alone</div><div>was born</div><div>would rather</div><div>had better</div>
+                    <div>there</div><div>it</div><div>what if</div><div>as soon as</div><div>what's it like</div>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg">
+                    <p><strong>(a)</strong> She cannot solve an easy sum, ________ a complex calculus problem.</p>
+                    <p><strong>(b)</strong> Michael Madhusudan Dutt ________ in Sagardari. He was a famous writer.</p>
+                    <p><strong>(c)</strong> ________ traveling in the hilly area of Bandarban? It must be adventurous.</p>
+                    <p><strong>(d)</strong> You ________ start cooking. The guests will arrive in any minute.</p>
+                    <p><strong>(e)</strong> ________ had we sat under the tree than it started raining cats and dogs.</p>
+                    <p><strong>(f)</strong> ________ the bell rang, the students left the exam hall.</p>
+                    <p><strong>(g)</strong> We ________ walk than take an auto-rickshaw in this gridlock.</p>
+                    <p><strong>(h)</strong> ________ we fail to convince the principal? Will he grant the permission?</p>
+                    <p><strong>(i)</strong> ________ are many beautiful flower plants in our balcony garden.</p>
+                    <p><strong>(j)</strong> ________ is not easy to obtain an A+ without studying consistently.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(8)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-8" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <button onclick="showSpecificAnswer(8, 'a')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">A</button>
+                            <button onclick="showSpecificAnswer(8, 'b')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">B</button>
+                            <button onclick="showSpecificAnswer(8, 'c')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">C</button>
+                            <button onclick="showSpecificAnswer(8, 'd')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">D</button>
+                            <button onclick="showSpecificAnswer(8, 'e')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">E</button>
+                            <button onclick="showSpecificAnswer(8, 'f')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">F</button>
+                            <button onclick="showSpecificAnswer(8, 'g')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">G</button>
+                            <button onclick="showSpecificAnswer(8, 'h')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">H</button>
+                            <button onclick="showSpecificAnswer(8, 'i')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">I</button>
+                            <button onclick="showSpecificAnswer(8, 'j')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">J</button>
+                        </div>
+                        
+                        <div id="specific-ans-8" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden"></div>
+
+                        <div class="mt-6 pt-4 border-t border-dashed border-gray-200">
+                            <h4 class="font-bold text-gray-800 mb-2">সব উত্তর এক নজরে:</h4>
+                            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-sm font-semibold text-gray-700">
+                                <div>(a) let alone</div><div>(b) was born</div><div>(c) what's it like</div><div>(d) had better</div><div>(e) no sooner had</div>
+                                <div>(f) as soon as</div><div>(g) would rather</div><div>(h) what if</div><div>(i) there</div><div>(j) it</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 9 -->
+            <div id="ex-9" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 09</span>
+                    <button onclick="toggleComplete(9)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-9"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+                
+                <div class="bg-blue-50 border border-blue-100 p-4 rounded-xl mb-6 grid grid-cols-2 sm:grid-cols-5 gap-2 text-center text-sm font-semibold text-blue-900">
+                    <div>what does...look like</div><div>as if</div><div>let alone</div><div>had better</div><div>have to</div>
+                    <div>was born</div><div>would rather</div><div>there</div><div>it</div><div>as soon as</div>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg">
+                    <p><strong>(a)</strong> The little baby asked, "Mom, ________ an elephant ________?"</p>
+                    <p><strong>(b)</strong> We ________ walk fast to join the assembly. Time is almost over.</p>
+                    <p><strong>(c)</strong> I cannot remember the name of my classmates, ________ my childhood friends.</p>
+                    <p><strong>(d)</strong> ________ was a deep pond beside our ancestral homestead.</p>
+                    <p><strong>(e)</strong> We ________ respect our freedom fighters. They fought for our motherland.</p>
+                    <p><strong>(f)</strong> She wept ________ her heart would break. She lost her pet yesterday.</p>
+                    <p><strong>(g)</strong> Dr. Muhammad Yunus ________ in Chittagong. He won the Nobel Peace Prize.</p>
+                    <p><strong>(h)</strong> I ________ fail than adopt unfair means in the examination hall.</p>
+                    <p><strong>(i)</strong> ________ is extremely important to stay updated with general knowledge.</p>
+                    <p><strong>(j)</strong> ________ the match ended, the audience broke into a loud cheer.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(9)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-9" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <button onclick="showSpecificAnswer(9, 'a')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">A</button>
+                            <button onclick="showSpecificAnswer(9, 'b')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">B</button>
+                            <button onclick="showSpecificAnswer(9, 'c')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">C</button>
+                            <button onclick="showSpecificAnswer(9, 'd')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">D</button>
+                            <button onclick="showSpecificAnswer(9, 'e')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">E</button>
+                            <button onclick="showSpecificAnswer(9, 'f')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">F</button>
+                            <button onclick="showSpecificAnswer(9, 'g')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">G</button>
+                            <button onclick="showSpecificAnswer(9, 'h')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">H</button>
+                            <button onclick="showSpecificAnswer(9, 'i')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">I</button>
+                            <button onclick="showSpecificAnswer(9, 'j')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">J</button>
+                        </div>
+                        
+                        <div id="specific-ans-9" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden"></div>
+
+                        <div class="mt-6 pt-4 border-t border-dashed border-gray-200">
+                            <h4 class="font-bold text-gray-800 mb-2">সব উত্তর এক নজরে:</h4>
+                            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-sm font-semibold text-gray-700">
+                                <div>(a) what does...look like</div><div>(b) had better</div><div>(c) let alone</div><div>(d) There</div><div>(e) have to</div>
+                                <div>(f) as if</div><div>(g) was born</div><div>(h) would rather</div><div>(i) it</div><div>(j) as soon as</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 10 -->
+            <div id="ex-10" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 10</span>
+                    <button onclick="toggleComplete(10)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-10"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+                
+                <div class="bg-blue-50 border border-blue-100 p-4 rounded-xl mb-6 grid grid-cols-2 sm:grid-cols-5 gap-2 text-center text-sm font-semibold text-blue-900">
+                    <div>no sooner had</div><div>as soon as</div><div>what if</div><div>was born</div><div>let alone</div>
+                    <div>would rather</div><div>had better</div><div>there</div><div>it</div><div>what's it like</div>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg">
+                    <p><strong>(a)</strong> You ________ start revision today. Only 3 days are left for the final exam.</p>
+                    <p><strong>(b)</strong> I cannot walk a single mile, ________ a long-distance marathon.</p>
+                    <p><strong>(c)</strong> ________ we do not get the study material before the class starts?</p>
+                    <p><strong>(d)</strong> Steve Jobs ________ in California, USA. He was a brilliant innovator.</p>
+                    <p><strong>(e)</strong> ________ had she completed her speech than the audience gave a standing ovation.</p>
+                    <p><strong>(f)</strong> ________ is no logic behind superstitious beliefs in this modern era.</p>
+                    <p><strong>(g)</strong> ________ is a fine pleasant evening. Let's go out for a walk.</p>
+                    <p><strong>(h)</strong> I ________ take a cup of hot tea than cold coffee right now.</p>
+                    <p><strong>(i)</strong> ________ she saw her mother, she hugged her tightly with love.</p>
+                    <p><strong>(j)</strong> ________ skydiving from a high-altitude airplane? It's extremely thrilling.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(10)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-10" class="hidden mt-4">
+                        <p class="text-sm text-gray-500 mb-3">যে অক্ষরের উত্তর দেখতে চান সেটিতে ক্লিক করুন:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <button onclick="showSpecificAnswer(10, 'a')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">A</button>
+                            <button onclick="showSpecificAnswer(10, 'b')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">B</button>
+                            <button onclick="showSpecificAnswer(10, 'c')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">C</button>
+                            <button onclick="showSpecificAnswer(10, 'd')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">D</button>
+                            <button onclick="showSpecificAnswer(10, 'e')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">E</button>
+                            <button onclick="showSpecificAnswer(10, 'f')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">F</button>
+                            <button onclick="showSpecificAnswer(10, 'g')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">G</button>
+                            <button onclick="showSpecificAnswer(10, 'h')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">H</button>
+                            <button onclick="showSpecificAnswer(10, 'i')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">I</button>
+                            <button onclick="showSpecificAnswer(10, 'j')" class="w-10 h-10 border border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-green-100 hover:border-green-500 transition">J</button>
+                        </div>
+                        
+                        <div id="specific-ans-10" class="p-4 bg-green-50 rounded-xl text-green-900 border border-green-200 hidden"></div>
+
+                        <div class="mt-6 pt-4 border-t border-dashed border-gray-200">
+                            <h4 class="font-bold text-gray-800 mb-2">সব উত্তর এক নজরে:</h4>
+                            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-sm font-semibold text-gray-700">
+                                <div>(a) had better</div><div>(b) let alone</div><div>(c) what if</div><div>(d) was born</div><div>(e) no sooner had</div>
+                                <div>(f) there</div><div>(g) it</div><div>(h) would rather</div><div>(i) as soon as</div><div>(j) what's it like</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ফুটার -->
+    <footer class="text-center py-6 text-gray-500 text-sm border-t border-gray-200 mt-12 bg-white">
+        <p>&copy; ২০২৬ ZAMIL ACADEMY। সর্বস্বত্ব সংরক্ষিত।</p>
+    </footer>
+
+    <script>
+        // সকল প্রশ্ন ও সেগুলোর ব্যাখ্যা ডেটাবেজ
+        const answerDatabase = {
+            1: {
+                a: { word: "had better", bangla: "আমাদের বরং কক্সবাজার ঘুরে আসা ভালো। আমরা অনেকদিন ধরে সেখানে যাইনি।" },
+                b: { word: "let alone", bangla: "সে একটিমাত্র পৃষ্ঠা সঠিকভাবে লিখতে পারে না, উপন্যাস লেখা তো দূরের কথা।" },
+                c: { word: "There", bangla: "আমাদের শহরে একটি সুন্দর পার্ক আছে। আমরা প্রায়শই সেখানে সন্ধ্যায় হাঁটার জন্য যাই।" },
+                d: { word: "as if", bangla: "ছেলেটি এমনভাবে কথা বলে যেন সে সবকিছু জানে। আসলে সে একজন বোকা।" },
+                e: { word: "What's it like", bangla: "চাঁদনী রাতে নৌকায় ভ্রমণ করতে কেমন লাগে? এটি স্বর্গীয় অনুভূতি দেয়।" },
+                f: { word: "was born", bangla: "কাজী নজরুল ইসলাম ১৮৯৯ সালে জন্মগ্রহণ করেন। তিনি আমাদের জাতীয় কবি।" },
+                g: { word: "would rather", bangla: "আমি বরং না খেয়ে মরব তবুও রাস্তায় ভিক্ষা করব না। ভিক্ষাবৃত্তি একটি অপমানজনক কাজ।" },
+                h: { word: "what if", bangla: "কী হবে যদি ট্রেনটি আজ বিলম্ব করে? আমি গুরুত্বপূর্ণ চাকরির ইন্টারভিউটি মিস করব।" },
+                i: { word: "It", bangla: "মুষলধারে বৃষ্টি হচ্ছে। আমাদের আজ ঘরেই থাকা উচিত।" },
+                j: { word: "As soon as", bangla: "ঘণ্টা বাজার সাথে সাথেই শিক্ষার্থীরা ক্লাসরুম থেকে বেরিয়ে গেল।" }
+            },
+            2: {
+                a: { word: "had better", bangla: "তোমার বরং এখনই রওনা হওয়া ভালো। ট্রেনের জন্য তোমার ইতিমধ্যেই দেরি হয়ে যাচ্ছে।" },
+                b: { word: "let alone", bangla: "গরীব লোকটি এক বেলার খাবারই জোটাতে পারে না, দিনে তিনবেলা খাওয়া তো দূরের কথা।" },
+                c: { word: "What if", bangla: "যদি আমরা ফ্লাইটটি মিস করি তাহলে কী হবে? বিমান সংস্থা কি আমাদের টাকা ফেরত দেবে?" },
+                d: { word: "was born", bangla: "বাংলাদেশ ১৯৭১ সালে জন্মলাভ করে। আমরা আমাদের দেশকে নিয়ে গর্বিত।" },
+                e: { word: "have to", bangla: "আমাদের অবশ্যই একটি শক্তিশালী নৈতিক চরিত্র গঠন করতে হবে। এটি জীবনের অলংকার।" },
+                f: { word: "would rather", bangla: "আমার বোন বরং একটি খাতা কিনবে তবুও মোবাইল ফোন কিনবে না।" },
+                g: { word: "There", bangla: "একদা এক ছোট গ্রামে এক সুখী জুতো সেলাইকারী বাস করতেন। তিনি তার কাজে খুশি ছিলেন।" },
+                h: { word: "It", bangla: "এখান থেকে দূরত্ব ১০ মাইল। এটি সত্যিই অনেক দীর্ঘ পথ।" },
+                i: { word: "what does...look like", bangla: "আমার ছোট ভাই জিজ্ঞেস করল, 'আপু, একটি ময়ূর দেখতে কেমন?'" },
+                j: { word: "As soon as", bangla: "শিক্ষক ক্লাসে প্রবেশ করার সাথে সাথেই কোলাহল সাথে সাথে বন্ধ হয়ে গেল।" }
+            },
+            3: {
+                a: { word: "had better", bangla: "তোমার বরং একটি ছাতা নেওয়া ভালো। আজ বৃষ্টি হতে পারে।" },
+                b: { word: "as if", bangla: "সে এমন আচরণ করে যেন সে কোটিপতি। বাস্তবে সে খুবই দরিদ্র।" },
+                c: { word: "what if", bangla: "কী হবে যদি আমরা ক্লাসটি মিস করি? শিক্ষক কি আমাদের আগামীকাল অনুমতি দেবেন?" },
+                d: { word: "was born", bangla: "আলবার্ট আইনস্টাইন ১৮৭৯ সালে জার্মানিতে জন্মগ্রহণ করেন।" },
+                e: { word: "as soon as", bangla: "বার্তাটি পাওয়ার সাথে সাথেই সে কান্নায় ভেঙে পড়ল আনন্দের চোটে।" },
+                f: { word: "would rather", bangla: "আমি বরং পদত্যাগ করব তবুও এই অসৎ কাজটি করব না।" },
+                g: { word: "let alone", bangla: "আমরা এক কিলোমিটারই হাঁটতে পারি না, ১০ কিলোমিটার তো দূরের কথা।" },
+                h: { word: "there", bangla: "উজ্জ্বল ভবিষ্যৎ নিশ্চিত করার জন্য কঠোর পরিশ্রমের কোনো বিকল্প নেই।" },
+                i: { word: "it", bangla: "আমাদের খারাপ অভ্যাসগুলো পরিবর্তন করার এটাই উপযুক্ত সময়।" },
+                j: { word: "no sooner had", bangla: "আমরা বাড়ি থেকে বের হতে না হতেই ঝুম বৃষ্টি শুরু হলো।" }
+            },
+            4: {
+                a: { word: "had better", bangla: "তোমার বরং কাজটি যথাসময়ে করা ভালো। অন্যথায়, তোমাকে জরিমানা করা হবে।" },
+                b: { word: "would rather", bangla: "আমরা বরং না খেয়ে মারা যাব তবুও কারো কাছ থেকে কোনো ঘুষ নেব না।" },
+                c: { word: "It", bangla: "এটি কোনো গোপন বিষয় নয় যে সে একজন সম্পূর্ণ দুর্নীতিগ্রস্ত ব্যক্তি।" },
+                d: { word: "was born", bangla: "রবীন্দ্রনাথ ঠাকুর ১৮৬১ সালে কলকাতায় জন্মগ্রহণ করেন।" },
+                e: { word: "what does...look like", bangla: "শিশু জিজ্ঞেস করল: বাবা, একটি অ্যালবাট্রস পাখি দেখতে কেমন?" },
+                f: { word: "What's it like", bangla: "দিনের বেলা ঘন বনের ভেতরে হাঁটা কেমন লাগে? এটি ভীতিকর কিন্তু রোমাঞ্চকর।" },
+                g: { word: "as soon as", bangla: "রোগীটিকে হাসপাতালে নিয়ে যাওয়ার সাথে সাথেই সে মারা গেল।" },
+                h: { word: "There", bangla: "আমাদের স্কুল ভবনের সামনে একটি বিশাল আম গাছ আছে।" },
+                i: { word: "as if", bangla: "সে এমনভাবে কথা বলে যেন সে দেশের নেতা।" },
+                j: { word: "let alone", bangla: "আমি একটি সাধারণ মোবাইল ফোনই কিনতে পারি না, ল্যাপটপ তো দূরের কথা।" }
+            },
+            5: {
+                a: { word: "have to", bangla: "আমাদের অবশ্যই স্বাস্থ্যের নিয়মগুলো মেনে চলতে হবে। অন্যথায়, আমরা অসুস্থ হয়ে পড়ব।" },
+                b: { word: "would rather", bangla: "আমি বরং আমার জীবন দিয়ে দেব তবুও অত্যাচারীর কাছে নতি স্বীকার করব না।" },
+                c: { word: "what if", bangla: "কী হবে যদি আমরা আজকের শেষ ট্রেনটি মিস করি? আমরা কোথায় থাকব?" },
+                d: { word: "was born", bangla: "বেগম রোকেয়া রংপুরে জন্মগ্রহণ করেন। তিনি নারী অধিকারের অগ্রদূত ছিলেন।" },
+                e: { word: "no sooner had", bangla: "ঘণ্টাটি পড়তে না পড়তেই শিক্ষক ক্লাসরুমে প্রবেশ করলেন।" },
+                f: { word: "had better", bangla: "তোমার বরং এইচএসসি পরীক্ষার জন্য ভালো প্রস্তুতি নেওয়া ভালো। সময় শেষ হয়ে যাচ্ছে।" },
+                g: { word: "let alone", bangla: "সে ভাতই রান্না করতে পারে না, বিরিয়ানি তো দূরের কথা।" },
+                h: { word: "there", bangla: "আমাদের কলেজে একটি বিখ্যাত লাইব্রেরি আছে। এতে চমৎকার কালেকশন রয়েছে।" },
+                i: { word: "it", bangla: "আমার পুরনো স্কুলের বন্ধুদের সাথে দেখা করার পর দীর্ঘ সময় কেটে গেছে।" },
+                j: { word: "as soon as", bangla: "ঝড় শুরু হওয়ার সাথে সাথেই আমরা খেলার মাঠ ত্যাগ করলাম।" }
+            },
+            6: {
+                a: { word: "let alone", bangla: "লোকটি খুবই দুর্বল। সে ১০ কেজিই তুলতে পারে না, ৫০ কেজি তো দূরের কথা।" },
+                b: { word: "had better", bangla: "আমাদের বরং অনলাইন টিকিট বুক করাই ভালো। ট্রেনে খুব ভিড় হয়।" },
+                c: { word: "was born", bangla: "নেলসন ম্যান্ডেলা দক্ষিণ আফ্রিকায় জন্মগ্রহণ করেন। তিনি বর্ণবাদের বিরুদ্ধে লড়াই করেছিলেন।" },
+                d: { word: "what's it like", bangla: "ভারী বৃষ্টিতে ফুটবল খেলা কেমন লাগে? এটি খুব সতেজ অনুভূতি দেয়।" },
+                e: { word: "what does...look like", bangla: "ছাত্র: স্যার, ক্যাঙ্গারু দেখতে কেমন?" },
+                f: { word: "as if", bangla: "সে এমন সাবলীল ইংরেজি বলে যেন সে এখানকার স্থানীয় অধিবাসী।" },
+                g: { word: "there", bangla: "এই সুন্দর বনে অনেক গাছপালা এবং পাখি রয়েছে।" },
+                h: { word: "it", bangla: "আজ রবিবার। এটি সরকারি ছুটির দিন।" },
+                i: { word: "would rather", bangla: "আমি বরং মিথ্যা বলব তবুও তার মনে কষ্ট দেব না। আমি তাকে অনেক সম্মান করি।" },
+                j: { word: "no sooner had", bangla: "আমরা স্কুলে পৌঁছাতে না পৌঁছাতেই পরীক্ষা শুরু হয়ে গেল।" }
+            },
+            7: {
+                a: { word: "was born", bangla: "থমাস আলভা এডিসন ওহিওর মিলানে জন্মগ্রহণ করেন। তিনি বৈদ্যুতিক বাল্ব আবিষ্কার করেন।" },
+                b: { word: "have to", bangla: "আমাদের অবশ্যই দ্রুত হাঁটতে হবে। ৫ মিনিটের মধ্যে হলের গেট বন্ধ হয়ে যাবে।" },
+                c: { word: "let alone", bangla: "আমার মা একটি সাধারণ সুতির শাড়িই কিনতে পারেন না, সিল্কের শাড়ি তো দূরের কথা।" },
+                d: { word: "it", bangla: "আজ খুব ঠান্ডা। আমাদের অবশ্যই গরম পোশাক পরা উচিত।" },
+                e: { word: "would rather", bangla: "আমি বরং পরীক্ষায় ফেল করব তবুও অসদুপায় অবলম্বন করে পাস করব না।" },
+                f: { word: "there", bangla: "আমাদের স্কুলের পেছনে একটি ছোট খেলার মাঠ আছে।" },
+                g: { word: "had better", bangla: "তোমার বরং একটু বিশ্রাম নেওয়া ভালো। তুমি সকাল থেকে পড়াশোনা করছ।" },
+                h: { word: "as if", bangla: "তাকে এমন দেখাচ্ছিল যেন সে একটি ভয়ঙ্কর ভূত দেখেছে।" },
+                i: { word: "what if", bangla: "কী হবে যদি আমরা প্রবেশদ্বারের পাসটি হারিয়ে ফেলি? তারা কি আমাদের ভেতরে যেতে দেবে?" },
+                j: { word: "as soon as", bangla: "পুলিশ আসার সাথে সাথেই চোরেরা ঘটনাস্থল থেকে পালিয়ে গেল।" }
+            },
+            8: {
+                a: { word: "let alone", bangla: "সে একটি সহজ অংকই সমাধান করতে পারে না, জটিল ক্যালকুলাস অংক তো দূরের কথা।" },
+                b: { word: "was born", bangla: "মাইকেল মধুসূদন দত্ত সাগরদাঁড়িতে জন্মগ্রহণ করেন। তিনি একজন বিখ্যাত লেখক ছিলেন।" },
+                c: { word: "what's it like", bangla: "বান্দরবানের পাহাড়ি এলাকায় ভ্রমণ করতে কেমন লাগে? এটি অবশ্যই রোমাঞ্চকর হবে।" },
+                d: { word: "had better", bangla: "তোমার বরং রান্না শুরু করাই ভালো। অতিথিরা যেকোনো মুহূর্তে চলে আসবে।" },
+                e: { word: "no sooner had", bangla: "আমরা গাছের নিচে বসতে না বসতেই মুষলধারে বৃষ্টি শুরু হলো।" },
+                f: { word: "as soon as", bangla: "ঘণ্টা বাজার সাথে সাথেই শিক্ষার্থীরা পরীক্ষার হল থেকে চলে গেল।" },
+                g: { word: "would rather", bangla: "এই ট্রাফিক জ্যামে আমরা বরং হেঁটে যাব তবুও অটো-রিকশায় উঠব না।" },
+                h: { word: "what if", bangla: "কী হবে যদি আমরা প্রিন্সিপালকে বোঝাতে ব্যর্থ হই? তিনি কি অনুমতি দেবেন?" },
+                i: { word: "there", bangla: "আমাদের বারান্দার বাগানে অনেক সুন্দর সুন্দর ফুলের গাছ আছে।" },
+                j: { word: "it", bangla: "নিয়মিত পড়াশোনা না করে এ+ পাওয়া সহজ নয়।" }
+            },
+            9: {
+                a: { word: "what does...look like", bangla: "ছোট শিশুটি জিজ্ঞেস করল, 'মা, একটা হাতি দেখতে কেমন?'" },
+                b: { word: "had better", bangla: "আমাদের বরং সমাবেশে যোগ দিতে দ্রুত হাঁটা ভালো। সময় প্রায় শেষ।" },
+                c: { word: "let alone", bangla: "আমি আমার সহপাঠীদের নামই মনে রাখতে পারি না, শৈশবের বন্ধুদের তো দূরের কথা।" },
+                d: { word: "There", bangla: "আমাদের পৈতৃক ভিটার পাশে একটি গভীর পুকুর ছিল।" },
+                e: { word: "have to", bangla: "আমাদের অবশ্যই আমাদের মুক্তিযোদ্ধাদের সম্মান করতে হবে। তাঁরা আমাদের মাতৃভূমির জন্য যুদ্ধ করেছেন।" },
+                f: { word: "as if", bangla: "সে এমনভাবে কেঁদেছিল যেন তার বুক ফেটে যাবে। গতকাল সে তার পোষা প্রাণীটিকে হারিয়েছে।" },
+                g: { word: "was born", bangla: "ড. মুহাম্মদ ইউনূস চট্টগ্রামে জন্মগ্রহণ করেন। তিনি নোবেল শান্তি পুরস্কার লাভ করেন।" },
+                h: { word: "would rather", bangla: "আমি বরং ফেল করব তবুও পরীক্ষার হলে অসদুপায় অবলম্বন করব না।" },
+                i: { word: "it", bangla: "সাধারণ জ্ঞানের সাথে আপডেট থাকা অত্যন্ত গুরুত্বপূর্ণ।" },
+                j: { word: "as soon as", bangla: "ম্যাচটি শেষ হওয়ার সাথে সাথেই দর্শকেরা জোরে করতালিতে ফেটে পড়ল।" }
+            },
+            10: {
+                a: { word: "had better", bangla: "তোমার বরং আজ থেকেই রিভিশন শুরু করা ভালো। ফাইনাল পরীক্ষার মাত্র ৩ দিন বাকি।" },
+                b: { word: "let alone", bangla: "আমি এক মাইলই হাঁটতে পারি না, দূরপাল্লার ম্যারাথন তো দূরের কথা।" },
+                c: { word: "what if", bangla: "কী হবে যদি আমরা ক্লাস শুরু হওয়ার আগে স্টাডি মেটেরিয়াল না পাই?" },
+                d: { word: "was born", bangla: "স্টিভ জবস ক্যালিফোর্নিয়ায় জন্মগ্রহণ করেন। তিনি একজন উজ্জ্বল উদ্ভাবক ছিলেন।" },
+                e: { word: "no sooner had", bangla: "তিনি তার বক্তব্য শেষ করতে না করতেই উপস্থিত দর্শকেরা দাঁড়িয়ে হাততালি দিল।" },
+                f: { word: "there", bangla: "এই আধুনিক যুগে কুসংস্কারের পেছনে কোনো যুক্তি নেই।" },
+                g: { word: "it", bangla: "এটি একটি চমৎকার মনোরম সন্ধ্যা। চলো একটু বাইরে হেঁটে আসি।" },
+                h: { word: "would rather", bangla: "আমি এই মুহূর্তে ঠান্ডা কফির চেয়ে বরং এক কাপ গরম চা নিতে পছন্দ করব।" },
+                i: { word: "as soon as", bangla: "মাকে দেখামাত্রই সে তাকে ভালোবেসে জড়িয়ে ধরল।" },
+                j: { word: "what's it like", bangla: "উঁচু বিমান থেকে স্কাইডাইভিং করতে কেমন লাগে? এটি অত্যন্ত রোমাঞ্চকর।" }
+            }
+        };
+
+        // উত্তর প্যানেল চালু/বন্ধ করা
+        function toggleAnswerPanel(exNum) {
+            const panel = document.getElementById(`ans-panel-${exNum}`);
+            if (panel.classList.contains('hidden')) {
+                panel.classList.remove('hidden');
+            } else {
+                panel.classList.add('hidden');
+            }
+        }
+
+        // নির্দিষ্ট অ্যালফাবেটের উত্তর ও বাংলা মিনিং দেখানো
+        function showSpecificAnswer(exNum, letter) {
+            const ansBox = document.getElementById(`specific-ans-${exNum}`);
+            const data = answerDatabase[exNum][letter];
+            
+            if (data) {
+                ansBox.innerHTML = `
+                    <div class="flex items-start gap-2">
+                        <span class="bg-green-200 text-green-900 font-bold px-2.5 py-0.5 rounded-md text-sm uppercase">${letter}</span>
+                        <div>
+                            <p class="font-bold text-lg text-green-900">Correct Phrase: <span class="underline text-red-600">${data.word}</span></p>
+                            <p class="text-sm text-gray-700 mt-1"><strong>বাংলা অর্থ:</strong> ${data.bangla}</p>
+                        </div>
+                    </div>
+                `;
+                ansBox.classList.remove('hidden');
+            }
+        }
+
+        // কমপ্লিট স্ট্যাটাস টগল এবং লোকাল স্টোরেজ আপডেট
+        function toggleComplete(exNum) {
+            const card = document.getElementById(`ex-${exNum}`);
+            const badge = card.querySelector('.completed-badge');
+            const checkbox = document.getElementById(`checkbox-${exNum}`);
+            
+            let completedList = JSON.parse(localStorage.getItem('zamil_completed_exercises')) || [];
+
+            if (completedList.includes(exNum)) {
+                // আন-কমপ্লিট করা
+                completedList = completedList.filter(id => id !== exNum);
+                card.classList.remove('completed-card');
+                badge.classList.add('hidden');
+                badge.classList.remove('flex');
+                checkbox.innerHTML = '';
+                checkbox.classList.remove('bg-green-600', 'border-green-600');
+                checkbox.classList.add('bg-white', 'border-gray-300');
+            } else {
+                // কমপ্লিট করা
+                completedList.push(exNum);
+                card.classList.add('completed-card');
+                badge.classList.remove('hidden');
+                badge.classList.add('flex');
+                checkbox.innerHTML = '<svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>';
+                checkbox.classList.remove('bg-white', 'border-gray-300');
+                checkbox.classList.add('bg-green-600', 'border-green-600');
+            }
+
+            localStorage.setItem('zamil_completed_exercises', JSON.stringify(completedList));
+        }
+
+        // পেজ লোড হওয়ার পর লোকাল স্টোরেজ থেকে প্রোগ্রেস লোড করা
+        window.addEventListener('DOMContentLoaded', () => {
+            const completedList = JSON.parse(localStorage.getItem('zamil_completed_exercises')) || [];
+            completedList.forEach(exNum => {
+                const card = document.getElementById(`ex-${exNum}`);
+                if (card) {
+                    const badge = card.querySelector('.completed-badge');
+                    const checkbox = document.getElementById(`checkbox-${exNum}`);
+                    
+                    card.classList.add('completed-card');
+                    if (badge) {
+                        badge.classList.remove('hidden');
+                        badge.classList.add('flex');
+                    }
+                    if (checkbox) {
+                        checkbox.innerHTML = '<svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>';
+                        checkbox.classList.remove('bg-white', 'border-gray-300');
+                        checkbox.classList.add('bg-green-600', 'border-green-600');
+                    }
+                }
+            });
+        });
+    </script>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyABpKz4xjVKWb6kVR_mT8d13dt9lcDwipE",
+    authDomain: "zamil-4e08e.firebaseapp.com",
+    projectId: "zamil-4e08e",
+    storageBucket: "zamil-4e08e.firebasestorage.app",
+    messagingSenderId: "696619411784",
+    appId: "1:696619411784:web:3dce390ed5b840cbc32b7d"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+onAuthStateChanged(auth, async (user) => {
+
+    // লগইন না থাকলে
+    if (!user) {
+        window.location.replace("/paid.html");
+        return;
+    }
+
+    try {
+        // paid_students collection এ email দিয়ে খুঁজবে
+        const paidRef = doc(db, "paid_students", user.email);
+        const paidDoc = await getDoc(paidRef);
+
+        // ডকুমেন্ট না থাকলে
+        if (!paidDoc.exists()) {
+            window.location.replace("/paid.html");
+            return;
+        }
+
+        // status paid না হলে
+        const data = paidDoc.data();
+
+        if (data.status !== "paid") {
+            window.location.replace("/paid.html");
+            return;
+        }
+
+        console.log("Paid User Verified");
+
+    } catch (error) {
+        console.error(error);
+        window.location.replace("/paid.html");
+    }
+
+});
+</script>
+</body>
+</html>

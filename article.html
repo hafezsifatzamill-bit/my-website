@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles Practice - ZAMIL ACADEMY</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Firebase Imports -->
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore-compat.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'hind': ['"Hind Siliguri"', 'sans-serif'],
+                        'poppins': ['"Poppins"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Hind Siliguri', sans-serif; }
+        .checkmark-animate {
+            animation: pop 0.3s ease-out;
+        }
+        @keyframes pop {
+            0% { transform: scale(0.8); opacity: 0.5; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+    <!-- হেডার -->
+    <header class="relative bg-green-800 text-white py-12 px-6 text-center shadow-lg rounded-b-[40px]">
+        <!-- ব্যাক বাটন -->
+        <a href="index.html" 
+           class="absolute top-6 left-4 md:left-8 flex items-center gap-2 text-white/90 hover:text-white bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full transition-all duration-300 backdrop-blur-sm text-sm font-semibold shadow-sm border border-white/10">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            <span class="hidden md:inline font-hind">ড্যাশবোর্ড</span>
+        </a>
+
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white font-hind mt-4 md:mt-0">ZAMIL ACADEMY</h1>
+        <p class="mt-2 text-green-100 text-sm md:text-base font-hind opacity-90">HSC English 2nd Paper • Articles Interactive Practice</p>
+    </header>
+
+    <!-- সাবস্ক্রাইব বক্স -->
+    <div class="flex justify-center -mt-8 px-6 relative z-10">
+        <div class="bg-white p-8 shadow-md border-t-4 border-green-800 rounded-2xl max-w-md w-full text-center">
+            <p class="text-gray-700 text-lg mb-6 font-hind">
+                প্রিমিয়াম সেবা পেতে আমাদের ইউটিউব চ্যানেলটি সাবস্ক্রাইব করুন।
+            </p>
+            <a href="https://youtube.com/@zamil_academy?si=EbWJq_lwwbWrLar9" 
+               target="_blank"
+               class="inline-block bg-red-700 hover:bg-green-800 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-md font-hind">
+                চ্যানেল ভিজিট করুন
+            </a>
+        </div>
+    </div>
+
+    <!-- মূল কন্টেন্ট এরিয়া -->
+    <main class="flex-grow flex flex-col items-center pt-16 pb-12 px-6">
+        
+        <!-- ১. Rules ব্যানার (ক্লিক করলে article-rules.html-এ চলে যাবে) -->
+        <div class="max-w-5xl w-full mb-8">
+            <a href="article-rules.html" class="flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-green-800 to-emerald-700 text-white p-6 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold font-hind">আর্টিকেল এর নিয়মাবলী (Rules)</h3>
+                        <p class="text-green-100 text-sm font-hind">সবগুলো নিয়ম উদাহরণ ও সহজ ব্যাখ্যাসহ দেখতে এখানে ক্লিক করুন।</p>
+                    </div>
+                </div>
+                <span class="mt-4 md:mt-0 bg-white text-green-800 font-bold px-6 py-2 rounded-full font-hind hover:bg-green-50 transition duration-300">নিয়মগুলো দেখুন &rarr;</span>
+            </a>
+        </div>
+
+        <!-- টাইটেল -->
+        <div class="text-center mb-10">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-gray-800 font-hind">১০টি গুরুত্বপূর্ণ প্র্যাকটিস এক্সারসাইজ</h2>
+            <div class="w-16 h-1 bg-green-600 rounded-full mx-auto mt-3"></div>
+        </div>
+
+        <!-- এক্সারসাইজ কার্ডস কন্টেইনার -->
+        <div id="exercise-container" class="w-full max-w-5xl space-y-8">
+            <!-- JavaScript এর মাধ্যমে ডায়নামিকালি লোড হবে -->
+        </div>
+
+    </main>
+
+    <!-- ফুটার -->
+    <footer class="text-center py-8 text-gray-500 text-sm border-t border-gray-200 bg-white">
+        <p class="font-hind">&copy; ২০২৬ ZAMIL ACADEMY। সর্বস্বত্ব সংরক্ষিত।</p>
+    </footer>
+
+    <!-- স্ক্রিপ্ট এবং লজিক হ্যান্ডলিং -->
+    <script>
+        // ১০টি HSC বোর্ড স্ট্যান্ডার্ড আর্টিকেল এক্সারসাইজ ডেটাবেস
+        const exercises = [
+            {
+                id: 1,
+                title: "Exercise 01: Hazrat Khan Jahan Ali",
+                passage: "Hazrat Khan Jahan Ali was (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> great reformer. He came to Bagerhat to preach (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> Islam. Bagerhat was then (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> forest. He cleared (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> forest and built (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> city. He also dug (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> big dighi called Khanjali dighi to solve (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> water problem of Bagerhat. His tomb is preserved as (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> historic place. He was (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> honest leader. We should follow (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> path of such great souls.",
+                answers: {
+                    a: { text: "a", bangla: "একজন", explanation: "Consonant sound-এর পূর্বে অনির্দিষ্ট করে 'a' বসে।" },
+                    b: { text: "✕ (no article)", bangla: "কোনো আর্টিকেল বসবে না", explanation: "ধর্মের নামের পূর্বে কোনো আর্টিকেল বসে না।" },
+                    c: { text: "a", bangla: "একটি", explanation: "অনির্দিষ্ট সাধারণ Noun-এর পূর্বে 'a' বসে।" },
+                    d: { text: "the", bangla: "সেই", explanation: "পূর্বোল্লিখিত বনকে নির্দিষ্ট করে উল্লেখ করায় 'the' বসেছে।" },
+                    e: { text: "a", bangla: "একটি", explanation: "অনির্দিষ্ট একটি শহর বা সিটি বোঝাতে 'a' বসেছে।" },
+                    f: { text: "a", bangla: "একটি", explanation: "Consonant সাউন্ড বিশিষ্ট অনির্দিষ্ট দীঘি বা Noun-এর পূর্বে 'a' বসে।" },
+                    g: { text: "the", bangla: "সেই নির্দিষ্ট", explanation: "বাগেরহাটের পানির সমস্যাকে নির্দিষ্ট করে বোঝানোয় 'the' বসেছে।" },
+                    h: { text: "a", bangla: "একটি", explanation: "historic শব্দটির উচ্চারণ হ-এর মতো হওয়ায় তার পূর্বে 'a' বসেছে।" },
+                    i: { text: "an", bangla: "একজন", explanation: "honest শব্দের H অনুচ্চারিত থাকায় Vowel সাউন্ড অনুযায়ী 'an' বসেছে।" },
+                    j: { text: "the", bangla: "সেই পথ", explanation: "মহৎ প্রাণদের সুনির্দিষ্ট আদর্শ বা পথ বোঝাতে 'the' বসেছে।" }
+                }
+            },
+            {
+                id: 2,
+                title: "Exercise 02: Honest Man",
+                passage: "Honesty is (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> great virtue. (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> honest man is respected by all. He never tells (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> lie. He knows that honesty is (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> best policy. He is (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> asset to (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> nation. On (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> other hand, (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> dishonest man is despised. He leads (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> miserable life. He is (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> burden to society.",
+                answers: {
+                    a: { text: "a", bangla: "একটি", explanation: "Consonant-এর পূর্বে এবং অনির্দিষ্ট সাধারণ গুণের পূর্বে 'a' বসে।" },
+                    b: { text: "An", bangla: "একজন", explanation: "honest শব্দের অনুচ্চারিত 'H' এর জন্য vowel সাউন্ডের কারণে 'an' বসেছে।" },
+                    c: { text: "a", bangla: "একটি (মিথ্যা)", explanation: "Tell a lie একটি প্রচলিত ফ্রেজ, যেখানে 'a' বসে।" },
+                    d: { text: "the", bangla: "সর্বোত্তম", explanation: "Superlative degree 'best'-এর পূর্বে সর্বদা 'the' বসে।" },
+                    e: { text: "an", bangla: "একটি সম্পদ", explanation: "Vowel sound বিশিষ্ট countable Noun (asset)-এর আগে 'an' বসে।" },
+                    f: { text: "the", bangla: "দেশের কাছে", explanation: "নির্দিষ্ট দেশের কাছে সম্পদ বোঝাতে 'the' বসে।" },
+                    g: { text: "the", bangla: "অন্য দিকে", explanation: "on the other hand একটি নির্দিষ্ট প্রচলিত গ্রামার ফ্রেজ।" },
+                    h: { text: "a", bangla: "একজন", explanation: "dishonest শব্দের 'D' স্পষ্টভাবে উচ্চারিত হওয়ায় Consonant সাউন্ড অনুযায়ী 'a' বসেছে।" },
+                    i: { text: "a", bangla: "একটি (দুর্দশাময়)", explanation: "leads a miserable life একটি ফ্রেজ, তাই 'a' বসেছে।" },
+                    j: { text: "a", bangla: "একটি বোঝা", explanation: "burden-এর 'B' কনসোনেন্ট সাউন্ড হওয়ায় 'a' বসে।" }
+                }
+            },
+            {
+                id: 3,
+                title: "Exercise 03: Education and Nation",
+                passage: "Education is (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> backbone of (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> nation. No nation can make (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> progress without education. (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> illiterate person is (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> burden. He is like (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> blind man. He cannot differentiate between (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> right and wrong. We must take steps to educate (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> poor. Education should be made free for (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> all. It is (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> unique way to develop the country.",
+                answers: {
+                    a: { text: "the", bangla: "সেই মেরুদণ্ড", explanation: "Noun + of + Noun স্ট্রাকচারে প্রথম Noun-এর পূর্বে 'the' বসে।" },
+                    b: { text: "a", bangla: "একটি জাতির", explanation: "সাধারণভাবে কোনো একটি জাতি বোঝাতে 'a' বসেছে।" },
+                    c: { text: "✕ (no article)", bangla: "কোনো আর্টিকেল বসে না", explanation: "Progress একটি uncountable abstract noun, তাই আর্টিকেল বসে না।" },
+                    d: { text: "An", bangla: "একজন", explanation: "illiterate শব্দটির শুরুতে vowel 'i' এবং স্বরধ্বনি থাকায় 'an' বসেছে।" },
+                    e: { text: "a", bangla: "একটি বোঝা", explanation: "burden-এর 'B' কনসোনেন্ট সাউন্ড হওয়ায় 'a' বসে।" },
+                    f: { text: "a", bangla: "একজন", explanation: "blind (অন্ধ)-এর প্রথম বর্ণ 'B' কনসোনেন্ট সাউন্ড হওয়ায় 'a' বসেছে।" },
+                    g: { text: "✕ (no article)", bangla: "কোনো আর্টিকেল বসবে না", explanation: "right and wrong এখানে ভাবপ্রকাশক বিমূর্ত রূপ, মাঝখানে আর্টিকেল বসে না।" },
+                    h: { text: "the", bangla: "গরিবদের", explanation: "adjective-এর পূর্বে 'the' বসে তা দিয়ে সমগ্র গরিব শ্রেণিকে নির্দেশ করা হয়েছে।" },
+                    i: { text: "✕ (no article)", bangla: "সকলের জন্য", explanation: "all এর আগে এখানে সাধারণত কোনো আর্টিকেল বসে না।" },
+                    j: { text: "a", bangla: "একটি অনন্য", explanation: "unique শব্দের প্রথম বর্ণ 'u' হলেও এর উচ্চারণ 'ইউ'-এর মতো হওয়ায় 'a' বসেছে।" }
+                }
+            },
+            {
+                id: 4,
+                title: "Exercise 04: Importance of Newspaper",
+                passage: "Newspaper is (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> storehouse of knowledge. It plays (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> vital role in (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> modern world. We cannot think of (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> morning without it. It carries (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> news of (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> home and abroad. Reading newspaper is (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> good habit. (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> idle person does not read it. It helps us to acquire (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> general knowledge. It is (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> extremely useful thing.",
+                answers: {
+                    a: { text: "a", bangla: "একটি ভাণ্ডার", explanation: "Consonant sound বিশিষ্ট সাধারণ Noun-এর পূর্বে 'a' বসে।" },
+                    b: { text: "a", bangla: "একটি গুরুত্বপূর্ণ", explanation: "play a vital role একটি বহুল ব্যবহৃত প্রচলিত ফ্রেজ।" },
+                    c: { text: "the", bangla: "নির্দিষ্ট আধুনিক পৃথিবী", explanation: "world শব্দের পূর্বে নির্দিষ্ট করে সবসময় 'the' বসে।" },
+                    d: { text: "a", bangla: "একটি সকাল", explanation: "অনির্দিষ্ট সকালের কথা উল্লেখ করায় 'a' বসেছে।" },
+                    e: { text: "the", bangla: "নির্দিষ্ট খবর", explanation: "দেশের এবং বিদেশের নির্দিষ্ট খবরসমূহ বোঝাতে 'the' বসেছে।" },
+                    f: { text: "✕ (no article)", bangla: "কোনো আর্টিকেল বসে না", explanation: "home and abroad একটি ফ্রেজ, এর মাঝখানে আর্টিকেল বসে না।" },
+                    g: { text: "a", bangla: "একটি ভালো", explanation: "good habit-এর 'G' কনসোনেন্ট সাউন্ড হওয়ায় 'a' বসেছে।" },
+                    h: { text: "An", bangla: "অলসব্যক্তি", explanation: "idle শব্দের প্রথম বর্ণ 'i' vowel এবং উচ্চারণ স্বরধ্বনির মতো হওয়ায় 'an' বসেছে।" },
+                    i: { text: "✕ (no article)", bangla: "সাধারণ জ্ঞান", explanation: "Knowledge একটি uncountable abstract noun, তাই আর্টিকেল বসে না।" },
+                    j: { text: "an", bangla: "একটি অত্যন্ত", explanation: "extremely শব্দের প্রথম বর্ণ 'e' এবং সাউন্ড vowel হওয়ায় 'an' বসেছে।" }
+                }
+            },
+            {
+                id: 5,
+                title: "Exercise 05: Sincerity (আন্তরিকতা)",
+                passage: "Sincerity is (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> key to success. (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> sincere man can reach (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> top of success. (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> industrious people are always sincere. If we want to build (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> better career, we must be sincere. It is (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> matter of fact that sincerity is (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> unique quality. Those who neglect (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> work cannot shine in life. We should read (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> lives of great men (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> to learn about sincerity.",
+                answers: {
+                    a: { text: "the", bangla: "প্রধান চাবিকাঠি", explanation: "নির্দিষ্ট একটি সমাধান বা পথ নির্দেশ করতে 'the' বসে।" },
+                    b: { text: "A", bangla: "একজন", explanation: "sincere-এর 'S' কনসোনেন্ট সাউন্ড হওয়ায় তার পূর্বে 'a' বসেছে।" },
+                    c: { text: "the", bangla: "চূড়ায়", explanation: "top, bottom, center ইত্যাদি নির্দিষ্ট অবস্থানের আগে 'the' বসে।" },
+                    d: { text: "The", bangla: "পরিশ্রমী ব্যক্তিরা", explanation: "industrious (adjective) দিয়ে এখানে সমগ্র পরিশ্রমী মানুষকে একসাথে বোঝানোয় 'the' বসেছে।" },
+                    e: { text: "a", bangla: "একটি ভালো", explanation: "better-এর 'B' কনসোনেন্ট সাউন্ড হওয়ায় 'a' বসেছে।" },
+                    f: { text: "a", bangla: "একটি বাস্তব বিষয়", explanation: "it is a matter of fact একটি প্রচলিত ফ্রেজ।" },
+                    g: { text: "a", bangla: "একটি অনন্য", explanation: "unique শব্দের প্রথম বর্ণ 'u' হলেও উচ্চারণ 'ইউ'-এর মতো হওয়ায় 'a' বসেছে।" },
+                    h: { text: "their / the", bangla: "তাদের নির্দিষ্ট কাজ", explanation: "কাউকে উদ্দেশ্য করে তার কাজকে নির্দিষ্ট করায় 'the' বসেছে।" },
+                    i: { text: "the", bangla: "মহৎ ব্যক্তিদের জীবন", explanation: "lives (Noun) + of + Noun স্ট্রাকচারে প্রথম Noun-এর পূর্বে 'the' বসে।" },
+                    j: { text: "✕ (no article)", bangla: "কোনো আর্টিকেল বসে না", explanation: "infinitive 'to' এবং verb-এর পূর্বে সাধারণত কোনো আর্টিকেল বসে না।" }
+                }
+            },
+            {
+                id: 6,
+                title: "Exercise 06: Life of a Farmer",
+                passage: "(a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> farmer is (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> important person in our country. He works from dawn to dusk in (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> field. He grows (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> crops for (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> nation. He leads (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> very simple life. He has to depend on (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> mercy of nature. Sometimes (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> heavy rain destroys his crops. In spite of (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> hard work, he remains poor. We must respect (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> farmers of our country.",
+                answers: {
+                    a: { text: "A", bangla: "একজন", explanation: "সাধারণ অর্থে singular countable noun (farmer)-এর পূর্বে 'A' বসেছে।" },
+                    b: { text: "an", bangla: "একজন গুরুত্বপূর্ণ", explanation: "important শব্দের প্রথমে vowel বর্ণ 'i' থাকায় তার পূর্বে 'an' বসেছে।" },
+                    c: { text: "the", bangla: "নির্দিষ্ট জমিতে", explanation: "চাষাবাদের নির্দিষ্ট মাঠ বা জমিকে বোঝাতে 'the' বসেছে।" },
+                    d: { text: "✕ (no article)", bangla: "শস্য বা ফসল", explanation: "plural noun (crops) এর পূর্বে সাধারণ অর্থে আর্টিকেল বসে না।" },
+                    e: { text: "the", bangla: "জাতির জন্য", explanation: "নির্দিষ্ট দেশকে বা পুরো জাতিকে বোঝাতে 'the' বসেছে।" },
+                    f: { text: "a", bangla: "একটি খুব সাধারণ", explanation: "leads a simple life ফ্রেজ অনুযায়ী এখানে 'a' বসে।" },
+                    g: { text: "the", bangla: "নির্দিষ্ট করুণার ওপর", explanation: "mercy (Noun) + of + nature স্ট্রাকচারে প্রথম Noun-এর পূর্বে 'the' বসে।" },
+                    h: { text: "✕ (no article)", bangla: "ভারী বৃষ্টি", explanation: "rain একটি uncountable noun, তাই সাধারণ অর্থে আর্টিকেল বসে না।" },
+                    i: { text: "✕ (no article)", bangla: "কঠোর পরিশ্রম", explanation: "hard work এখানে abstract notion হিসেবে ব্যবহৃত হয়েছে, তাই আর্টিকেল বসে না।" },
+                    j: { text: "the", bangla: "কৃষকদের", explanation: "নির্দিষ্ট করে আমাদের দেশের কৃষকদের নির্দিষ্ট করায় plural noun-এর পূর্বে 'the' বসেছে।" }
+                }
+            },
+            {
+                id: 7,
+                title: "Exercise 07: Mobile Phone Technology",
+                passage: "Mobile phone is (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> wonderful invention of modern science. It has become (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> essential part of (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> life. We can communicate with (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> people easily. (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> internet has made it even more useful. It plays (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> important role in business. However, it has (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> bad sides too. (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> addiction to mobile games is harmful. Many (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> student wastes his time on it. We must use it in (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> proper way.",
+                answers: {
+                    a: { text: "a", bangla: "একটি চমৎকার", explanation: "wonderful-এর প্রথম বর্ণ 'w' কনসোনেন্ট সাউন্ড সৃষ্টি করায় 'a' বসে।" },
+                    b: { text: "an", bangla: "একটি অত্যন্ত গুরুত্বপূর্ণ", explanation: "essential-এর প্রথম বর্ণ 'e' এবং উচ্চারণ vowel হওয়ায় 'an' বসেছে।" },
+                    c: { text: "✕ (no article)", bangla: "আমাদের জীবন", explanation: "সাধারণ অর্থে life-এর পূর্বে কোনো আর্টিকেল বসে না।" },
+                    d: { text: "✕ (no article)", bangla: "মানুষের সাথে", explanation: "plural noun (people) দিয়ে সাধারণ জনসমষ্টি বোঝানোয় আর্টিকেল বসেনি।" },
+                    e: { text: "The", bangla: "ইন্টারনেট", explanation: "প্রযুক্তিগত একক এবং নির্দিষ্ট নেটওয়ার্ক মাধ্যম হওয়ায় 'the' বসে।" },
+                    f: { text: "an", bangla: "একটি গুরুত্বপূর্ণ", explanation: "important-এর প্রথম বর্ণ vowel হওয়ায় 'an' বসেছে।" },
+                    g: { text: "✕ (no article)", bangla: "খারাপ দিকসমূহ", explanation: "plural noun (sides)-এর পূর্বে সাধারণত আর্টিকেল বসে না।" },
+                    h: { text: "The", bangla: "নির্দিষ্ট আসক্তি", explanation: "addiction (Noun) + to + noun স্ট্রাকচারে নির্দিষ্ট আসক্তি বোঝাতে 'the' বসেছে।" },
+                    i: { text: "a", bangla: "অনেক ছাত্র", explanation: "Many a + Singular Countable Noun নিয়মানুযায়ী এখানে 'a' বসেছে।" },
+                    j: { text: "a / the", bangla: "সঠিক উপায়ে", explanation: "নির্দিষ্ট একটি সঠিক পদ্ধতি বা সাধারণ সঠিক পদ্ধতি বোঝাতে 'the' বা 'a' বসে।" }
+                }
+            },
+            {
+                id: 8,
+                title: "Exercise 08: Patriotism (দেশপ্রেম)",
+                passage: "Patriotism is (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> noble virtue. It inspires (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> man to love his country. (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> true patriot works for (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> welfare of (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> nation. He is (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> asset to (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> world. (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> unpatriotic man is despised. He thinks only of (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> his own interest. Let's work for (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> motherland.",
+                answers: {
+                    a: { text: "a", bangla: "একটি মহৎ", explanation: "noble-এর প্রথম বর্ণ কনসোনেন্ট সাউন্ড বিশিষ্ট হওয়ায় 'a' বসে।" },
+                    b: { text: "a", bangla: "একজন মানুষকে", explanation: "সাধারণভাবে যেকোনো মানুষকে নির্দেশ করায় 'a' বসেছে।" },
+                    c: { text: "A", bangla: "একজন প্রকৃত", explanation: "অনির্দিষ্ট একজন দেশপ্রেমিককে সাধারণ উদাহরণ হিসেবে তুলে ধরায় 'a' বসেছে।" },
+                    d: { text: "the", bangla: "কল্যাণ", explanation: "welfare (Noun) + of + Noun স্ট্রাকচারে প্রথম Noun-এর পূর্বে 'the' বসে।" },
+                    e: { text: "the / a", bangla: "জাতি / একটি জাতির", explanation: "নির্দিষ্ট জাতিকে বোঝাতে 'the' এবং যেকোনো সাধারণ জাতি বোঝাতে 'a' বসে।" },
+                    f: { text: "an", bangla: "একটি সম্পদ", explanation: "Vowel sound (asset)-এর পূর্বে অনির্দিষ্ট করে 'an' বসে।" },
+                    g: { text: "the", bangla: "পৃথিবীর কাছে", explanation: "world শব্দের পূর্বে নির্দিষ্ট করে সব সময় 'the' বসে।" },
+                    h: { text: "An", bangla: "একজন অদেশপ্রেমিক", explanation: "unpatriotic শব্দের প্রথম অক্ষর 'u' এবং উচ্চারণ আ-এর মতো হওয়ায় 'an' বসেছে।" },
+                    i: { text: "✕ (no article)", bangla: "কোনো আর্টিকেল বসে না", explanation: "Possessive pronoun (his) এর আগে বা পরে কোনো আর্টিকেল বসে না।" },
+                    j: { text: "the", bangla: "মাতৃভূমির জন্য", explanation: "নিজের নির্দিষ্ট মাতৃভূমিকে সুনির্দিষ্ট করে নির্দেশ করায় 'the' বসেছে।" }
+                }
+            },
+            {
+                id: 9,
+                title: "Exercise 09: Discipline (শৃঙ্খলা)",
+                passage: "Discipline is (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> valuable quality. It is (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> must in (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> student life. Without discipline, (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> life is like (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> rudderless ship. Nature teaches us (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> lesson of discipline. (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> Sun rises in (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> east regularly. (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> disciplined nation can progress fast. We should maintain (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> discipline in every step of life.",
+                answers: {
+                    a: { text: "a", bangla: "একটি মূল্যবান", explanation: "valuable-এর প্রথম বর্ণ কনসোনেন্ট সাউন্ড বিশিষ্ট হওয়ায় 'a' বসে।" },
+                    b: { text: "a", bangla: "অবশ্য পালনীয়", explanation: "It is a must একটি জনপ্রিয় ইংরেজি ফ্রেজ।" },
+                    c: { text: "✕ (no article)", bangla: "ছাত্রজীবন", explanation: "Student life-এর পূর্বে এখানে সাধারণ অর্থে আর্টিকেল বসে না।" },
+                    d: { text: "✕ (no article)", bangla: "জীবন", explanation: "সাধারণ অর্থে 'life' এর পূর্বে আর্টিকেল বসে না।" },
+                    e: { text: "a", bangla: "একটি হালহীন", explanation: "rudderless-এর 'R' কনসোনেন্ট সাউন্ড হওয়ায় তার পূর্বে 'a' বসেছে।" },
+                    f: { text: "the", bangla: "নির্দিষ্ট শিক্ষা", explanation: "lesson (Noun) + of + Noun স্ট্রাকচারে প্রথম Noun-এর পূর্বে 'the' বসে।" },
+                    g: { text: "The", bangla: "সূর্য", explanation: "মহাবিশ্বের একমাত্র অদ্বিতীয় বস্তুর নামের আগে 'the' বসে।" },
+                    h: { text: "the", bangla: "পূর্ব দিকে", explanation: "যেকোনো নির্দিষ্ট দিকের নামের পূর্বে সর্বদা 'the' বসে।" },
+                    i: { text: "A", bangla: "একটি সুশৃঙ্খল", explanation: "disciplined-এর 'D' কনসোনেন্ট সাউন্ড হওয়ায় তার পূর্বে 'a' বসেছে।" },
+                    j: { text: "✕ (no article)", bangla: "শৃঙ্খলা", explanation: "Discipline একটি abstract noun, সাধারণ অর্থে এর পূর্বে আর্টিকেল বসে না।" }
+                }
+            },
+            {
+                id: 10,
+                title: "Exercise 10: Digital Bangladesh",
+                passage: "Digital Bangladesh is (a) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> dream of (b) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> present generation. It means (c) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> technology-based country. It will help us to reduce (d) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> corruption. Government is trying (e) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> to implement this vision. (f) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> use of computer is a must for this. (g) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> internet plays a vital role. In (h) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> short time, we have made (i) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> great progress. We hope to see (j) <span class='border-b-2 border-dashed border-gray-400 font-semibold px-1 text-green-700'>___</span> fully digitalized nation soon.",
+                answers: {
+                    a: { text: "a", bangla: "একটি স্বপ্ন", explanation: "dream-এর 'D' কনসোনেন্ট সাউন্ড বিশিষ্ট হওয়ায় 'a' বসে।" },
+                    b: { text: "the", bangla: "বর্তমান প্রজন্মের", explanation: "Noun + of + Noun স্ট্রাকচারে প্রথম Noun-এর পূর্বে 'the' বসে।" },
+                    c: { text: "a", bangla: "একটি প্রযুক্তি-ভিত্তিক", explanation: "technology-এর 'T' কনসোনেন্ট সাউন্ড হওয়ায় 'a' বসে।" },
+                    d: { text: "✕ (no article)", bangla: "দুর্নীতি", explanation: "corruption একটি abstract uncountable noun, তাই এর পূর্বে আর্টিকেল বসে না।" },
+                    e: { text: "✕ (no article)", bangla: "চেষ্টা করছে", explanation: "ইনফিনিটিভ 'to try'-এর সাথে বা ভার্ব ও অ্যাডভার্বিয়াল গ্যাপে আর্টিকেল বসে না।" },
+                    f: { text: "The", bangla: "কম্পিউটারের ব্যবহার", explanation: "use (Noun) + of + Noun স্ট্রাকচারে প্রথম Noun-এর পূর্বে 'the' বসে।" },
+                    g: { text: "The", bangla: "ইন্টারনেট", explanation: "নির্দিষ্ট প্রযুক্তি মাধ্যম বা নেটওয়ার্ক বোঝাতে 'the' বসে।" },
+                    h: { text: "a", bangla: "অল্প সময়ে", explanation: "in a short time একটি বহুল প্রচলিত জনপ্রিয় ইংরেজি ফ্রেজ।" },
+                    i: { text: "✕ (no article)", bangla: "বিরাট উন্নতি", explanation: "progress একটি uncountable abstract noun, তাই এর পূর্বে আর্টিকেল বসে না।" },
+                    j: { text: "a", bangla: "একটি সম্পূর্ণ ডিজিটাল জাতি", explanation: "nation-এর আগে Adjective (fully digitalized) বসায় কনসোনেন্ট উচ্চারণ অনুযায়ী 'a' বসেছে।" }
+                }
+            }
+        ];
+
+        // প্রোগ্রেস ট্র্যাকিং মেমোরি অবজেক্ট
+        let completedExercises = {};
+
+        // ফায়ারবেস কনফিগারেশন ও ইনিশিয়ালিলাইজেশন
+        let db = null;
+        let auth = null;
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'zamil-academy-articles';
+
+        if (typeof __firebase_config !== 'undefined' && __firebase_config) {
+            try {
+                const firebaseConfig = JSON.parse(__firebase_config);
+                if (!firebase.apps.length) {
+                    firebase.initializeApp(firebaseConfig);
+                }
+                db = firebase.firestore();
+                auth = firebase.auth();
+                
+                // অথেনটিকেশন ও ডেটা লোড
+                initFirebaseSession();
+            } catch (err) {
+                console.warn("Firebase Setup Failed, falling back to local storage:", err);
+                loadFromLocalStorage();
+            }
+        } else {
+            loadFromLocalStorage();
+        }
+
+        // ফায়ারবেস সাইন ইন এবং ক্লাউড প্রোগ্রেস লোড
+        async function initFirebaseSession() {
+            try {
+                if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+                    await auth.signInWithCustomToken(__initial_auth_token);
+                } else {
+                    await auth.signInAnonymously();
+                }
+                
+                auth.onAuthStateChanged(user => {
+                    if (user) {
+                        loadCloudProgress(user.uid);
+                    } else {
+                        loadFromLocalStorage();
+                    }
+                });
+            } catch (e) {
+                console.error("Auth failed:", e);
+                loadFromLocalStorage();
+            }
+        }
+
+        // ক্লাউড ডেটাবেস থেকে অগ্রগতি লোড
+        function loadCloudProgress(userId) {
+            if (!db) return;
+            const docRef = db.collection('artifacts').doc(appId).collection('users').doc(userId).collection('progress').doc('article_tasks');
+            docRef.get().then(doc => {
+                if (doc.exists) {
+                    completedExercises = doc.data().completed || {};
+                } else {
+                    // লোকাল মেমোরি থেকে ডেটা থাকলে তা ক্লাউডে সিঙ্ক করা
+                    loadFromLocalStorage();
+                    saveCloudProgress(userId);
+                }
+                renderAllExercises();
+            }).catch(err => {
+                console.error("Firestore read error:", err);
+                loadFromLocalStorage();
+                renderAllExercises();
+            });
+        }
+
+        // ক্লাউড ডেটাবেসে প্রোগ্রেস সংরক্ষণ
+        function saveCloudProgress(userId) {
+            if (!db) return;
+            const docRef = db.collection('artifacts').doc(appId).collection('users').doc(userId).collection('progress').doc('article_tasks');
+            docRef.set({ completed: completedExercises }, { merge: true })
+                .catch(err => console.error("Firestore write error:", err));
+        }
+
+        // লোকাল মেমোরি (localStorage) থেকে লোড (লগইন থাকুক বা না থাকুক চিরস্থায়ী সেভ রাখার জন্য)
+        function loadFromLocalStorage() {
+            try {
+                const localData = localStorage.getItem('zamil_articles_progress');
+                if (localData) {
+                    completedExercises = JSON.parse(localData);
+                }
+            } catch (e) {
+                console.warn("Local storage not supported or allowed:", e);
+            }
+        }
+
+        // লোকাল মেমোরিতে সংরক্ষণ
+        function saveToLocalStorage() {
+            try {
+                localStorage.setItem('zamil_articles_progress', JSON.stringify(completedExercises));
+            } catch (e) {
+                console.warn(e);
+            }
+        }
+
+        // প্রোগ্রেস পরিবর্তন হ্যান্ডল করা
+        function toggleComplete(exerciseId) {
+            if (completedExercises[exerciseId]) {
+                delete completedExercises[exerciseId];
+            } else {
+                completedExercises[exerciseId] = true;
+            }
+
+            // লোকাল সংরক্ষণ
+            saveToLocalStorage();
+
+            // ক্লাউড সংরক্ষণ (যদি অথেনটিকেটেড থাকে)
+            if (auth && auth.currentUser) {
+                saveCloudProgress(auth.currentUser.uid);
+            }
+
+            // পেজ রি-রেন্ডার না করে শুধুমাত্র নির্দিষ্ট কার্ডের ইন্টারফেস আপডেট করা
+            updateCardStyle(exerciseId);
+        }
+
+        // নির্দিষ্ট কার্ডের ডিজাইন আপডেট করা
+        function updateCardStyle(exerciseId) {
+            const card = document.getElementById(`card-${exerciseId}`);
+            const badge = document.getElementById(`badge-${exerciseId}`);
+            const checkbox = document.getElementById(`check-${exerciseId}`);
+            const isCompleted = !!completedExercises[exerciseId];
+
+            if (isCompleted) {
+                card.className = "bg-green-50/90 border-2 border-green-500 rounded-2xl p-6 md:p-8 shadow-md relative transition-all duration-300 transform scale-[1.01] checkmark-animate";
+                badge.classList.remove('hidden');
+                checkbox.checked = true;
+            } else {
+                card.className = "bg-white border border-gray-100 rounded-2xl p-6 md:p-8 shadow-sm relative transition-all duration-300";
+                badge.classList.add('hidden');
+                checkbox.checked = false;
+            }
+        }
+
+        // নির্দিষ্ট বর্ণানুক্রমিক বাটন ক্লিক করলে নির্দিষ্ট ব্ল্যাংকের উত্তর দেখানো
+        function selectAnswer(exerciseId, letter) {
+            const displayBox = document.getElementById(`ans-display-${exerciseId}`);
+            const exercise = exercises.find(ex => ex.id === exerciseId);
+            if (!exercise || !exercise.answers[letter]) return;
+
+            const selectedAns = exercise.answers[letter];
+
+            // পূর্বের বাটন ডি-সিলেক্ট করে নতুনটি সিলেক্ট করা
+            const allBtnContainer = document.getElementById(`btns-${exerciseId}`);
+            const buttons = allBtnContainer.getElementsByTagName('button');
+            for (let btn of buttons) {
+                btn.className = "w-10 h-10 rounded-full font-bold transition flex items-center justify-center border border-gray-200 bg-gray-50 text-gray-700 hover:bg-gray-100";
+            }
+            
+            const activeBtn = document.getElementById(`btn-${exerciseId}-${letter}`);
+            if (activeBtn) {
+                activeBtn.className = "w-10 h-10 rounded-full font-bold transition flex items-center justify-center bg-green-800 text-white shadow-md scale-115";
+            }
+
+            // উত্তর রেন্ডার করা
+            displayBox.innerHTML = `
+                <div class="space-y-2 text-left fade-in">
+                    <p class="text-lg font-bold text-green-900 font-poppins">Blank (${letter}): <span class="underline text-red-700">${selectedAns.text}</span></p>
+                    <p class="text-gray-700"><span class="font-bold font-hind">বাংলা অর্থ:</span> ${selectedAns.bangla}</p>
+                    <p class="text-sm text-gray-500 italic"><span class="font-bold font-hind">ব্যাখ্যা:</span> ${selectedAns.explanation}</p>
+                </div>
+            `;
+        }
+
+        // উত্তর দেখার প্যানেলটি টগল করা
+        function toggleAnswerPanel(exerciseId) {
+            const panel = document.getElementById(`panel-${exerciseId}`);
+            const btn = document.getElementById(`toggle-btn-${exerciseId}`);
+            if (panel.classList.contains('hidden')) {
+                panel.classList.remove('hidden');
+                btn.innerHTML = `উত্তর বন্ধ করুন 
+                    <svg class="w-5 h-5 ml-1 transform rotate-180 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>`;
+            } else {
+                panel.classList.add('hidden');
+                btn.innerHTML = `উত্তর দেখুন 
+                    <svg class="w-5 h-5 ml-1 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>`;
+            }
+        }
+
+        // সম্পূর্ণ এক্সারসাইজ জেনারেট করা
+        function renderAllExercises() {
+            const container = document.getElementById('exercise-container');
+            container.innerHTML = ""; // ক্লিয়ার করা
+
+            exercises.forEach(ex => {
+                const isCompleted = !!completedExercises[ex.id];
+                const cardClass = isCompleted 
+                    ? "bg-green-50/90 border-2 border-green-500 rounded-2xl p-6 md:p-8 shadow-md relative transition-all duration-300 transform scale-[1.01]" 
+                    : "bg-white border border-gray-100 rounded-2xl p-6 md:p-8 shadow-sm relative transition-all duration-300";
+                
+                const badgeClass = isCompleted ? "" : "hidden";
+                const isChecked = isCompleted ? "checked" : "";
+
+                // বর্ণানুক্রমিক বাটন জেনারেশন (a to j)
+                let letterButtons = "";
+                ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'].forEach(l => {
+                    letterButtons += `
+                        <button id="btn-${ex.id}-${l}" onclick="selectAnswer(${ex.id}, '${l}')" 
+                                class="w-10 h-10 rounded-full font-bold transition flex items-center justify-center border border-gray-200 bg-gray-50 text-gray-700 hover:bg-gray-100">
+                            ${l}
+                        </button>
+                    `;
+                });
+
+                const cardHTML = `
+                    <div id="card-${ex.id}" class="${cardClass}">
+                        
+                        <!-- কমপ্লিট ব্যাজ -->
+                        <div id="badge-${ex.id}" class="absolute -top-3.5 right-6 bg-green-600 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-sm flex items-center gap-1.5 ${badgeClass}">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="font-hind">এটা আপনি কমপ্লিট করেছেন</span>
+                        </div>
+
+                        <!-- কার্ড টপ বার (হেডার এবং টিক বক্স) -->
+                        <div class="flex items-center justify-between mb-4 pb-2 border-b border-gray-100">
+                            <h3 class="text-xl font-bold text-gray-800 font-hind">${ex.title}</h3>
+                            
+                            <!-- টিক মার্ক বোতাম -->
+                            <label class="flex items-center gap-2 cursor-pointer select-none">
+                                <span class="text-sm font-semibold text-gray-500 font-hind hidden sm:inline">কমপ্লিট চিহ্নিত করুন</span>
+                                <input type="checkbox" id="check-${ex.id}" onclick="toggleComplete(${ex.id})" ${isChecked}
+                                       class="w-6 h-6 rounded border-gray-300 text-green-700 focus:ring-green-500 cursor-pointer">
+                            </label>
+                        </div>
+
+                        <!-- প্যাসেজ প্যারাগ্রাফ -->
+                        <p class="text-gray-700 text-base md:text-lg leading-relaxed font-poppins mb-6 text-justify">
+                            ${ex.passage}
+                        </p>
+
+                        <!-- উত্তর দেখুন বাটন -->
+                        <div class="text-center">
+                            <button id="toggle-btn-${ex.id}" onclick="toggleAnswerPanel(${ex.id})" 
+                                    class="inline-flex items-center bg-green-800 hover:bg-green-900 text-white font-semibold py-2 px-6 rounded-full transition shadow-sm font-hind text-base">
+                                উত্তর দেখুন 
+                                <svg class="w-5 h-5 ml-1 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                        </div>
+
+                        <!-- উত্তর দেখুন সাব-প্যানেল (ডিফল্ট হিডেন) -->
+                        <div id="panel-${ex.id}" class="hidden mt-6 pt-6 border-t border-gray-100">
+                            <p class="text-sm font-bold text-gray-500 mb-3 text-center font-hind">যেকোনো ব্ল্যাংকের বর্ণ সিলেক্ট করে ব্যাখ্যা ও অর্থ দেখুন:</p>
+                            
+                            <!-- বর্ণানুক্রমিক বাটন গ্রিড -->
+                            <div id="btns-${ex.id}" class="flex flex-wrap justify-center gap-2.5 mb-6">
+                                ${letterButtons}
+                            </div>
+
+                            <!-- নির্দিষ্ট উত্তর শো করার ডিসপ্লে বক্স -->
+                            <div id="ans-display-${ex.id}" class="bg-gray-50 p-5 rounded-2xl border border-gray-200 text-center min-h-[100px] flex items-center justify-center">
+                                <p class="text-gray-400 font-hind">কোনো উত্তর সিলেক্ট করা হয়নি। উপরের বাটনে ক্লিক করুন।</p>
+                            </div>
+                        </div>
+
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', cardHTML);
+            });
+        }
+
+        // ফায়ারবেস বা লোকাল লোডের জন্য প্রথম পেজ রেন্ডার
+        window.onload = function() {
+            if (!db) {
+                loadFromLocalStorage();
+                renderAllExercises();
+            }
+        };
+    </script>
+
+</body>
+</html>

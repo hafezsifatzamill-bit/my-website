@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Right Form of Verbs Rules - ZAMIL ACADEMY</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'hind': ['"Hind Siliguri"', 'sans-serif'],
+                        'poppins': ['"Poppins"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Hind Siliguri', sans-serif; }
+        .fade-in { animation: fadeIn 0.4s ease-out forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+    <!-- হেডার -->
+    <header class="relative bg-green-800 text-white py-12 px-6 text-center shadow-lg rounded-b-[40px]">
+        <!-- ব্যাক বাটন (ড্যাশবোর্ডে ফিরে যাওয়ার জন্য) -->
+        <a href="index.html" 
+           class="absolute top-6 left-4 md:left-8 flex items-center gap-2 text-white/90 hover:text-white bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full transition-all duration-300 backdrop-blur-sm text-sm font-semibold shadow-sm border border-white/10">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            <span class="hidden md:inline font-hind">ড্যাশবোর্ড</span>
+        </a>
+
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white font-hind mt-4 md:mt-0">ZAMIL ACADEMY</h1>
+        <p class="mt-2 text-green-100 text-sm md:text-base font-hind opacity-90">Alim & HSC English 2nd Paper • Right Form of Verbs Complete Grammar Guide</p>
+    </header>
+
+    <!-- সাবস্ক্রাইব বক্স -->
+    <div class="flex justify-center -mt-8 px-6 relative z-10">
+        <div class="bg-white p-8 shadow-md border-t-4 border-green-800 rounded-2xl max-w-md w-full text-center">
+            <p class="text-gray-700 text-lg mb-6 font-hind">
+                প্রিমিয়াম সেবা পেতে আমাদের ইউটিউব চ্যানেলটি সাবস্ক্রাইব করুন।
+            </p>
+            <a href="https://youtube.com/@zamil_academy?si=EbWJq_lwwbWrLar9" 
+               target="_blank"
+               class="inline-block bg-red-700 hover:bg-green-800 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-md font-hind">
+                চ্যানেল ভিজিট করুন
+            </a>
+        </div>
+    </div>
+
+    <!-- মূল কন্টেন্ট এরিয়া -->
+    <main class="flex-grow flex flex-col items-center pt-16 pb-12 px-6">
+        
+        <!-- টাইটেল -->
+        <div class="text-center mb-10">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-gray-800 font-hind">Right Form of Verbs ব্যবহারের ২০টি গুরুত্বপূর্ণ নিয়ম</h2>
+            <div class="w-16 h-1 bg-green-600 rounded-full mx-auto mt-3"></div>
+        </div>
+
+        <!-- ফিল্টার বা ক্যাটাগরি ট্যাব -->
+        <div class="flex flex-wrap justify-center gap-3 mb-10 w-full max-w-2xl">
+            <button onclick="filterRules('all')" id="btn-all" class="px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind bg-green-800 text-white text-xs md:text-sm">সবগুলো নিয়ম</button>
+            <button onclick="filterRules('tense-subject')" id="btn-tense-subject" class="px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind bg-white text-gray-700 border border-gray-200 hover:bg-gray-50 text-xs md:text-sm">টেন্স ও সাবজেক্ট এগ্রিমেন্ট</button>
+            <button onclick="filterRules('clauses')" id="btn-clauses" class="px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind bg-white text-gray-700 border border-gray-200 hover:bg-gray-50 text-xs md:text-sm">স্পেশাল ক্লজসমূহ</button>
+            <button onclick="filterRules('special-verbs')" id="btn-special-verbs" class="px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind bg-white text-gray-700 border border-gray-200 hover:bg-gray-50 text-xs md:text-sm">অন্যান্য বিশেষ নিয়ম</button>
+        </div>
+
+        <!-- নিয়মসমূহের গ্রিড কন্টেইনার -->
+        <div id="rules-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-5xl">
+            
+            <!-- Category: tense-subject (Rules 1-8) -->
+            <div class="rule-card tense-subject bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-blue-100 text-blue-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 01</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">Subject 3rd Person Singular (সাধারণ বর্তমান কাল)</h4>
+                <div class="bg-blue-50 text-blue-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-blue-500 font-poppins">
+                    <span class="font-bold">Example:</span> He <span class="text-blue-700 font-bold underline">reads</span> English daily. She <span class="text-blue-700 font-bold underline">does</span> not waste her time.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> বাক্যটি যদি Present Indefinite Tense হয় এবং Subject-টি Third Person Singular Number (যেমন: He, She, It, বা কোনো একক নাম) হয়, তবে Verb-এর শেষে s বা es যুক্ত হয়।</p>
+            </div>
+
+            <div class="rule-card tense-subject bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-blue-100 text-blue-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 02</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">Universal Truth বা চিরন্তন সত্য</h4>
+                <div class="bg-blue-50 text-blue-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-blue-500 font-poppins">
+                    <span class="font-bold">Example:</span> The sun <span class="text-blue-700 font-bold underline">rises</span> in the east. Ice <span class="text-blue-700 font-bold underline">floats</span> on water.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> বাক্যটি চিরন্তন সত্য (Universal Truth) বা অভ্যাসগত সত্য (Habitual Fact) বোঝালে বাক্যটি সব সময় Present Indefinite Tense-এ গঠিত হয়।</p>
+            </div>
+
+            <div class="rule-card tense-subject bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-blue-100 text-blue-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 03</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">Present Continuous-এর নির্দেশক শব্দসমূহ</h4>
+                <div class="bg-blue-50 text-blue-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-blue-500 font-poppins">
+                    <span class="font-bold">Example:</span> At this moment, we <span class="text-blue-700 font-bold underline">are reading</span>. Now, she <span class="text-blue-700 font-bold underline">is writing</span> a letter.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> বাক্যে Now, At present, At this moment, Day by day ইত্যাদি শব্দ থাকলে বাক্যটি সাধারণত Present Continuous Tense (Subject + am/is/are + Verb-ing) হয়।</p>
+            </div>
+
+            <div class="rule-card tense-subject bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-blue-100 text-blue-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 04</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">Just, Just now, Already (সম্প্রতি শেষ হওয়া কাজ)</h4>
+                <div class="bg-blue-50 text-blue-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-blue-500 font-poppins">
+                    <span class="font-bold">Example:</span> He <span class="text-blue-700 font-bold underline">has just finished</span> his work. They <span class="text-blue-700 font-bold underline">have already left</span> the class.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> বাক্যে Just, Just now, Already, Yet, Recently, Lately ইত্যাদি থাকলে বাক্যটি Present Perfect Tense (Subject + have/has + Verb-V3) হয়।</p>
+            </div>
+
+            <div class="rule-card tense-subject bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-blue-100 text-blue-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 05</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">অতীত নির্দেশক শব্দ (Past Simple)</h4>
+                <div class="bg-blue-50 text-blue-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-blue-500 font-poppins">
+                    <span class="font-bold">Example:</span> He <span class="text-blue-700 font-bold underline">came</span> home yesterday. Once there <span class="text-blue-700 font-bold underline">lived</span> a kind king.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> বাক্যে অতীত নির্দেশক শব্দ যেমন: Yesterday, Ago, Long ago, Last year, Once, Formerly ইত্যাদি থাকলে Verb-টি Past Simple Form (V2) হয়।</p>
+            </div>
+
+            <div class="rule-card tense-subject bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-blue-100 text-blue-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 06</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">One of, Each, Everyone (Subject-Verb Agreement)</h4>
+                <div class="bg-blue-50 text-blue-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-blue-500 font-poppins">
+                    <span class="font-bold">Example:</span> One of the boys <span class="text-blue-700 font-bold underline">is</span> present. Each of the students <span class="text-blue-700 font-bold underline">has</span> a book.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> One of the, Each of, Either of, Everyone, Everybody ইত্যাদি বাক্যের Subject হলে এর পরবর্তী Noun/Pronoun-টি Plural হলেও Verb-টি সব সময় Singular হয়।</p>
+            </div>
+
+            <div class="rule-card tense-subject bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-blue-100 text-blue-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 07</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">দুইটি সাবজেক্ট 'And' দ্বারা যুক্ত হলে</h4>
+                <div class="bg-blue-50 text-blue-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-blue-500 font-poppins">
+                    <span class="font-bold">Example:</span> Rahim and Karim <span class="text-blue-700 font-bold underline">are</span> good friends. Bread and butter <span class="text-blue-700 font-bold underline">is</span> my favorite breakfast.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> সাধারণত 'And' দ্বারা দুটি ভিন্ন সাবজেক্ট যুক্ত হলে Verb-টি Plural হয়। কিন্তু তারা যদি একক ধারণা প্রকাশ করে (যেমন: Bread and butter, Slow and steady), তবে Verb-টি Singular হয়।</p>
+            </div>
+
+            <div class="rule-card tense-subject bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-blue-100 text-blue-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 08</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">Either... Or, Neither... Nor (নিকটবর্তী সাবজেক্ট)</h4>
+                <div class="bg-blue-50 text-blue-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-blue-500 font-poppins">
+                    <span class="font-bold">Example:</span> Neither he nor his friends <span class="text-blue-700 font-bold underline">were</span> present. Either you or he <span class="text-blue-700 font-bold underline">is</span> guilty.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> Either... or, Neither... nor, Not only... but also দ্বারা দুটি সাবজেক্ট যুক্ত হলে, Verb-টি সর্বদা তার ঠিক নিকটবর্তী (পরবর্তী) সাবজেক্টের পার্সন ও নাম্বার অনুযায়ী নির্ধারিত হয়।</p>
+            </div>
+
+            <!-- Category: clauses (Rules 9-14) -->
+            <div class="rule-card clauses bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-purple-100 text-purple-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 09</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">Since-এর অত্যন্ত গুরুত্বপূর্ণ দুই নিয়ম</h4>
+                <div class="bg-purple-50 text-purple-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-purple-500 font-poppins">
+                    <span class="font-bold">Example 1:</span> Many years have passed since his father <span class="text-purple-700 font-bold underline">died</span>.<br>
+                    <span class="font-bold">Example 2:</span> It was long since we <span class="text-purple-700 font-bold underline">had met</span> him last.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> 'Since'-এর প্রথম অংশ Present Indefinite/Perfect হলে দ্বিতীয় অংশ Past Indefinite (V2) হয়। আবার প্রথম অংশ Past Indefinite হলে দ্বিতীয় অংশ Past Perfect (had + V3) হয়।</p>
+            </div>
+
+            <div class="rule-card clauses bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-purple-100 text-purple-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 10</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">As if / As though (যেন)</h4>
+                <div class="bg-purple-50 text-purple-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-purple-500 font-poppins">
+                    <span class="font-bold">Example 1:</span> He talks as if he <span class="text-purple-700 font-bold underline">knew</span> everything. (Be verb হলে <span class="text-purple-700 font-bold underline">were</span> বসে)<br>
+                    <span class="font-bold">Example 2:</span> He spoke as if he <span class="text-purple-700 font-bold underline">had seen</span> the incident.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> As if/As though-এর প্রথম অংশ Present Indefinite হলে পরের অংশ Past Indefinite হয় (Be verb হলে সর্বদা 'were' বসে)। আবার প্রথম অংশ Past Indefinite হলে পরের অংশ Past Perfect (had + V3) হয়।</p>
+            </div>
+
+            <div class="rule-card clauses bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-purple-100 text-purple-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 11</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">No sooner had... than (যেইমাত্র... সেইমাত্র)</h4>
+                <div class="bg-purple-50 text-purple-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-purple-500 font-poppins">
+                    <span class="font-bold">Example:</span> No sooner <span class="text-purple-700 font-bold underline">had</span> we <span class="text-purple-700 font-bold underline">reached</span> the station than the train <span class="text-purple-700 font-bold underline">left</span>.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> No sooner had... than, Scarcely had... when, Hardly had... when দ্বারা যুক্ত বাক্যে প্রথম ক্লজের Verb-টি Past Perfect (had + V3) হয় এবং 'than/when'-এর পরের ক্লজের Verb-টি Past Indefinite (V2) হয়।</p>
+            </div>
+
+            <div class="rule-card clauses bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-purple-100 text-purple-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 12</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">Lest (পাছে ভয় হয় যে)</h4>
+                <div class="bg-purple-50 text-purple-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-purple-500 font-poppins">
+                    <span class="font-bold">Example:</span> Read attentively lest you <span class="text-purple-700 font-bold underline">should fail</span> in the examination.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> বাক্যে 'Lest' থাকলে পরবর্তী ক্লজে Subject-এর পর Auxiliary Verb হিসেবে 'should' অথবা 'might' বসে এবং মূল Verb-এর base form (V1) ব্যবহৃত হয়।</p>
+            </div>
+
+            <div class="rule-card clauses bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-purple-100 text-purple-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 13</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">Conditional Sentences (শর্তাধীন বাক্য)</h4>
+                <div class="bg-purple-50 text-purple-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-purple-500 font-poppins">
+                    <span class="font-bold">1st Cond:</span> If he invites me, I <span class="text-purple-700 font-bold underline">will go</span>.<br>
+                    <span class="font-bold">2nd Cond:</span> If he invited me, I <span class="text-purple-700 font-bold underline">would go</span>.<br>
+                    <span class="font-bold">3rd Cond:</span> If he had invited me, I <span class="text-purple-700 font-bold underline">would have gone</span>.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> 'If' যুক্ত বাক্য যদি Present হলে অপর পাশে [subject + shall/will/can + V1] বসে। Past Indefinite হলে [subject + should/would/could + V1] বসে। Past Perfect হলে [subject + would have/could have + V3] বসে।</p>
+            </div>
+
+            <div class="rule-card clauses bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-purple-100 text-purple-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 14</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">It is high time / It is time</h4>
+                <div class="bg-purple-50 text-purple-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-purple-500 font-poppins">
+                    <span class="font-bold">Example 1:</span> It is high time we <span class="text-purple-700 font-bold underline">changed</span> our bad habits.<br>
+                    <span class="font-bold">Example 2:</span> It is time <span class="text-purple-700 font-bold underline">to start</span> the work.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> It is time বা It is high time এর পরে যদি সরাসরি কোনো Subject থাকে, তবে পরবর্তী Verb-টি Past Indefinite Form (V2) হয়। কিন্তু Subject না থাকলে 'to + Verb-V1' বসে।</p>
+            </div>
+
+            <!-- Category: special-verbs (Rules 15-20) -->
+            <div class="rule-card special-verbs bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-red-100 text-red-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 15</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">একটি সিম্পল বাক্যে দুইটি Verb থাকলে</h4>
+                <div class="bg-red-50 text-red-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-red-500 font-poppins">
+                    <span class="font-bold">Example 1:</span> I saw him <span class="text-red-700 font-bold underline">playing</span> in the field.<br>
+                    <span class="font-bold">Example 2:</span> I went to the market <span class="text-red-700 font-bold underline">to buy</span> a book.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> একটি Simple Sentence-এ দুটি Verb থাকলে দ্বিতীয় Verb-টির সাথে সাধারণত 'ing' যুক্ত হয় (উদ্দেশ্য প্রকাশ করলে দ্বিতীয় Verb-টির পূর্বে 'to' বসে)।</p>
+            </div>
+
+            <div class="rule-card special-verbs bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-red-100 text-red-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 16</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">Modal Auxiliary Verbs-এর পরবর্তী রূপ</h4>
+                <div class="bg-red-50 text-red-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-red-500 font-poppins">
+                    <span class="font-bold">Example 1:</span> You must <span class="text-red-700 font-bold underline">obey</span> your parents.<br>
+                    <span class="font-bold">Example 2:</span> English can <span class="text-red-700 font-bold underline">be learned</span> easily.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> Modal Auxiliary (যেমন: can, could, may, might, shall, should, will, would, must) এর পর সরাসরি Verb-এর Base Form (V1) বসে। তবে বাক্যটি Passive Voice হলে এবং মোডালের পর 'be' থাকলে Verb-V3 ফর্ম বসে।</p>
+            </div>
+
+            <div class="rule-card special-verbs bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-red-100 text-red-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 17</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">Preposition-এর পর Verb-এর রূপ</h4>
+                <div class="bg-red-50 text-red-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-red-500 font-poppins">
+                    <span class="font-bold">Example 1:</span> He is fond of <span class="text-red-700 font-bold underline">catching</span> fish.<br>
+                    <span class="font-bold">Example 2:</span> He went there to <span class="text-red-700 font-bold underline">buy</span> some books.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> 'To' ব্যতীত অন্য যেকোনো Preposition (যেমন: of, in, without, by, for, after) এর পর Verb থাকলে তার সাথে 'ing' যুক্ত হয়। আর 'To'-এর পর সাধারণত Verb-এর base form (V1) বসে।</p>
+            </div>
+
+            <div class="rule-card special-verbs bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-red-100 text-red-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 18</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">'To' থাকা সত্ত্বেও 'Verb-ing' যেখানে বসে</h4>
+                <div class="bg-red-50 text-red-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-red-500 font-poppins">
+                    <span class="font-bold">Example:</span> He went to school with a view to <span class="text-red-700 font-bold underline">learning</span> something.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> কিছু বিশেষ ফ্রেজ যেমন: with a view to, look forward to, get used to, be addicted to, be accustomed to ইত্যাদি ক্ষেত্রে 'to' থাকা সত্ত্বেও এর পরবর্তী Verb-এর সাথে 'ing' যুক্ত হয়।</p>
+            </div>
+
+            <div class="rule-card special-verbs bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-red-100 text-red-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 19</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">Passive Voice-এ Auxiliary + Verb-V3</h4>
+                <div class="bg-red-50 text-red-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-red-500 font-poppins">
+                    <span class="font-bold">Example:</span> The work was <span class="text-red-700 font-bold underline">done</span> by him. English is <span class="text-red-700 font-bold underline">spoken</span> all over the world.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> সাবজেক্ট যখন নিজে কাজ সম্পাদন না করে অন্যের দ্বারা কাজ সম্পন্ন হওয়া বোঝায় (Passive Voice), তখন টেন্স অনুযায়ী Auxiliary Verb বসে এবং মূল Verb-টি সব সময় Past Participle (V3) হয়।</p>
+            </div>
+
+            <div class="rule-card special-verbs bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <span class="bg-red-100 text-red-800 font-bold px-3 py-1 rounded-full text-xs font-poppins">RULE 20</span>
+                <h4 class="text-lg font-bold text-gray-800 mt-3 mb-2 font-hind">While (যখন) এর ব্যবহার</h4>
+                <div class="bg-red-50 text-red-950 px-4 py-3 rounded-xl mb-4 text-sm font-medium border-l-4 border-red-500 font-poppins">
+                    <span class="font-bold">Example 1:</span> While <span class="text-red-700 font-bold underline">walking</span> in the garden, a snake bit him.<br>
+                    <span class="font-bold">Example 2:</span> While he <span class="text-red-700 font-bold underline">was walking</span> in the garden, a snake bit him.
+                </div>
+                <p class="text-gray-600 text-base leading-relaxed font-hind"><span class="font-bold text-gray-800">ব্যাখ্যা:</span> 'While'-এর ঠিক পরে সরাসরি কোনো Verb থাকলে তার সাথে 'ing' যুক্ত হয়। কিন্তু 'While'-এর পরে যদি কোনো Subject থাকে, তবে পরবর্তী অংশটি Past Continuous Tense (was/were + Verb-ing) হয়।</p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- ফুটার -->
+    <footer class="text-center py-8 text-gray-500 text-sm border-t border-gray-200 bg-white">
+        <p class="font-hind">&copy; ২০২৬ ZAMIL ACADEMY। সর্বস্বত্ব সংরক্ষিত।</p>
+    </footer>
+
+    <!-- স্ক্রিপ্ট এবং লজিক হ্যান্ডলিং -->
+    <script>
+        function filterRules(category) {
+            // সকল কার্ড সংগ্রহ করা
+            const cards = document.querySelectorAll('.rule-card');
+            
+            // ট্যাব বাটনের ক্লাস ক্লিয়ার করা
+            const btnAll = document.getElementById('btn-all');
+            const btnTenseSubject = document.getElementById('btn-tense-subject');
+            const btnClauses = document.getElementById('btn-clauses');
+            const btnSpecialVerbs = document.getElementById('btn-special-verbs');
+            
+            const activeClass = "bg-green-800 text-white";
+            const inactiveClass = "bg-white text-gray-700 border border-gray-200 hover:bg-gray-50";
+            
+            btnAll.className = `px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind ${inactiveClass} text-xs md:text-sm`;
+            btnTenseSubject.className = `px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind ${inactiveClass} text-xs md:text-sm`;
+            btnClauses.className = `px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind ${inactiveClass} text-xs md:text-sm`;
+            btnSpecialVerbs.className = `px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind ${inactiveClass} text-xs md:text-sm`;
+
+            // সিলেক্টেড ট্যাবে একটিভ ক্লাস দেওয়া
+            if (category === 'all') {
+                btnAll.className = `px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind ${activeClass} text-xs md:text-sm`;
+            } else if (category === 'tense-subject') {
+                btnTenseSubject.className = `px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind ${activeClass} text-xs md:text-sm`;
+            } else if (category === 'clauses') {
+                btnClauses.className = `px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind ${activeClass} text-xs md:text-sm`;
+            } else if (category === 'special-verbs') {
+                btnSpecialVerbs.className = `px-5 py-2.5 rounded-full font-semibold transition shadow-sm font-hind ${activeClass} text-xs md:text-sm`;
+            }
+
+            // কার্ড ফিল্টারিং লুপ
+            cards.forEach(card => {
+                card.classList.add('fade-in');
+                if (category === 'all') {
+                    card.classList.remove('hidden');
+                } else {
+                    if (card.classList.contains(category)) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                }
+            });
+        }
+    </script>
+<script type="module">
+    // Firebase Time Tracking Script
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
+    import { getDatabase, ref, update, increment } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-database.js";
+
+    // ফায়ারবেজ কনফিগারেশন
+    const firebaseConfig = {
+        apiKey: "AIzaSyABpKz4xjVKWb6kVR_mT8d13dt9lcDwipE",
+        authDomain: "zamil-4e08e.firebaseapp.com",
+        databaseURL: "https://zamil-4e08e-default-rtdb.firebaseio.com/",
+        projectId: "zamil-4e08e"
+    };
+
+    // ফায়ারবেজ অ্যাপ এবং ডেটাবেজ ইনিশিয়ালিলাইজেশন
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+
+    // ডেটাবেজ কানেকশনটিকে গ্লোবাল করা
+    window.db = db; 
+
+    // প্রতি ৩০ সেকেন্ডে সময় ট্র্যাকিং
+    const timeRef = ref(db, 'total_time_spent');
+
+    setInterval(() => {
+        // ইউজার ট্যাব অন্য ট্যাবে বা ব্যাকগ্রাউন্ডে থাকলে কোডটি রান করবে না
+        if (document.hidden) return; 
+
+        update(timeRef, {
+            "seconds": increment(30)
+        }).catch(err => console.error("Error updating time:", err));
+    }, 30000);
+
+    console.log("Firebase time tracking active (optimized).");
+</script>
+
+
+
+
+
+
+
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyABpKz4xjVKWb6kVR_mT8d13dt9lcDwipE",
+    authDomain: "zamil-4e08e.firebaseapp.com",
+    projectId: "zamil-4e08e",
+    storageBucket: "zamil-4e08e.firebasestorage.app",
+    messagingSenderId: "696619411784",
+    appId: "1:696619411784:web:3dce390ed5b840cbc32b7d"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+onAuthStateChanged(auth, async (user) => {
+
+    // লগইন না থাকলে
+    if (!user) {
+        window.location.replace("/paid.html");
+        return;
+    }
+
+    try {
+        // paid_students collection এ email দিয়ে খুঁজবে
+        const paidRef = doc(db, "paid_students", user.email);
+        const paidDoc = await getDoc(paidRef);
+
+        // ডকুমেন্ট না থাকলে
+        if (!paidDoc.exists()) {
+            window.location.replace("/paid.html");
+            return;
+        }
+
+        // status paid না হলে
+        const data = paidDoc.data();
+
+        if (data.status !== "paid") {
+            window.location.replace("/paid.html");
+            return;
+        }
+
+        console.log("Paid User Verified");
+
+    } catch (error) {
+        console.error(error);
+        window.location.replace("/paid.html");
+    }
+
+});
+</script>
+
+
+</body>
+</html>

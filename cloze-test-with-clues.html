@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAMIL ACADEMY</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Hind Siliguri', sans-serif; }
+        
+        /* Cloze Test Styles */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .question-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid #166534; /* Green matching the theme */
+        }
+
+        .question-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-top: 0;
+            border-bottom: 2px dashed #e2e8f0;
+            padding-bottom: 10px;
+        }
+
+        .clue-box {
+            background-color: #f8fafc;
+            border: 1px solid #cbd5e1;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-weight: 600;
+            color: #0f172a;
+            line-height: 1.6;
+            text-align: center;
+            word-spacing: 10px;
+        }
+
+        .passage {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #334155;
+            text-align: justify;
+        }
+
+        .show-ans-btn {
+            background-color: #166534;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background 0.3s;
+            font-family: inherit;
+        }
+
+        .show-ans-btn:hover {
+            background-color: #14532d;
+        }
+
+        .answer-section {
+            display: none;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .option-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .opt-btn {
+            background-color: #f0fdf4;
+            color: #166534;
+            border: 1px solid #bbf7d0;
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .opt-btn:hover, .opt-btn.active {
+            background-color: #166534;
+            color: white;
+        }
+
+        .result-display {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #92400e;
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .clue-box {
+                word-spacing: 5px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+    <!-- হেডার: পুরো বক্স সবুজ এবং নিচের দিকে কার্ভ করা -->
+    <header class="bg-green-800 text-white py-12 px-6 text-center shadow-lg rounded-b-[40px]">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white-400">ZAMIL ACADEMY</h1>
+    </header>
+
+    <!-- সাবস্ক্রাইব বক্স -->
+    <div class="flex justify-center -mt-8 px-6">
+        <div class="bg-white p-8 shadow-md border-t-4 border-green-800 rounded-2xl max-w-md w-full text-center">
+            <p class="text-gray-700 text-lg mb-6">
+                প্রিমিয়াম সেবা পেতে আমাদের ইউটিউব চ্যানেলটি সাবস্ক্রাইব করুন।
+            </p>
+            <a href="https://youtube.com/@zamil_academy?si=EbWJq_lwwbWrLar9" 
+               target="_blank"
+               class="inline-block bg-red-700 hover:bg-green-800 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-md">
+                চ্যানেল ভিজিট করুন
+            </a>
+        </div>
+    </div>
+
+    <!-- মূল কন্টেন্ট (Cloze Test) -->
+    <main class="flex-grow">
+        <div class="container" id="content-container">
+            <!-- Questions will be injected here via JavaScript -->
+        </div>
+    </main>
+
+    <!-- ফুটার -->
+    <footer class="text-center py-6 text-gray-500 text-sm border-t border-gray-200">
+        <p>&copy; ২০২৬ ZAMIL ACADEMY। সর্বস্বত্ব সংরক্ষিত।</p>
+    </footer>
+
+    <!-- জাভাস্ক্রিপ্ট -->
+
+
+    <script>
+        // Data for all questions
+        const questionsData = [
+            {
+                id: 1,
+                title: "Question No. 01 (Alim Exam 2024)",
+                clues: ["develops", "provides", "overcome", "enlighten", "train", "ahead", "sensibility", "broadens", "become", "responsibilities"],
+                passage: "Education is the process by which our mind (a) _______ through formal learning at an institution like a school, college or university. It is mental and intellectual training which (b) _______ opportunities of growth and helps to (c) _______ obstacles to progress. Again the purpose of education is to (d) _______ the individual and develop his/her capacity to limit. It is also the business of education to (e) _______ individuals to make the right choices to go (f) _______. It ennobles our mind and refines our (g) _______. It also (h) _______ our outlook and helps us (i) _______ aware of our rights and (j) _______.",
+                answers: {
+                    a: "develops – বিকাশ লাভ করে", b: "provides – প্রদান করে", c: "overcome – অতিক্রম করা বা জয় করা", d: "enlighten – আলোকিত করা",
+                    e: "train – প্রশিক্ষিত করা", f: "ahead – সামনে", g: "sensibility – বোধশক্তি", h: "broadens – প্রসারিত করে",
+                    i: "become – হওয়া", j: "responsibilities – দায়িত্বসমূহ"
+                }
+            },
+            {
+                id: 2,
+                title: "Question No 02 (Alim Exam 2023)",
+                clues: ["life", "alphabetically", "find", "spelling", "syllables", "antonyms", "noun", "picture", "friends", "neglect"],
+                passage: "Dictionaries are very important books in the (a) _______ of a people. A dictionary lists the words in a language (b) _______, so that the reader may (c) _______ them easily. A dictionary entry gives us the accepted (d) _______ of a word, its division into (e) _______, its pronunciation, its origins, and its meanings. Sometimes a dictionary also provides (f) _______, or opposites of a word. In addition, if the word is a (g) _______ that describes a visible thing, the dictionary may provide a (h) _______ of it. Dictionaries of the past, present and future can become your teachers and good (i) _______. Don't (j) _______ them.",
+                answers: {
+                    a: "life – জীবন", b: "alphabetically – বর্ণানুক্রমিকভাবে", c: "find – খুঁজে পাওয়া", d: "spelling – বানান",
+                    e: "syllables – শব্দাংশসমূহ", f: "antonyms – বিপরীত শব্দসমূহ", g: "noun – বিশেষ্য", h: "picture – ছবি",
+                    i: "friends – বন্ধু", j: "neglect – অবহেলা করা"
+                }
+            },
+            {
+                id: 3,
+                title: "Question No. 03 (Alim Exam 2019)",
+                clues: ["considered", "mixing", "increase", "hazardous", "indiscriminately", "dishonest", "using", "preserving", "unsafe", "ensured"],
+                passage: "Food adulteration is now (a) _______ as one of the greatest problems in Bangladesh. It means (b) _______ different substances with the main product to (c) _______ the amount. According to the survey report (d) _______ levels of insecticides are used (e) _______ in vegetables and fruits. Different (f) _______ traders and businessmen are (g) _______ formaldehyde for (h) _______ their product for a long time which is very (i) _______ for us. Exemplary punishment must be (j) _______ for this unscrupulous person.",
+                answers: {
+                    a: "considered – বিবেচিত", b: "mixing – মেশানো", c: "increase – বৃদ্ধি করা", d: "hazardous – বিপজ্জনক",
+                    e: "indiscriminately – নির্বিচারে", f: "dishonest – অসাধু", g: "using – ব্যবহার করছে", h: "preserving – সংরক্ষণ করা",
+                    i: "unsafe – অনিরাপদ", j: "ensured – নিশ্চিত করা"
+                }
+            },
+            {
+                id: 4,
+                title: "Question No. 04 (Alim Exam 2018)",
+                clues: ["history", "emancipation", "belonged", "blacks", "discrimination", "raised", "apartheid", "struggled", "succeeded", "leaders"],
+                passage: "There are many leaders in the world (a) _______ who struggled for the (b) _______ of mass people. Nelson Mandela was one of them. He (c) _______ to South Africa. The (d) _______ were deprived of their rights. There existed race (e) _______ in South Africa. Mandela (f) _______ his voice against this (g) _______. He (h) _______ for their emancipation. This greatman (i) _______ in the long run. He became South Africa's first black president. Not only that, he became one of the greatest (j) _______ of the world.",
+                answers: {
+                    a: "history – ইতিহাস", b: "emancipation – মুক্তি", c: "belonged – অন্তর্গত ছিলেন", d: "blacks – কৃষ্ণাঙ্গরা",
+                    e: "discrimination – বৈষম্য", f: "raised – তুলেছিলেন", g: "apartheid – বর্ণবাদ", h: "struggled – সংগ্রাম করেছিলেন",
+                    i: "succeeded – সফল হয়েছিলেন", j: "leaders – নেতৃবৃন্দ"
+                }
+            },
+            {
+                id: 5,
+                title: "Question No. 05",
+                clues: ["for", "and", "them", "life", "wedding", "debate", "careful", "know", "say", "everyday"],
+                passage: "We learn etiquette and manners from our parents, families and various institutions, such as schools, colleges or professional bodies. There are rules of behaviour (a) _______ for all kinds of social occasions (b) _______ and it is important to learn (c) _______ and practice them in everyday (d) _______. The manners that are correct in a (e) _______ reception will not do in a (f) _______ club. Therefore, we have to be (g) _______ about etiquette and manners. We (h) _______ how important it is to (i) _______ 'please' and 'thank you' in (j) _______ life.",
+                answers: {
+                    a: "for – জন্য", b: "and – এবং", c: "them – সেগুলোকে", d: "life – জীবন", e: "wedding – বিবাহ",
+                    f: "debate – বিতর্ক", g: "careful – সতর্ক", h: "know – জানা", i: "say – বলা", j: "everyday – দৈনন্দিন"
+                }
+            },
+            {
+                id: 6,
+                title: "Question No. 06",
+                clues: ["sunny", "making", "returned", "outworn", "revealed", "pretty", "wicked", "interested", "took", "annoyed"],
+                passage: "It was a (a) _______ summer day. The boy's grandmother was (b) _______ woolen scarf. When the boy (c) _______ from the field, he found an (d) _______ picture in the attic. The photograph (e) _______ a pleasant surrounding. There was a (f) _______ girl in the picture with a (g) _______ smile on her face. The boy felt very (h) _______ in the picture to know who the girl was. So, he (i) _______ it to his grandmother. But the grandmother became (j) _______ when the boy jumped on the bed.",
+                answers: {
+                    a: "sunny – রৌদ্রোজ্জ্বল", b: "making – তৈরি করছিল", c: "returned – ফিরে এল", d: "outworn – জীর্ণ",
+                    e: "revealed – প্রকাশ করল", f: "pretty – সুন্দর", g: "wicked – দুষ্টুমিভরা", h: "interested – আগ্রহী",
+                    i: "took – নিয়ে গেল", j: "annoyed – বিরক্ত"
+                }
+            },
+            {
+                id: 7,
+                title: "Question No. 07",
+                clues: ["through", "growth", "knowledge", "above", "defines", "growth", "childhood", "adulthood", "careful", "adolescence"],
+                passage: "A child passes (a) _______ through four or five stages of (b) _______ before reaching adulthood. They gather certain (c) _______ in these phases. A person, who is 18 or (d) _______ is considered an adult. World Health Organization (e) _______ adolescence as the period in human (f) _______ and development that occurs after (g) _______ and before (h) _______. An adolescent has to be very (i) _______ while passing (j) _______.",
+                answers: {
+                    a: "through – মধ্য দিয়ে", b: "growth – বৃদ্ধি", c: "knowledge – জ্ঞান", d: "above – উপরে/বেশি",
+                    e: "defines – সংজ্ঞায়িত করে", f: "growth – বৃদ্ধি", g: "childhood – শৈশব", h: "adulthood – প্রাপ্তবয়স্ক কাল",
+                    i: "careful – সতর্ক", j: "adolescence – কৈশোরকাল"
+                }
+            },
+            {
+                id: 8,
+                title: "Question No. 08",
+                clues: ["transitional", "vital", "living", "satisfactory", "face", "inequality", "send", "off", "scapegoat", "maltreated"],
+                passage: "Adolescence is a (a) _______ period of our life. Adolescents are the (b) _______ force of a country. There are 28 million adolescents (c) _______ in our country. But the condition of adolescent girls in our country is not (d) _______. The adolescent girls have to (e) _______ a lot of problems including female (f) _______, violence, familial dominance and sexual abuse. In addition, most of the parents of our country do not (g) _______ their daughters to school and marry their daughters (h) _______ at a premature age. Apart from this, the girls become the (i) _______ of dowry system. Again they are (j) _______ in their in-laws' houses.",
+                answers: {
+                    a: "transitional – সন্ধিক্ষণ", b: "vital – গুরুত্বপূর্ণ", c: "living – বসবাসরত", d: "satisfactory – সন্তোষজনক",
+                    e: "face – মোকাবিলা করা", f: "inequality – অসমতা", g: "send – পাঠানো", h: "off – বিবাহ দিয়ে দেওয়া",
+                    i: "scapegoat – বলির পাঁঠা", j: "maltreated – নির্যাতিত"
+                }
+            },
+            {
+                id: 9,
+                title: "Question No. 09",
+                clues: ["absolutely", "phenomenon", "practice", "inherited", "victim", "enrolled", "counselling", "pregnancy", "assistance", "injuries"],
+                passage: "Early marriage is (a) _______ not a new (b) _______ in our society. It is a socially established (c) _______ that is (d) _______ through generations. Every year, many adolescent girls in Bangladesh fall into a (e) _______ of it. Shilpi, a 15-year-old teenager, is also one of them. After marriage, she (f) _______ herself in a local empowerment group that provides discussion and (g) _______ regarding early marriage and (h) _______. With the (i) _______ of the group, she learned about the health (j) _______ caused by obstructed childbirth.",
+                answers: {
+                    a: "absolutely – একেবারেই", b: "phenomenon – বিষয়", c: "practice – প্রথা", d: "inherited – উত্তরাধিকারসূত্রে প্রাপ্ত",
+                    e: "victim – শিকার", f: "enrolled – যোগ দেওয়া", g: "counselling – পরামর্শ", h: "pregnancy – গর্ভাবস্থা",
+                    i: "assistance – সহায়তা", j: "injuries – ক্ষতি"
+                }
+            },
+            {
+                id: 10,
+                title: "Question No. 10",
+                clues: ["light", "unless", "flame", "repeats", "load", "inspire", "inform", "inspire", "learning", "waste"],
+                passage: "A lamp can never (a) _______ another lamp (b) _______ it continues to burn its own (c) _______. The teacher who has come to the end of his subject, merely (d) _______ his lessons to students. He can just (e) _______ their minds but cannot (f) _______ them. Truth must not only (g) _______, but (h) _______. The greater part of our (i) _______ in the school has been a (j) _______ because for most of our teachers, their subjects are like dead specimens of once living things.",
+                answers: {
+                    a: "light – প্রজ্বলিত করা", b: "unless – যদি না", c: "flame – শিখা", d: "repeats – পুনরাবৃত্তি করে",
+                    e: "load – বোঝাই করা", f: "inspire – অনুপ্রাণিত করা", g: "inform – জানানো", h: "inspire – অনুপ্রাণিত করা",
+                    i: "learning – শিক্ষা", j: "waste – অপচয়"
+                }
+            },
+            {
+                id: 11,
+                title: "Question No. 11",
+                clues: ["global", "contribute", "fastest", "believe", "prepared", "barrage", "cope", "face", "addition", "people"],
+                passage: "The 21st century is a very competitive age. It is also the age of a (a) _______ economy. As a result, higher education has a lot to do to (b) _______ to the development of the (c) _______ growing business world. So, today's educationists (d) _______ that the learners of this century should be (e) _______ with some skills beside their subject areas. They should be readied with the (f) _______ of information from different sources. They should learn how to (g) _______ with the multidisciplinary problems that workers (h) _______ in their workplaces. In (i) _______ to these they should learn how to work in a multinational workplace with (j) _______ of different cultures, languages and so on.",
+                answers: {
+                    a: "global – বৈশ্বিক", b: "contribute – অবদান রাখা", c: "fastest – দ্রুততম", d: "believe – বিশ্বাস করা",
+                    e: "prepared – প্রস্তুত", f: "barrage – বিপুল পরিমাণ", g: "cope – মানিয়ে নেওয়া", h: "face – মোকাবিলা করা",
+                    i: "addition – অতিরিক্ত", j: "people – মানুষ"
+                }
+            },
+            {
+                id: 12,
+                title: "Question No. 12",
+                clues: ["natural", "laughter", "is", "pleasurable", "perception", "can", "part", "place", "away", "truth"],
+                passage: "It is difficult to define beauty. Beauty lies in every (a) _______ object. It may be in nature, in the (b) _______ of children, in the kindness of strangers. Beauty (c) _______ everywhere which is appreciated divinely. It may be (d) _______ or not. It depends on one's view and (e) _______. Beauty is a part of our life. But (f) _______ you imagine that ugliness too can be a (g) _______ of our life? Actually ugliness has as much (h) _______ in our life as beauty. We cannot drive (i) _______ ugliness fully from our life. Sometimes an unpleasant (j) _______ becomes beautiful at a higher level. However, a beautiful thing remains true forever.",
+                answers: {
+                    a: "natural – প্রাকৃতিক", b: "laughter – হাসি", c: "is – হয়/বিরাজমান", d: "pleasurable – আনন্দদায়ক",
+                    e: "perception – উপলব্ধি", f: "can – পারা", g: "part – অংশ", h: "place – স্থান",
+                    i: "away – দূরে", j: "truth – সত্য"
+                }
+            },
+            {
+                id: 13,
+                title: "Question No. 13",
+                clues: ["capital", "jam-packed", "traffic", "major", "dwellers", "struggle", "destinations", "indiscriminate", "numerous", "unbearable"],
+                passage: "Dhaka, the (a) _______ city of Bangladesh, is one of the most (b) _______ cities in the world. In fact, (c) _______ congestion is one of the (d) _______ problems for the city (e) _______. People have to (f) _______ a lot to reach any (g) _______ through the roads and highways in the city. The (h) _______ movement of (i) _______ rickshaws is said to be one of the main causes of (j) _______ traffic jam of the city.",
+                answers: {
+                    a: "capital – রাজধানী", b: "jam-packed – ঠাসাঠাসি", c: "traffic – যানবাহন", d: "major – প্রধান",
+                    e: "dwellers – অধিবাসী", f: "struggle – সংগ্রাম করা", g: "destinations – গন্তব্যস্থলসমূহ", h: "indiscriminate – নির্বিচার",
+                    i: "numerous – অসংখ্য", j: "unbearable – অসহনীয়"
+                }
+            },
+            {
+                id: 14,
+                title: "Question No. 15 (Email)",
+                clues: ["electronic", "mode", "communication", "established", "simultaneously", "based", "transmitted", "stored", "personal", "actually"],
+                passage: "Email means (a) _______ mail. It is an electronic (b) _______ of communication. Email (c) _______ is user to user but telex communication is terminal to terminal. Telephone connection often takes a lot of time to be (d) _______ because both the caller and the called must be present (e) _______. But email is a computer (f) _______ system and the messages that are (g) _______ via the computer become (h) _______ in the mail box of an individual's (i) _______ computer without the need of his being (j) _______ present. Thus, email saves both time and money.",
+                answers: {
+                    a: "electronic – ইলেকট্রনিক (বৈদ্যুতিক)", b: "mode – পদ্ধতি বা মাধ্যম", c: "communication – যোগাযোগ", d: "established – স্থাপিত বা প্রতিষ্ঠিত",
+                    e: "simultaneously – একই সাথে বা যুগপতভাবে", f: "based – ভিত্তিক", g: "transmitted – প্রেরিত বা পাঠানো", h: "stored – সংরক্ষিত",
+                    i: "personal – ব্যক্তিগত", j: "actually – প্রকৃতপক্ষে বা আসলে"
+                }
+            },
+            {
+                id: 15,
+                title: "Question No. 15 (Liberty)",
+                clues: ["descend", "raise", "earned", "domination", "merely", "man", "from", "rightful", "world", "energies"],
+                passage: "Liberty does not (a) _______ upon a people; a people must (b) _______ themselves to it. It is a fruit that must be (c) _______ before it can be enjoyed. That freedom means freedom only from foreign (d) _______ is an outworn idea. It is not (e) _______ the government that should be free, but people themselves should be free. And no (f) _______ has any real value, for the common men or women unless it also means freedom from want, freedom from disease and freedom (g) _______. This is the main task which confronts us if we are to take our (h) _______ place in the modern (i) _______. So, we must go forward at a double pace bending all our (j) _______ to this great purpose.",
+                answers: {
+                    a: "descend – অবতীর্ণ হওয়া বা আকাশ থেকে পড়া", b: "raise – উন্নত করা বা নিজেদের প্রস্তুত করা", c: "earned – অর্জিত (কষ্টে অর্জন করা)", d: "domination – শাসন বা আধিপত্য",
+                    e: "merely – কেবলমাত্র বা শুধুমাত্র", f: "man – মানুষ (ব্যক্তি)", g: "from – থেকে (অজ্ঞতা থেকে মুক্তি)", h: "rightful – ন্যায্য বা যথাযথ",
+                    i: "world – বিশ্ব বা পৃথিবী", j: "energies – শক্তি বা সকল প্রচেষ্টা"
+                }
+            },
+            {
+                id: 16,
+                title: "Question No. 16 (Sundarbans)",
+                clues: ["mangrove", "The", "wild", "Bengal", "only", "study", "seriously", "the", "is", "big"],
+                passage: "The Sundarbans mangrove forest is one of the largest such forests in the world. The (a) _______ forest is shared by both Bangladesh and India. (b) _______ forest is a shelter for various types of (c) _______ life. It is the largest reserves for the (d) _______ Tiger. But a study reports that there are (e) _______ 500 tigers remain in this mangrove forest. The (f) _______ also finds that the forest is being damaged (g) _______ — by erosion, rising sea and storm surges. Hence, (h) _______ life of tigers is at stake. The Sundarbans (i) _______ a critical tiger habitat. We must save this (j) _______ mangrove forest to save the majestic animal from being extinct.",
+                answers: {
+                    a: "mangrove – ম্যানগ্রোভ (লবণাক্ত পানির বন)", b: "The – নির্দিষ্টকারী অব্যয় (বনটি)", c: "wild – বন্য (বন্যপ্রাণী)", d: "Bengal – বেঙ্গল (বাংলার বাঘ)",
+                    e: "only – মাত্র বা শুধুমাত্র", f: "study – গবেষণা বা সমীক্ষা", g: "seriously – মারাত্মকভাবে বা গুরুত্বের সাথে", h: "the – নির্দিষ্টকারী (জীবন)",
+                    i: "is – হয় বা হচ্ছে", j: "big – বিশাল বা বড়"
+                }
+            },
+            {
+                id: 17,
+                title: "Question No. 17 (Valentina Tereshkova)",
+                clues: ["chief", "putting", "join", "selected", "under", "weight", "hero", "died", "during", "old"],
+                passage: "After the flight of Yuri Gagarin in 1961, Sergey Korolyov, the (a) _______ Soviet rocket engineer, came up with the idea of (b) _______ a woman in space. On 16 February 1962, Valentina Tereshkova was selected to (c) _______ the female cosmonaut corps. Out of more than four hundred applicants, five were (d) _______. Qualifications included that they should be (e) _______ 30 years of age, under 170cm tall, and under 70 kg in (f) _______. Tereshkova was selected finally. Her father sergeant Vladimir Tereshkova was a war (g) _______ of Soviet Union. He (h) _______ in the Finnish Winter War (i) _______ World War II, when Tereshkova was only two years (j) _______.",
+                answers: {
+                    a: "chief – প্রধান", b: "putting – পাঠানো বা স্থাপন করা", c: "join – যোগদান করা", d: "selected – নির্বাচিত হয়েছিল",
+                    e: "under – নিচে (৩০ বছরের নিচে)", f: "weight – ওজন", g: "hero – বীর (যুদ্ধবীর)", h: "died – মৃত্যুবরণ করেন",
+                    i: "during – চলাকালীন বা সময়ে", j: "old – বয়স (দুই বছর বয়স)"
+                }
+            },
+            {
+                id: 18,
+                title: "Question No. 18 (Padma Bridge)",
+                clues: ["reality", "great", "ambitious", "mighty", "owing", "connects", "changes", "living", "huge", "economic"],
+                passage: "The Padma Bridge is no longer a dream now; it is now a (a) _______. It is now a (b) _______ boon for the south western part of Bangladesh. But decades ago, it was rather an (c) _______ dream, a daunting challenge to tame the (d) _______ Padma. Crossing the river has always been strenuous and sometimes dangerous (e) _______ to unreliable and limited ferry connections and long waits for crowded boats and launches. The Padma Bridge that (f) _______ Dhaka with 21 southern districts is a potential catalyst for major economic (g) _______ in the lives of over 30 million people (h) _______ in the region and will give a (i) _______ boost to trade and (j) _______ activities.",
+                answers: {
+                    a: "reality – বাস্তবতা", b: "great – মহান বা বড়", c: "ambitious – উচ্চাভিলাষী", d: "mighty – শক্তিশালী বা প্রমত্তা",
+                    e: "owing – কারণে", f: "connects – সংযুক্ত করে", g: "changes – পরিবর্তনসমূহ", h: "living – বসবাসকারী",
+                    i: "huge – বিশাল", j: "economic – অর্থনৈতিক"
+                }
+            }
+        ];
+
+        const container = document.getElementById('content-container');
+
+        // Render all questions
+        questionsData.forEach((q) => {
+            const letters = Object.keys(q.answers);
+            let buttonsHTML = letters.map(letter => `
+                <button class="opt-btn" onclick="showResult(${q.id}, '${letter}', '${q.answers[letter]}', this)">${letter}</button>
+            `).join('');
+
+            const html = `
+                <div class="question-card">
+                    <h3 class="question-title">${q.title}</h3>
+                    <div class="clue-box">${q.clues.join(', ')}</div>
+                    <p class="passage">${q.passage}</p>
+                    <button class="show-ans-btn" onclick="toggleAnswerSection(${q.id})">উত্তর দেখুন</button>
+                    
+                    <div class="answer-section" id="ans-sec-${q.id}">
+                        <div class="option-grid">
+                            ${buttonsHTML}
+                        </div>
+                        <div class="result-display" id="result-${q.id}"></div>
+                    </div>
+                </div>
+            `;
+            container.innerHTML += html;
+        });
+
+        // Toggle the entire answer section
+        function toggleAnswerSection(id) {
+            const section = document.getElementById(`ans-sec-${id}`);
+            if (section.style.display === 'block') {
+                section.style.display = 'none';
+            } else {
+                section.style.display = 'block';
+            }
+        }
+
+        // Show individual result
+        function showResult(questionId, letter, text, btnElement) {
+            const resultBox = document.getElementById(`result-${questionId}`);
+            
+            // Highlight active button
+            const allBtns = btnElement.parentElement.querySelectorAll('.opt-btn');
+            allBtns.forEach(btn => btn.classList.remove('active'));
+            btnElement.classList.add('active');
+
+            // Show result text
+            resultBox.style.display = 'block';
+            resultBox.innerHTML = `(${letter}) ${text}`;
+        }
+    </script>
+
+<script type="module">
+    // Firebase Time Tracking Script
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
+    import { getDatabase, ref, update, increment } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-database.js";
+
+    // ফায়ারবেজ কনফিগারেশন
+    const firebaseConfig = {
+        apiKey: "AIzaSyABpKz4xjVKWb6kVR_mT8d13dt9lcDwipE",
+        authDomain: "zamil-4e08e.firebaseapp.com",
+        databaseURL: "https://zamil-4e08e-default-rtdb.firebaseio.com/",
+        projectId: "zamil-4e08e"
+    };
+
+    // ফায়ারবেজ অ্যাপ এবং ডেটাবেজ ইনিশিয়ালিলাইজেশন
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+
+    // ডেটাবেজ কানেকশনটিকে গ্লোবাল করা
+    window.db = db; 
+
+    // প্রতি ৩০ সেকেন্ডে সময় ট্র্যাকিং
+    const timeRef = ref(db, 'total_time_spent');
+
+    setInterval(() => {
+        // ইউজার ট্যাব অন্য ট্যাবে বা ব্যাকগ্রাউন্ডে থাকলে কোডটি রান করবে না
+        if (document.hidden) return; 
+
+        update(timeRef, {
+            "seconds": increment(30)
+        }).catch(err => console.error("Error updating time:", err));
+    }, 30000);
+
+    console.log("Firebase time tracking active (optimized).");
+</script
+</body>
+</html>

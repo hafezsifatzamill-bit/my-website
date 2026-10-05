@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAMIL ACADEMY</title>
+
+	<!-- Canonical Tag -->
+	<link rel="canonical" href="https://zamilacademy.pages.dev/live" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Footer Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'hind': ['"Hind Siliguri"', 'sans-serif'],
+                        'poppins': ['"Poppins"', 'sans-serif'],
+                    },
+                    keyframes: {
+                        leafFall: {
+                            '0%': { transform: 'translateY(-15px) translateX(-10px) rotate(0deg)', opacity: '0' },
+                            '30%': { opacity: '1' },
+                            '100%': { transform: 'translateY(25px) translateX(15px) rotate(360deg)', opacity: '0' }
+                        },
+                        rgbBorder: {
+                            '0%': { borderColor: '#ef4444' }, /* Red */
+                            '33%': { borderColor: '#10b981' }, /* Green */
+                            '66%': { borderColor: '#3b82f6' }, /* Blue */
+                            '100%': { borderColor: '#ef4444' }  /* Red */
+                        },
+                        rgbGlow: {
+                            '0%, 100%': { boxShadow: '0 0 15px rgba(239, 68, 68, 0.3)' },
+                            '33%': { boxShadow: '0 0 15px rgba(16, 185, 129, 0.3)' },
+                            '66%': { boxShadow: '0 0 15px rgba(59, 130, 246, 0.3)' }
+                        }
+                    },
+                    animation: {
+                        'leaf-fall-1': 'leafFall 3s ease-in-out infinite',
+                        'leaf-fall-2': 'leafFall 3s ease-in-out infinite 1.5s',
+                        'rgb-border': 'rgbBorder 6s linear infinite',
+                        'rgb-glow': 'rgbGlow 6s linear infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Hind Siliguri', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+    <!-- হেডার: পুরো বক্স সবুজ এবং নিচের দিকে কার্ভ করা -->
+    <header class="relative bg-green-800 text-white pt-20 pb-16 px-6 text-center shadow-lg rounded-b-[40px]">
+        
+        <!-- টপ বার (সার্চ এবং লগইন বাটন) -->
+        <div class="absolute top-0 left-0 w-full px-4 sm:px-8 py-4 flex justify-between items-center z-20">
+            <!-- সার্চ বার -->
+            <div class="relative w-40 sm:w-64 group">
+                <input type="text" placeholder="অনুসন্ধান করুন..." 
+                       class="w-full bg-white/10 border border-white/20 text-white placeholder-white/70 rounded-full py-2.5 pl-5 pr-10 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:bg-white/20 transition-all font-hind shadow-inner backdrop-blur-sm">
+                <button class="absolute right-3 top-2.5 text-white/70 hover:text-yellow-400 transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- সুন্দর লগইন বাটন -->
+            <a href="login.html" 
+               class="flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-green-900 font-bold py-2.5 px-6 rounded-full shadow-[0_4px_15px_rgba(250,204,21,0.4)] transform transition-all hover:scale-105 hover:shadow-[0_6px_20px_rgba(250,204,21,0.6)] font-hind text-lg border border-yellow-300">
+                <svg class="w-5 h-5 hidden sm:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path>
+                </svg>
+                লগইন
+            </a>
+        </div>
+
+        <!-- মেইন লোগো বা টাইটেল -->
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white font-poppins mt-6">ZAMIL ACADEMY</h1>
+        <p class="mt-3 text-green-100 text-lg md:text-xl font-hind max-w-2xl mx-auto">HSC শিক্ষার্থীদের জন্য সকল বিষয়ের নির্ভরযোগ্য শিক্ষামূলক প্ল্যাটফর্ম</p>
+    </header>
+
+    <!-- আমাদের সম্পর্কে জানুন বক্স -->
+    <div class="flex justify-center -mt-8 px-6 relative z-10">
+        <div class="bg-white p-6 md:p-8 shadow-xl border-t-4 border-green-800 rounded-2xl max-w-md w-full text-center transform transition hover:-translate-y-1">
+            <p class="text-gray-700 text-lg mb-5 font-hind font-semibold">
+                আমাদের কোর্স ও একাডেমি সম্পর্কে বিস্তারিত জানতে ক্লিক করুন
+            </p>
+            <a href="about.html" 
+               class="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-full transition-colors duration-300 shadow-md font-hind w-full sm:w-auto">
+                <i class="fa-solid fa-circle-info text-xl"></i>
+                আমাদের সম্পর্কে জানুন
+            </a>
+        </div>
+    </div>
+
+    <!-- মূল কন্টেন্ট (বিষয়সমূহ) -->
+    <main class="flex-grow flex flex-col items-center pt-16 pb-20 px-6">
+        
+        <div class="text-center mb-10 relative">
+            <h2 class="text-3xl font-bold text-gray-800 font-hind tracking-wide">
+                সকল বিষয়সমূহ
+            </h2>
+            <div class="w-16 h-1.5 bg-green-600 rounded-full mx-auto mt-3"></div>
+        </div>
+
+        <!-- সাবজেক্ট কার্ড গ্রিড (শুধু English 1st এবং English 2nd) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-2xl">
+            
+            <!-- English 1st -->
+            <a href="/en1st/en1st-main.html" class="group relative bg-white rounded-2xl p-6 text-center shadow-md hover:shadow-2xl border-4 animate-rgb-border animate-rgb-glow transition-all duration-500 transform hover:-translate-y-3 overflow-hidden flex flex-col items-center justify-center aspect-square">
+                
+                <div class="absolute inset-0 bg-gradient-to-b from-green-50/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                
+                <!-- গাছের ফিক্সড রূপ ও ঝরে পড়া পাতা -->
+                <div class="relative z-10 flex flex-col items-center justify-center">
+                    <div class="relative text-green-700">
+                        <i class="fa-solid fa-tree text-5xl md:text-6xl"></i>
+                        <!-- ঝরে পড়া পাতা ১ -->
+                        <i class="fa-solid fa-leaf text-green-500 absolute -top-2 -left-4 text-lg animate-leaf-fall-1"></i>
+                        <!-- ঝরে পড়া পাতা ২ -->
+                        <i class="fa-solid fa-seedling text-emerald-600 absolute top-2 -right-4 text-sm animate-leaf-fall-2"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 font-poppins mt-4 group-hover:text-green-700 transition-colors">English 1st</h3>
+                </div>
+            </a>
+
+            <!-- English 2nd -->
+            <a href="/en2nd/en2nd-main.html" class="group relative bg-white rounded-2xl p-6 text-center shadow-md hover:shadow-2xl border-4 animate-rgb-border animate-rgb-glow transition-all duration-500 transform hover:-translate-y-3 overflow-hidden flex flex-col items-center justify-center aspect-square">
+                
+                <div class="absolute inset-0 bg-gradient-to-b from-green-50/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                
+                <!-- গাছের ফিক্সড রূপ ও ঝরে পড়া পাতা -->
+                <div class="relative z-10 flex flex-col items-center justify-center">
+                    <div class="relative text-green-700">
+                        <i class="fa-solid fa-tree text-5xl md:text-6xl"></i>
+                        <!-- ঝরে পড়া পাতা ১ -->
+                        <i class="fa-solid fa-leaf text-green-500 absolute -top-2 -left-4 text-lg animate-leaf-fall-1"></i>
+                        <!-- ঝরে পড়া পাতা ২ -->
+                        <i class="fa-solid fa-seedling text-emerald-600 absolute top-2 -right-4 text-sm animate-leaf-fall-2"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 font-poppins mt-4 group-hover:text-green-700 transition-colors">English 2nd</h3>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- FOMO & Motivational Section -->
+        <div class="w-full max-w-2xl mt-12 bg-gradient-to-br from-amber-50 via-white to-green-50 border-l-4 border-yellow-500 p-6 md:p-8 rounded-2xl shadow-xl relative overflow-hidden">
+            <div class="absolute -right-8 -bottom-8 opacity-5 text-8xl text-green-800"><i class="fa-solid fa-graduation-cap"></i></div>
+            
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 leading-snug">
+                বন্ধুরা কি ইতিমধ্যেই তোমার চেয়ে অনেক এগিয়ে গেছে? 
+            </h3>
+
+            <p class="text-gray-600 text-sm md:text-base leading-relaxed mt-2">
+                পরীক্ষায় ভালো ফলাফল করার স্বপ্ন সবার থাকে, কিন্তু সঠিক দিকনির্দেশনা ও সময়োপযোগী সিদ্ধান্তের অভাবে অনেকেই পিছিয়ে পড়ে। হাজারো শিক্ষার্থী প্রতিদিন আমাদের ওয়েবসাইট থেকে তাদের প্রস্তুতি ঝালাই করে নিচ্ছে। তুমি যদি আজই সম্পূর্ণ ওয়েবসাইটটি ঘুরে না দেখে থাকো, তবে হতে পারে তোমার কাঙ্ক্ষিত লক্ষ্য অর্জনে বড় ধরনের ঘাটতি থেকে যাচ্ছে!
+            </p>
+
+            <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-gray-200 mt-4">
+                <p class="text-xs font-semibold text-green-800 bg-green-100 px-3 py-2 rounded-lg">
+                    💡 টিপস: ফুল প্রিপারেশনের জন্য আমাদের পেইড সার্ভিসে এড হয়ে যাও
+                </p>
+                <a href="about.html" class="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold py-2.5 px-6 rounded-full text-sm transition-all shadow-md transform hover:scale-105 shrink-0">
+                    <span>সবাই কি দেখছে জানুন</span>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ফুটার -->
+    <footer class="bg-white border-t border-gray-200 mt-auto py-8">
+        <div class="container mx-auto px-4 text-center">
+            
+            <!-- সোশ্যাল আইকনস -->
+            <div class="flex justify-center items-center gap-4 mb-6">
+                <a href="https://wa.me/01611158519" target="_blank" rel="noopener noreferrer" 
+                   class="w-10 h-10 rounded-full bg-green-100 text-green-600 flex items-center justify-center hover:bg-[#25D366] hover:text-white transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-1">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                </a>
+                <a href="https://youtube.com/@zamil_academy?si=EbWJq_lwwbWrLar9" target="_blank" rel="noopener noreferrer" 
+                   class="w-10 h-10 rounded-full bg-red-100 text-red-600 flex items-center justify-center hover:bg-[#FF0000] hover:text-white transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-1">
+                    <i class="fa-brands fa-youtube text-lg"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61590877342889" target="_blank" rel="noopener noreferrer" 
+                   class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-1">
+                    <i class="fa-brands fa-facebook-f text-lg"></i>
+                </a>
+                <a href="https://facebook.com/groups/1352796963439902/" target="_blank" rel="noopener noreferrer" 
+                   class="w-10 h-10 rounded-full bg-teal-100 text-teal-600 flex items-center justify-center hover:bg-[#00A400] hover:text-white transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-1">
+                    <i class="fa-solid fa-users text-lg"></i>
+                </a>
+            </div>
+
+            <p class="text-gray-500 text-sm font-hind">
+                &copy; <span id="currentYear">২০২৬</span> ZAMIL ACADEMY। সর্বস্বত্ব সংরক্ষিত।
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
+    import { getDatabase, ref, update, increment, onDisconnect } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-database.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyABpKz4xjVKWb6kVR_mT8d13dt9lcDwipE",
+        authDomain: "zamil-4e08e.firebaseapp.com",
+        databaseURL: "https://zamil-4e08e-default-rtdb.firebaseio.com/",
+        projectId: "zamil-4e08e"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+
+    window.db = db; 
+
+    const rootRef = ref(db);
+    
+    // ভিজিটর কাউন্টার লজিক আপডেট
+    const updates = { "active_visitors": increment(1) };
+    
+    // sessionStorage ব্যবহার করা হয়েছে, যেন সাব-পেজ থেকে ফিরে আসলে আবার কাউন্ট না হয়
+    if (!sessionStorage.getItem('visited_zamil_home')) {
+        updates["total_visits"] = increment(1);
+        sessionStorage.setItem('visited_zamil_home', 'true');
+    }
+
+    update(rootRef, updates).catch(err => console.error("Error updating visits:", err));
+
+    const activeRef = ref(db, 'active_visitors');
+    onDisconnect(activeRef).set(increment(-1));
+
+    const timeRef = ref(db, 'total_time_spent');
+    setInterval(() => {
+        update(timeRef, {
+            "seconds": increment(30)
+        }).catch(err => console.error("Error updating time:", err));
+    }, 30000);
+
+</script>
+</body>
+</html>

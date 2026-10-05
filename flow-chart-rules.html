@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow Chart Rules - ZAMIL ACADEMY</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Firebase Imports -->
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore-compat.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'hind': ['"Hind Siliguri"', 'sans-serif'],
+                        'poppins': ['"Poppins"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Hind Siliguri', sans-serif; }
+        .checkmark-animate {
+            animation: pop 0.3s ease-out;
+        }
+        @keyframes pop {
+            0% { transform: scale(0.8); opacity: 0.5; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+    <!-- হেডার -->
+    <header class="relative bg-green-800 text-white py-12 px-6 text-center shadow-lg rounded-b-[40px]">
+        <!-- ব্যাক বাটন -->
+        <a href="index.html" 
+           class="absolute top-6 left-4 md:left-8 flex items-center gap-2 text-white/90 hover:text-white bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full transition-all duration-300 backdrop-blur-sm text-sm font-semibold shadow-sm border border-white/10">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            <span class="hidden md:inline font-hind">ড্যাশবোর্ড</span>
+        </a>
+
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white font-hind mt-4 md:mt-0">ZAMIL ACADEMY</h1>
+        <p class="mt-2 text-green-100 text-sm md:text-base font-hind opacity-90">HSC English 1st Paper • Flow Chart Mastery Rules</p>
+    </header>
+
+    <!-- সাবস্ক্রাইব বক্স -->
+    <div class="flex justify-center -mt-8 px-6 relative z-10">
+        <div class="bg-white p-8 shadow-md border-t-4 border-green-800 rounded-2xl max-w-md w-full text-center">
+            <p class="text-gray-700 text-lg mb-6 font-hind">
+                ফ্লো চার্টের দারুণ সব শর্টকাট ক্লাস দেখতে আমাদের ইউটিউব চ্যানেলটি সাবস্ক্রাইব করুন।
+            </p>
+            <a href="https://youtube.com/@zamil_academy?si=EbWJq_lwwbWrLar9" 
+               target="_blank"
+               class="inline-block bg-red-700 hover:bg-green-800 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-md font-hind">
+                চ্যানেল ভিজিট করুন
+            </a>
+        </div>
+    </div>
+
+    <!-- মূল কন্টেন্ট এরিয়া -->
+    <main class="flex-grow flex flex-col items-center pt-16 pb-12 px-6">
+        
+        <!-- প্র্যাকটিস লিঙ্ক ব্যানার -->
+        <div class="max-w-5xl w-full mb-8">
+            <a href="flow-chart-practice.html" class="flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-green-800 to-emerald-700 text-white p-6 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 2 0 00-2 2v12a2 2 2 0 002 2h10a2 2 2 0 002-2V7a2 2 2 0 00-2-2h-2M9 5a2 2 2 0 002 2h2a2 2 2 0 002-2M9 5a2 2 2 0 012-2h2a2 2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold font-hind">টপ-১০ বোর্ড স্ট্যান্ডার্ড প্র্যাকটিস এক্সারসাইজ</h3>
+                        <p class="text-green-100 text-sm font-hind">নিয়মগুলো পড়ার পর সরাসরি ইন্টারঅ্যাক্টিভ ফ্লো চার্ট প্র্যাকটিস করতে এখানে ক্লিক করুন।</p>
+                    </div>
+                </div>
+                <span class="mt-4 md:mt-0 bg-white text-green-800 font-bold px-6 py-2 rounded-full font-hind hover:bg-green-50 transition duration-300">প্র্যাকটিস করুন →</span>
+            </a>
+        </div>
+
+        <!-- টাইটেল -->
+        <div class="text-center mb-10">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-gray-800 font-hind">ফ্লো চার্টে ১০ এ ১০ পাওয়ার ১০টি ইফেক্টিভ গোল্ডেন রুলস</h2>
+            <div class="w-16 h-1 bg-green-600 rounded-full mx-auto mt-3"></div>
+        </div>
+
+        <!-- নিয়মাবলীর কার্ড কন্টেইনার -->
+        <div id="rules-container" class="w-full max-w-5xl space-y-8">
+            <!-- JavaScript এর মাধ্যমে ডায়নামিকালি লোড হবে -->
+        </div>
+
+    </main>
+
+    <!-- ফুটার -->
+    <footer class="text-center py-8 text-gray-500 text-sm border-t border-gray-200 bg-white">
+        <p class="font-hind">© ২০২৬ ZAMIL ACADEMY। সর্বস্বত্ব সংরক্ষিত।</p>
+    </footer>
+
+    <!-- স্ক্রিপ্ট এবং লজিক হ্যান্ডলিং -->
+    <script>
+        // ফ্লো চার্ট লেখার ১০টি অত্যন্ত কার্যকরী রুলস ডেটাবেস
+        const rulesData = [
+            {
+                id: 1,
+                title: "Rule 01: The Parallelism Rule (সবচেয়ে গুরুত্বপূর্ণ আইন)",
+                summary: "প্রশ্নপত্রে প্রদত্ত ১ম বক্সটি (Clue) যে গ্রামাটিক্যাল ফরম্যাটে বা স্ট্রাকচারে লেখা থাকবে, তোমার বাকি ৫টি বক্সের উত্তরও ঠিক একই স্ট্রাকচার মেইনটেইন করে তৈরি করতে হবে।",
+                details: {
+                    a: { label: "মূল থিম", text: "প্যারালেলিজম (Parallelism)", explanation: "১ম বক্সে যদি Verb+ing থাকে, তবে ২ থেকে ৬ নম্বর বক্সেও বাধ্যতামূলকভাবে Verb+ing দিয়ে শুরু করতে হবে। ১ম বক্সে ইনফিনিটিভ (To+Verb) থাকলে বাকিগুলোতেও ইনফিনিটিভ বসবে।" },
+                    b: { label: "বোর্ড উদাহরণ", text: "1. Fighting against apartheid (Nelson Mandela passage)", explanation: "যেহেতু ১ম বক্সে 'Fighting' (V+ing) আছে, তাই পরবর্তী বক্সগুলো হবে: 2. Supporting the oppressed, 3. Suffering imprisonment, ইত্যাদি।" },
+                    c: { label: "কেন এটি করবেন?", text: "খাতায় ধারাবাহিকতা বজায় রাখা", explanation: "পরীক্ষক ফ্লো চার্ট মূল্যায়নের সময় সবার আগে লক্ষ্য করেন স্ট্রাকচার ঠিক আছে কিনা। স্ট্রাকচার ব্রেক করলে পুরো নম্বর কাটা যেতে পারে।" },
+                    d: { label: "বর্জনীয় ভুল", text: "মিক্সড স্ট্রাকচার ব্যবহার করা", explanation: "একটি বক্সে 'To save environment' আর অন্য বক্সে 'Saving environment'—এমন মিশ্রণ করা সম্পূর্ণ ভুল।" }
+                }
+            },
+            {
+                id: 2,
+                title: "Rule 02: Formula 01 — The Gerund/Participle Phrase (V+ing)",
+                summary: "প্যাসেজে যখন কোনো ব্যক্তি বা বিষয়ের কাজ, কার্যাবলি, আন্দোলনের প্রক্রিয়া বা ইতিহাস জানতে চাওয়া হয়, তখন এই ফর্মুলাটি সবচেয়ে বেশি ব্যবহৃত হয়।",
+                details: {
+                    a: { label: "স্ট্রাকচার সূত্র", text: "Verb + ing + Extension/Object", explanation: "মূল Verb-এর সাথে ing যুক্ত করে বাকী প্রয়োজনীয় শব্দাংশটি প্যাসেজ থেকে দেখে বসিয়ে দিতে হবে।" },
+                    b: { label: "বোর্ড উদাহরণ", text: "Question: Show the activities of Amerigo. Answer: 1. Collecting trash in streets", explanation: "প্যাসেজে ছিল 'I used to collect trash...'. আমরা সাবজেক্ট বাদ দিয়ে শুধু 'Collecting trash in streets' লিখে ফ্রেজ বানিয়েছি।" },
+                    c: { label: "কখন ব্যবহার করবেন?", text: "পদ্ধতি, কাজ বা চলমান অবস্থা বোঝাতে", explanation: "যদি ১ম বক্সে কোনো কারণে V+ing দেওয়া থাকে অথবা কোনো ঘটনার ধারাবাহিক বিবরণ দিতে বলা হয়, তখন এটি সেরা ফর্মুলা।" },
+                    d: { label: "বর্জনীয় ভুল", text: "Am/Is/Are যুক্ত করা", explanation: "ভুলেও V+ing এর আগে am, is, are, was, were বা কোনো Auxiliary verb বসানো যাবে না (যেমন: Is collecting trash লেখা যাবে না)।" }
+                }
+            },
+            {
+                id: 3,
+                title: "Rule 03: Formula 02 — The Infinitive Phrase (To + V1)",
+                summary: "প্যাসেজে কোনো ঘটনার উদ্দেশ্য (Purpose), লক্ষ্য (Aim), ভবিষ্যৎ পরিকল্পনা কিংবা কোনো কাজের কারণ জানতে চাইলে এই ইনফিনিটিভ স্ট্রাকচারটি প্রয়োগ করা হয়।",
+                details: {
+                    a: { label: "স্ট্রাকচার সূত্র", text: "To + Base Form of Verb (V1) + Extension", explanation: "প্রথমে একটি 'To' বসবে, তারপর মূল ক্রিয়াপদের প্রেজেন্ট ফর্ম এবং সবশেষে অবজেক্ট বা এক্সটেনশন অংশ বসবে।" },
+                    b: { label: "বোর্ড উদাহরণ", text: "Question: Show the steps to protect environment. Answer: 1. To plant more trees", explanation: "পরিবেশ রক্ষার উদ্দেশ্যে গৃহীত পদক্ষেপের প্রথমটি হলো গাছ লাগানো। তাই ইনফিনিটিভ দিয়ে ফ্রেজটি শুরু হয়েছে।" },
+                    c: { label: "কখন ব্যবহার করবেন?", text: "উদ্দেশ্য বা লক্ষ্য নির্দেশ করতে", explanation: "কোনো আন্দোলনের লক্ষ্য বা কোনো বৈজ্ঞানিক গবেষণার উদ্দেশ্য প্রকাশ করতে এই সূত্রটি জাদুর মতো কাজ করে।" },
+                    d: { label: "বর্জনীয় ভুল", text: "To-এর পর V+ing বা V2 লেখা", explanation: "To-এর পর সবসময় মূল ভার্বের বেস ফর্ম বসে। 'To planting' বা 'To planted' লেখা ব্যাকরণগত মারাত্মক ভুল।" }
+                }
+            },
+            {
+                id: 4,
+                title: "Rule 04: Formula 03 — The Noun Phrase Structure",
+                summary: "যখন প্যাসেজ থেকে কোনো ব্যক্তির গুণাবলি (Qualities), অর্জিত উপাধি, কোনো জিনিসের বৈশিষ্ট্য, দোষ বা উপাদানের নাম জানতে চাওয়া হয়, তখন এই রুল কাজ করে।",
+                details: {
+                    a: { label: "স্ট্রাকচার সূত্র", text: "Adjective + Noun OR Noun + of + Noun", explanation: "এখানে কোনো ভার্ব থাকে না। শুধু গুণবাচক বা নামবাচক শব্দগুচ্ছের মাধ্যমে তথ্য উপস্থাপন করতে হয়।" },
+                    b: { label: "বোর্ড উদাহরণ", text: "Question: Show the qualities of Nelson Mandela. Answer: 1. Great political leadership", explanation: "ম্যান্ডেলার একটি গুণ হলো মহান রাজনৈতিক নেতৃত্ব। এখানে 'Great' (Adj), 'political' (Adj) এবং 'leadership' (Noun) মিলে ফ্রেজ হয়েছে।" },
+                    c: { label: "কখন ব্যবহার করবেন?", text: "বৈশিষ্ট্য ও স্থির অবস্থা প্রকাশে", explanation: "কুয়াকাটার আকর্ষণীয় দিক, ঐতিহ্যের উপাদান বা কোনো ঐতিহাসিক ব্যক্তির চরিত্রের দিক ফুটিয়ে তুলতে এই রুলটি অদ্বিতীয়।" },
+                    d: { label: "বর্জনীয় ভুল", text: "অপ্রয়োজনীয় ভার্ব যুক্ত করা", explanation: "যেহেতু এটি পিওর নাউন ফ্রেজ, তাই এর ভেতরে কোনো অ্যাকশন ভার্ব (Action Verb) টেনে আনার প্রয়োজন নেই।" }
+                }
+            },
+            {
+                id: 5,
+                title: "Rule 05: Formula 04 — The Past Participle Phrase (V3)",
+                summary: "প্যাসেজের কোনো সাবজেক্ট যদি নিজে কাজটি না করে অন্যের দ্বারা প্রভাবিত হয় (Passive Voice বা সম্পন্ন হয়ে গেছে এমন অবস্থা), তখন এই ফর্মুলা ব্যবহার করা হয়।",
+                details: {
+                    a: { label: "স্ট্রাকচার সূত্র", text: "Past Participle of Verb (V3) + Extension", explanation: "ভার্বের ৩ নম্বর রূপ (যেমন: Educated, Born, Awarded, Oppressed) দিয়ে সরাসরি ফ্রেজটি শুরু করতে হয়।" },
+                    b: { label: "বোর্ড উদাহরণ", text: "Question: Show the struggles of Mandela. Answer: 1. Imprisoned for nearly three decades", explanation: "ম্যান্ডেলাকে জেলে বন্দি করে রাখা হয়েছিল। তাই প্যাসিভ ভাব প্রকাশ করতে 'Imprisoned' (V3) দিয়ে শর্ট ফ্রেজ করা হয়েছে।" },
+                    c: { label: "কখন ব্যবহার করবেন?", text: "ইতিহাস বা প্যাসিভ কোনো তথ্য দিতে", explanation: "কারো জন্মস্থান, প্রাপ্ত পুরস্কার বা শোষিত হওয়ার ঘটনা (যেমন: Diaspora বা কবিদের জীবনী) দেখানোর জন্য এটি আদর্শ।" },
+                    d: { label: "বর্জনীয় ভুল", text: "Has/Have/Had বা Was/Were যোগ করা", explanation: "শর্ট ফ্রেজে 'He was imprisoned' বা 'Has awarded' লেখা যাবে না। সরাসরি V3 রূপ দিয়ে শুরু করতে হবে।" }
+                }
+            },
+            {
+                id: 6,
+                title: "Rule 06: Formula 05 — The Prepositional Phrase",
+                summary: "কোনো ঘটনা কখন ঘটেছিল (সময়), কোথায় ঘটেছিল (স্থান) কিংবা কীভাবে বা কিসের দ্বারা সম্পন্ন হয়েছিল তা সুনির্দিষ্টভাবে প্রকাশের জন্য এই রুলটি ব্যবহৃত হয়।",
+                details: {
+                    a: { label: "স্ট্রাকচার সূত্র", text: "Preposition (By/In/For/At/Through) + Noun/Gerund + Extension", explanation: "একটি উপযুক্ত প্রিপজিশন প্রথমে বসিয়ে সময়, স্থান বা মাধ্যমকে যুক্ত করা হয়।" },
+                    b: { label: "বোর্ড উদাহরণ", text: "Question: How Shilpi was helped. Answer: 1. By forming a support group", explanation: "শিল্পী কীভাবে সাহায্য পেয়েছিল—একটি সাপোর্ট গ্রুপ তৈরির মাধ্যমে। 'By' প্রিপজিশন ব্যবহার করে মাধ্যমটি পরিষ্কার করা হয়েছে।" },
+                    c: { label: "কখন ব্যবহার করবেন?", text: "সাল, সময় বা উপায়ের বিবরণ দিতে", explanation: "প্যাসেজে যদি সালভিত্তিক ক্রনোলজি থাকে (যেমন: ইন ১৯৭১, ইন ১৯৫২) অথবা কোনো উপায়ের বর্ণনা থাকে, তখন এটি ব্যবহার করা সহজ।" },
+                    d: { label: "বর্জনীয় ভুল", text: "ভুল প্রিপজিশন নির্বাচন", explanation: "সালের পূর্বে 'At' বা মাধ্যমের ক্ষেত্রে ভুল প্রিপজিশন বসালে পুরো ফ্রেজের অর্থ নষ্ট হয়ে যায়।" }
+                }
+            },
+            {
+                id: 7,
+                title: "Rule 07: Absolute Ban on Full Sentences (পূর্ণাঙ্গ বাক্য নিষিদ্ধ)",
+                summary: "ফ্লো চার্টের অন্যতম প্রধান শর্ত হলো এর ভেতরে কোনো 'Full Sentence' বা পূর্ণাঙ্গ স্বাধীন বাক্য লেখা যাবে না। সাবজেক্ট ও ফাইনাইট ভার্ব সরাসরি একসাথে বসালেই নম্বর কাটা যাবে।",
+                details: {
+                    a: { label: "মূল মেকানিজম", text: "বাক্য কেটে ফ্রেজ (Phrase) বানানো", explanation: "প্যাসেজে থাকবে পূর্ণ বাক্য, সেখান থেকে সাবজেক্ট (যেমন: He, She, They) এবং অক্সিলিয়ারি ভার্ব বাদ দিয়ে মূল তথ্যটি ছেঁটে নিতে হবে।" },
+                    b: { label: "কনভার্সন ট্রিক", text: "প্যাসেজ: 'He fought for justice' ➜ ফ্লো চার্ট: 'Fighting for justice'", explanation: "প্যাসেজের পূর্ণ বাক্যটি থেকে সাবজেক্ট 'He' বাদ দেওয়া হয়েছে এবং 'fought' ভার্বটিকে 'Fighting' বানিয়ে ফ্রেজ করা হয়েছে।" },
+                    c: { label: "কেন এই নিয়ম?", text: "ফ্লো চার্টের মূল কনসেপ্ট রক্ষা", explanation: "ফ্লো চার্ট মানেই হলো তথ্যের সংক্ষিপ্ত গ্রাফিক্যাল প্রবাহ। বাক্য লিখলে তা ফ্লো চার্ট না হয়ে প্যারাগ্রাফের পয়েন্টে রূপান্তর হয়ে যায়।" },
+                    d: { label: "বর্জনীয় ভুল", text: "He/She/It দিয়ে শুরু করা", explanation: "বক্সের ভেতরের লেখা কখনো He, She, It, We বা কোনো সরাসরি সাবজেক্ট দিয়ে শুরু করবেন না।" }
+                }
+            },
+            {
+                id: 8,
+                title: "Rule 08: Capitalization & No Full Stop (লিখনশৈলী ও বিরামচিহ্ন)",
+                summary: "ফ্লো চার্টের প্রতিটি বক্সের লেখার শুরু এবং শেষ করার সুনির্দিষ্ট পাঙ্কচুয়েশন ও ক্যাপিটালাইজেশন নিয়ম রয়েছে যা কঠোরভাবে মেইনটেইন করতে হয়।",
+                details: {
+                    a: { label: "শুরুর নিয়ম", text: "অবশ্যই Capital Letter (বড় হাতের অক্ষর)", explanation: "প্রতিটি বক্সের ফ্রেজ বা শব্দের প্রথম লেটারটি অবশ্যই Capital Letter হতে হবে, তা যেকোনো পার্টস অফ স্পিচই হোক না কেন।" },
+                    b: { label: "শেষের নিয়ম", text: "কোনো প্রকার Full Stop (.) দেওয়া যাবে না", explanation: "যেহেতু এগুলো পূর্ণ বাক্য নয়, তাই বক্সের ভেতরের লেখার একদম শেষে ফুল স্টপ দেওয়া সম্পূর্ণ অবৈধ।" },
+                    c: { label: "সঠিক রূপ", text: "✔ To reduce poverty (কোনো ফুল স্টপ নেই)", explanation: "শুরুর 'T' বড় হাতের এবং শেষে কোনো ডট বা ফুলস্টপ নেই। এটিই আদর্শ স্ট্যান্ডার্ড।" },
+                    d: { label: "বর্জনীয় ভুল", text: "ভুলবশত ফুলস্টপ বা ছোট হাতের অক্ষর দেওয়া", explanation: "শেষে গোল করে ফুলস্টপ দিয়ে দিলে পরীক্ষক নম্বর কেটে দিতে পারেন, কারণ এটি বাক্যের সমাপ্তি নির্দেশ করে যা ফ্লো চার্টে নিষিদ্ধ।" }
+                }
+            },
+            {
+                id: 9,
+                title: "Rule 09: Box and Arrow Mechanics (অবশ্যই বক্স ও তীর চিহ্ন আঁকা)",
+                summary: "ফ্লো চার্ট মানেই হলো জ্যামিতিক নকশা। শুধু তথ্য সঠিক লিখলেই হবে না, খাতার প্রেজেন্টেশন বা বক্সের ডিজাইন নিখুঁত হতে হবে।",
+                details: {
+                    a: { label: "বক্সের আকৃতি", text: "আয়তক্ষেত্রাকার বক্স (Rectangle Box)", explanation: "স্কেল দিয়ে সুন্দর করে প্রতিটি তথ্যের চারপাশে আয়তাকার বক্স এঁকে দিতে হবে। বক্স ছাড়া ভেতরের লেখার কোনো মূল্য নেই।" },
+                    b: { label: "প্রবাহের দিক", text: "তীর চিহ্ন (→) ব্যবহার করা", explanation: "১ম বক্সের পর একটি তীর চিহ্ন দিয়ে ২য় বক্স, তারপর তীর চিহ্ন দিয়ে ৩য় বক্স—এভাবে ধারাবাহিক ফ্লো বা প্রবাহ নিশ্চিত করতে হবে।" },
+                    c: { label: "সাজানোর ধরণ", text: "পাশাপাশি (Horizontal) অথবা লম্বালম্বি (Vertical)", explanation: "খাতায় জায়গা বেশি থাকলে পাশাপাশি ১ থেকে ৬ সাজাতে পারো। অথবা খাতা লম্বালম্বি থাকলে উপর থেকে নিচে ১ থেকে ৬ একটির নিচে আরেকটি তীর চিহ্ন দিয়ে সাজাতে পারো।" },
+                    d: { label: "বর্জনীয় ভুল", text: "১ম বক্সটি খাতায় না তোলা", explanation: "প্রশ্নপত্রে যে ১ নম্বর বক্সটি করে দেওয়া থাকে, উত্তরপত্রে সেটিসহ মোট ৬টি বক্স আঁকতে হবে। ১ নম্বর বক্স বাদ দেওয়া যাবে না।" }
+                }
+            },
+            {
+                id: 10,
+                title: "Rule 10: Strict Chronological Order (ঘটনার সঠিক সময়ানুক্রম)",
+                summary: "বিশেষ করে কোনো ঐতিহাসিক ঘটনা, কারো জীবনী কিংবা কোনো ধারাবাহিক প্রক্রিয়ার ক্ষেত্রে প্যাসেজের তথ্যের সিরিয়াল বা ক্রমানুসার বজায় রাখা বাধ্যতামূলক।",
+                details: {
+                    a: { label: "মূল নিয়ম", text: "Time Sequence বা ঘটনার ক্রম মানা", explanation: "প্যাসেজে যে ঘটনা আগে ঘটেছে (যেমন: জন্ম বা ১৯৫২ সাল) তা আগের বক্সে এবং পরের ঘটনা (যেমন: মৃত্যু বা ১৯৭১ সাল) ক্রমান্বয়ে পরের বক্সগুলোতে বসবে।" },
+                    b: { label: "প্যাসেজ ট্র্যাকিং", text: "প্যাসেজের উপর থেকে নিচ বরাবর তথ্য খোঁজা", explanation: "ফ্লো চার্টের উত্তর করার সময় প্যাসেজের প্রথম অংশ থেকে সিরিয়ালি তথ্য সাজাতে হয়। এলোমেলোভাবে তথ্য বসালে ফ্লো নষ্ট হয়।" },
+                    c: { label: "নম্বরিং ট্রিক", text: "বক্সের ভেতরে বা উপরে সিরিয়াল নম্বর দেওয়া", explanation: "১, ২, ৩, ৪, ৫, ৬ নম্বরগুলো বক্সের ভেতরে একদম শুরুতে বা বক্সের ঠিক উপরে স্পষ্ট করে লিখে দিতে হবে।" },
+                    d: { label: "বর্জনীয় ভুল", text: "আগের ঘটনা পরে এবং পরের ঘটনা আগে লেখা", explanation: "ধরা যাক ম্যান্ডেলার প্রেসিডেন্ট হওয়ার তথ্য ৩ নম্বর বক্সে লিখলে আর নোবেল পাওয়ার তথ্য ২ নম্বর বক্সে লিখলে—এমনটা করলে ক্রনোলজি ভঙ্গের কারণে নম্বর কাটা যাবে।" }
+                }
+            }
+        ];
+
+        // প্রোগ্রেস ট্র্যাকিং মেমোরি অবজেক্ট
+        let completedRules = {};
+
+        // ফায়ারবেস কনফিগারেশন ও ইনিশিয়ালিলাইজেশন
+        let db = null;
+        let auth = null;
+        const appId = 'zamil-academy-flowchart-rules';
+
+        if (typeof __firebase_config !== 'undefined' && __firebase_config) {
+            try {
+                const firebaseConfig = JSON.parse(__firebase_config);
+                if (!firebase.apps.length) {
+                    firebase.initializeApp(firebaseConfig);
+                }
+                db = firebase.firestore();
+                auth = firebase.auth();
+                
+                initFirebaseSession();
+            } catch (err) {
+                console.warn("Firebase Setup Failed, falling back to local storage:", err);
+                loadFromLocalStorage();
+            }
+        } else {
+            loadFromLocalStorage();
+        }
+
+        async function initFirebaseSession() {
+            try {
+                if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+                    await auth.signInWithCustomToken(__initial_auth_token);
+                } else {
+                    await auth.signInAnonymously();
+                }
+                
+                auth.onAuthStateChanged(user => {
+                    if (user) {
+                        loadCloudProgress(user.uid);
+                    } else {
+                        loadFromLocalStorage();
+                    }
+                });
+            } catch (e) {
+                console.error("Auth failed:", e);
+                loadFromLocalStorage();
+            }
+        }
+
+        function loadCloudProgress(userId) {
+            if (!db) return;
+            const docRef = db.collection('artifacts').doc(appId).collection('users').doc(userId).collection('progress').doc('flowchart_rules');
+            docRef.get().then(doc => {
+                if (doc.exists) {
+                    completedRules = doc.data().completed || {};
+                } else {
+                    loadFromLocalStorage();
+                    saveCloudProgress(userId);
+                }
+                renderAllRules();
+            }).catch(err => {
+                console.error("Firestore read error:", err);
+                loadFromLocalStorage();
+                renderAllRules();
+            });
+        }
+
+        function saveCloudProgress(userId) {
+            if (!db) return;
+            const docRef = db.collection('artifacts').doc(appId).collection('users').doc(userId).collection('progress').doc('flowchart_rules');
+            docRef.set({ completed: completedRules }, { merge: true })
+                .catch(err => console.error("Firestore write error:", err));
+        }
+
+        function loadFromLocalStorage() {
+            try {
+                const localData = localStorage.getItem('zamil_flowchart_rules_progress');
+                if (localData) {
+                    completedRules = JSON.parse(localData);
+                }
+            } catch (e) {
+                console.warn("Local storage not supported:", e);
+            }
+        }
+
+        function saveToLocalStorage() {
+            try {
+                localStorage.setItem('zamil_flowchart_rules_progress', JSON.stringify(completedRules));
+            } catch (e) {
+                console.warn(e);
+            }
+        }
+
+        function toggleRuleComplete(ruleId) {
+            if (completedRules[ruleId]) {
+                delete completedRules[ruleId];
+            } else {
+                completedRules[ruleId] = true;
+            }
+
+            saveToLocalStorage();
+
+            if (auth && auth.currentUser) {
+                saveCloudProgress(auth.currentUser.uid);
+            }
+
+            updateCardStyle(ruleId);
+        }
+
+        function updateCardStyle(ruleId) {
+            const card = document.getElementById(`card-${ruleId}`);
+            const badge = document.getElementById(`badge-${ruleId}`);
+            const checkbox = document.getElementById(`check-${ruleId}`);
+            const isCompleted = !!completedRules[ruleId];
+
+            if (isCompleted) {
+                card.className = "bg-green-50/90 border-2 border-green-500 rounded-2xl p-6 md:p-8 shadow-md relative transition-all duration-300 transform scale-[1.01] checkmark-animate";
+                badge.classList.remove('hidden');
+                checkbox.checked = true;
+            } else {
+                card.className = "bg-white border border-gray-100 rounded-2xl p-6 md:p-8 shadow-sm relative transition-all duration-300";
+                badge.classList.add('hidden');
+                checkbox.checked = false;
+            }
+        }
+
+        function selectDetails(ruleId, componentKey) {
+            const displayBox = document.getElementById(`detail-display-${ruleId}`);
+            const rule = rulesData.find(r => r.id === ruleId);
+            if (!rule || !rule.details[componentKey]) return;
+
+            const selectedData = rule.details[componentKey];
+
+            const allBtnContainer = document.getElementById(`btns-${ruleId}`);
+            const buttons = allBtnContainer.getElementsByTagName('button');
+            for (let btn of buttons) {
+                btn.className = "px-4 py-2 rounded-xl font-semibold transition text-sm border border-gray-200 bg-gray-50 text-gray-700 hover:bg-gray-100 font-hind";
+            }
+            
+            const activeBtn = document.getElementById(`btn-${ruleId}-${componentKey}`);
+            if (activeBtn) {
+                activeBtn.className = "px-4 py-2 rounded-xl font-semibold transition text-sm bg-green-800 text-white shadow-sm font-hind scale-105";
+            }
+
+            displayBox.innerHTML = `
+                <div class="space-y-2 text-left animate-fade-in">
+                    <p class="text-base font-bold text-green-950 font-hind">🎯 ${selectedData.label}: <span class="text-red-700 font-poppins">${selectedData.text}</span></p>
+                    <p class="text-gray-700 text-sm md:text-base font-hind leading-relaxed"><span class="font-bold text-gray-800">সহজ ব্যাখ্যা:</span> ${selectedData.explanation}</p>
+                </div>
+            `;
+        }
+
+        function toggleDetailPanel(ruleId) {
+            const panel = document.getElementById(`panel-${ruleId}`);
+            const btn = document.getElementById(`toggle-btn-${ruleId}`);
+            if (panel.classList.contains('hidden')) {
+                panel.classList.remove('hidden');
+                btn.innerHTML = `বিস্তারিত বন্ধ করুন 
+                    <svg class="w-5 h-5 ml-1 transform rotate-180 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>`;
+                // প্রথম অপশনটি অটো লোড করা
+                selectDetails(ruleId, 'a');
+            } else {
+                panel.classList.add('hidden');
+                btn.innerHTML = `বিস্তারিত ও উদাহরণ দেখুন 
+                    <svg class="w-5 h-5 ml-1 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>`;
+            }
+        }
+
+        function renderAllRules() {
+            const container = document.getElementById('rules-container');
+            container.innerHTML = ""; 
+
+            rulesData.forEach(rule => {
+                const isCompleted = !!completedRules[rule.id];
+                const cardClass = isCompleted 
+                    ? "bg-green-50/90 border-2 border-green-500 rounded-2xl p-6 md:p-8 shadow-md relative transition-all duration-300 transform scale-[1.01]" 
+                    : "bg-white border border-gray-100 rounded-2xl p-6 md:p-8 shadow-sm relative transition-all duration-300";
+                
+                const badgeClass = isCompleted ? "" : "hidden";
+                const isChecked = isCompleted ? "checked" : "";
+
+                let componentButtons = "";
+                Object.keys(rule.details).forEach(key => {
+                    componentButtons += `
+                        <button id="btn-${rule.id}-${key}" onclick="selectDetails(${rule.id}, '${key}')" 
+                                class="px-4 py-2 rounded-xl font-semibold transition text-sm border border-gray-200 bg-gray-50 text-gray-700 hover:bg-gray-100 font-hind">
+                            ${rule.details[key].label}
+                        </button>
+                    `;
+                });
+
+                const cardHTML = `
+                    <div id="card-${rule.id}" class="${cardClass}">
+                        
+                        <!-- আন্ডারস্টুড ব্যাজ -->
+                        <div id="badge-${rule.id}" class="absolute -top-3.5 right-6 bg-green-600 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-sm flex items-center gap-1.5 ${badgeClass}">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="font-hind">এটি আয়ত্ত করেছেন</span>
+                        </div>
+
+                        <!-- কার্ড টপ বার -->
+                        <div class="flex items-center justify-between mb-4 pb-2 border-b border-gray-100">
+                            <h3 class="text-xl font-bold text-gray-800 font-hind">${rule.title}</h3>
+                            
+                            <!-- প্রোগ্রেস চেকবক্স -->
+                            <label class="flex items-center gap-2 cursor-pointer select-none">
+                                <span class="text-sm font-semibold text-gray-500 font-hind hidden sm:inline">পড়া হয়েছে</span>
+                                <input type="checkbox" id="check-${rule.id}" onclick="toggleRuleComplete(${rule.id})" ${isChecked}
+                                       class="w-6 h-6 rounded border-gray-300 text-green-700 focus:ring-green-500 cursor-pointer">
+                            </label>
+                        </div>
+
+                        <!-- সামারি টেক্সট -->
+                        <p class="text-gray-700 text-base md:text-lg leading-relaxed font-hind mb-6 text-justify">
+                            ${rule.summary}
+                        </p>
+
+                        <!-- বিস্তারিত বাটন -->
+                        <div class="text-center">
+                            <button id="toggle-btn-${rule.id}" onclick="toggleDetailPanel(${rule.id})" 
+                                    class="inline-flex items-center bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-full transition shadow-sm font-hind text-base">
+                                বিস্তারিত ও উদাহরণ দেখুন 
+                                <svg class="w-5 h-5 ml-1 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                        </div>
+
+                        <!-- এক্সপ্যান্ডেড সাব-প্যানেল -->
+                        <div id="panel-${rule.id}" class="hidden mt-6 pt-6 border-t border-gray-100">
+                            <p class="text-xs font-bold text-gray-400 mb-4 text-center font-hind uppercase tracking-wider">রুলটির নিখুঁত ব্রেকডাউন দেখতে নিচের ট্যাবগুলোতে ক্লিক করুন</p>
+                            
+                            <!-- মোড সিলেকশন বাটন গ্রুপ -->
+                            <div id="btns-${rule.id}" class="flex flex-wrap justify-center gap-2 mb-6">
+                                ${componentButtons}
+                            </div>
+
+                            <!-- ডিসপ্লে বক্স -->
+                            <div id="detail-display-${rule.id}" class="bg-gray-50 p-5 rounded-2xl border border-gray-200 min-h-[110px] flex items-center justify-start">
+                                <p class="text-gray-400 font-hind w-full text-center">যেকোনো একটি ট্যাবে ক্লিক করে উদাহরণ ও ব্যাখ্যা লোড করুন।</p>
+                            </div>
+                        </div>
+
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', cardHTML);
+            });
+        }
+
+        // উইন্ডো লোড
+        window.onload = function() {
+            if (!db) {
+                loadFromLocalStorage();
+                renderAllRules();
+            }
+        };
+    </script>
+<script type="module">
+    // Firebase Time Tracking Script
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
+    import { getDatabase, ref, update, increment } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-database.js";
+
+    // ফায়ারবেজ কনফিগারেশন
+    const firebaseConfig = {
+        apiKey: "AIzaSyABpKz4xjVKWb6kVR_mT8d13dt9lcDwipE",
+        authDomain: "zamil-4e08e.firebaseapp.com",
+        databaseURL: "https://zamil-4e08e-default-rtdb.firebaseio.com/",
+        projectId: "zamil-4e08e"
+    };
+
+    // ফায়ারবেজ অ্যাপ এবং ডেটাবেজ ইনিশিয়ালিলাইজেশন
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+
+    // ডেটাবেজ কানেকশনটিকে গ্লোবাল করা
+    window.db = db; 
+
+    // প্রতি ৩০ সেকেন্ডে সময় ট্র্যাকিং
+    const timeRef = ref(db, 'total_time_spent');
+
+    setInterval(() => {
+        // ইউজার ট্যাব অন্য ট্যাবে বা ব্যাকগ্রাউন্ডে থাকলে কোডটি রান করবে না
+        if (document.hidden) return; 
+
+        update(timeRef, {
+            "seconds": increment(30)
+        }).catch(err => console.error("Error updating time:", err));
+    }, 30000);
+
+    console.log("Firebase time tracking active (optimized).");
+</script>
+
+
+
+
+
+
+
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyABpKz4xjVKWb6kVR_mT8d13dt9lcDwipE",
+    authDomain: "zamil-4e08e.firebaseapp.com",
+    projectId: "zamil-4e08e",
+    storageBucket: "zamil-4e08e.firebasestorage.app",
+    messagingSenderId: "696619411784",
+    appId: "1:696619411784:web:3dce390ed5b840cbc32b7d"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+onAuthStateChanged(auth, async (user) => {
+
+    // লগইন না থাকলে
+    if (!user) {
+        window.location.replace("/paid.html");
+        return;
+    }
+
+    try {
+        // paid_students collection এ email দিয়ে খুঁজবে
+        const paidRef = doc(db, "paid_students", user.email);
+        const paidDoc = await getDoc(paidRef);
+
+        // ডকুমেন্ট না থাকলে
+        if (!paidDoc.exists()) {
+            window.location.replace("/paid.html");
+            return;
+        }
+
+        // status paid না হলে
+        const data = paidDoc.data();
+
+        if (data.status !== "paid") {
+            window.location.replace("/paid.html");
+            return;
+        }
+
+        console.log("Paid User Verified");
+
+    } catch (error) {
+        console.error(error);
+        window.location.replace("/paid.html");
+    }
+
+});
+</script>
+</body>
+</html>

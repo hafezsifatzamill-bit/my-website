@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAMIL ACADEMY - Narration Practice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Hind Siliguri', sans-serif; }
+        .completed-card {
+            background-color: #f0fdf4 !important;
+            border-color: #16a34a !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+    <!-- হেডার: পুরো বক্স সবুজ এবং নিচের দিকে কার্ভ করা -->
+    <header class="bg-green-800 text-white py-12 px-6 text-center shadow-lg rounded-b-[40px]">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white-400">ZAMIL ACADEMY</h1>
+    </header>
+
+    <!-- সাবস্ক্রাইব বক্স -->
+    <div class="flex justify-center -mt-8 px-6">
+        <div class="bg-white p-8 shadow-md border-t-4 border-green-800 rounded-2xl max-w-md w-full text-center">
+            <p class="text-gray-700 text-lg mb-6">
+                প্রিমিয়াম সেবা পেতে আমাদের ইউটিউব চ্যানেলটি সাবস্ক্রাইব করুন।
+            </p>
+            <a href="https://youtube.com/@zamil_academy?si=EbWJq_lwwbWrLar9" 
+               target="_blank"
+               class="inline-block bg-red-700 hover:bg-green-800 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-md">
+                চ্যানেল ভিজিট করুন
+            </a>
+        </div>
+    </div>
+
+    <!-- মূল কন্টেন্ট (Main Content) -->
+    <main class="flex-grow max-w-4xl w-full mx-auto px-4 md:px-6 py-12">
+        
+        <!-- রুলস পেজে যাওয়ার আকর্ষণীয় বক্স -->
+        <div class="mb-10">
+            <a href="narration-rules.html" class="block bg-gradient-to-r from-green-700 to-green-900 hover:from-green-800 hover:to-green-950 text-white p-6 rounded-2xl shadow-md text-center transition duration-300 transform hover:scale-[1.02]">
+                <h3 class="text-2xl font-bold mb-1">📖 প্যাসেজ ন্যারেশন এর রুলস দেখুন</h3>
+                <p class="text-green-100 text-sm md:text-base">RV & RS, Person, Tense, Adverb এবং Sentence ও প্যাসেজ ন্যারেশনের সব রুলস সহজে দেখতে এখানে ক্লিক করুন।</p>
+            </a>
+        </div>
+
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">Passage Narration Practice Board</h2>
+            <p class="text-green-700 font-semibold text-lg">HSC & Alim English 2nd Paper (Question No. 5)</p>
+            <div class="w-24 h-1 bg-green-700 mx-auto mt-3 rounded"></div>
+        </div>
+
+        <!-- এক্সারসাইজ সেকশনসমূহ -->
+        <div class="space-y-12" id="practice-container">
+            
+            <!-- Exercise 1 -->
+            <div id="ex-1" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 01</span>
+                    <button onclick="toggleComplete(1)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-1"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">"My sons, a great treasure lies hidden in the land. I am going to leave you for ever," said the dying old farmer. "How shall we find it?" said the sons. "You must dig the land for it," said the farmer.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(1)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-1" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Indirect Speech:</h4>
+                            <p class="font-semibold text-red-700 bg-white p-4 rounded-lg shadow-inner mt-2 leading-relaxed">Addressing his sons, the dying old farmer told them that a great treasure lay hidden in the land. He added that he was going to leave them for ever. The sons asked him how they should find it. The farmer advised them that they had to dig the land for it.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">বাংলা অর্থ:</h4>
+                            <p class="text-gray-700 text-sm mt-1 leading-relaxed">ছেলেদের সম্বোধন করে মুমূর্ষু বৃদ্ধ কৃষক তাদের বললেন যে জমিতে একটি বড় গুপ্তধন লুকানো রয়েছে। তিনি আরও বললেন যে তিনি তাদের চিরদিনের জন্য ছেড়ে চলে যাচ্ছেন। ছেলেরা তাকে জিজ্ঞেস করল তারা কীভাবে এটি খুঁজে পাবে। কৃষক তাদের পরামর্শ দিলেন যে তাদের এটির জন্য জমি খনন করতে হবে।</p>
+                        </div>
+                        <div class="text-xs text-green-800 bg-green-100/50 p-4 rounded-lg border border-green-200/50">
+                            <h4 class="font-bold">সহজ ব্যাখ্যা:</h4>
+                            <ul class="list-disc pl-5 mt-1 space-y-1">
+                                <li><strong>My sons</strong> থাকার কারণে শুরুতে <strong>Addressing his sons</strong> ব্যবহৃত হয়েছে।</li>
+                                <li><strong>lies (V1)</strong> পরিবর্তিত হয়ে <strong>lay (V2)</strong> হয়েছে এবং <strong>am going</strong> রূপান্তরিত হয়ে <strong>was going</strong> হয়েছে।</li>
+                                <li>প্রশ্নের <strong>"How shall we find it?"</strong> এর কাঠামো পরিবর্তন করে Assertive (they should find it) এবং RV হিসেবে <strong>asked</strong> ব্যবহার করা হয়েছে।</li>
+                                <li><strong>You must</strong> এর পরিবর্তে <strong>they had to</strong> বসেছে কারণ উপদেশ বোঝাতে <strong>advised</strong> RV আনা হয়েছে।</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 2 -->
+            <div id="ex-2" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 02</span>
+                    <button onclick="toggleComplete(2)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-2"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">"Will you buy my hair?" asked Della. "I buy hair," said Madame. "Take your hat off and let's have a sight at the looks of it." "Twenty dollars," said Madame, lifting the mass with a practiced hand. "Give it to me quick," said Della.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(2)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-2" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Indirect Speech:</h4>
+                            <p class="font-semibold text-red-700 bg-white p-4 rounded-lg shadow-inner mt-2 leading-relaxed">Della asked Madame if she would buy her hair. Madame replied that she bought hair. Then she told Della to take her hat off and proposed that they should have a sight at the looks of it. Madame lifted the mass with a practiced hand and said that it was twenty dollars. Della requested her to give that to her quickly.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">বাংলা অর্থ:</h4>
+                            <p class="text-gray-700 text-sm mt-1 leading-relaxed">ডেলা ম্যাডামকে জিজ্ঞেস করল সে তার চুল কিনবে কি না। ম্যাডাম উত্তর দিলেন যে তিনি চুল কেনেন। তারপর তিনি ডেলাকে তার হ্যাটটি খুলতে বললেন এবং প্রস্তাব দিলেন যে তাদের চুলটি এক নজর দেখা উচিত। ম্যাডাম অভিজ্ঞ হাতে চুলের স্তূপটি তুলে বললেন যে এটার দাম কুড়ি ডলার। ডেলা তাকে অনুরোধ করল সেটি তাকে দ্রুত দিয়ে দিতে।</p>
+                        </div>
+                        <div class="text-xs text-green-800 bg-green-100/50 p-4 rounded-lg border border-green-200/50">
+                            <h4 class="font-bold">সহজ ব্যাখ্যা:</h4>
+                            <ul class="list-disc pl-5 mt-1 space-y-1">
+                                <li>Auxiliary verb <strong>Will</strong> দিয়ে শুরু হওয়া প্রশ্নে লিঙ্কার <strong>if</strong> বসেছে এবং <strong>will you buy</strong> পরিবর্তিত হয়ে <strong>she would buy</strong> হয়েছে।</li>
+                                <li><strong>let's</strong> এর পরিবর্তে প্রস্তাবমূলক নিয়মে <strong>proposed that they should</strong> ব্যবহার করা হয়েছে।</li>
+                                <li><strong>"Twenty dollars"</strong> এর জায়গায় পূর্ণাঙ্গ সেন্টেন্স কাঠামো <strong>it was twenty dollars</strong> করতে হয়েছে।</li>
+                                <li><strong>"Give it..."</strong> অনুরোধ প্রকাশ করায় <strong>requested her to give</strong> এবং <strong>it</strong> পরিবর্তিত হয়ে <strong>that</strong> এ পরিণত হয়েছে।</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 3 -->
+            <div id="ex-3" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 03</span>
+                    <button onclick="toggleComplete(3)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-3"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">"Where did you go yesterday?" said Lipi. "I went to Dhaka to buy some books," said Mina. "Why did you go to Dhaka?" "My father wanted me to go there with him."</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(3)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-3" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Indirect Speech:</h4>
+                            <p class="font-semibold text-red-700 bg-white p-4 rounded-lg shadow-inner mt-2 leading-relaxed">Lipi asked Mina where she had gone the previous day. Mina replied that she had gone to Dhaka to buy some books. Lipi again asked her why she had gone to Dhaka. Mina replied that her father had wanted her to go there with him.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">বাংলা অর্থ:</h4>
+                            <p class="text-gray-700 text-sm mt-1 leading-relaxed">লিপি মিনাকে জিজ্ঞেস করল সে আগের দিন কোথায় গিয়েছিল। মিনা উত্তর দিল সে কিছু বই কেনার জন্য ঢাকায় গিয়েছিল। লিপি তাকে আবারও জিজ্ঞেস করল সে কেন ঢাকায় গিয়েছিল। মিনা উত্তর দিল তার বাবা তাকে তার সাথে সেখানে নিয়ে যেতে চেয়েছিলেন।</p>
+                        </div>
+                        <div class="text-xs text-green-800 bg-green-100/50 p-4 rounded-lg border border-green-200/50">
+                            <h4 class="font-bold">সহজ ব্যাখ্যা:</h4>
+                            <ul class="list-disc pl-5 mt-1 space-y-1">
+                                <li><strong>yesterday</strong> পরিবর্তিত হয়ে <strong>the previous day</strong> হয়েছে।</li>
+                                <li><strong>did go (Past Simple)</strong> রূপান্তরিত হয়ে <strong>had gone (Past Perfect)</strong> হয়েছে।</li>
+                                <li><strong>"Why did you go...?"</strong> প্রশ্নটি WH-word দিয়ে শুরু হওয়ায় লিঙ্কার <strong>why</strong> নিজেই রয়েছে এবং Tense টি <strong>had gone</strong> হয়েছে।</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 4 -->
+            <div id="ex-4" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 04</span>
+                    <button onclick="toggleComplete(4)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-4"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">The teacher said to the boy, "Why are you making a noise in the class? You should be attentive." "Sir, I am sorry. I was asking for a pen from my friend," replied the boy.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(4)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-4" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Indirect Speech:</h4>
+                            <p class="font-semibold text-red-700 bg-white p-4 rounded-lg shadow-inner mt-2 leading-relaxed">The teacher asked the boy why he was making a noise in the class and advised him that he should be attentive. The boy respectfully replied that he was sorry and explained that he had been asking for a pen from his friend.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">বাংলা অর্থ:</h4>
+                            <p class="text-gray-700 text-sm mt-1 leading-relaxed">শিক্ষক ছেলেটিকে জিজ্ঞেস করলেন সে কেন ক্লাসে গোলমাল করছে এবং তাকে উপদেশ দিলেন যে তার মনোযোগী হওয়া উচিত। ছেলেটি বিনম্রভাবে উত্তর দিল যে সে দুঃখিত এবং ব্যাখ্যা করল যে সে তার বন্ধুর কাছে একটি কলম চাচ্ছিল।</p>
+                        </div>
+                        <div class="text-xs text-green-800 bg-green-100/50 p-4 rounded-lg border border-green-200/50">
+                            <h4 class="font-bold">সহজ ব্যাখ্যা:</h4>
+                            <ul class="list-disc pl-5 mt-1 space-y-1">
+                                <li><strong>Sir</strong> থাকার কারণে <strong>respectfully</strong> রিপোর্টিং ভার্বের সাথে যুক্ত করা হয়েছে।</li>
+                                <li><strong>are making (Present Cont.)</strong> পরিবর্তিত হয়ে <strong>was making</strong> হয়েছে এবং <strong>was asking (Past Cont.)</strong> পরিবর্তিত হয়ে <strong>had been asking</strong> হয়েছে।</li>
+                                <li>দ্বিতীয় বাক্যটি উপদেশমূলক হওয়ায় <strong>advised</strong> RV ব্যবহার করে <strong>that he should be...</strong> করা হয়েছে।</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 5 -->
+            <div id="ex-5" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 05</span>
+                    <button onclick="toggleComplete(5)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-5"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">"My friend, why are you sitting alone here today?" said the bird. "I am very sad because I have lost my way," replied the traveller. "Do not worry, I will show you the path," said the bird.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(5)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-5" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Indirect Speech:</h4>
+                            <p class="font-semibold text-red-700 bg-white p-4 rounded-lg shadow-inner mt-2 leading-relaxed">Addressing the traveller as friend, the bird asked him why he was sitting alone there that day. The traveller replied that he was very sad because he had lost his way. The bird advised him not to worry and assured him that it would show him the path.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">বাংলা অর্থ:</h4>
+                            <p class="text-gray-700 text-sm mt-1 leading-relaxed">পথিককে বন্ধু বলে সম্বোধন করে পাখিটি তাকে জিজ্ঞেস করল সে কেন সেদিন সেখানে একা বসে আছে। পথিক উত্তর দিল যে সে খুব দুঃখিত কারণ সে তার পথ হারিয়ে ফেলেছে। পাখিটি তাকে চিন্তা না করতে বলল এবং আশ্বাস দিল যে এটি তাকে পথ দেখিয়ে দেবে।</p>
+                        </div>
+                        <div class="text-xs text-green-800 bg-green-100/50 p-4 rounded-lg border border-green-200/50">
+                            <h4 class="font-bold">সহজ ব্যাখ্যা:</h4>
+                            <ul class="list-disc pl-5 mt-1 space-y-1">
+                                <li><strong>My friend</strong> থাকার কারণে শুরুতে <strong>Addressing the traveller as friend</strong> বসেছে।</li>
+                                <li><strong>here</strong> পরিবর্তিত হয়ে <strong>there</strong> এবং <strong>today</strong> পরিবর্তিত হয়ে <strong>that day</strong> হয়েছে।</li>
+                                <li><strong>have lost (Present Perfect)</strong> রূপান্তরিত হয়ে <strong>had lost (Past Perfect)</strong> হয়েছে।</li>
+                                <li>নিষেধ বা উপদেশমূলক <strong>"Do not worry"</strong> বাক্যটিতে <strong>advised him not to worry</strong> রূপ নেওয়া হয়েছে।</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 6 -->
+            <div id="ex-6" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 06</span>
+                    <button onclick="toggleComplete(6)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-6"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">"Have you prepared your lessons today?" said the teacher. "No, sir, I have not prepared my lessons," replied the student. "Why?" asked the teacher. "I was suffering from fever yesterday," said the student.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(6)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-6" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Indirect Speech:</h4>
+                            <p class="font-semibold text-red-700 bg-white p-4 rounded-lg shadow-inner mt-2 leading-relaxed">The teacher asked the student if he had prepared his lessons that day. The student respectfully replied in the negative and said that he had not prepared his lessons. The teacher then asked him why he had not prepared them. The student explained that he had been suffering from fever the previous day.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">বাংলা অর্থ:</h4>
+                            <p class="text-gray-700 text-sm mt-1 leading-relaxed">শিক্ষক ছাত্রটিকে জিজ্ঞেস করলেন সে কি সেদিন তার পড়া প্রস্তুত করেছে। ছাত্রটি বিনম্রভাবে না-বোধক উত্তর দিল এবং বলল যে সে তার পড়া প্রস্তুত করেনি। শিক্ষক তখন তাকে জিজ্ঞেস করলেন কেন সে পড়া প্রস্তুত করেনি। ছাত্রটি ব্যাখ্যা করল যে সে আগের দিন জ্বরে ভুগছিল।</p>
+                        </div>
+                        <div class="text-xs text-green-800 bg-green-100/50 p-4 rounded-lg border border-green-200/50">
+                            <h4 class="font-bold">সহজ ব্যাখ্যা:</h4>
+                            <ul class="list-disc pl-5 mt-1 space-y-1">
+                                <li><strong>No, sir</strong> এর জন্য <strong>respectfully replied in the negative and said that</strong> নিয়মানুযায়ী ব্যবহার করা হয়েছে।</li>
+                                <li><strong>today</strong> পরিবর্তিত হয়ে <strong>that day</strong> এবং <strong>yesterday</strong> পরিবর্তিত হয়ে <strong>the previous day</strong> হয়েছে।</li>
+                                <li>সংক্ষিপ্ত প্রশ্ন <strong>"Why?"</strong> এর পূর্ণাঙ্গ রূপ ধরে <strong>asked him why he had not prepared them</strong> এ রূপ দেওয়া হয়েছে।</li>
+                                <li><strong>was suffering (Past Cont.)</strong> পরিবর্তিত হয়ে <strong>had been suffering (Past Perfect Cont.)</strong> হয়েছে।</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 7 -->
+            <div id="ex-7" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 07</span>
+                    <button onclick="toggleComplete(7)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-7"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">"Follow my example," she said as we shook hands, "and never eat more than one thing for luncheon." "I will do better than that," I retorted, "I will eat nothing for dinner tonight."</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(7)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-7" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Indirect Speech:</h4>
+                            <p class="font-semibold text-red-700 bg-white p-4 rounded-lg shadow-inner mt-2 leading-relaxed">As we shook hands, she advised me to follow her example and never to eat more than one thing for luncheon. I retorted that I would do better than that and added that I would eat nothing for dinner that night.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">বাংলা অর্থ:</h4>
+                            <p class="text-gray-700 text-sm mt-1 leading-relaxed">আমরা যখন হাত মেলালাম, তিনি আমাকে তাঁর উদাহরণ অনুসরণ করতে এবং মধ্যাহ্নভোজে একটির বেশি কিছু না খেতে পরামর্শ দিলেন। আমি প্রতিউত্তরে বললাম যে আমি তার চেয়ে ভালো করব এবং আরও বললাম যে আমি আজ রাতে নৈশভোজে কিছুই খাব না।</p>
+                        </div>
+                        <div class="text-xs text-green-800 bg-green-100/50 p-4 rounded-lg border border-green-200/50">
+                            <h4 class="font-bold">সহজ ব্যাখ্যা:</h4>
+                            <ul class="list-disc pl-5 mt-1 space-y-1">
+                                <li><strong>"Follow my example..."</strong> আদেশ বা উপদেশমূলক হওয়ায় <strong>advised me to follow her example</strong> করা হয়েছে।</li>
+                                <li>নেতিবাচক অনুরোধ <strong>never eat</strong> পরিবর্তিত হয়ে <strong>never to eat</strong> লিঙ্কার দ্বারা যুক্ত হয়েছে।</li>
+                                <li><strong>tonight</strong> পরিবর্তিত হয়ে <strong>that night</strong> এ রূপান্তরিত হয়েছে।</li>
+                                <li><strong>will do</strong> পরিবর্তিত হয়ে <strong>would do</strong> হয়েছে।</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 8 -->
+            <div id="ex-8" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 08</span>
+                    <button onclick="toggleComplete(8)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-8"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">"Stop! Write down the address," said the father to his son. "I have lost my pen. Can you lend me one?" said the son. "Yes, take this," said the father.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(8)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-8" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Indirect Speech:</h4>
+                            <p class="font-semibold text-red-700 bg-white p-4 rounded-lg shadow-inner mt-2 leading-relaxed">The father ordered his son to stop and write down the address. The son replied that he had lost his pen and asked his father if he could lend him one. The father replied in the affirmative and told him to take that.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">বাংলা অর্থ:</h4>
+                            <p class="text-gray-700 text-sm mt-1 leading-relaxed">বাবা তার ছেলেকে থামতে এবং ঠিকানাটি লিখে রাখতে আদেশ দিলেন। ছেলেটি উত্তর দিল যে সে তার কলমটি হারিয়ে ফেলেছে এবং তার বাবার কাছে জানতে চাইল সে তাকে একটি ধার দিতে পারবে কি না। বাবা হ্যাঁ-বোধক উত্তর দিলেন এবং সেটি তাকে নিতে বললেন।</p>
+                        </div>
+                        <div class="text-xs text-green-800 bg-green-100/50 p-4 rounded-lg border border-green-200/50">
+                            <h4 class="font-bold">সহজ ব্যাখ্যা:</h4>
+                            <ul class="list-disc pl-5 mt-1 space-y-1">
+                                <li>আদেশমূলক <strong>"Stop! Write..."</strong> বাক্যটিতে <strong>ordered his son to stop and write</strong> কাঠামো এসেছে।</li>
+                                <li><strong>have lost (Present Perfect)</strong> রূপান্তরিত হয়ে <strong>had lost (Past Perfect)</strong> হয়েছে।</li>
+                                <li><strong>Yes</strong> এর জন্য <strong>replied in the affirmative</strong> নিয়ম মেনে বসানো হয়েছে।</li>
+                                <li>নিকটবর্তী নির্দেশক শব্দ <strong>this</strong> পরিবর্তিত হয়ে দূরবর্তী <strong>that</strong> এ পরিণত হয়েছে।</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 9 -->
+            <div id="ex-9" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 09</span>
+                    <button onclick="toggleComplete(9)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-9"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">"Have you saved something for the future?" said the rich man to the cobbler. "No," replied the cobbler, "I am happy with my present life. I do not think of tomorrow."</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(9)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-9" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Indirect Speech:</h4>
+                            <p class="font-semibold text-red-700 bg-white p-4 rounded-lg shadow-inner mt-2 leading-relaxed">The rich man asked the cobbler if he had saved something for the future. The cobbler replied in the negative and added that he was happy with his present life and he did not think of the next day.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">বাংলা অর্থ:</h4>
+                            <p class="text-gray-700 text-sm mt-1 leading-relaxed">ধনী লোকটি মুচিকে জিজ্ঞেস করল সে ভবিষ্যতের জন্য কিছু জমিয়েছে কি না। মুচি না-বোধক উত্তর দিল এবং আরও বলল যে সে তার বর্তমান জীবন নিয়ে সুখী এবং সে আগামীকালের (পরের দিনের) কথা চিন্তা করে না।</p>
+                        </div>
+                        <div class="text-xs text-green-800 bg-green-100/50 p-4 rounded-lg border border-green-200/50">
+                            <h4 class="font-bold">সহজ ব্যাখ্যা:</h4>
+                            <ul class="list-disc pl-5 mt-1 space-y-1">
+                                <li><strong>Have you saved</strong> প্রশ্নবোধক বাক্যটি রূপান্তরিত হয়ে Assertive-এ <strong>if he had saved</strong> হয়েছে।</li>
+                                <li><strong>No</strong> এর জন্য <strong>replied in the negative</strong> ব্যবহার করা হয়েছে এবং অতিরিক্ত বিবৃতির জন্য <strong>and added that</strong> যোগ করা হয়েছে।</li>
+                                <li><strong>am happy</strong> পরিবর্তিত হয়ে <strong>was happy</strong> এবং <strong>tomorrow</strong> পরিবর্তিত হয়ে <strong>the next day</strong> হয়েছে।</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 10 -->
+            <div id="ex-10" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 relative">
+                <div class="completed-badge hidden text-green-700 font-bold text-sm bg-green-100 py-1 px-3 rounded-full absolute top-4 right-4 items-center gap-1">
+                    ✓ এটা আপনি কমপ্লিট করেছেন
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-green-100 text-green-800 px-3 py-1 rounded-full">Exercise 10</span>
+                    <button onclick="toggleComplete(10)" class="complete-btn flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-green-700 transition">
+                        <span class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center bg-white" id="checkbox-10"></span>
+                        <span>Complete হিসেবে চিহ্নিত করুন</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-gray-800 leading-relaxed md:text-lg font-mono bg-gray-50 p-6 rounded-xl border border-gray-150">
+                    <p class="text-gray-900 font-semibold">"By Allah, I will never tell a lie," said the boy. "May Allah help you in your life," said the teacher. "Thank you, sir," replied the boy.</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <button onclick="toggleAnswerPanel(10)" class="bg-green-800 hover:bg-green-900 text-white font-semibold py-2.5 px-6 rounded-xl transition duration-200 text-sm shadow">
+                        উত্তর দেখুন
+                    </button>
+                    
+                    <div id="ans-panel-10" class="hidden mt-4 p-5 bg-green-50 rounded-xl text-green-900 border border-green-200 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-green-950">Indirect Speech:</h4>
+                            <p class="font-semibold text-red-700 bg-white p-4 rounded-lg shadow-inner mt-2 leading-relaxed">Swearing by Allah, the boy said that he would never tell a lie. The teacher prayed that Allah might help him (the boy) in his life. The boy respectfully thanked the teacher.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">বাংলা অর্থ:</h4>
+                            <p class="text-gray-700 text-sm mt-1 leading-relaxed">আল্লাহর কসম খেয়ে ছেলেটি বলল যে সে কখনও মিথ্যা বলবে না। শিক্ষক প্রার্থনা করলেন যে আল্লাহ যেন তার জীবনে তাকে সাহায্য করেন। ছেলেটি বিনম্রভাবে শিক্ষককে ধন্যবাদ জানাল।</p>
+                        </div>
+                        <div class="text-xs text-green-800 bg-green-100/50 p-4 rounded-lg border border-green-200/50">
+                            <h4 class="font-bold">সহজ ব্যাখ্যা:</h4>
+                            <ul class="list-disc pl-5 mt-1 space-y-1">
+                                <li><strong>By Allah</strong> শপথ করার জন্য বাক্যের শুরুতে <strong>Swearing by Allah</strong> গঠনটি ব্যবহৃত হয়েছে।</li>
+                                <li><strong>will</strong> পরিবর্তিত হয়ে <strong>would</strong> হয়েছে।</li>
+                                <li>প্রার্থনামূলক বাক্য <strong>"May Allah help you..."</strong> এর জন্য <strong>prayed that Allah might help him</strong> রূপ নিয়েছে।</li>
+                                <li><strong>Thank you, sir</strong> এর জন্য <strong>respectfully thanked the teacher</strong> নিয়মানুযায়ী সম্পন্ন হয়েছে।</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ফুটার -->
+    <footer class="text-center py-6 text-gray-500 text-sm border-t border-gray-200 mt-12 bg-white">
+        <p>&copy; ২০২৬ ZAMIL ACADEMY। সর্বস্বত্ব সংরক্ষিত।</p>
+    </footer>
+
+    <script>
+        // উত্তর প্যানেল শো বা হাইড করার ফাংশন
+        function toggleAnswerPanel(exNum) {
+            const panel = document.getElementById(`ans-panel-${exNum}`);
+            if (panel.classList.contains('hidden')) {
+                panel.classList.remove('hidden');
+            } else {
+                panel.classList.add('hidden');
+            }
+        }
+
+        // কমপ্লিট স্ট্যাটাস টগল এবং লোকাল স্টোরেজ আপডেট
+        function toggleComplete(exNum) {
+            const card = document.getElementById(`ex-${exNum}`);
+            const badge = card.querySelector('.completed-badge');
+            const checkbox = document.getElementById(`checkbox-${exNum}`);
+            
+            let completedList = JSON.parse(localStorage.getItem('narration_completed_exercises')) || [];
+
+            if (completedList.includes(exNum)) {
+                // আন-কমপ্লিট করা
+                completedList = completedList.filter(id => id !== exNum);
+                card.classList.remove('completed-card');
+                badge.classList.add('hidden');
+                badge.classList.remove('flex');
+                checkbox.innerHTML = '';
+                checkbox.classList.remove('bg-green-600', 'border-green-600');
+                checkbox.classList.add('bg-white', 'border-gray-300');
+            } else {
+                // কমপ্লিট করা
+                completedList.push(exNum);
+                card.classList.add('completed-card');
+                badge.classList.remove('hidden');
+                badge.classList.add('flex');
+                checkbox.innerHTML = '<svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>';
+                checkbox.classList.remove('bg-white', 'border-gray-300');
+                checkbox.classList.add('bg-green-600', 'border-green-600');
+            }
+
+            localStorage.setItem('narration_completed_exercises', JSON.stringify(completedList));
+        }
+
+        // পেজ লোড হওয়ার পর লোকাল স্টোরেজ থেকে প্রোগ্রেস পুনরুদ্ধার
+        window.addEventListener('DOMContentLoaded', () => {
+            const completedList = JSON.parse(localStorage.getItem('narration_completed_exercises')) || [];
+            completedList.forEach(exNum => {
+                const card = document.getElementById(`ex-${exNum}`);
+                if (card) {
+                    const badge = card.querySelector('.completed-badge');
+                    const checkbox = document.getElementById(`checkbox-${exNum}`);
+                    
+                    card.classList.add('completed-card');
+                    if (badge) {
+                        badge.classList.remove('hidden');
+                        badge.classList.add('flex');
+                    }
+                    if (checkbox) {
+                        checkbox.innerHTML = '<svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>';
+                        checkbox.classList.remove('bg-white', 'border-gray-300');
+                        checkbox.classList.add('bg-green-600', 'border-green-600');
+                    }
+                }
+            });
+        });
+    </script>
+
+<script type="module">
+    // Firebase Time Tracking Script
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
+    import { getDatabase, ref, update, increment } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-database.js";
+
+    // ফায়ারবেজ কনফিগারেশন
+    const firebaseConfig = {
+        apiKey: "AIzaSyABpKz4xjVKWb6kVR_mT8d13dt9lcDwipE",
+        authDomain: "zamil-4e08e.firebaseapp.com",
+        databaseURL: "https://zamil-4e08e-default-rtdb.firebaseio.com/",
+        projectId: "zamil-4e08e"
+    };
+
+    // ফায়ারবেজ অ্যাপ এবং ডেটাবেজ ইনিশিয়ালিলাইজেশন
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+
+    // ডেটাবেজ কানেকশনটিকে গ্লোবাল করা
+    window.db = db; 
+
+    // প্রতি ৩০ সেকেন্ডে সময় ট্র্যাকিং
+    const timeRef = ref(db, 'total_time_spent');
+
+    setInterval(() => {
+        // ইউজার ট্যাব অন্য ট্যাবে বা ব্যাকগ্রাউন্ডে থাকলে কোডটি রান করবে না
+        if (document.hidden) return; 
+
+        update(timeRef, {
+            "seconds": increment(30)
+        }).catch(err => console.error("Error updating time:", err));
+    }, 30000);
+
+    console.log("Firebase time tracking active (optimized).");
+</script>
+
+
+
+
+
+
+
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyABpKz4xjVKWb6kVR_mT8d13dt9lcDwipE",
+    authDomain: "zamil-4e08e.firebaseapp.com",
+    projectId: "zamil-4e08e",
+    storageBucket: "zamil-4e08e.firebasestorage.app",
+    messagingSenderId: "696619411784",
+    appId: "1:696619411784:web:3dce390ed5b840cbc32b7d"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+onAuthStateChanged(auth, async (user) => {
+
+    // লগইন না থাকলে
+    if (!user) {
+        window.location.replace("/paid.html");
+        return;
+    }
+
+    try {
+        // paid_students collection এ email দিয়ে খুঁজবে
+        const paidRef = doc(db, "paid_students", user.email);
+        const paidDoc = await getDoc(paidRef);
+
+        // ডকুমেন্ট না থাকলে
+        if (!paidDoc.exists()) {
+            window.location.replace("/paid.html");
+            return;
+        }
+
+        // status paid না হলে
+        const data = paidDoc.data();
+
+        if (data.status !== "paid") {
+            window.location.replace("/paid.html");
+            return;
+        }
+
+        console.log("Paid User Verified");
+
+    } catch (error) {
+        console.error(error);
+        window.location.replace("/paid.html");
+    }
+
+});
+</script>
+</body>
+</html>
